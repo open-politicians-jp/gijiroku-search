@@ -13,10 +13,8 @@ eggs/
 # Python lib directories only - exclude frontend/lib
 scripts/*/lib/
 **/site-packages/
-**/Lib/
 
 # Include frontend lib directory explicitly
-!frontend/lib/
 lib64/
 parts/
 sdist/
