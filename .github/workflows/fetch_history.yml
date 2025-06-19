@@ -1,0 +1,110 @@
+name: 週次履歴データ取得
+
+on:
+  schedule:
+    # 毎週日曜日日本時間3:00に実行（UTC 18:00）
+    - cron: '0 18 * * 0'
+  workflow_dispatch: # 手動実行も可能
+    inputs:
+      target_months:
+        description: '取得対象月数（デフォルト：3ヶ月）'
+        required: false
+        default: '3'
+
+jobs:
+  fetch-history-data:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120 # 2時間タイムアウト
+    
+    steps:
+    - name: チェックアウト
+      uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+    
+    - name: Python環境のセットアップ
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+        cache: 'pip'
+    
+    - name: 依存関係のインストール
+      run: |
+        cd backend
+        pip install -r requirements.txt
+    
+    - name: データディレクトリの作成
+      run: |
+        mkdir -p data/speech
+    
+    - name: 履歴データの取得
+      run: |
+        cd backend
+        python fetch_history.py
+      env:
+        TZ: Asia/Tokyo
+    
+    - name: 変更の確認
+      id: changes
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add data/
+        if git diff --staged --quiet; then
+          echo "has_changes=false" >> $GITHUB_OUTPUT
+          echo "file_count=0" >> $GITHUB_OUTPUT
+        else
+          echo "has_changes=true" >> $GITHUB_OUTPUT
+          file_count=$(git diff --staged --name-only | wc -l)
+          echo "file_count=$file_count" >> $GITHUB_OUTPUT
+        fi
+    
+    - name: 変更のコミット
+      if: steps.changes.outputs.has_changes == 'true'
+      run: |
+        git commit -m "📚 履歴議事録データを更新 ($(date +'%Y-%m-%d'))"
+    
+    - name: プルリクエストの作成
+      if: steps.changes.outputs.has_changes == 'true'
+      uses: peter-evans/create-pull-request@v5
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        commit-message: "📚 履歴議事録データを更新 ($(date +'%Y-%m-%d'))"
+        title: "📚 履歴議事録データ更新 - $(date +'%Y-%m-%d')"
+        body: |
+          ## 📚 履歴議事録データの自動更新
+          
+          - 実行日: $(date +'%Y年%m月%d日')
+          - 取得対象: 過去3ヶ月の議事録データ
+          - スクリプト: `fetch_history.py`
+          - 更新ファイル数: ${{ steps.changes.outputs.file_count }}
+          
+          ### 変更内容
+          - 月次議事録データファイルを追加/更新
+          - データは `data/speech/YYYY/` ディレクトリに保存
+          - 既存ファイルがある場合はスキップ
+          
+          ### 注意事項
+          - 大量のデータが含まれる可能性があります
+          - マージ前に内容を確認してください
+          
+          ---
+          
+          🤖 このプルリクエストは GitHub Actions によって自動生成されました
+        branch: history-update-$(date +'%Y%m%d')
+        delete-branch: true
+    
+    - name: Slack通知（成功）
+      if: steps.changes.outputs.has_changes == 'true' && success()
+      run: |
+        echo "✅ 履歴データの取得が完了しました（${{ steps.changes.outputs.file_count }}ファイル更新）"
+    
+    - name: Slack通知（データなし）
+      if: steps.changes.outputs.has_changes == 'false' && success()
+      run: |
+        echo "ℹ️ 新しい履歴データはありませんでした"
+    
+    - name: Slack通知（失敗）
+      if: failure()
+      run: |
+        echo "❌ 履歴データの取得に失敗しました"

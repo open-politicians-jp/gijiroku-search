@@ -1,0 +1,87 @@
+name: 議事録データ収集
+
+on:
+  schedule:
+    # 毎日午前3時（JST）に実行（UTC 18:00）
+    - cron: '0 18 * * *'
+  workflow_dispatch:
+    inputs:
+      months_back:
+        description: '過去何ヶ月分のデータを取得するか'
+        required: false
+        default: '2'
+        type: string
+      force_update:
+        description: '強制的に全データを更新するか'
+        required: false
+        default: false
+        type: boolean
+
+jobs:
+  collect-data:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+        
+    - name: Install uv
+      run: |
+        curl -LsSf https://astral.sh/uv/install.sh | sh
+        echo "$HOME/.local/bin" >> $GITHUB_PATH
+        
+    - name: Setup uv environment
+      working-directory: scripts/uv-data-collection
+      run: |
+        uv sync
+        
+    - name: Run data collection
+      working-directory: scripts/uv-data-collection
+      env:
+        MONTHS_BACK: ${{ github.event.inputs.months_back || '2' }}
+        FORCE_UPDATE: ${{ github.event.inputs.force_update || 'false' }}
+      run: |
+        uv run python daily_data_collection.py
+        
+    - name: Collect committee news (fixed)
+      working-directory: scripts/uv-data-collection
+      run: |
+        uv run python collect_committee_news_fixed.py
+        
+    - name: Collect bills data (fixed)
+      working-directory: scripts/uv-data-collection
+      run: |
+        uv run python collect_bills_fixed.py
+        
+    - name: Collect legislators profiles
+      working-directory: scripts/uv-data-collection
+      run: |
+        uv run python collect_legislators_profiles.py
+        
+    - name: Collect questions (fixed)
+      working-directory: scripts/uv-data-collection
+      run: |
+        uv run python collect_questions_fixed.py
+        
+    - name: Reorganize data files
+      working-directory: scripts/uv-data-collection
+      run: |
+        uv run python file_naming_manager.py
+        
+    - name: Create data backup
+      run: |
+        mkdir -p data/backup/$(date +%Y%m%d)
+        cp -r scripts/raw_data/* data/backup/$(date +%Y%m%d)/ || true
+        
+    - name: Commit and push changes
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add data/ frontend/public/data/
+        git diff --staged --quiet || git commit -m "データ収集: $(date '+%Y-%m-%d %H:%M:%S')"
+        git push

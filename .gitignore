@@ -1,0 +1,151 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environment
+venv/
+env/
+ENV/
+.venv/
+scripts/uv-data-collection/.venv/
+
+# UV (Python package manager)
+.uv/
+uv.lock
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Next.js
+.next/
+out/
+frontend/.next/
+frontend/out/
+frontend/build/
+
+# Next.js cache and build files
+frontend/.next/cache/
+frontend/.next/server/
+frontend/.next/static/
+
+# Environment Variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+frontend/.env
+frontend/.env.local
+frontend/.env.development.local
+frontend/.env.test.local
+frontend/.env.production.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs
+*.log
+logs/
+scripts/uv-data-collection/logs/
+scripts/uv-data-collection/*.log
+frontend/logs/
+frontend/*.log
+
+# TypeScript
+*.tsbuildinfo
+frontend/*.tsbuildinfo
+
+# ESLint
+.eslintcache
+frontend/.eslintcache
+
+# Testing
+coverage/
+.nyc_output/
+frontend/coverage/
+frontend/.nyc_output/
+
+# Turbo
+.turbo/
+frontend/.turbo/
+
+# Docker
+.docker/
+scripts/uv-data-collection/.docker/
+
+# データファイル（大きすぎる場合はGit LFSを使用）
+# data/speech/
+# ↑コメントアウト：議事録データはリポジトリで管理
+
+# バックアップファイル（不要）
+*.backup
+*.backup.*
+**/*.backup.json
+frontend/public/data/**/*.backup*
+
+# Temporary files
+*.tmp
+*.temp
+scripts/uv-data-collection/*.tmp
+scripts/uv-data-collection/*.temp
+
+# Runtime
+*.pid
+*.lock
+
+# スクリプト関連の一時ファイル
+scripts/uv-data-collection/data_collection_*.log
+scripts/uv-data-collection/test_*.json
+scripts/uv-data-collection/debug_*.json
+
+# フロントエンド関連
+frontend/node_modules/
+frontend/package-lock.json.bak
+frontend/.swc/
+frontend/.vercel/
+
+# Webpack
+frontend/webpack-stats.json
+
+# Bundle analyzer
+frontend/.next/analyze/
+
+# Local development files
+.local/
+scripts/uv-data-collection/.local/

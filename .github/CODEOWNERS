@@ -1,0 +1,30 @@
+# CODEOWNERS file for new-jp-search
+# This file defines who owns what parts of the codebase
+# Users defined here will be automatically requested for review when PRs touch these files
+
+# Global ownership - repository owner has final approval on all changes
+* @hironeko
+
+# Critical system files require owner approval
+/.github/ @hironeko
+/CLAUDE.md @hironeko
+/README.md @hironeko
+
+# Data collection scripts - core functionality
+/scripts/ @hironeko
+
+# Frontend components and API
+/frontend/app/ @hironeko
+/frontend/components/ @hironeko
+
+# Configuration files
+package.json @hironeko
+pyproject.toml @hironeko
+next.config.js @hironeko
+tsconfig.json @hironeko
+
+# Data files - require careful review
+/frontend/public/data/ @hironeko
+
+# GitHub Actions workflows
+/.github/workflows/ @hironeko

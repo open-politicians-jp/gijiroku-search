@@ -1,0 +1,4355 @@
+{
+  "metadata": {
+    "data_type": "bills",
+    "total_count": 164,
+    "generated_at": "2025-06-17T08:56:37.043843",
+    "source": "衆議院議案データベース",
+    "collection_method": "url_fixing",
+    "improvements": [
+      "正しい議案詳細URLパターンの適用",
+      "審議経過URLの追加",
+      "衆議院公式サイト構造に準拠",
+      "404エラーの解消"
+    ]
+  },
+  "data": [
+    {
+      "bill_number": "ＮＨＫ決算",
+      "title": "日本放送協会令和二年度財産目録、貸借対照表、損益計算書、資本等変動計算書及びキャッシュ・フロー計算書",
+      "submitter": "議員",
+      "status": "衆議院で審議中",
+      "status_normalized": "under_review",
+      "session_number": 217,
+      "detail_url": "",
+      "summary": "日本放送協会令和二年度財産目録、貸借対照表、損益計算書、資本等変動計算書及びキャッシュ・フロー計算書の詳細情報です。",
+      "full_text": "",
+      "committee": "総務委員会",
+      "submission_date": "2025-01-24",
+      "related_urls": [],
+      "category": "その他",
+      "collected_at": "2025-06-11T20:04:11.570552",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "ＮＨＫ決算",
+      "title": "日本放送協会令和三年度財産目録、貸借対照表、損益計算書、資本等変動計算書及びキャッシュ・フロー計算書",
+      "submitter": "議員",
+      "status": "衆議院で審議中",
+      "status_normalized": "under_review",
+      "session_number": 217,
+      "detail_url": "",
+      "summary": "日本放送協会令和三年度財産目録、貸借対照表、損益計算書、資本等変動計算書及びキャッシュ・フロー計算書の詳細情報です。",
+      "full_text": "",
+      "committee": "総務委員会",
+      "submission_date": "2025-01-24",
+      "related_urls": [],
+      "category": "その他",
+      "collected_at": "2025-06-11T20:04:11.570574",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "ＮＨＫ決算",
+      "title": "日本放送協会令和四年度財産目録、貸借対照表、損益計算書、資本等変動計算書及びキャッシュ・フロー計算書",
+      "submitter": "議員",
+      "status": "衆議院で審議中",
+      "status_normalized": "under_review",
+      "session_number": 217,
+      "detail_url": "",
+      "summary": "日本放送協会令和四年度財産目録、貸借対照表、損益計算書、資本等変動計算書及びキャッシュ・フロー計算書の詳細情報です。",
+      "full_text": "",
+      "committee": "総務委員会",
+      "submission_date": "2025-01-24",
+      "related_urls": [],
+      "category": "その他",
+      "collected_at": "2025-06-11T20:04:11.570596",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "ＮＨＫ決算",
+      "title": "日本放送協会令和五年度財産目録、貸借対照表、損益計算書、資本等変動計算書及びキャッシュ・フロー計算書",
+      "submitter": "議員",
+      "status": "衆議院で審議中",
+      "status_normalized": "under_review",
+      "session_number": 217,
+      "detail_url": "",
+      "summary": "日本放送協会令和五年度財産目録、貸借対照表、損益計算書、資本等変動計算書及びキャッシュ・フロー計算書の詳細情報です。",
+      "full_text": "",
+      "committee": "総務委員会",
+      "submission_date": "2025-01-24",
+      "related_urls": [],
+      "category": "その他",
+      "collected_at": "2025-06-11T20:04:11.570618",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "医療保険の被保険者証等の交付等の特例に関する法律案",
+      "submitter": "議員",
+      "status": "衆議院で審議中",
+      "status_normalized": "under_review",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "医療保険の被保険者証等の交付等の特例に関する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "厚生労働委員会",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "社会保障・労働",
+      "collected_at": "2025-06-11T20:04:11.566768",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "訪問介護事業者に対する緊急の支援に関する法律案",
+      "submitter": "議員",
+      "status": "衆議院で審議中",
+      "status_normalized": "under_review",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "訪問介護事業者に対する緊急の支援に関する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "未分類",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "社会保障・労働",
+      "collected_at": "2025-06-11T20:04:11.566793",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "介護・障害福祉従事者の人材確保に関する特別措置法案",
+      "submitter": "議員",
+      "status": "衆議院で審議中",
+      "status_normalized": "under_review",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "介護・障害福祉従事者の人材確保に関する特別措置法案の詳細情報です。",
+      "full_text": "",
+      "committee": "厚生労働委員会",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "社会保障・労働",
+      "collected_at": "2025-06-11T20:04:11.566822",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "政治資金規正法の一部を改正する法律案",
+      "submitter": "議員",
+      "status": "衆議院で審議中",
+      "status_normalized": "under_review",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "政治資金規正法の一部を改正する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "未分類",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "司法・行政",
+      "collected_at": "2025-06-11T20:04:11.566849",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "高等学校等就学支援金の支給に関する法律の一部を改正する法律案",
+      "submitter": "議員",
+      "status": "衆議院で審議中",
+      "status_normalized": "under_review",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "高等学校等就学支援金の支給に関する法律の一部を改正する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "未分類",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "教育・文化",
+      "collected_at": "2025-06-11T20:04:11.566901",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "義務教育諸学校等の施設費の国庫負担等に関する法律の一部を改正する法律案",
+      "submitter": "議員",
+      "status": "衆議院で審議中",
+      "status_normalized": "under_review",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "義務教育諸学校等の施設費の国庫負担等に関する法律の一部を改正する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "文部科学委員会",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "教育・文化",
+      "collected_at": "2025-06-11T20:04:11.566926",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "健康保険法等の一部を改正する法律案",
+      "submitter": "議員",
+      "status": "衆議院で審議中",
+      "status_normalized": "under_review",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "健康保険法等の一部を改正する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "未分類",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "その他",
+      "collected_at": "2025-06-11T20:04:11.566951",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "公職選挙法の一部を改正する法律案",
+      "submitter": "議員",
+      "status": "成立",
+      "status_normalized": "enacted",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "公職選挙法の一部を改正する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "総務委員会",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "司法・行政",
+      "collected_at": "2025-06-11T20:04:11.566976",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "中小企業正規労働者雇入臨時助成金の支給に関する法律案",
+      "submitter": "議員",
+      "status": "衆議院で審議中",
+      "status_normalized": "under_review",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "中小企業正規労働者雇入臨時助成金の支給に関する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "厚生労働委員会",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "社会保障・労働",
+      "collected_at": "2025-06-11T20:04:11.567027",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "軽油引取税の税率の特例の廃止に関する法律案",
+      "submitter": "議員",
+      "status": "衆議院で審議中",
+      "status_normalized": "under_review",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "軽油引取税の税率の特例の廃止に関する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "財務金融委員会",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "税制・財政",
+      "collected_at": "2025-06-11T20:04:11.567053",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "揮発油税及び地方揮発油税の税率の特例の廃止に関する法律案",
+      "submitter": "議員",
+      "status": "衆議院で審議中",
+      "status_normalized": "under_review",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "揮発油税及び地方揮発油税の税率の特例の廃止に関する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "総務委員会",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "税制・財政",
+      "collected_at": "2025-06-11T20:04:11.567078",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "地震防災対策強化地域における地震対策緊急整備事業に係る国の財政上の特別措置に関する法律の一部を改正する法律案",
+      "submitter": "議員",
+      "status": "成立",
+      "status_normalized": "enacted",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "地震防災対策強化地域における地震対策緊急整備事業に係る国の財政上の特別措置に関する法律の一部を改正する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "財務金融委員会",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "税制・財政",
+      "collected_at": "2025-06-11T20:04:11.567129",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "半島振興法の一部を改正する法律案",
+      "submitter": "議員",
+      "status": "成立",
+      "status_normalized": "enacted",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "半島振興法の一部を改正する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "未分類",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "その他",
+      "collected_at": "2025-06-11T20:04:11.567155",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "地域人口の急減に対処するための特定地域づくり事業の推進に関する法律の一部を改正する法律案",
+      "submitter": "議員",
+      "status": "成立",
+      "status_normalized": "enacted",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "地域人口の急減に対処するための特定地域づくり事業の推進に関する法律の一部を改正する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "未分類",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "その他",
+      "collected_at": "2025-06-11T20:04:11.567180",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "議院に出頭する証人等の旅費及び日当に関する法律の一部を改正する法律案",
+      "submitter": "議員",
+      "status": "成立",
+      "status_normalized": "enacted",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "議院に出頭する証人等の旅費及び日当に関する法律の一部を改正する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "未分類",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "その他",
+      "collected_at": "2025-06-11T20:04:11.567205",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "棚田地域振興法の一部を改正する法律案",
+      "submitter": "議員",
+      "status": "成立",
+      "status_normalized": "enacted",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "棚田地域振興法の一部を改正する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "未分類",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "その他",
+      "collected_at": "2025-06-11T20:04:11.567230",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "山村振興法の一部を改正する法律案",
+      "submitter": "議員",
+      "status": "成立",
+      "status_normalized": "enacted",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "山村振興法の一部を改正する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "未分類",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "その他",
+      "collected_at": "2025-06-11T20:04:11.567256",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "政治資金規正法及び租税特別措置法の一部を改正する法律案",
+      "submitter": "議員",
+      "status": "衆議院で審議中",
+      "status_normalized": "under_review",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "政治資金規正法及び租税特別措置法の一部を改正する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "財務金融委員会",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "税制・財政",
+      "collected_at": "2025-06-11T20:04:11.567281",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "子ども・子育て支援法等の一部を改正する法律案",
+      "submitter": "議員",
+      "status": "衆議院で審議中",
+      "status_normalized": "under_review",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "子ども・子育て支援法等の一部を改正する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "未分類",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "その他",
+      "collected_at": "2025-06-11T20:04:11.567306",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "若者の就労所得に係る所得税の負担を軽減するための所得控除の拡充に関し講ずべき措置に関する法律案",
+      "submitter": "議員",
+      "status": "衆議院で審議中",
+      "status_normalized": "under_review",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "若者の就労所得に係る所得税の負担を軽減するための所得控除の拡充に関し講ずべき措置に関する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "財務金融委員会",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "税制・財政",
+      "collected_at": "2025-06-11T20:04:11.567331",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "ライドシェア事業に係る制度の導入に関する法律案",
+      "submitter": "議員",
+      "status": "衆議院で審議中",
+      "status_normalized": "under_review",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "ライドシェア事業に係る制度の導入に関する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "未分類",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "その他",
+      "collected_at": "2025-06-11T20:04:11.567356",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "外国為替資金特別会計の在り方の見直しに関する法律案",
+      "submitter": "議員",
+      "status": "衆議院で審議中",
+      "status_normalized": "under_review",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "外国為替資金特別会計の在り方の見直しに関する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "未分類",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "税制・財政",
+      "collected_at": "2025-06-11T20:04:11.567381",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "租税特別措置法及び東日本大震災の被災者等に係る国税関係法律の臨時特例に関する法律の一部を改正する法律案",
+      "submitter": "議員",
+      "status": "衆議院で審議中",
+      "status_normalized": "under_review",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "租税特別措置法及び東日本大震災の被災者等に係る国税関係法律の臨時特例に関する法律の一部を改正する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "財務金融委員会",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "税制・財政",
+      "collected_at": "2025-06-11T20:04:11.567406",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "地方税法の一部を改正する法律案",
+      "submitter": "議員",
+      "status": "衆議院で審議中",
+      "status_normalized": "under_review",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "地方税法の一部を改正する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "総務委員会",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "税制・財政",
+      "collected_at": "2025-06-11T20:04:11.567432",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "国会法及び議院における証人の宣誓及び証言等に関する法律の一部を改正する法律案",
+      "submitter": "議員",
+      "status": "成立",
+      "status_normalized": "enacted",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "国会法及び議院における証人の宣誓及び証言等に関する法律の一部を改正する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "未分類",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "その他",
+      "collected_at": "2025-06-11T20:04:11.567457",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "民法の一部を改正する法律案",
+      "submitter": "議員",
+      "status": "衆議院で審議中",
+      "status_normalized": "under_review",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "民法の一部を改正する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "未分類",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "その他",
+      "collected_at": "2025-06-11T20:04:11.567483",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "婚姻前の氏の通称使用に関する法律案",
+      "submitter": "議員",
+      "status": "衆議院で審議中",
+      "status_normalized": "under_review",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "婚姻前の氏の通称使用に関する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "未分類",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "その他",
+      "collected_at": "2025-06-11T20:04:11.567508",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "自動車盗難対策等の推進に関する法律案",
+      "submitter": "議員",
+      "status": "衆議院で審議中",
+      "status_normalized": "under_review",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "自動車盗難対策等の推進に関する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "未分類",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "その他",
+      "collected_at": "2025-06-11T20:04:11.567533",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "組織的な犯罪の処罰及び犯罪収益の規制等に関する法律及び刑事訴訟法の一部を改正する法律案",
+      "submitter": "議員",
+      "status": "衆議院で審議中",
+      "status_normalized": "under_review",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "組織的な犯罪の処罰及び犯罪収益の規制等に関する法律及び刑事訴訟法の一部を改正する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "未分類",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "その他",
+      "collected_at": "2025-06-11T20:04:11.567561",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "貨物自動車運送事業法の一部を改正する法律案",
+      "submitter": "議員",
+      "status": "成立",
+      "status_normalized": "enacted",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "貨物自動車運送事業法の一部を改正する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "未分類",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "その他",
+      "collected_at": "2025-06-11T20:04:11.567586",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "貨物自動車運送事業の適正化のための体制の整備等の推進に関する法律案",
+      "submitter": "議員",
+      "status": "成立",
+      "status_normalized": "enacted",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "貨物自動車運送事業の適正化のための体制の整備等の推進に関する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "未分類",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "その他",
+      "collected_at": "2025-06-11T20:04:11.567611",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "行政書士法の一部を改正する法律案",
+      "submitter": "議員",
+      "status": "成立",
+      "status_normalized": "enacted",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "行政書士法の一部を改正する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "内閣委員会",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "司法・行政",
+      "collected_at": "2025-06-11T20:04:11.567663",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "ギャンブル等依存症対策基本法の一部を改正する法律案",
+      "submitter": "議員",
+      "status": "参議院で審議中",
+      "status_normalized": "under_review",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "ギャンブル等依存症対策基本法の一部を改正する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "未分類",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "その他",
+      "collected_at": "2025-06-11T20:04:11.567686",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "国有林野事業に従事する職員の労働関係を円滑に調整するための行政執行法人の労働関係に関する法律の一部を改正する法律案",
+      "submitter": "議員",
+      "status": "衆議院で審議中",
+      "status_normalized": "under_review",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "国有林野事業に従事する職員の労働関係を円滑に調整するための行政執行法人の労働関係に関する法律の一部を改正する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "内閣委員会",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "社会保障・労働",
+      "collected_at": "2025-06-11T20:04:11.567710",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "国有林野事業に従事する職員の給与等に関する特例法案",
+      "submitter": "議員",
+      "status": "衆議院で審議中",
+      "status_normalized": "under_review",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "国有林野事業に従事する職員の給与等に関する特例法案の詳細情報です。",
+      "full_text": "",
+      "committee": "未分類",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "その他",
+      "collected_at": "2025-06-11T20:04:11.567734",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "農業用植物の優良な品種を確保するための公的新品種育成の促進等に関する法律案",
+      "submitter": "議員",
+      "status": "衆議院で審議中",
+      "status_normalized": "under_review",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "農業用植物の優良な品種を確保するための公的新品種育成の促進等に関する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "農林水産委員会",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "農林水産",
+      "collected_at": "2025-06-11T20:04:11.567758",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "地域在来品種等の種苗の保存及び利用等の促進に関する法律案",
+      "submitter": "議員",
+      "status": "衆議院で審議中",
+      "status_normalized": "under_review",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "地域在来品種等の種苗の保存及び利用等の促進に関する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "未分類",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "その他",
+      "collected_at": "2025-06-11T20:04:11.567782",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "食料供給困難事態対策法の一部を改正する法律案",
+      "submitter": "議員",
+      "status": "衆議院で審議中",
+      "status_normalized": "under_review",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "食料供給困難事態対策法の一部を改正する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "農林水産委員会",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "農林水産",
+      "collected_at": "2025-06-11T20:04:11.567806",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "国家公務員法等の一部を改正する法律案",
+      "submitter": "議員",
+      "status": "衆議院で審議中",
+      "status_normalized": "under_review",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "国家公務員法等の一部を改正する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "内閣委員会",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "司法・行政",
+      "collected_at": "2025-06-11T20:04:11.567830",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "国家公務員の労働関係に関する法律案",
+      "submitter": "議員",
+      "status": "衆議院で審議中",
+      "status_normalized": "under_review",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "国家公務員の労働関係に関する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "内閣委員会",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "社会保障・労働",
+      "collected_at": "2025-06-11T20:04:11.567854",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "45",
+      "submitter": "議員",
+      "status": "衆議院で審議中",
+      "status_normalized": "under_review",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "45の詳細情報です。",
+      "full_text": "",
+      "committee": "未分類",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "その他",
+      "collected_at": "2025-06-11T20:04:11.567879",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "地方公務員法等の一部を改正する法律案",
+      "submitter": "議員",
+      "status": "衆議院で審議中",
+      "status_normalized": "under_review",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "地方公務員法等の一部を改正する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "内閣委員会",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "司法・行政",
+      "collected_at": "2025-06-11T20:04:11.567904",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "地方公務員の労働関係に関する法律案",
+      "submitter": "議員",
+      "status": "衆議院で審議中",
+      "status_normalized": "under_review",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "地方公務員の労働関係に関する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "内閣委員会",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "社会保障・労働",
+      "collected_at": "2025-06-11T20:04:11.567928",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "スポーツ基本法及びスポーツにおけるドーピングの防止活動の推進に関する法律の一部を改正する法律案",
+      "submitter": "議員",
+      "status": "参議院で審議中",
+      "status_normalized": "under_review",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "スポーツ基本法及びスポーツにおけるドーピングの防止活動の推進に関する法律の一部を改正する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "未分類",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "その他",
+      "collected_at": "2025-06-11T20:04:11.567952",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "社会保険労務士法の一部を改正する法律案",
+      "submitter": "議員",
+      "status": "参議院で審議中",
+      "status_normalized": "under_review",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "社会保険労務士法の一部を改正する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "未分類",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "その他",
+      "collected_at": "2025-06-11T20:04:11.567976",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "公職選挙法及び地方自治法の一部を改正する法律案",
+      "submitter": "議員",
+      "status": "衆議院で審議中",
+      "status_normalized": "under_review",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "公職選挙法及び地方自治法の一部を改正する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "総務委員会",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "司法・行政",
+      "collected_at": "2025-06-11T20:04:11.567999",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "衆議院の解散に係る手続等に関する法律案",
+      "submitter": "議員",
+      "status": "衆議院で審議中",
+      "status_normalized": "under_review",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "衆議院の解散に係る手続等に関する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "未分類",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "その他",
+      "collected_at": "2025-06-11T20:04:11.568023",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "特定生殖補助医療に関する法律案",
+      "submitter": "議員",
+      "status": "参議院で審議中",
+      "status_normalized": "under_review",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "特定生殖補助医療に関する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "厚生労働委員会",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "社会保障・労働",
+      "collected_at": "2025-06-11T20:04:11.568073",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "政党助成法を廃止する法律案",
+      "submitter": "議員",
+      "status": "参議院で審議中",
+      "status_normalized": "under_review",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "政党助成法を廃止する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "未分類",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "その他",
+      "collected_at": "2025-06-11T20:04:11.568121",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "学校教育法の一部を改正する法律案",
+      "submitter": "議員",
+      "status": "参議院で審議中",
+      "status_normalized": "under_review",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "学校教育法の一部を改正する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "文部科学委員会",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "教育・文化",
+      "collected_at": "2025-06-11T20:04:11.568145",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "自殺対策基本法の一部を改正する法律案",
+      "submitter": "議員",
+      "status": "成立",
+      "status_normalized": "enacted",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "自殺対策基本法の一部を改正する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "未分類",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "その他",
+      "collected_at": "2025-06-11T20:04:11.568169",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "大深度地下の公共的使用に関する特別措置法の廃止に関する措置等に関する法律案",
+      "submitter": "議員",
+      "status": "参議院で審議中",
+      "status_normalized": "under_review",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "大深度地下の公共的使用に関する特別措置法の廃止に関する措置等に関する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "未分類",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "その他",
+      "collected_at": "2025-06-11T20:04:11.568193",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "労働安全衛生法及び特定受託事業者に係る取引の適正化等に関する法律の一部を改正する法律案",
+      "submitter": "議員",
+      "status": "参議院で審議中",
+      "status_normalized": "under_review",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "労働安全衛生法及び特定受託事業者に係る取引の適正化等に関する法律の一部を改正する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "厚生労働委員会",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "社会保障・労働",
+      "collected_at": "2025-06-11T20:04:11.568217",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "児童の朝の居場所の確保を図るための措置等に関する法律案",
+      "submitter": "議員",
+      "status": "参議院で審議中",
+      "status_normalized": "under_review",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "児童の朝の居場所の確保を図るための措置等に関する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "未分類",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "その他",
+      "collected_at": "2025-06-11T20:04:11.568240",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "所得税法等の一部を改正する法律案",
+      "submitter": "議員",
+      "status": "成立",
+      "status_normalized": "enacted",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "所得税法等の一部を改正する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "財務金融委員会",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "税制・財政",
+      "collected_at": "2025-06-11T20:04:11.568393",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "地方税法及び地方税法等の一部を改正する法律の一部を改正する法律案",
+      "submitter": "議員",
+      "status": "成立",
+      "status_normalized": "enacted",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "地方税法及び地方税法等の一部を改正する法律の一部を改正する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "総務委員会",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "税制・財政",
+      "collected_at": "2025-06-11T20:04:11.568418",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "地方交付税法等の一部を改正する法律案",
+      "submitter": "議員",
+      "status": "成立",
+      "status_normalized": "enacted",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "地方交付税法等の一部を改正する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "総務委員会",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "税制・財政",
+      "collected_at": "2025-06-11T20:04:11.568442",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "重要電子計算機に対する不正な行為による被害の防止に関する法律案",
+      "submitter": "議員",
+      "status": "成立",
+      "status_normalized": "enacted",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "重要電子計算機に対する不正な行為による被害の防止に関する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "未分類",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "その他",
+      "collected_at": "2025-06-11T20:04:11.568467",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "関税定率法等の一部を改正する法律案",
+      "submitter": "議員",
+      "status": "成立",
+      "status_normalized": "enacted",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "関税定率法等の一部を改正する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "財務金融委員会",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "税制・財政",
+      "collected_at": "2025-06-11T20:04:11.568517",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "国際開発協会への加盟に伴う措置に関する法律及び米州投資公社への加盟に伴う措置に関する法律の一部を改正する法律案",
+      "submitter": "議員",
+      "status": "成立",
+      "status_normalized": "enacted",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "国際開発協会への加盟に伴う措置に関する法律及び米州投資公社への加盟に伴う措置に関する法律の一部を改正する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "外務委員会",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "経済・産業",
+      "collected_at": "2025-06-11T20:04:11.568541",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "大学等における修学の支援に関する法律の一部を改正する法律案",
+      "submitter": "議員",
+      "status": "成立",
+      "status_normalized": "enacted",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "大学等における修学の支援に関する法律の一部を改正する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "未分類",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "教育・文化",
+      "collected_at": "2025-06-11T20:04:11.568565",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "公立の義務教育諸学校等の教育職員の給与等に関する特別措置法等の一部を改正する法律案",
+      "submitter": "議員",
+      "status": "参議院で審議中",
+      "status_normalized": "under_review",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "公立の義務教育諸学校等の教育職員の給与等に関する特別措置法等の一部を改正する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "文部科学委員会",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "教育・文化",
+      "collected_at": "2025-06-11T20:04:11.568588",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "戦没者等の遺族に対する特別弔慰金支給法の一部を改正する法律案",
+      "submitter": "議員",
+      "status": "成立",
+      "status_normalized": "enacted",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "戦没者等の遺族に対する特別弔慰金支給法の一部を改正する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "未分類",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "その他",
+      "collected_at": "2025-06-11T20:04:11.568612",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "情報処理の促進に関する法律及び特別会計に関する法律の一部を改正する法律案",
+      "submitter": "議員",
+      "status": "成立",
+      "status_normalized": "enacted",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "情報処理の促進に関する法律及び特別会計に関する法律の一部を改正する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "未分類",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "税制・財政",
+      "collected_at": "2025-06-11T20:04:11.568636",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "道路法等の一部を改正する法律案",
+      "submitter": "議員",
+      "status": "成立",
+      "status_normalized": "enacted",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "道路法等の一部を改正する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "未分類",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "国土・交通",
+      "collected_at": "2025-06-11T20:04:11.568659",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "港湾法等の一部を改正する法律案",
+      "submitter": "議員",
+      "status": "成立",
+      "status_normalized": "enacted",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "港湾法等の一部を改正する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "未分類",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "国土・交通",
+      "collected_at": "2025-06-11T20:04:11.568683",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "裁判所職員定員法の一部を改正する法律案",
+      "submitter": "議員",
+      "status": "成立",
+      "status_normalized": "enacted",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "裁判所職員定員法の一部を改正する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "未分類",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "司法・行政",
+      "collected_at": "2025-06-11T20:04:11.568706",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "医薬品、医療機器等の品質、有効性及び安全性の確保等に関する法律等の一部を改正する法律案",
+      "submitter": "議員",
+      "status": "成立",
+      "status_normalized": "enacted",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "医薬品、医療機器等の品質、有効性及び安全性の確保等に関する法律等の一部を改正する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "厚生労働委員会",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "社会保障・労働",
+      "collected_at": "2025-06-11T20:04:11.568730",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "防衛省設置法等の一部を改正する法律案",
+      "submitter": "議員",
+      "status": "成立",
+      "status_normalized": "enacted",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "防衛省設置法等の一部を改正する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "安全保障委員会",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "外交・安全保障",
+      "collected_at": "2025-06-11T20:04:11.568754",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "災害対策基本法等の一部を改正する法律案",
+      "submitter": "議員",
+      "status": "成立",
+      "status_normalized": "enacted",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "災害対策基本法等の一部を改正する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "未分類",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "その他",
+      "collected_at": "2025-06-11T20:04:11.568778",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "株式会社地域経済活性化支援機構法の一部を改正する法律案",
+      "submitter": "議員",
+      "status": "成立",
+      "status_normalized": "enacted",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "株式会社地域経済活性化支援機構法の一部を改正する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "経済産業委員会",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "経済・産業",
+      "collected_at": "2025-06-11T20:04:11.568801",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "電波法及び放送法の一部を改正する法律案",
+      "submitter": "議員",
+      "status": "成立",
+      "status_normalized": "enacted",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "電波法及び放送法の一部を改正する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "総務委員会",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "その他",
+      "collected_at": "2025-06-11T20:04:11.568825",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "国会議員の選挙等の執行経費の基準に関する法律の一部を改正する法律案",
+      "submitter": "議員",
+      "status": "成立",
+      "status_normalized": "enacted",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "国会議員の選挙等の執行経費の基準に関する法律の一部を改正する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "総務委員会",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "司法・行政",
+      "collected_at": "2025-06-11T20:04:11.568848",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "医療法等の一部を改正する法律案",
+      "submitter": "議員",
+      "status": "衆議院で審議中",
+      "status_normalized": "under_review",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "医療法等の一部を改正する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "厚生労働委員会",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "社会保障・労働",
+      "collected_at": "2025-06-11T20:04:11.568871",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "土地改良法等の一部を改正する法律案",
+      "submitter": "議員",
+      "status": "成立",
+      "status_normalized": "enacted",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "土地改良法等の一部を改正する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "未分類",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "その他",
+      "collected_at": "2025-06-11T20:04:11.568895",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "独立行政法人国際協力機構法の一部を改正する法律案",
+      "submitter": "議員",
+      "status": "成立",
+      "status_normalized": "enacted",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "独立行政法人国際協力機構法の一部を改正する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "内閣委員会",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "司法・行政",
+      "collected_at": "2025-06-11T20:04:11.568919",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "株式会社日本政策投資銀行法の一部を改正する法律案",
+      "submitter": "議員",
+      "status": "成立",
+      "status_normalized": "enacted",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "株式会社日本政策投資銀行法の一部を改正する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "財務金融委員会",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "経済・産業",
+      "collected_at": "2025-06-11T20:04:11.568943",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "特別会計に関する法律の一部を改正する法律案",
+      "submitter": "議員",
+      "status": "成立",
+      "status_normalized": "enacted",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "特別会計に関する法律の一部を改正する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "未分類",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "税制・財政",
+      "collected_at": "2025-06-11T20:04:11.568967",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "漁業災害補償法の一部を改正する法律案",
+      "submitter": "議員",
+      "status": "成立",
+      "status_normalized": "enacted",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "漁業災害補償法の一部を改正する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "未分類",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "農林水産",
+      "collected_at": "2025-06-11T20:04:11.568991",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "鳥獣の保護及び管理並びに狩猟の適正化に関する法律の一部を改正する法律案",
+      "submitter": "議員",
+      "status": "成立",
+      "status_normalized": "enacted",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "鳥獣の保護及び管理並びに狩猟の適正化に関する法律の一部を改正する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "未分類",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "その他",
+      "collected_at": "2025-06-11T20:04:11.569015",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "脱炭素成長型経済構造への円滑な移行の推進に関する法律及び資源の有効な利用の促進に関する法律の一部を改正する法律案",
+      "submitter": "議員",
+      "status": "成立",
+      "status_normalized": "enacted",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "脱炭素成長型経済構造への円滑な移行の推進に関する法律及び資源の有効な利用の促進に関する法律の一部を改正する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "経済産業委員会",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "経済・産業",
+      "collected_at": "2025-06-11T20:04:11.569038",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "人工知能関連技術の研究開発及び活用の推進に関する法律案",
+      "submitter": "議員",
+      "status": "成立",
+      "status_normalized": "enacted",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "人工知能関連技術の研究開発及び活用の推進に関する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "文部科学委員会",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "教育・文化",
+      "collected_at": "2025-06-11T20:04:11.569062",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "情報通信技術の進展等に対応するための刑事訴訟法等の一部を改正する法律案",
+      "submitter": "議員",
+      "status": "成立",
+      "status_normalized": "enacted",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "情報通信技術の進展等に対応するための刑事訴訟法等の一部を改正する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "総務委員会",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "IT・デジタル",
+      "collected_at": "2025-06-11T20:04:11.569086",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "森林経営管理法及び森林法の一部を改正する法律案",
+      "submitter": "議員",
+      "status": "成立",
+      "status_normalized": "enacted",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "森林経営管理法及び森林法の一部を改正する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "未分類",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "その他",
+      "collected_at": "2025-06-11T20:04:11.569110",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "公益通報者保護法の一部を改正する法律案",
+      "submitter": "議員",
+      "status": "成立",
+      "status_normalized": "enacted",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "公益通報者保護法の一部を改正する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "未分類",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "その他",
+      "collected_at": "2025-06-11T20:04:11.569134",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "円滑な事業再生を図るための事業者の金融機関等に対する債務の調整の手続等に関する法律案",
+      "submitter": "議員",
+      "status": "成立",
+      "status_normalized": "enacted",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "円滑な事業再生を図るための事業者の金融機関等に対する債務の調整の手続等に関する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "財務金融委員会",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "経済・産業",
+      "collected_at": "2025-06-11T20:04:11.569159",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "老朽化マンション等の管理及び再生の円滑化等を図るための建物の区分所有等に関する法律等の一部を改正する法律案",
+      "submitter": "議員",
+      "status": "成立",
+      "status_normalized": "enacted",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "老朽化マンション等の管理及び再生の円滑化等を図るための建物の区分所有等に関する法律等の一部を改正する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "未分類",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "その他",
+      "collected_at": "2025-06-11T20:04:11.569183",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "地域の自主性及び自立性を高めるための改革の推進を図るための関係法律の整備に関する法律案",
+      "submitter": "議員",
+      "status": "成立",
+      "status_normalized": "enacted",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "地域の自主性及び自立性を高めるための改革の推進を図るための関係法律の整備に関する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "未分類",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "その他",
+      "collected_at": "2025-06-11T20:04:11.569207",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "36",
+      "submitter": "議員",
+      "status": "参議院で審議中",
+      "status_normalized": "under_review",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "36の詳細情報です。",
+      "full_text": "",
+      "committee": "未分類",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "その他",
+      "collected_at": "2025-06-11T20:04:11.569231",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "保険業法の一部を改正する法律案",
+      "submitter": "議員",
+      "status": "成立",
+      "status_normalized": "enacted",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "保険業法の一部を改正する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "未分類",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "その他",
+      "collected_at": "2025-06-11T20:04:11.569255",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "信託業法の一部を改正する法律案",
+      "submitter": "議員",
+      "status": "参議院で審議中",
+      "status_normalized": "under_review",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "信託業法の一部を改正する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "未分類",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "その他",
+      "collected_at": "2025-06-11T20:04:11.569278",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "資金決済に関する法律の一部を改正する法律案",
+      "submitter": "議員",
+      "status": "成立",
+      "status_normalized": "enacted",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "資金決済に関する法律の一部を改正する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "未分類",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "その他",
+      "collected_at": "2025-06-11T20:04:11.569302",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "児童福祉法等の一部を改正する法律案",
+      "submitter": "議員",
+      "status": "成立",
+      "status_normalized": "enacted",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "児童福祉法等の一部を改正する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "厚生労働委員会",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "社会保障・労働",
+      "collected_at": "2025-06-11T20:04:11.569326",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "行政手続における特定の個人を識別するための番号の利用等に関する法律及び住民基本台帳法の一部を改正する法律案",
+      "submitter": "議員",
+      "status": "成立",
+      "status_normalized": "enacted",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "行政手続における特定の個人を識別するための番号の利用等に関する法律及び住民基本台帳法の一部を改正する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "内閣委員会",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "司法・行政",
+      "collected_at": "2025-06-11T20:04:11.569349",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "民事裁判情報の活用の促進に関する法律案",
+      "submitter": "議員",
+      "status": "成立",
+      "status_normalized": "enacted",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "民事裁判情報の活用の促進に関する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "未分類",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "司法・行政",
+      "collected_at": "2025-06-11T20:04:11.569373",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "譲渡担保契約及び所有権留保契約に関する法律案",
+      "submitter": "議員",
+      "status": "成立",
+      "status_normalized": "enacted",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "譲渡担保契約及び所有権留保契約に関する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "未分類",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "その他",
+      "collected_at": "2025-06-11T20:04:11.569397",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "食品等の流通の合理化及び取引の適正化に関する法律及び卸売市場法の一部を改正する法律案",
+      "submitter": "議員",
+      "status": "参議院で審議中",
+      "status_normalized": "under_review",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "食品等の流通の合理化及び取引の適正化に関する法律及び卸売市場法の一部を改正する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "未分類",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "その他",
+      "collected_at": "2025-06-11T20:04:11.569444",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "海洋再生可能エネルギー発電設備の整備に係る海域の利用の促進に関する法律の一部を改正する法律案",
+      "submitter": "議員",
+      "status": "成立",
+      "status_normalized": "enacted",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "海洋再生可能エネルギー発電設備の整備に係る海域の利用の促進に関する法律の一部を改正する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "経済産業委員会",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "環境・エネルギー",
+      "collected_at": "2025-06-11T20:04:11.569468",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "風俗営業等の規制及び業務の適正化等に関する法律の一部を改正する法律案",
+      "submitter": "議員",
+      "status": "成立",
+      "status_normalized": "enacted",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "風俗営業等の規制及び業務の適正化等に関する法律の一部を改正する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "未分類",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "その他",
+      "collected_at": "2025-06-11T20:04:11.569491",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "下請代金支払遅延等防止法及び下請中小企業振興法の一部を改正する法律案",
+      "submitter": "議員",
+      "status": "成立",
+      "status_normalized": "enacted",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "下請代金支払遅延等防止法及び下請中小企業振興法の一部を改正する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "経済産業委員会",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "経済・産業",
+      "collected_at": "2025-06-11T20:04:11.569515",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "盗難特定金属製物品の処分の防止等に関する法律案",
+      "submitter": "議員",
+      "status": "参議院で審議中",
+      "status_normalized": "under_review",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "盗難特定金属製物品の処分の防止等に関する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "未分類",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "その他",
+      "collected_at": "2025-06-11T20:04:11.569539",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "労働施策の総合的な推進並びに労働者の雇用の安定及び職業生活の充実等に関する法律等の一部を改正する法律案",
+      "submitter": "議員",
+      "status": "成立",
+      "status_normalized": "enacted",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "労働施策の総合的な推進並びに労働者の雇用の安定及び職業生活の充実等に関する法律等の一部を改正する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "厚生労働委員会",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "社会保障・労働",
+      "collected_at": "2025-06-11T20:04:11.569563",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "環境影響評価法の一部を改正する法律案",
+      "submitter": "議員",
+      "status": "参議院で審議中",
+      "status_normalized": "under_review",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "環境影響評価法の一部を改正する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "環境委員会",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "環境・エネルギー",
+      "collected_at": "2025-06-11T20:04:11.569587",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "独立行政法人男女共同参画機構法案",
+      "submitter": "議員",
+      "status": "衆議院で審議中",
+      "status_normalized": "under_review",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "独立行政法人男女共同参画機構法案の詳細情報です。",
+      "full_text": "",
+      "committee": "内閣委員会",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "司法・行政",
+      "collected_at": "2025-06-11T20:04:11.569611",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "独立行政法人男女共同参画機構法の施行に伴う関係法律の整備等に関する法律案",
+      "submitter": "議員",
+      "status": "衆議院で審議中",
+      "status_normalized": "under_review",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "独立行政法人男女共同参画機構法の施行に伴う関係法律の整備等に関する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "内閣委員会",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "司法・行政",
+      "collected_at": "2025-06-11T20:04:11.569635",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "電気通信事業法及び日本電信電話株式会社等に関する法律の一部を改正する法律案",
+      "submitter": "議員",
+      "status": "成立",
+      "status_normalized": "enacted",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "電気通信事業法及び日本電信電話株式会社等に関する法律の一部を改正する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "総務委員会",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "その他",
+      "collected_at": "2025-06-11T20:04:11.569658",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "航空法等の一部を改正する法律案",
+      "submitter": "議員",
+      "status": "成立",
+      "status_normalized": "enacted",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "航空法等の一部を改正する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "未分類",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "国土・交通",
+      "collected_at": "2025-06-11T20:04:11.569682",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "日本国の自衛隊と我が国以外の締約国の軍隊との間における相互のアクセス及び協力の円滑化に関する日本国と我が国以外の締約国との間の協定の実施に関する法律案",
+      "submitter": "議員",
+      "status": "成立",
+      "status_normalized": "enacted",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "日本国の自衛隊と我が国以外の締約国の軍隊との間における相互のアクセス及び協力の円滑化に関する日本国と我が国以外の締約国との間の協定の実施に関する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "安全保障委員会",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "外交・安全保障",
+      "collected_at": "2025-06-11T20:04:11.569705",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "労働安全衛生法及び作業環境測定法の一部を改正する法律案",
+      "submitter": "議員",
+      "status": "成立",
+      "status_normalized": "enacted",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "労働安全衛生法及び作業環境測定法の一部を改正する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "厚生労働委員会",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "社会保障・労働",
+      "collected_at": "2025-06-11T20:04:11.569729",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "船員法等の一部を改正する法律案",
+      "submitter": "議員",
+      "status": "成立",
+      "status_normalized": "enacted",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "船員法等の一部を改正する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "未分類",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "その他",
+      "collected_at": "2025-06-11T20:04:11.569752",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "社会経済の変化を踏まえた年金制度の機能強化のための国民年金法等の一部を改正する等の法律案",
+      "submitter": "議員",
+      "status": "参議院で審議中",
+      "status_normalized": "under_review",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "社会経済の変化を踏まえた年金制度の機能強化のための国民年金法等の一部を改正する等の法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "厚生労働委員会",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "社会保障・労働",
+      "collected_at": "2025-06-11T20:04:11.569776",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "令和七年度一般会計予算",
+      "submitter": "議員",
+      "status": "参議院回付案（同意）",
+      "status_normalized": "unknown",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "令和七年度一般会計予算の詳細情報です。",
+      "full_text": "",
+      "committee": "財務金融委員会",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "税制・財政",
+      "collected_at": "2025-06-11T20:04:11.569811",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "令和七年度特別会計予算",
+      "submitter": "議員",
+      "status": "成立",
+      "status_normalized": "enacted",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "令和七年度特別会計予算の詳細情報です。",
+      "full_text": "",
+      "committee": "財務金融委員会",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "税制・財政",
+      "collected_at": "2025-06-11T20:04:11.569833",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "令和七年度政府関係機関予算",
+      "submitter": "政府",
+      "status": "成立",
+      "status_normalized": "enacted",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "令和七年度政府関係機関予算の詳細情報です。",
+      "full_text": "",
+      "committee": "財務金融委員会",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "税制・財政",
+      "collected_at": "2025-06-11T20:04:11.569856",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "所得に対する租税に関する二重課税の除去並びに脱税及び租税回避の防止のための日本国とトルクメニスタンとの間の条約の締結について承認を求めるの件",
+      "submitter": "議員",
+      "status": "両院承認",
+      "status_normalized": "unknown",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "所得に対する租税に関する二重課税の除去並びに脱税及び租税回避の防止のための日本国とトルクメニスタンとの間の条約の締結について承認を求めるの件の詳細情報です。",
+      "full_text": "",
+      "committee": "外務委員会",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "税制・財政",
+      "collected_at": "2025-06-11T20:04:11.569906",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "経済上の連携に関する日本国とインドネシア共和国との間の協定を改正する議定書の締結について承認を求めるの件",
+      "submitter": "議員",
+      "status": "両院承認",
+      "status_normalized": "unknown",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "経済上の連携に関する日本国とインドネシア共和国との間の協定を改正する議定書の締結について承認を求めるの件の詳細情報です。",
+      "full_text": "",
+      "committee": "経済産業委員会",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "経済・産業",
+      "collected_at": "2025-06-11T20:04:11.569955",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "航空業務に関する日本国とチェコ共和国との間の協定の締結について承認を求めるの件",
+      "submitter": "議員",
+      "status": "両院承認",
+      "status_normalized": "unknown",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "航空業務に関する日本国とチェコ共和国との間の協定の締結について承認を求めるの件の詳細情報です。",
+      "full_text": "",
+      "committee": "未分類",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "外交・安全保障",
+      "collected_at": "2025-06-11T20:04:11.569977",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "航空業務に関する日本国とルクセンブルク大公国との間の協定の締結について承認を求めるの件",
+      "submitter": "議員",
+      "status": "両院承認",
+      "status_normalized": "unknown",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "航空業務に関する日本国とルクセンブルク大公国との間の協定の締結について承認を求めるの件の詳細情報です。",
+      "full_text": "",
+      "committee": "未分類",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "外交・安全保障",
+      "collected_at": "2025-06-11T20:04:11.570000",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "日本国の自衛隊とフィリピンの軍隊との間における相互のアクセス及び協力の円滑化に関する日本国とフィリピン共和国との間の協定の締結について承認を求めるの件",
+      "submitter": "議員",
+      "status": "両院承認",
+      "status_normalized": "unknown",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "日本国の自衛隊とフィリピンの軍隊との間における相互のアクセス及び協力の円滑化に関する日本国とフィリピン共和国との間の協定の締結について承認を求めるの件の詳細情報です。",
+      "full_text": "",
+      "committee": "安全保障委員会",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "外交・安全保障",
+      "collected_at": "2025-06-11T20:04:11.570022",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "日本国の自衛隊とイタリア共和国の軍隊との間における物品又は役務の相互の提供に関する日本国政府とイタリア共和国政府との間の協定の締結について承認を求めるの件",
+      "submitter": "政府",
+      "status": "両院承認",
+      "status_normalized": "unknown",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "日本国の自衛隊とイタリア共和国の軍隊との間における物品又は役務の相互の提供に関する日本国政府とイタリア共和国政府との間の協定の締結について承認を求めるの件の詳細情報です。",
+      "full_text": "",
+      "committee": "安全保障委員会",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "外交・安全保障",
+      "collected_at": "2025-06-11T20:04:11.570044",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "千九百九十四年四月十五日にマラケシュで作成された世界貿易機関を設立するマラケシュ協定のサービスの貿易に関する一般協定の日本国の特定の約束に係る表の改善に関する確認書の締結について承認を求めるの件",
+      "submitter": "議員",
+      "status": "両院承認",
+      "status_normalized": "unknown",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "千九百九十四年四月十五日にマラケシュで作成された世界貿易機関を設立するマラケシュ協定のサービスの貿易に関する一般協定の日本国の特定の約束に係る表の改善に関する確認書の締結について承認を求めるの件の詳細情報です。",
+      "full_text": "",
+      "committee": "経済産業委員会",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "経済・産業",
+      "collected_at": "2025-06-11T20:04:11.570065",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "東南アジア諸国連合貿易投資観光促進センターを設立する協定の第二次改正の受諾について承認を求めるの件",
+      "submitter": "議員",
+      "status": "両院承認",
+      "status_normalized": "unknown",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "東南アジア諸国連合貿易投資観光促進センターを設立する協定の第二次改正の受諾について承認を求めるの件の詳細情報です。",
+      "full_text": "",
+      "committee": "経済産業委員会",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "経済・産業",
+      "collected_at": "2025-06-11T20:04:11.570087",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "海洋法に関する国際連合条約に基づくいずれの国の管轄にも属さない区域における海洋の生物の多様性の保全及び持続可能な利用に関する協定の締結について承認を求めるの件",
+      "submitter": "議員",
+      "status": "両院承認",
+      "status_normalized": "unknown",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "海洋法に関する国際連合条約に基づくいずれの国の管轄にも属さない区域における海洋の生物の多様性の保全及び持続可能な利用に関する協定の締結について承認を求めるの件の詳細情報です。",
+      "full_text": "",
+      "committee": "外務委員会",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "外交・安全保障",
+      "collected_at": "2025-06-11T20:04:11.570109",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "職業上の安全及び健康並びに作業環境に関する条約（第百五十五号）の締結について承認を求めるの件",
+      "submitter": "議員",
+      "status": "両院承認",
+      "status_normalized": "unknown",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "職業上の安全及び健康並びに作業環境に関する条約（第百五十五号）の締結について承認を求めるの件の詳細情報です。",
+      "full_text": "",
+      "committee": "外務委員会",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "外交・安全保障",
+      "collected_at": "2025-06-11T20:04:11.570132",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "千九百九十五年の漁船員の訓練及び資格証明並びに当直の基準に関する国際条約の締結について承認を求めるの件",
+      "submitter": "議員",
+      "status": "両院承認",
+      "status_normalized": "unknown",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "千九百九十五年の漁船員の訓練及び資格証明並びに当直の基準に関する国際条約の締結について承認を求めるの件の詳細情報です。",
+      "full_text": "",
+      "committee": "外務委員会",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "外交・安全保障",
+      "collected_at": "2025-06-11T20:04:11.570154",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "特定船舶の入港の禁止に関する特別措置法第五条第一項の規定に基づき、特定船舶の入港禁止の実施につき承認を求めるの件",
+      "submitter": "議員",
+      "status": "両院承認",
+      "status_normalized": "unknown",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "特定船舶の入港の禁止に関する特別措置法第五条第一項の規定に基づき、特定船舶の入港禁止の実施につき承認を求めるの件の詳細情報です。",
+      "full_text": "",
+      "committee": "未分類",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "その他",
+      "collected_at": "2025-06-11T20:04:11.570186",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "外国為替及び外国貿易法第十条第二項の規定に基づき、北朝鮮を仕向地とする貨物の輸出及び北朝鮮を原産地又は船積地域とする貨物の輸入につき承認義務を課する等の措置を講じたことについて承認を求めるの件",
+      "submitter": "議員",
+      "status": "参議院で審議中",
+      "status_normalized": "under_review",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "外国為替及び外国貿易法第十条第二項の規定に基づき、北朝鮮を仕向地とする貨物の輸出及び北朝鮮を原産地又は船積地域とする貨物の輸入につき承認義務を課する等の措置を講じたことについて承認を求めるの件の詳細情報です。",
+      "full_text": "",
+      "committee": "経済産業委員会",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "経済・産業",
+      "collected_at": "2025-06-11T20:04:11.570208",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "令和六年度一般会計原油価格・物価高騰対策及び賃上げ促進環境整備対応予備費使用総調書及び各省各庁所管使用調書（その１）",
+      "submitter": "議員",
+      "status": "経過",
+      "status_normalized": "unknown",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "令和六年度一般会計原油価格・物価高騰対策及び賃上げ促進環境整備対応予備費使用総調書及び各省各庁所管使用調書（その１）の詳細情報です。",
+      "full_text": "",
+      "committee": "環境委員会",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "環境・エネルギー",
+      "collected_at": "2025-06-11T20:04:11.570332",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "令和六年度一般会計予備費使用総調書及び各省各庁所管使用調書（その１）",
+      "submitter": "議員",
+      "status": "経過",
+      "status_normalized": "unknown",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "令和六年度一般会計予備費使用総調書及び各省各庁所管使用調書（その１）の詳細情報です。",
+      "full_text": "",
+      "committee": "未分類",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "その他",
+      "collected_at": "2025-06-11T20:04:11.570353",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "国際協同組合年に当たり協同組合の振興を図る決議案",
+      "submitter": "議員",
+      "status": "本院可決",
+      "status_normalized": "passed",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "国際協同組合年に当たり協同組合の振興を図る決議案の詳細情報です。",
+      "full_text": "",
+      "committee": "外務委員会",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "その他",
+      "collected_at": "2025-06-11T20:04:11.570650",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "衆議院規則の一部を改正する規則案",
+      "submitter": "議員",
+      "status": "衆議院で審議中",
+      "status_normalized": "under_review",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "衆議院規則の一部を改正する規則案の詳細情報です。",
+      "full_text": "",
+      "committee": "未分類",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "その他",
+      "collected_at": "2025-06-11T20:04:11.570683",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第217号",
+      "title": "衆議院情報監視審査会規程の一部を改正する規程案",
+      "submitter": "議員",
+      "status": "本院可決",
+      "status_normalized": "passed",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm",
+      "summary": "衆議院情報監視審査会規程の一部を改正する規程案の詳細情報です。",
+      "full_text": "",
+      "committee": "未分類",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705217.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170217.htm"
+        }
+      ],
+      "category": "IT・デジタル",
+      "collected_at": "2025-06-11T20:04:11.570714",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第216号",
+      "title": "賃金上昇を上回る所得税の負担増加等に対処するために所得税に関し講ずべき措置に関する法律案",
+      "submitter": "議員",
+      "status": "衆議院で審議中",
+      "status_normalized": "under_review",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705216.htm",
+      "summary": "賃金上昇を上回る所得税の負担増加等に対処するために所得税に関し講ずべき措置に関する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "財務金融委員会",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705216.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170216.htm"
+        }
+      ],
+      "category": "税制・財政",
+      "collected_at": "2025-06-11T20:04:11.566336",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第216号",
+      "title": "揮発油価格高騰時における揮発油税等税率特例停止措置の実施並びに揮発油税等の税率の特例の廃止及び脱炭素社会の実現等に資する税制の構築のための措置に関する法律案",
+      "submitter": "議員",
+      "status": "衆議院で審議中",
+      "status_normalized": "under_review",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705216.htm",
+      "summary": "揮発油価格高騰時における揮発油税等税率特例停止措置の実施並びに揮発油税等の税率の特例の廃止及び脱炭素社会の実現等に資する税制の構築のための措置に関する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "財務金融委員会",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705216.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170216.htm"
+        }
+      ],
+      "category": "税制・財政",
+      "collected_at": "2025-06-11T20:04:11.566366",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第216号",
+      "title": "一般会計からの自動車安全特別会計の自動車事故対策勘定への繰入れのために講ずべき措置に関する法律案",
+      "submitter": "議員",
+      "status": "衆議院で審議中",
+      "status_normalized": "under_review",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705216.htm",
+      "summary": "一般会計からの自動車安全特別会計の自動車事故対策勘定への繰入れのために講ずべき措置に関する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "未分類",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705216.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170216.htm"
+        }
+      ],
+      "category": "税制・財政",
+      "collected_at": "2025-06-11T20:04:11.566394",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第216号",
+      "title": "電気料金の高騰に対する当分の間の措置として電気の使用者に対して再生可能エネルギー電気に係る賦課金の請求が行われないようにするために講ずべき措置等に関する法律案",
+      "submitter": "議員",
+      "status": "衆議院で審議中",
+      "status_normalized": "under_review",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705216.htm",
+      "summary": "電気料金の高騰に対する当分の間の措置として電気の使用者に対して再生可能エネルギー電気に係る賦課金の請求が行われないようにするために講ずべき措置等に関する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "経済産業委員会",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705216.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170216.htm"
+        }
+      ],
+      "category": "環境・エネルギー",
+      "collected_at": "2025-06-11T20:04:11.566420",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第216号",
+      "title": "政治資金規正法の一部を改正する法律案",
+      "submitter": "議員",
+      "status": "衆議院で審議中",
+      "status_normalized": "under_review",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705216.htm",
+      "summary": "政治資金規正法の一部を改正する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "未分類",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705216.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170216.htm"
+        }
+      ],
+      "category": "司法・行政",
+      "collected_at": "2025-06-11T20:04:11.566449",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第216号",
+      "title": "政治資金規正法及び租税特別措置法の一部を改正する法律案",
+      "submitter": "議員",
+      "status": "撤回",
+      "status_normalized": "withdrawn",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705216.htm",
+      "summary": "政治資金規正法及び租税特別措置法の一部を改正する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "財務金融委員会",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705216.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170216.htm"
+        }
+      ],
+      "category": "税制・財政",
+      "collected_at": "2025-06-11T20:04:11.566481",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第216号",
+      "title": "政党交付金の交付停止等に関する制度の創設に関する法律案",
+      "submitter": "議員",
+      "status": "衆議院で審議中",
+      "status_normalized": "under_review",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705216.htm",
+      "summary": "政党交付金の交付停止等に関する制度の創設に関する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "未分類",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705216.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170216.htm"
+        }
+      ],
+      "category": "その他",
+      "collected_at": "2025-06-11T20:04:11.566509",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第216号",
+      "title": "政治資金規正法等の一部を改正する法律案",
+      "submitter": "議員",
+      "status": "衆議院で審議中",
+      "status_normalized": "under_review",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705216.htm",
+      "summary": "政治資金規正法等の一部を改正する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "未分類",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705216.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170216.htm"
+        }
+      ],
+      "category": "司法・行政",
+      "collected_at": "2025-06-11T20:04:11.566536",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第216号",
+      "title": "財政法の一部を改正する法律案",
+      "submitter": "議員",
+      "status": "衆議院で審議中",
+      "status_normalized": "under_review",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705216.htm",
+      "summary": "財政法の一部を改正する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "財務金融委員会",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705216.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170216.htm"
+        }
+      ],
+      "category": "税制・財政",
+      "collected_at": "2025-06-11T20:04:11.566564",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第216号",
+      "title": "サイバー安全保障を確保するための能動的サイバー防御等に係る態勢の整備の推進に関する法律案",
+      "submitter": "議員",
+      "status": "衆議院で審議中",
+      "status_normalized": "under_review",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705216.htm",
+      "summary": "サイバー安全保障を確保するための能動的サイバー防御等に係る態勢の整備の推進に関する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "安全保障委員会",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705216.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170216.htm"
+        }
+      ],
+      "category": "外交・安全保障",
+      "collected_at": "2025-06-11T20:04:11.566590",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第216号",
+      "title": "育児・介護二重負担者の支援に関する施策の推進に関する法律案",
+      "submitter": "議員",
+      "status": "衆議院で審議中",
+      "status_normalized": "under_review",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705216.htm",
+      "summary": "育児・介護二重負担者の支援に関する施策の推進に関する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "未分類",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705216.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170216.htm"
+        }
+      ],
+      "category": "社会保障・労働",
+      "collected_at": "2025-06-11T20:04:11.566616",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第216号",
+      "title": "消費者対応業務関連特定行為対策の推進に関する法律案",
+      "submitter": "議員",
+      "status": "衆議院で審議中",
+      "status_normalized": "under_review",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705216.htm",
+      "summary": "消費者対応業務関連特定行為対策の推進に関する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "未分類",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705216.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170216.htm"
+        }
+      ],
+      "category": "その他",
+      "collected_at": "2025-06-11T20:04:11.566641",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第216号",
+      "title": "被災者生活再建支援法の一部を改正する法律案",
+      "submitter": "議員",
+      "status": "衆議院で審議中",
+      "status_normalized": "under_review",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705216.htm",
+      "summary": "被災者生活再建支援法の一部を改正する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "未分類",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705216.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170216.htm"
+        }
+      ],
+      "category": "その他",
+      "collected_at": "2025-06-11T20:04:11.566667",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第216号",
+      "title": "健康保険法及び高齢者の医療の確保に関する法律の一部を改正する法律案",
+      "submitter": "議員",
+      "status": "衆議院で審議中",
+      "status_normalized": "under_review",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705216.htm",
+      "summary": "健康保険法及び高齢者の医療の確保に関する法律の一部を改正する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "厚生労働委員会",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705216.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170216.htm"
+        }
+      ],
+      "category": "社会保障・労働",
+      "collected_at": "2025-06-11T20:04:11.566692",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第216号",
+      "title": "我が国の総合的な安全保障の確保を図るための土地等の取得、利用及び管理の規制に関する施策の推進に関する法律案",
+      "submitter": "議員",
+      "status": "衆議院で審議中",
+      "status_normalized": "under_review",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705216.htm",
+      "summary": "我が国の総合的な安全保障の確保を図るための土地等の取得、利用及び管理の規制に関する施策の推進に関する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "安全保障委員会",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705216.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170216.htm"
+        }
+      ],
+      "category": "外交・安全保障",
+      "collected_at": "2025-06-11T20:04:11.566718",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第216号",
+      "title": "学校給食法の一部を改正する法律案",
+      "submitter": "議員",
+      "status": "衆議院で審議中",
+      "status_normalized": "under_review",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705216.htm",
+      "summary": "学校給食法の一部を改正する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "未分類",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705216.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170216.htm"
+        }
+      ],
+      "category": "教育・文化",
+      "collected_at": "2025-06-11T20:04:11.566742",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第216号",
+      "title": "令和五年度一般会計原油価格・物価高騰対策及び賃上げ促進環境整備対応予備費使用総調書及び各省各庁所管使用調書",
+      "submitter": "議員",
+      "status": "経過",
+      "status_normalized": "unknown",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705216.htm",
+      "summary": "令和五年度一般会計原油価格・物価高騰対策及び賃上げ促進環境整備対応予備費使用総調書及び各省各庁所管使用調書の詳細情報です。",
+      "full_text": "",
+      "committee": "環境委員会",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705216.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170216.htm"
+        }
+      ],
+      "category": "環境・エネルギー",
+      "collected_at": "2025-06-11T20:04:11.570246",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第216号",
+      "title": "令和五年度一般会計予備費使用総調書及び各省各庁所管使用調書",
+      "submitter": "議員",
+      "status": "経過",
+      "status_normalized": "unknown",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705216.htm",
+      "summary": "令和五年度一般会計予備費使用総調書及び各省各庁所管使用調書の詳細情報です。",
+      "full_text": "",
+      "committee": "未分類",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705216.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170216.htm"
+        }
+      ],
+      "category": "その他",
+      "collected_at": "2025-06-11T20:04:11.570267",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第216号",
+      "title": "令和五年度特別会計予備費使用総調書及び各省各庁所管使用調書",
+      "submitter": "議員",
+      "status": "経過",
+      "status_normalized": "unknown",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705216.htm",
+      "summary": "令和五年度特別会計予備費使用総調書及び各省各庁所管使用調書の詳細情報です。",
+      "full_text": "",
+      "committee": "未分類",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705216.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170216.htm"
+        }
+      ],
+      "category": "税制・財政",
+      "collected_at": "2025-06-11T20:04:11.570288",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第216号",
+      "title": "令和五年度特別会計予算総則第二十一条第一項の規定による経費増額総調書及び各省各庁所管経費増額調書",
+      "submitter": "議員",
+      "status": "経過",
+      "status_normalized": "unknown",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705216.htm",
+      "summary": "令和五年度特別会計予算総則第二十一条第一項の規定による経費増額総調書及び各省各庁所管経費増額調書の詳細情報です。",
+      "full_text": "",
+      "committee": "財務金融委員会",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705216.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170216.htm"
+        }
+      ],
+      "category": "税制・財政",
+      "collected_at": "2025-06-11T20:04:11.570309",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第215号",
+      "title": "行政手続における特定の個人を識別するための番号の利用等に関する法律等の一部を改正する法律の一部を改正する法律案",
+      "submitter": "議員",
+      "status": "撤回",
+      "status_normalized": "withdrawn",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705215.htm",
+      "summary": "行政手続における特定の個人を識別するための番号の利用等に関する法律等の一部を改正する法律の一部を改正する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "内閣委員会",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705215.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170215.htm"
+        }
+      ],
+      "category": "司法・行政",
+      "collected_at": "2025-06-11T20:04:11.566256",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "第215号",
+      "title": "就労支援給付制度の導入に関する法律案",
+      "submitter": "議員",
+      "status": "衆議院で審議中",
+      "status_normalized": "under_review",
+      "session_number": 217,
+      "detail_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705215.htm",
+      "summary": "就労支援給付制度の導入に関する法律案の詳細情報です。",
+      "full_text": "",
+      "committee": "未分類",
+      "submission_date": "2025-01-24",
+      "related_urls": [
+        {
+          "title": "議案詳細（衆議院）",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21705215.htm"
+        },
+        {
+          "title": "審議経過",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/2170215.htm"
+        }
+      ],
+      "category": "その他",
+      "collected_at": "2025-06-11T20:04:11.566302",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "決算",
+      "title": "令和五年度一般会計歳入歳出決算",
+      "submitter": "議員",
+      "status": "衆議院で審議中",
+      "status_normalized": "under_review",
+      "session_number": 217,
+      "detail_url": "",
+      "summary": "令和五年度一般会計歳入歳出決算の詳細情報です。",
+      "full_text": "",
+      "committee": "未分類",
+      "submission_date": "2025-01-24",
+      "related_urls": [],
+      "category": "その他",
+      "collected_at": "2025-06-11T20:04:11.570420",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "決算",
+      "title": "令和五年度特別会計歳入歳出決算",
+      "submitter": "議員",
+      "status": "衆議院で審議中",
+      "status_normalized": "under_review",
+      "session_number": 217,
+      "detail_url": "",
+      "summary": "令和五年度特別会計歳入歳出決算の詳細情報です。",
+      "full_text": "",
+      "committee": "未分類",
+      "submission_date": "2025-01-24",
+      "related_urls": [],
+      "category": "税制・財政",
+      "collected_at": "2025-06-11T20:04:11.570442",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "決算",
+      "title": "令和五年度国税収納金整理資金受払計算書",
+      "submitter": "議員",
+      "status": "衆議院で審議中",
+      "status_normalized": "under_review",
+      "session_number": 217,
+      "detail_url": "",
+      "summary": "令和五年度国税収納金整理資金受払計算書の詳細情報です。",
+      "full_text": "",
+      "committee": "財務金融委員会",
+      "submission_date": "2025-01-24",
+      "related_urls": [],
+      "category": "税制・財政",
+      "collected_at": "2025-06-11T20:04:11.570464",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "決算",
+      "title": "令和五年度政府関係機関決算書",
+      "submitter": "政府",
+      "status": "衆議院で審議中",
+      "status_normalized": "under_review",
+      "session_number": 217,
+      "detail_url": "",
+      "summary": "令和五年度政府関係機関決算書の詳細情報です。",
+      "full_text": "",
+      "committee": "未分類",
+      "submission_date": "2025-01-24",
+      "related_urls": [],
+      "category": "その他",
+      "collected_at": "2025-06-11T20:04:11.570486",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "国有財産",
+      "title": "令和五年度国有財産増減及び現在額総計算書",
+      "submitter": "議員",
+      "status": "衆議院で審議中",
+      "status_normalized": "under_review",
+      "session_number": 217,
+      "detail_url": "",
+      "summary": "令和五年度国有財産増減及び現在額総計算書の詳細情報です。",
+      "full_text": "",
+      "committee": "未分類",
+      "submission_date": "2025-01-24",
+      "related_urls": [],
+      "category": "その他",
+      "collected_at": "2025-06-11T20:04:11.570508",
+      "year": 2025,
+      "house_display": "衆議院"
+    },
+    {
+      "bill_number": "国有財産",
+      "title": "令和五年度国有財産無償貸付状況総計算書",
+      "submitter": "議員",
+      "status": "衆議院で審議中",
+      "status_normalized": "under_review",
+      "session_number": 217,
+      "detail_url": "",
+      "summary": "令和五年度国有財産無償貸付状況総計算書の詳細情報です。",
+      "full_text": "",
+      "committee": "未分類",
+      "submission_date": "2025-01-24",
+      "related_urls": [],
+      "category": "その他",
+      "collected_at": "2025-06-11T20:04:11.570530",
+      "year": 2025,
+      "house_display": "衆議院"
+    }
+  ]
+}

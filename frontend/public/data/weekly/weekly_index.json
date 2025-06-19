@@ -1,0 +1,34 @@
+{
+  "metadata": {
+    "generated_at": "2025-06-11T20:26:08.298089",
+    "description": "週次データファイルのインデックス"
+  },
+  "weeks": {
+    "2025_2025": {
+      "year": 2025,
+      "week": 25,
+      "files": {
+        "petitions": {
+          "json_file": "petitions_2025_w24.json",
+          "csv_file": "petitions_2025_w24.csv",
+          "size_kb": 29.4
+        },
+        "speeches": {
+          "json_file": "speeches_2025_w06.json",
+          "csv_file": "speeches_2025_w06.csv",
+          "size_kb": 4153.7
+        },
+        "bills": {
+          "json_file": "bills_2025_w24.json",
+          "csv_file": "bills_2025_w24.csv",
+          "size_kb": 51.1
+        },
+        "questions": {
+          "json_file": "questions_2025_w24.json",
+          "csv_file": "questions_2025_w24.csv",
+          "size_kb": 86.0
+        }
+      }
+    }
+  }
+}

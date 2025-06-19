@@ -1,0 +1,1395 @@
+{
+  "metadata": {
+    "data_type": "bills",
+    "total_count": 173,
+    "generated_at": "2025-06-11T20:04:40.308093",
+    "source": "衆議院・参議院公式サイト",
+    "collection_method": "parliamentary_scraping"
+  },
+  "data": [
+    {
+      "house": "shugiin",
+      "bill_number": "215",
+      "bill_name": "1",
+      "status": "行政手続における特定の個人を識別するための番号の利用等に関する法律等の一部を改正する法律の一部を改正する法律案",
+      "submission_date": "撤回",
+      "collected_at": "2025-06-11T20:04:11.566256"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "215",
+      "bill_name": "2",
+      "status": "就労支援給付制度の導入に関する法律案",
+      "submission_date": "衆議院で審議中",
+      "collected_at": "2025-06-11T20:04:11.566302"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "216",
+      "bill_name": "1",
+      "status": "賃金上昇を上回る所得税の負担増加等に対処するために所得税に関し講ずべき措置に関する法律案",
+      "submission_date": "衆議院で審議中",
+      "collected_at": "2025-06-11T20:04:11.566336"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "216",
+      "bill_name": "3",
+      "status": "揮発油価格高騰時における揮発油税等税率特例停止措置の実施並びに揮発油税等の税率の特例の廃止及び脱炭素社会の実現等に資する税制の構築のための措置に関する法律案",
+      "submission_date": "衆議院で審議中",
+      "collected_at": "2025-06-11T20:04:11.566366"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "216",
+      "bill_name": "4",
+      "status": "一般会計からの自動車安全特別会計の自動車事故対策勘定への繰入れのために講ずべき措置に関する法律案",
+      "submission_date": "衆議院で審議中",
+      "collected_at": "2025-06-11T20:04:11.566394"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "216",
+      "bill_name": "5",
+      "status": "電気料金の高騰に対する当分の間の措置として電気の使用者に対して再生可能エネルギー電気に係る賦課金の請求が行われないようにするために講ずべき措置等に関する法律案",
+      "submission_date": "衆議院で審議中",
+      "collected_at": "2025-06-11T20:04:11.566420"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "216",
+      "bill_name": "9",
+      "status": "政治資金規正法の一部を改正する法律案",
+      "submission_date": "衆議院で審議中",
+      "collected_at": "2025-06-11T20:04:11.566449"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "216",
+      "bill_name": "10",
+      "status": "政治資金規正法及び租税特別措置法の一部を改正する法律案",
+      "submission_date": "撤回",
+      "collected_at": "2025-06-11T20:04:11.566481"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "216",
+      "bill_name": "12",
+      "status": "政党交付金の交付停止等に関する制度の創設に関する法律案",
+      "submission_date": "衆議院で審議中",
+      "collected_at": "2025-06-11T20:04:11.566509"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "216",
+      "bill_name": "13",
+      "status": "政治資金規正法等の一部を改正する法律案",
+      "submission_date": "衆議院で審議中",
+      "collected_at": "2025-06-11T20:04:11.566536"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "216",
+      "bill_name": "17",
+      "status": "財政法の一部を改正する法律案",
+      "submission_date": "衆議院で審議中",
+      "collected_at": "2025-06-11T20:04:11.566564"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "216",
+      "bill_name": "18",
+      "status": "サイバー安全保障を確保するための能動的サイバー防御等に係る態勢の整備の推進に関する法律案",
+      "submission_date": "衆議院で審議中",
+      "collected_at": "2025-06-11T20:04:11.566590"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "216",
+      "bill_name": "19",
+      "status": "育児・介護二重負担者の支援に関する施策の推進に関する法律案",
+      "submission_date": "衆議院で審議中",
+      "collected_at": "2025-06-11T20:04:11.566616"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "216",
+      "bill_name": "21",
+      "status": "消費者対応業務関連特定行為対策の推進に関する法律案",
+      "submission_date": "衆議院で審議中",
+      "collected_at": "2025-06-11T20:04:11.566641"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "216",
+      "bill_name": "22",
+      "status": "被災者生活再建支援法の一部を改正する法律案",
+      "submission_date": "衆議院で審議中",
+      "collected_at": "2025-06-11T20:04:11.566667"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "216",
+      "bill_name": "23",
+      "status": "健康保険法及び高齢者の医療の確保に関する法律の一部を改正する法律案",
+      "submission_date": "衆議院で審議中",
+      "collected_at": "2025-06-11T20:04:11.566692"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "216",
+      "bill_name": "24",
+      "status": "我が国の総合的な安全保障の確保を図るための土地等の取得、利用及び管理の規制に関する施策の推進に関する法律案",
+      "submission_date": "衆議院で審議中",
+      "collected_at": "2025-06-11T20:04:11.566718"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "216",
+      "bill_name": "25",
+      "status": "学校給食法の一部を改正する法律案",
+      "submission_date": "衆議院で審議中",
+      "collected_at": "2025-06-11T20:04:11.566742"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "1",
+      "status": "医療保険の被保険者証等の交付等の特例に関する法律案",
+      "submission_date": "衆議院で審議中",
+      "collected_at": "2025-06-11T20:04:11.566768"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "2",
+      "status": "訪問介護事業者に対する緊急の支援に関する法律案",
+      "submission_date": "衆議院で審議中",
+      "collected_at": "2025-06-11T20:04:11.566793"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "3",
+      "status": "介護・障害福祉従事者の人材確保に関する特別措置法案",
+      "submission_date": "衆議院で審議中",
+      "collected_at": "2025-06-11T20:04:11.566822"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "4",
+      "status": "政治資金規正法の一部を改正する法律案",
+      "submission_date": "衆議院で審議中",
+      "collected_at": "2025-06-11T20:04:11.566849"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "5",
+      "status": "政治資金規正法の一部を改正する法律案",
+      "submission_date": "衆議院で審議中",
+      "collected_at": "2025-06-11T20:04:11.566875"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "6",
+      "status": "高等学校等就学支援金の支給に関する法律の一部を改正する法律案",
+      "submission_date": "衆議院で審議中",
+      "collected_at": "2025-06-11T20:04:11.566901"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "7",
+      "status": "義務教育諸学校等の施設費の国庫負担等に関する法律の一部を改正する法律案",
+      "submission_date": "衆議院で審議中",
+      "collected_at": "2025-06-11T20:04:11.566926"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "8",
+      "status": "健康保険法等の一部を改正する法律案",
+      "submission_date": "衆議院で審議中",
+      "collected_at": "2025-06-11T20:04:11.566951"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "9",
+      "status": "公職選挙法の一部を改正する法律案",
+      "submission_date": "成立",
+      "collected_at": "2025-06-11T20:04:11.566976"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "10",
+      "status": "公職選挙法の一部を改正する法律案",
+      "submission_date": "成立",
+      "collected_at": "2025-06-11T20:04:11.567002"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "11",
+      "status": "中小企業正規労働者雇入臨時助成金の支給に関する法律案",
+      "submission_date": "衆議院で審議中",
+      "collected_at": "2025-06-11T20:04:11.567027"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "12",
+      "status": "軽油引取税の税率の特例の廃止に関する法律案",
+      "submission_date": "衆議院で審議中",
+      "collected_at": "2025-06-11T20:04:11.567053"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "13",
+      "status": "揮発油税及び地方揮発油税の税率の特例の廃止に関する法律案",
+      "submission_date": "衆議院で審議中",
+      "collected_at": "2025-06-11T20:04:11.567078"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "14",
+      "status": "政治資金規正法の一部を改正する法律案",
+      "submission_date": "撤回",
+      "collected_at": "2025-06-11T20:04:11.567104"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "15",
+      "status": "地震防災対策強化地域における地震対策緊急整備事業に係る国の財政上の特別措置に関する法律の一部を改正する法律案",
+      "submission_date": "成立",
+      "collected_at": "2025-06-11T20:04:11.567129"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "16",
+      "status": "半島振興法の一部を改正する法律案",
+      "submission_date": "成立",
+      "collected_at": "2025-06-11T20:04:11.567155"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "17",
+      "status": "地域人口の急減に対処するための特定地域づくり事業の推進に関する法律の一部を改正する法律案",
+      "submission_date": "成立",
+      "collected_at": "2025-06-11T20:04:11.567180"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "18",
+      "status": "議院に出頭する証人等の旅費及び日当に関する法律の一部を改正する法律案",
+      "submission_date": "成立",
+      "collected_at": "2025-06-11T20:04:11.567205"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "19",
+      "status": "棚田地域振興法の一部を改正する法律案",
+      "submission_date": "成立",
+      "collected_at": "2025-06-11T20:04:11.567230"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "20",
+      "status": "山村振興法の一部を改正する法律案",
+      "submission_date": "成立",
+      "collected_at": "2025-06-11T20:04:11.567256"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "21",
+      "status": "政治資金規正法及び租税特別措置法の一部を改正する法律案",
+      "submission_date": "衆議院で審議中",
+      "collected_at": "2025-06-11T20:04:11.567281"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "22",
+      "status": "子ども・子育て支援法等の一部を改正する法律案",
+      "submission_date": "衆議院で審議中",
+      "collected_at": "2025-06-11T20:04:11.567306"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "23",
+      "status": "若者の就労所得に係る所得税の負担を軽減するための所得控除の拡充に関し講ずべき措置に関する法律案",
+      "submission_date": "衆議院で審議中",
+      "collected_at": "2025-06-11T20:04:11.567331"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "24",
+      "status": "ライドシェア事業に係る制度の導入に関する法律案",
+      "submission_date": "衆議院で審議中",
+      "collected_at": "2025-06-11T20:04:11.567356"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "25",
+      "status": "外国為替資金特別会計の在り方の見直しに関する法律案",
+      "submission_date": "衆議院で審議中",
+      "collected_at": "2025-06-11T20:04:11.567381"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "26",
+      "status": "租税特別措置法及び東日本大震災の被災者等に係る国税関係法律の臨時特例に関する法律の一部を改正する法律案",
+      "submission_date": "衆議院で審議中",
+      "collected_at": "2025-06-11T20:04:11.567406"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "27",
+      "status": "地方税法の一部を改正する法律案",
+      "submission_date": "衆議院で審議中",
+      "collected_at": "2025-06-11T20:04:11.567432"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "28",
+      "status": "国会法及び議院における証人の宣誓及び証言等に関する法律の一部を改正する法律案",
+      "submission_date": "成立",
+      "collected_at": "2025-06-11T20:04:11.567457"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "29",
+      "status": "民法の一部を改正する法律案",
+      "submission_date": "衆議院で審議中",
+      "collected_at": "2025-06-11T20:04:11.567483"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "30",
+      "status": "婚姻前の氏の通称使用に関する法律案",
+      "submission_date": "衆議院で審議中",
+      "collected_at": "2025-06-11T20:04:11.567508"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "31",
+      "status": "自動車盗難対策等の推進に関する法律案",
+      "submission_date": "衆議院で審議中",
+      "collected_at": "2025-06-11T20:04:11.567533"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "32",
+      "status": "組織的な犯罪の処罰及び犯罪収益の規制等に関する法律及び刑事訴訟法の一部を改正する法律案",
+      "submission_date": "衆議院で審議中",
+      "collected_at": "2025-06-11T20:04:11.567561"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "33",
+      "status": "貨物自動車運送事業法の一部を改正する法律案",
+      "submission_date": "成立",
+      "collected_at": "2025-06-11T20:04:11.567586"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "34",
+      "status": "貨物自動車運送事業の適正化のための体制の整備等の推進に関する法律案",
+      "submission_date": "成立",
+      "collected_at": "2025-06-11T20:04:11.567611"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "35",
+      "status": "民法の一部を改正する法律案",
+      "submission_date": "衆議院で審議中",
+      "collected_at": "2025-06-11T20:04:11.567639"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "36",
+      "status": "行政書士法の一部を改正する法律案",
+      "submission_date": "成立",
+      "collected_at": "2025-06-11T20:04:11.567663"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "37",
+      "status": "ギャンブル等依存症対策基本法の一部を改正する法律案",
+      "submission_date": "参議院で審議中",
+      "collected_at": "2025-06-11T20:04:11.567686"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "38",
+      "status": "国有林野事業に従事する職員の労働関係を円滑に調整するための行政執行法人の労働関係に関する法律の一部を改正する法律案",
+      "submission_date": "衆議院で審議中",
+      "collected_at": "2025-06-11T20:04:11.567710"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "39",
+      "status": "国有林野事業に従事する職員の給与等に関する特例法案",
+      "submission_date": "衆議院で審議中",
+      "collected_at": "2025-06-11T20:04:11.567734"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "40",
+      "status": "農業用植物の優良な品種を確保するための公的新品種育成の促進等に関する法律案",
+      "submission_date": "衆議院で審議中",
+      "collected_at": "2025-06-11T20:04:11.567758"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "41",
+      "status": "地域在来品種等の種苗の保存及び利用等の促進に関する法律案",
+      "submission_date": "衆議院で審議中",
+      "collected_at": "2025-06-11T20:04:11.567782"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "42",
+      "status": "食料供給困難事態対策法の一部を改正する法律案",
+      "submission_date": "衆議院で審議中",
+      "collected_at": "2025-06-11T20:04:11.567806"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "43",
+      "status": "国家公務員法等の一部を改正する法律案",
+      "submission_date": "衆議院で審議中",
+      "collected_at": "2025-06-11T20:04:11.567830"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "44",
+      "status": "国家公務員の労働関係に関する法律案",
+      "submission_date": "衆議院で審議中",
+      "collected_at": "2025-06-11T20:04:11.567854"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "45",
+      "status": "公務員庁設置法案",
+      "submission_date": "衆議院で審議中",
+      "collected_at": "2025-06-11T20:04:11.567879"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "46",
+      "status": "地方公務員法等の一部を改正する法律案",
+      "submission_date": "衆議院で審議中",
+      "collected_at": "2025-06-11T20:04:11.567904"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "47",
+      "status": "地方公務員の労働関係に関する法律案",
+      "submission_date": "衆議院で審議中",
+      "collected_at": "2025-06-11T20:04:11.567928"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "48",
+      "status": "スポーツ基本法及びスポーツにおけるドーピングの防止活動の推進に関する法律の一部を改正する法律案",
+      "submission_date": "参議院で審議中",
+      "collected_at": "2025-06-11T20:04:11.567952"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "49",
+      "status": "社会保険労務士法の一部を改正する法律案",
+      "submission_date": "参議院で審議中",
+      "collected_at": "2025-06-11T20:04:11.567976"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "50",
+      "status": "公職選挙法及び地方自治法の一部を改正する法律案",
+      "submission_date": "衆議院で審議中",
+      "collected_at": "2025-06-11T20:04:11.567999"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "51",
+      "status": "衆議院の解散に係る手続等に関する法律案",
+      "submission_date": "衆議院で審議中",
+      "collected_at": "2025-06-11T20:04:11.568023"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "1",
+      "status": "特定生殖補助医療に関する法律案",
+      "submission_date": "参議院で審議中",
+      "collected_at": "2025-06-11T20:04:11.568073"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "2",
+      "status": "政治資金規正法の一部を改正する法律案",
+      "submission_date": "参議院で審議中",
+      "collected_at": "2025-06-11T20:04:11.568097"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "3",
+      "status": "政党助成法を廃止する法律案",
+      "submission_date": "参議院で審議中",
+      "collected_at": "2025-06-11T20:04:11.568121"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "4",
+      "status": "学校教育法の一部を改正する法律案",
+      "submission_date": "参議院で審議中",
+      "collected_at": "2025-06-11T20:04:11.568145"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "5",
+      "status": "自殺対策基本法の一部を改正する法律案",
+      "submission_date": "成立",
+      "collected_at": "2025-06-11T20:04:11.568169"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "6",
+      "status": "大深度地下の公共的使用に関する特別措置法の廃止に関する措置等に関する法律案",
+      "submission_date": "参議院で審議中",
+      "collected_at": "2025-06-11T20:04:11.568193"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "7",
+      "status": "労働安全衛生法及び特定受託事業者に係る取引の適正化等に関する法律の一部を改正する法律案",
+      "submission_date": "参議院で審議中",
+      "collected_at": "2025-06-11T20:04:11.568217"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "8",
+      "status": "児童の朝の居場所の確保を図るための措置等に関する法律案",
+      "submission_date": "参議院で審議中",
+      "collected_at": "2025-06-11T20:04:11.568240"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "1",
+      "status": "所得税法等の一部を改正する法律案",
+      "submission_date": "成立",
+      "collected_at": "2025-06-11T20:04:11.568393"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "2",
+      "status": "地方税法及び地方税法等の一部を改正する法律の一部を改正する法律案",
+      "submission_date": "成立",
+      "collected_at": "2025-06-11T20:04:11.568418"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "3",
+      "status": "地方交付税法等の一部を改正する法律案",
+      "submission_date": "成立",
+      "collected_at": "2025-06-11T20:04:11.568442"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "4",
+      "status": "重要電子計算機に対する不正な行為による被害の防止に関する法律案",
+      "submission_date": "成立",
+      "collected_at": "2025-06-11T20:04:11.568467"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "5",
+      "status": "重要電子計算機に対する不正な行為による被害の防止に関する法律の施行に伴う関係法律の整備等に関する法律案",
+      "submission_date": "成立",
+      "collected_at": "2025-06-11T20:04:11.568492"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "6",
+      "status": "関税定率法等の一部を改正する法律案",
+      "submission_date": "成立",
+      "collected_at": "2025-06-11T20:04:11.568517"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "7",
+      "status": "国際開発協会への加盟に伴う措置に関する法律及び米州投資公社への加盟に伴う措置に関する法律の一部を改正する法律案",
+      "submission_date": "成立",
+      "collected_at": "2025-06-11T20:04:11.568541"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "8",
+      "status": "大学等における修学の支援に関する法律の一部を改正する法律案",
+      "submission_date": "成立",
+      "collected_at": "2025-06-11T20:04:11.568565"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "9",
+      "status": "公立の義務教育諸学校等の教育職員の給与等に関する特別措置法等の一部を改正する法律案",
+      "submission_date": "参議院で審議中",
+      "collected_at": "2025-06-11T20:04:11.568588"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "10",
+      "status": "戦没者等の遺族に対する特別弔慰金支給法の一部を改正する法律案",
+      "submission_date": "成立",
+      "collected_at": "2025-06-11T20:04:11.568612"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "11",
+      "status": "情報処理の促進に関する法律及び特別会計に関する法律の一部を改正する法律案",
+      "submission_date": "成立",
+      "collected_at": "2025-06-11T20:04:11.568636"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "12",
+      "status": "道路法等の一部を改正する法律案",
+      "submission_date": "成立",
+      "collected_at": "2025-06-11T20:04:11.568659"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "13",
+      "status": "港湾法等の一部を改正する法律案",
+      "submission_date": "成立",
+      "collected_at": "2025-06-11T20:04:11.568683"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "14",
+      "status": "裁判所職員定員法の一部を改正する法律案",
+      "submission_date": "成立",
+      "collected_at": "2025-06-11T20:04:11.568706"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "15",
+      "status": "医薬品、医療機器等の品質、有効性及び安全性の確保等に関する法律等の一部を改正する法律案",
+      "submission_date": "成立",
+      "collected_at": "2025-06-11T20:04:11.568730"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "16",
+      "status": "防衛省設置法等の一部を改正する法律案",
+      "submission_date": "成立",
+      "collected_at": "2025-06-11T20:04:11.568754"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "17",
+      "status": "災害対策基本法等の一部を改正する法律案",
+      "submission_date": "成立",
+      "collected_at": "2025-06-11T20:04:11.568778"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "18",
+      "status": "株式会社地域経済活性化支援機構法の一部を改正する法律案",
+      "submission_date": "成立",
+      "collected_at": "2025-06-11T20:04:11.568801"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "19",
+      "status": "電波法及び放送法の一部を改正する法律案",
+      "submission_date": "成立",
+      "collected_at": "2025-06-11T20:04:11.568825"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "20",
+      "status": "国会議員の選挙等の執行経費の基準に関する法律の一部を改正する法律案",
+      "submission_date": "成立",
+      "collected_at": "2025-06-11T20:04:11.568848"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "21",
+      "status": "医療法等の一部を改正する法律案",
+      "submission_date": "衆議院で審議中",
+      "collected_at": "2025-06-11T20:04:11.568871"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "22",
+      "status": "土地改良法等の一部を改正する法律案",
+      "submission_date": "成立",
+      "collected_at": "2025-06-11T20:04:11.568895"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "23",
+      "status": "独立行政法人国際協力機構法の一部を改正する法律案",
+      "submission_date": "成立",
+      "collected_at": "2025-06-11T20:04:11.568919"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "24",
+      "status": "株式会社日本政策投資銀行法の一部を改正する法律案",
+      "submission_date": "成立",
+      "collected_at": "2025-06-11T20:04:11.568943"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "25",
+      "status": "特別会計に関する法律の一部を改正する法律案",
+      "submission_date": "成立",
+      "collected_at": "2025-06-11T20:04:11.568967"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "26",
+      "status": "漁業災害補償法の一部を改正する法律案",
+      "submission_date": "成立",
+      "collected_at": "2025-06-11T20:04:11.568991"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "27",
+      "status": "鳥獣の保護及び管理並びに狩猟の適正化に関する法律の一部を改正する法律案",
+      "submission_date": "成立",
+      "collected_at": "2025-06-11T20:04:11.569015"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "28",
+      "status": "脱炭素成長型経済構造への円滑な移行の推進に関する法律及び資源の有効な利用の促進に関する法律の一部を改正する法律案",
+      "submission_date": "成立",
+      "collected_at": "2025-06-11T20:04:11.569038"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "29",
+      "status": "人工知能関連技術の研究開発及び活用の推進に関する法律案",
+      "submission_date": "成立",
+      "collected_at": "2025-06-11T20:04:11.569062"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "30",
+      "status": "情報通信技術の進展等に対応するための刑事訴訟法等の一部を改正する法律案",
+      "submission_date": "成立",
+      "collected_at": "2025-06-11T20:04:11.569086"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "31",
+      "status": "森林経営管理法及び森林法の一部を改正する法律案",
+      "submission_date": "成立",
+      "collected_at": "2025-06-11T20:04:11.569110"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "32",
+      "status": "公益通報者保護法の一部を改正する法律案",
+      "submission_date": "成立",
+      "collected_at": "2025-06-11T20:04:11.569134"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "33",
+      "status": "円滑な事業再生を図るための事業者の金融機関等に対する債務の調整の手続等に関する法律案",
+      "submission_date": "成立",
+      "collected_at": "2025-06-11T20:04:11.569159"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "34",
+      "status": "老朽化マンション等の管理及び再生の円滑化等を図るための建物の区分所有等に関する法律等の一部を改正する法律案",
+      "submission_date": "成立",
+      "collected_at": "2025-06-11T20:04:11.569183"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "35",
+      "status": "地域の自主性及び自立性を高めるための改革の推進を図るための関係法律の整備に関する法律案",
+      "submission_date": "成立",
+      "collected_at": "2025-06-11T20:04:11.569207"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "36",
+      "status": "日本学術会議法案",
+      "submission_date": "参議院で審議中",
+      "collected_at": "2025-06-11T20:04:11.569231"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "37",
+      "status": "保険業法の一部を改正する法律案",
+      "submission_date": "成立",
+      "collected_at": "2025-06-11T20:04:11.569255"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "38",
+      "status": "信託業法の一部を改正する法律案",
+      "submission_date": "参議院で審議中",
+      "collected_at": "2025-06-11T20:04:11.569278"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "39",
+      "status": "資金決済に関する法律の一部を改正する法律案",
+      "submission_date": "成立",
+      "collected_at": "2025-06-11T20:04:11.569302"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "40",
+      "status": "児童福祉法等の一部を改正する法律案",
+      "submission_date": "成立",
+      "collected_at": "2025-06-11T20:04:11.569326"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "41",
+      "status": "行政手続における特定の個人を識別するための番号の利用等に関する法律及び住民基本台帳法の一部を改正する法律案",
+      "submission_date": "成立",
+      "collected_at": "2025-06-11T20:04:11.569349"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "42",
+      "status": "民事裁判情報の活用の促進に関する法律案",
+      "submission_date": "成立",
+      "collected_at": "2025-06-11T20:04:11.569373"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "43",
+      "status": "譲渡担保契約及び所有権留保契約に関する法律案",
+      "submission_date": "成立",
+      "collected_at": "2025-06-11T20:04:11.569397"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "44",
+      "status": "譲渡担保契約及び所有権留保契約に関する法律の施行に伴う関係法律の整備等に関する法律案",
+      "submission_date": "成立",
+      "collected_at": "2025-06-11T20:04:11.569420"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "45",
+      "status": "食品等の流通の合理化及び取引の適正化に関する法律及び卸売市場法の一部を改正する法律案",
+      "submission_date": "参議院で審議中",
+      "collected_at": "2025-06-11T20:04:11.569444"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "46",
+      "status": "海洋再生可能エネルギー発電設備の整備に係る海域の利用の促進に関する法律の一部を改正する法律案",
+      "submission_date": "成立",
+      "collected_at": "2025-06-11T20:04:11.569468"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "47",
+      "status": "風俗営業等の規制及び業務の適正化等に関する法律の一部を改正する法律案",
+      "submission_date": "成立",
+      "collected_at": "2025-06-11T20:04:11.569491"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "48",
+      "status": "下請代金支払遅延等防止法及び下請中小企業振興法の一部を改正する法律案",
+      "submission_date": "成立",
+      "collected_at": "2025-06-11T20:04:11.569515"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "49",
+      "status": "盗難特定金属製物品の処分の防止等に関する法律案",
+      "submission_date": "参議院で審議中",
+      "collected_at": "2025-06-11T20:04:11.569539"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "50",
+      "status": "労働施策の総合的な推進並びに労働者の雇用の安定及び職業生活の充実等に関する法律等の一部を改正する法律案",
+      "submission_date": "成立",
+      "collected_at": "2025-06-11T20:04:11.569563"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "51",
+      "status": "環境影響評価法の一部を改正する法律案",
+      "submission_date": "参議院で審議中",
+      "collected_at": "2025-06-11T20:04:11.569587"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "52",
+      "status": "独立行政法人男女共同参画機構法案",
+      "submission_date": "衆議院で審議中",
+      "collected_at": "2025-06-11T20:04:11.569611"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "53",
+      "status": "独立行政法人男女共同参画機構法の施行に伴う関係法律の整備等に関する法律案",
+      "submission_date": "衆議院で審議中",
+      "collected_at": "2025-06-11T20:04:11.569635"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "54",
+      "status": "電気通信事業法及び日本電信電話株式会社等に関する法律の一部を改正する法律案",
+      "submission_date": "成立",
+      "collected_at": "2025-06-11T20:04:11.569658"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "55",
+      "status": "航空法等の一部を改正する法律案",
+      "submission_date": "成立",
+      "collected_at": "2025-06-11T20:04:11.569682"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "56",
+      "status": "日本国の自衛隊と我が国以外の締約国の軍隊との間における相互のアクセス及び協力の円滑化に関する日本国と我が国以外の締約国との間の協定の実施に関する法律案",
+      "submission_date": "成立",
+      "collected_at": "2025-06-11T20:04:11.569705"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "57",
+      "status": "労働安全衛生法及び作業環境測定法の一部を改正する法律案",
+      "submission_date": "成立",
+      "collected_at": "2025-06-11T20:04:11.569729"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "58",
+      "status": "船員法等の一部を改正する法律案",
+      "submission_date": "成立",
+      "collected_at": "2025-06-11T20:04:11.569752"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "59",
+      "status": "社会経済の変化を踏まえた年金制度の機能強化のための国民年金法等の一部を改正する等の法律案",
+      "submission_date": "参議院で審議中",
+      "collected_at": "2025-06-11T20:04:11.569776"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "1",
+      "status": "令和七年度一般会計予算",
+      "submission_date": "参議院回付案（同意）",
+      "collected_at": "2025-06-11T20:04:11.569811"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "2",
+      "status": "令和七年度特別会計予算",
+      "submission_date": "成立",
+      "collected_at": "2025-06-11T20:04:11.569833"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "3",
+      "status": "令和七年度政府関係機関予算",
+      "submission_date": "成立",
+      "collected_at": "2025-06-11T20:04:11.569856"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "2",
+      "status": "所得に対する租税に関する二重課税の除去並びに脱税及び租税回避の防止のための日本国とトルクメニスタンとの間の条約の締結について承認を求めるの件",
+      "submission_date": "両院承認",
+      "collected_at": "2025-06-11T20:04:11.569906"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "3",
+      "status": "所得に対する租税に関する二重課税の除去並びに脱税及び租税回避の防止のための日本国とアルメニア共和国との間の条約の締結について承認を求めるの件",
+      "submission_date": "両院承認",
+      "collected_at": "2025-06-11T20:04:11.569933"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "4",
+      "status": "経済上の連携に関する日本国とインドネシア共和国との間の協定を改正する議定書の締結について承認を求めるの件",
+      "submission_date": "両院承認",
+      "collected_at": "2025-06-11T20:04:11.569955"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "5",
+      "status": "航空業務に関する日本国とチェコ共和国との間の協定の締結について承認を求めるの件",
+      "submission_date": "両院承認",
+      "collected_at": "2025-06-11T20:04:11.569977"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "6",
+      "status": "航空業務に関する日本国とルクセンブルク大公国との間の協定の締結について承認を求めるの件",
+      "submission_date": "両院承認",
+      "collected_at": "2025-06-11T20:04:11.570000"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "7",
+      "status": "日本国の自衛隊とフィリピンの軍隊との間における相互のアクセス及び協力の円滑化に関する日本国とフィリピン共和国との間の協定の締結について承認を求めるの件",
+      "submission_date": "両院承認",
+      "collected_at": "2025-06-11T20:04:11.570022"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "8",
+      "status": "日本国の自衛隊とイタリア共和国の軍隊との間における物品又は役務の相互の提供に関する日本国政府とイタリア共和国政府との間の協定の締結について承認を求めるの件",
+      "submission_date": "両院承認",
+      "collected_at": "2025-06-11T20:04:11.570044"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "9",
+      "status": "千九百九十四年四月十五日にマラケシュで作成された世界貿易機関を設立するマラケシュ協定のサービスの貿易に関する一般協定の日本国の特定の約束に係る表の改善に関する確認書の締結について承認を求めるの件",
+      "submission_date": "両院承認",
+      "collected_at": "2025-06-11T20:04:11.570065"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "10",
+      "status": "東南アジア諸国連合貿易投資観光促進センターを設立する協定の第二次改正の受諾について承認を求めるの件",
+      "submission_date": "両院承認",
+      "collected_at": "2025-06-11T20:04:11.570087"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "11",
+      "status": "海洋法に関する国際連合条約に基づくいずれの国の管轄にも属さない区域における海洋の生物の多様性の保全及び持続可能な利用に関する協定の締結について承認を求めるの件",
+      "submission_date": "両院承認",
+      "collected_at": "2025-06-11T20:04:11.570109"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "12",
+      "status": "職業上の安全及び健康並びに作業環境に関する条約（第百五十五号）の締結について承認を求めるの件",
+      "submission_date": "両院承認",
+      "collected_at": "2025-06-11T20:04:11.570132"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "13",
+      "status": "千九百九十五年の漁船員の訓練及び資格証明並びに当直の基準に関する国際条約の締結について承認を求めるの件",
+      "submission_date": "両院承認",
+      "collected_at": "2025-06-11T20:04:11.570154"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "2",
+      "status": "特定船舶の入港の禁止に関する特別措置法第五条第一項の規定に基づき、特定船舶の入港禁止の実施につき承認を求めるの件",
+      "submission_date": "両院承認",
+      "collected_at": "2025-06-11T20:04:11.570186"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "3",
+      "status": "外国為替及び外国貿易法第十条第二項の規定に基づき、北朝鮮を仕向地とする貨物の輸出及び北朝鮮を原産地又は船積地域とする貨物の輸入につき承認義務を課する等の措置を講じたことについて承認を求めるの件",
+      "submission_date": "参議院で審議中",
+      "collected_at": "2025-06-11T20:04:11.570208"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "216",
+      "bill_name": "令和五年度一般会計原油価格・物価高騰対策及び賃上げ促進環境整備対応予備費使用総調書及び各省各庁所管使用調書",
+      "status": "両院承諾",
+      "submission_date": "経過",
+      "collected_at": "2025-06-11T20:04:11.570246"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "216",
+      "bill_name": "令和五年度一般会計予備費使用総調書及び各省各庁所管使用調書",
+      "status": "両院承諾",
+      "submission_date": "経過",
+      "collected_at": "2025-06-11T20:04:11.570267"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "216",
+      "bill_name": "令和五年度特別会計予備費使用総調書及び各省各庁所管使用調書",
+      "status": "両院承諾",
+      "submission_date": "経過",
+      "collected_at": "2025-06-11T20:04:11.570288"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "216",
+      "bill_name": "令和五年度特別会計予算総則第二十一条第一項の規定による経費増額総調書及び各省各庁所管経費増額調書",
+      "status": "両院承諾",
+      "submission_date": "経過",
+      "collected_at": "2025-06-11T20:04:11.570309"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "令和六年度一般会計原油価格・物価高騰対策及び賃上げ促進環境整備対応予備費使用総調書及び各省各庁所管使用調書（その１）",
+      "status": "衆議院で審議中",
+      "submission_date": "経過",
+      "collected_at": "2025-06-11T20:04:11.570332"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "令和六年度一般会計予備費使用総調書及び各省各庁所管使用調書（その１）",
+      "status": "衆議院で審議中",
+      "submission_date": "経過",
+      "collected_at": "2025-06-11T20:04:11.570353"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "令和六年度一般会計予備費使用総調書及び各省各庁所管使用調書（その２）",
+      "status": "衆議院で審議中",
+      "submission_date": "経過",
+      "collected_at": "2025-06-11T20:04:11.570374"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "決算",
+      "bill_name": "216",
+      "status": "令和五年度一般会計歳入歳出決算",
+      "submission_date": "衆議院で審議中",
+      "collected_at": "2025-06-11T20:04:11.570420"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "決算",
+      "bill_name": "216",
+      "status": "令和五年度特別会計歳入歳出決算",
+      "submission_date": "衆議院で審議中",
+      "collected_at": "2025-06-11T20:04:11.570442"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "決算",
+      "bill_name": "216",
+      "status": "令和五年度国税収納金整理資金受払計算書",
+      "submission_date": "衆議院で審議中",
+      "collected_at": "2025-06-11T20:04:11.570464"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "決算",
+      "bill_name": "216",
+      "status": "令和五年度政府関係機関決算書",
+      "submission_date": "衆議院で審議中",
+      "collected_at": "2025-06-11T20:04:11.570486"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "国有財産",
+      "bill_name": "216",
+      "status": "令和五年度国有財産増減及び現在額総計算書",
+      "submission_date": "衆議院で審議中",
+      "collected_at": "2025-06-11T20:04:11.570508"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "国有財産",
+      "bill_name": "216",
+      "status": "令和五年度国有財産無償貸付状況総計算書",
+      "submission_date": "衆議院で審議中",
+      "collected_at": "2025-06-11T20:04:11.570530"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "ＮＨＫ決算",
+      "bill_name": "207",
+      "status": "日本放送協会令和二年度財産目録、貸借対照表、損益計算書、資本等変動計算書及びキャッシュ・フロー計算書",
+      "submission_date": "衆議院で審議中",
+      "collected_at": "2025-06-11T20:04:11.570552"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "ＮＨＫ決算",
+      "bill_name": "210",
+      "status": "日本放送協会令和三年度財産目録、貸借対照表、損益計算書、資本等変動計算書及びキャッシュ・フロー計算書",
+      "submission_date": "衆議院で審議中",
+      "collected_at": "2025-06-11T20:04:11.570574"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "ＮＨＫ決算",
+      "bill_name": "212",
+      "status": "日本放送協会令和四年度財産目録、貸借対照表、損益計算書、資本等変動計算書及びキャッシュ・フロー計算書",
+      "submission_date": "衆議院で審議中",
+      "collected_at": "2025-06-11T20:04:11.570596"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "ＮＨＫ決算",
+      "bill_name": "216",
+      "status": "日本放送協会令和五年度財産目録、貸借対照表、損益計算書、資本等変動計算書及びキャッシュ・フロー計算書",
+      "submission_date": "衆議院で審議中",
+      "collected_at": "2025-06-11T20:04:11.570618"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "1",
+      "status": "国際協同組合年に当たり協同組合の振興を図る決議案",
+      "submission_date": "本院可決",
+      "collected_at": "2025-06-11T20:04:11.570650"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "2",
+      "status": "衆議院規則の一部を改正する規則案",
+      "submission_date": "衆議院で審議中",
+      "collected_at": "2025-06-11T20:04:11.570683"
+    },
+    {
+      "house": "shugiin",
+      "bill_number": "217",
+      "bill_name": "2",
+      "status": "衆議院情報監視審査会規程の一部を改正する規程案",
+      "submission_date": "本院可決",
+      "collected_at": "2025-06-11T20:04:11.570714"
+    }
+  ]
+}

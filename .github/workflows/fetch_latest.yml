@@ -1,0 +1,90 @@
+name: 毎日データ取得
+
+on:
+  schedule:
+    # 毎日日本時間2:00に実行（UTC 17:00）
+    - cron: '0 17 * * *'
+  workflow_dispatch: # 手動実行も可能
+
+jobs:
+  fetch-latest-data:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: チェックアウト
+      uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+    
+    - name: Python環境のセットアップ
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+        cache: 'pip'
+    
+    - name: 依存関係のインストール
+      run: |
+        cd backend
+        pip install -r requirements.txt
+    
+    - name: データディレクトリの作成
+      run: |
+        mkdir -p data/speech/daily
+    
+    - name: 最新データの取得
+      run: |
+        cd backend
+        python fetch_latest.py
+      env:
+        TZ: Asia/Tokyo
+    
+    - name: 変更の確認
+      id: changes
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add data/
+        if git diff --staged --quiet; then
+          echo "has_changes=false" >> $GITHUB_OUTPUT
+        else
+          echo "has_changes=true" >> $GITHUB_OUTPUT
+        fi
+    
+    - name: 変更のコミット
+      if: steps.changes.outputs.has_changes == 'true'
+      run: |
+        git commit -m "📊 最新議事録データを追加 ($(date +'%Y-%m-%d'))"
+    
+    - name: プルリクエストの作成
+      if: steps.changes.outputs.has_changes == 'true'
+      uses: peter-evans/create-pull-request@v5
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        commit-message: "📊 最新議事録データを追加 ($(date +'%Y-%m-%d'))"
+        title: "📊 最新議事録データ追加 - $(date +'%Y-%m-%d')"
+        body: |
+          ## 📊 最新議事録データの自動追加
+          
+          - 実行日: $(date +'%Y年%m月%d日')
+          - 取得対象: 前日の議事録データ
+          - スクリプト: `fetch_latest.py`
+          
+          ### 変更内容
+          - 新しい議事録データファイルを追加
+          - データは `data/speech/daily/` ディレクトリに保存
+          
+          ---
+          
+          🤖 このプルリクエストは GitHub Actions によって自動生成されました
+        branch: data-update-$(date +'%Y%m%d')
+        delete-branch: true
+    
+    - name: Slack通知（成功）
+      if: steps.changes.outputs.has_changes == 'true' && success()
+      run: |
+        echo "✅ 最新データの取得が完了しました"
+    
+    - name: Slack通知（失敗）
+      if: failure()
+      run: |
+        echo "❌ 最新データの取得に失敗しました"

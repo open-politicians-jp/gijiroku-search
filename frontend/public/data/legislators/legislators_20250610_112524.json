@@ -1,0 +1,73 @@
+{
+  "metadata": {
+    "data_type": "legislators",
+    "total_count": 3,
+    "generated_at": "2025-06-10T11:25:24.916574",
+    "source": "国会議員データベース (Sample Data)"
+  },
+  "data": [
+    {
+      "name": "田中太郎",
+      "name_kana": "たなかたろう",
+      "party": "創新党",
+      "house": "衆議院",
+      "constituency": "東京1区",
+      "election_count": 3,
+      "age": 52,
+      "gender": "男性",
+      "career": [
+        "民間企業役員",
+        "地方議員"
+      ],
+      "committees": [
+        "予算委員会",
+        "経済産業委員会"
+      ],
+      "website": "https://tanaka-taro.jp",
+      "twitter": "@tanaka_taro",
+      "updated_at": "2025-06-10T11:25:24.916356"
+    },
+    {
+      "name": "佐藤花子",
+      "name_kana": "さとうはなこ",
+      "party": "未来の党",
+      "house": "参議院",
+      "constituency": "比例代表",
+      "election_count": 2,
+      "age": 45,
+      "gender": "女性",
+      "career": [
+        "弁護士",
+        "NPO法人代表"
+      ],
+      "committees": [
+        "法務委員会",
+        "環境委員会"
+      ],
+      "website": "https://sato-hanako.jp",
+      "twitter": "@sato_hanako",
+      "updated_at": "2025-06-10T11:25:24.916370"
+    },
+    {
+      "name": "鈴木一郎",
+      "name_kana": "すずきいちろう",
+      "party": "国民生活党",
+      "house": "衆議院",
+      "constituency": "大阪3区",
+      "election_count": 4,
+      "age": 58,
+      "gender": "男性",
+      "career": [
+        "教員",
+        "市長"
+      ],
+      "committees": [
+        "文部科学委員会",
+        "厚生労働委員会"
+      ],
+      "website": "https://suzuki-ichiro.jp",
+      "twitter": "@suzuki_ichiro",
+      "updated_at": "2025-06-10T11:25:24.916379"
+    }
+  ]
+}
