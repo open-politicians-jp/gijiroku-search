@@ -1,4 +1,4 @@
-name: 議事録データ収集
+name: 📊 自動データ収集
 
 on:
   schedule:
@@ -16,6 +16,18 @@ on:
         required: false
         default: false
         type: boolean
+      target_scripts:
+        description: '実行するスクリプト（all, speeches, questions, bills, committee, manifestos）'
+        required: false
+        default: 'all'
+        type: choice
+        options:
+        - all
+        - speeches
+        - questions
+        - bills
+        - committee
+        - manifestos
 
 jobs:
   collect-data:
