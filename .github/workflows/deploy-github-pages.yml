@@ -52,14 +52,30 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-nextjs-${{ hashFiles('frontend/**/package-lock.json') }}-
         
+    - name: 🔍 Debug TypeScript paths
+      working-directory: frontend
+      run: |
+        pwd
+        echo "=== lib directory ==="
+        ls -la lib/
+        echo "=== app directory ==="
+        ls -la app/
+        echo "=== tsconfig.json ==="
+        cat tsconfig.json
+        echo "=== package.json scripts ==="
+        cat package.json | grep -A 10 '"scripts"'
+        
+    - name: 🔧 TypeScript compilation check
+      working-directory: frontend
+      run: |
+        echo "Checking TypeScript compilation..."
+        npx tsc --noEmit --skipLibCheck
+        
     - name: 🏗️ Build Next.js app
       working-directory: frontend
       env:
         NODE_ENV: production
-      run: |
-        pwd
-        ls -la
-        npm run build
+      run: npm run build
       
     - name: 📤 Upload artifact
       uses: actions/upload-pages-artifact@v3
