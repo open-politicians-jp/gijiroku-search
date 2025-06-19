@@ -1,19 +1,11 @@
-name: 📊 レガシーデータ収集（非推奨）
+name: 📊 日次データ収集（増分更新）
 
 on:
-  # 手動実行のみ（新しいワークフローに移行）
+  schedule:
+    # 毎日午前3時（JST）に実行（UTC 18:00）
+    - cron: '0 18 * * *'
   workflow_dispatch:
     inputs:
-      months_back:
-        description: '過去何ヶ月分のデータを取得するか'
-        required: false
-        default: '2'
-        type: string
-      force_update:
-        description: '強制的に全データを更新するか'
-        required: false
-        default: false
-        type: boolean
       target_scripts:
         description: '実行するスクリプト（all, speeches, questions, bills, committee, manifestos）'
         required: false
@@ -28,7 +20,7 @@ on:
         - manifestos
 
 jobs:
-  collect-data:
+  collect-daily-data:
     runs-on: ubuntu-latest
     
     steps:
@@ -50,34 +42,34 @@ jobs:
       run: |
         uv sync
         
-    - name: 📊 議事録データ収集
+    - name: 📊 議事録データ収集（過去1週間）
       if: ${{ github.event.inputs.target_scripts == 'all' || github.event.inputs.target_scripts == 'speeches' || github.event.inputs.target_scripts == '' }}
       working-directory: scripts/uv-data-collection
       env:
-        MONTHS_BACK: ${{ github.event.inputs.months_back || '2' }}
-        FORCE_UPDATE: ${{ github.event.inputs.force_update || 'false' }}
+        MONTHS_BACK: '0.25'  # 約1週間
+        FORCE_UPDATE: 'false'
       run: |
         uv run python daily_data_collection.py
         
-    - name: 📋 質問主意書収集
+    - name: 📋 質問主意書収集（増分）
       if: ${{ github.event.inputs.target_scripts == 'all' || github.event.inputs.target_scripts == 'questions' || github.event.inputs.target_scripts == '' }}
       working-directory: scripts/uv-data-collection
       run: |
         uv run python collect_questions_fixed.py
         
-    - name: 📜 提出法案収集
+    - name: 📜 提出法案収集（増分）
       if: ${{ github.event.inputs.target_scripts == 'all' || github.event.inputs.target_scripts == 'bills' || github.event.inputs.target_scripts == '' }}
       working-directory: scripts/uv-data-collection
       run: |
         uv run python collect_bills_fixed.py
         
-    - name: 📰 委員会ニュース収集
+    - name: 📰 委員会ニュース収集（増分）
       if: ${{ github.event.inputs.target_scripts == 'all' || github.event.inputs.target_scripts == 'committee' || github.event.inputs.target_scripts == '' }}
       working-directory: scripts/uv-data-collection
       run: |
         uv run python collect_committee_news_fixed.py
         
-    - name: 📄 マニフェスト収集
+    - name: 📄 マニフェスト収集（増分）
       if: ${{ github.event.inputs.target_scripts == 'all' || github.event.inputs.target_scripts == 'manifestos' || github.event.inputs.target_scripts == '' }}
       working-directory: scripts/uv-data-collection
       run: |
@@ -87,12 +79,6 @@ jobs:
       working-directory: scripts/uv-data-collection
       run: |
         uv run python split_large_files.py || true
-        uv run python split_large_monthly.py || true
-        
-    - name: 📝 週次データ整理
-      working-directory: scripts/uv-data-collection
-      run: |
-        uv run python weekly_data_organizer.py || true
         
     - name: 🔗 リンク修正
       working-directory: scripts/uv-data-collection
@@ -102,26 +88,19 @@ jobs:
     - name: 💾 変更をコミット
       run: |
         git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action [Data Collection]"
+        git config --local user.name "GitHub Action [Daily Data Collection]"
         git add frontend/public/data/
         if ! git diff --staged --quiet; then
-          git commit -m "📊 自動データ収集: $(date '+%Y-%m-%d %H:%M:%S JST')"
+          git commit -m "📊 日次データ収集: $(date '+%Y-%m-%d %H:%M:%S JST')"
           git push
-          echo "✅ データ更新完了" >> $GITHUB_STEP_SUMMARY
+          echo "✅ 新規データ更新完了" >> $GITHUB_STEP_SUMMARY
         else
-          echo "ℹ️ 更新すべきデータなし" >> $GITHUB_STEP_SUMMARY
+          echo "ℹ️ 新規データなし" >> $GITHUB_STEP_SUMMARY
         fi
         
     - name: 📊 収集サマリー
       run: |
-        echo "## 📊 データ収集結果" >> $GITHUB_STEP_SUMMARY
+        echo "## 📊 日次データ収集結果" >> $GITHUB_STEP_SUMMARY
         echo "- **実行時刻**: $(date '+%Y-%m-%d %H:%M:%S JST')" >> $GITHUB_STEP_SUMMARY
+        echo "- **対象**: 増分データ（過去1週間）" >> $GITHUB_STEP_SUMMARY
         echo "- **対象スクリプト**: ${{ github.event.inputs.target_scripts || 'all' }}" >> $GITHUB_STEP_SUMMARY
-        echo "- **過去期間**: ${{ github.event.inputs.months_back || '2' }}ヶ月" >> $GITHUB_STEP_SUMMARY
-        echo "- **強制更新**: ${{ github.event.inputs.force_update || 'false' }}" >> $GITHUB_STEP_SUMMARY
-        echo "" >> $GITHUB_STEP_SUMMARY
-        echo "### 📁 データファイル数" >> $GITHUB_STEP_SUMMARY
-        echo "- **議事録**: $(find frontend/public/data/speeches -name '*.json' | wc -l)件" >> $GITHUB_STEP_SUMMARY
-        echo "- **質問主意書**: $(find frontend/public/data/questions -name '*.json' | wc -l)件" >> $GITHUB_STEP_SUMMARY
-        echo "- **提出法案**: $(find frontend/public/data/bills -name '*.json' | wc -l)件" >> $GITHUB_STEP_SUMMARY
-        echo "- **委員会ニュース**: $(find frontend/public/data/committee_news -name '*.json' | wc -l)件" >> $GITHUB_STEP_SUMMARY

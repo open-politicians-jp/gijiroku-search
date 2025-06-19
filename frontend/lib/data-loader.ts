@@ -33,16 +33,22 @@ class StaticDataLoader {
     if (typeof window !== 'undefined') {
       // ブラウザ環境では現在のパスから推測
       const path = window.location.pathname;
+      console.log('Current pathname:', path);
       if (path.startsWith('/gijiroku-search/')) {
+        console.log('Detected GitHub Pages environment, using basePath: /gijiroku-search');
         return '/gijiroku-search';
       }
     }
-    return process.env.NODE_ENV === 'production' ? '/gijiroku-search' : '';
+    const basePath = process.env.GITHUB_PAGES === 'true' ? '/gijiroku-search' : '';
+    console.log('Using basePath:', basePath);
+    return basePath;
   }
   
   private getDataPath(path: string): string {
     const basePath = this.getBasePath();
-    return `${basePath}${path}`;
+    const fullPath = `${basePath}${path}`;
+    console.log(`Resolved path: ${path} -> ${fullPath}`);
+    return fullPath;
   }
 
   /**
@@ -54,50 +60,77 @@ class StaticDataLoader {
     }
 
     try {
-      // 利用可能なファイルを優先順位で試行
+      // 利用可能なファイルを優先順位で試行（確実に存在するファイルを優先）
       const filesToTry = [
-        '/data/speeches/speeches_2025_processed.json',
+        '/data/speeches/speeches_latest.json',
         '/data/speeches/speeches_20250610_112452.json',
         '/data/speeches/speeches_20250610_110612.json',
         '/data/speeches/speeches_20250610_105520.json',
         '/data/speeches/speeches_20250610_000325.json',
-        '/data/speeches/speeches_20250609_232138.json'
+        '/data/speeches/speeches_20250609_232138.json',
+        '/data/speeches/speeches_2025_06.json',
+        '/data/speeches/speeches_2025_05.json'
       ].map(path => this.getDataPath(path));
+
+      console.log('Attempting to load speeches from:', filesToTry);
 
       for (const filePath of filesToTry) {
         try {
+          console.log(`Trying to fetch: ${filePath}`);
           const response = await fetch(filePath);
+          
           if (response.ok) {
             const data = await response.json();
-            console.log(`Loaded speeches from: ${filePath}`);
+            console.log(`Successfully loaded speeches from: ${filePath}`);
+            console.log(`Response data structure:`, {
+              isArray: Array.isArray(data),
+              hasSpeeches: !!data.speeches,
+              hasData: !!data.data,
+              keys: Object.keys(data)
+            });
+            
+            let speechData: Speech[] = [];
             
             if (Array.isArray(data)) {
-              this.speechesCache = data;
+              speechData = data;
             } else if (data.speeches && Array.isArray(data.speeches)) {
-              this.speechesCache = data.speeches;
+              speechData = data.speeches;
             } else if (data.data && Array.isArray(data.data)) {
-              this.speechesCache = data.data;
+              speechData = data.data;
             } else {
-              console.warn(`Unexpected data format in ${filePath}:`, data);
+              console.warn(`Unexpected data format in ${filePath}:`, {
+                type: typeof data,
+                keys: Object.keys(data),
+                dataStructure: data
+              });
               continue;
             }
             
+            // データの有効性チェック
+            if (speechData.length === 0) {
+              console.warn(`No speeches found in ${filePath}`);
+              continue;
+            }
+            
+            this.speechesCache = speechData;
             this.updateCacheTime();
-            console.log(`Loaded ${this.speechesCache.length} speeches`);
+            console.log(`Successfully loaded ${this.speechesCache.length} speeches from ${filePath}`);
             return this.speechesCache;
+          } else {
+            console.log(`Failed to fetch ${filePath}: ${response.status} ${response.statusText}`);
           }
         } catch (fileError) {
-          console.log(`Failed to load ${filePath}:`, fileError);
+          console.error(`Error loading ${filePath}:`, fileError);
           continue;
         }
       }
       
-      console.warn('No speech files could be loaded');
+      console.warn('No speech files could be loaded from any source');
       this.speechesCache = [];
       this.updateCacheTime();
       return this.speechesCache;
     } catch (error) {
-      console.error('Error loading speeches:', error);
+      console.error('Critical error loading speeches:', error);
       return [];
     }
   }
@@ -237,14 +270,31 @@ class StaticDataLoader {
    */
   async loadStats(): Promise<Stats> {
     if (this.statsCache && this.isCacheValid()) {
+      console.log('Returning cached stats');
       return this.statsCache;
     }
 
     try {
+      console.log('Loading fresh stats data...');
       const speeches = await this.loadSpeeches();
+      
+      if (speeches.length === 0) {
+        console.warn('No speeches loaded, returning default stats');
+        return this.getDefaultStats();
+      }
+      
+      console.log(`Calculating stats from ${speeches.length} speeches`);
       
       // 統計を動的計算
       const stats: Stats = this.calculateStats(speeches);
+      
+      console.log('Stats calculated:', {
+        total_speeches: stats.total_speeches,
+        top_parties_count: stats.top_parties.length,
+        top_speakers_count: stats.top_speakers.length,
+        top_committees_count: stats.top_committees.length,
+        date_range: stats.date_range
+      });
       
       this.statsCache = stats;
       this.updateCacheTime();
@@ -568,6 +618,8 @@ class StaticDataLoader {
   }
 
   private calculateStats(speeches: Speech[]): Stats {
+    console.log('Starting stats calculation...');
+    
     // 政党別集計
     const partyCount: { [key: string]: number } = {};
     const speakerCount: { [key: string]: number } = {};
@@ -576,21 +628,48 @@ class StaticDataLoader {
     let minDate = '';
     let maxDate = '';
 
-    speeches.forEach(speech => {
-      // 政党集計
-      if (speech.party) {
-        partyCount[speech.party] = (partyCount[speech.party] || 0) + 1;
+    speeches.forEach((speech, index) => {
+      // データ品質チェック（最初の10件）
+      if (index < 10) {
+        console.log(`Speech ${index}:`, {
+          date: speech.date,
+          speaker: speech.speaker,
+          party: speech.party,
+          committee: speech.committee
+        });
+      }
+      
+      // 政党集計（null値のチェック）
+      if (speech.party && speech.party.trim() !== '') {
+        const party = speech.party.trim();
+        partyCount[party] = (partyCount[party] || 0) + 1;
       }
       
       // 発言者集計
-      speakerCount[speech.speaker] = (speakerCount[speech.speaker] || 0) + 1;
+      if (speech.speaker && speech.speaker.trim() !== '') {
+        const speaker = speech.speaker.trim();
+        speakerCount[speaker] = (speakerCount[speaker] || 0) + 1;
+      }
       
       // 委員会集計
-      committeeCount[speech.committee] = (committeeCount[speech.committee] || 0) + 1;
+      if (speech.committee && speech.committee.trim() !== '') {
+        const committee = speech.committee.trim();
+        committeeCount[committee] = (committeeCount[committee] || 0) + 1;
+      }
       
       // 日付範囲
-      if (!minDate || speech.date < minDate) minDate = speech.date;
-      if (!maxDate || speech.date > maxDate) maxDate = speech.date;
+      if (speech.date && speech.date.trim() !== '') {
+        const date = speech.date.trim();
+        if (!minDate || date < minDate) minDate = date;
+        if (!maxDate || date > maxDate) maxDate = date;
+      }
+    });
+
+    console.log('Raw counts:', {
+      parties: Object.keys(partyCount).length,
+      speakers: Object.keys(speakerCount).length,
+      committees: Object.keys(committeeCount).length,
+      dateRange: { minDate, maxDate }
     });
 
     // 上位項目をソート
@@ -605,6 +684,12 @@ class StaticDataLoader {
     const topCommittees = Object.entries(committeeCount)
       .sort(([,a], [,b]) => b - a)
       .slice(0, 15);
+
+    console.log('Top stats preview:', {
+      topParties: topParties.slice(0, 3),
+      topSpeakers: topSpeakers.slice(0, 3),
+      topCommittees: topCommittees.slice(0, 3)
+    });
 
     return {
       total_speeches: speeches.length,

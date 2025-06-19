@@ -1,18 +1,18 @@
-name: 📊 レガシーデータ収集（非推奨）
+name: 📚 過去データ一括収集
 
 on:
-  # 手動実行のみ（新しいワークフローに移行）
+  # 手動実行のみ（重いデータ処理のため）
   workflow_dispatch:
     inputs:
       months_back:
         description: '過去何ヶ月分のデータを取得するか'
         required: false
-        default: '2'
+        default: '4'
         type: string
       force_update:
         description: '強制的に全データを更新するか'
         required: false
-        default: false
+        default: true
         type: boolean
       target_scripts:
         description: '実行するスクリプト（all, speeches, questions, bills, committee, manifestos）'
@@ -28,8 +28,9 @@ on:
         - manifestos
 
 jobs:
-  collect-data:
+  collect-historical-data:
     runs-on: ubuntu-latest
+    timeout-minutes: 180  # 3時間タイムアウト
     
     steps:
     - name: 📥 Checkout repository
@@ -50,75 +51,83 @@ jobs:
       run: |
         uv sync
         
-    - name: 📊 議事録データ収集
-      if: ${{ github.event.inputs.target_scripts == 'all' || github.event.inputs.target_scripts == 'speeches' || github.event.inputs.target_scripts == '' }}
+    - name: 📊 議事録データ収集（過去データ）
+      if: ${{ github.event.inputs.target_scripts == 'all' || github.event.inputs.target_scripts == 'speeches' }}
       working-directory: scripts/uv-data-collection
       env:
-        MONTHS_BACK: ${{ github.event.inputs.months_back || '2' }}
-        FORCE_UPDATE: ${{ github.event.inputs.force_update || 'false' }}
+        MONTHS_BACK: ${{ github.event.inputs.months_back || '4' }}
+        FORCE_UPDATE: ${{ github.event.inputs.force_update || 'true' }}
       run: |
+        echo "📊 過去 ${{ github.event.inputs.months_back || '4' }}ヶ月分の議事録データを収集中..."
         uv run python daily_data_collection.py
         
-    - name: 📋 質問主意書収集
-      if: ${{ github.event.inputs.target_scripts == 'all' || github.event.inputs.target_scripts == 'questions' || github.event.inputs.target_scripts == '' }}
+    - name: 📋 質問主意書収集（過去データ）
+      if: ${{ github.event.inputs.target_scripts == 'all' || github.event.inputs.target_scripts == 'questions' }}
       working-directory: scripts/uv-data-collection
       run: |
+        echo "📋 質問主意書の過去データを収集中..."
         uv run python collect_questions_fixed.py
         
-    - name: 📜 提出法案収集
-      if: ${{ github.event.inputs.target_scripts == 'all' || github.event.inputs.target_scripts == 'bills' || github.event.inputs.target_scripts == '' }}
+    - name: 📜 提出法案収集（過去データ）
+      if: ${{ github.event.inputs.target_scripts == 'all' || github.event.inputs.target_scripts == 'bills' }}
       working-directory: scripts/uv-data-collection
       run: |
+        echo "📜 提出法案の過去データを収集中..."
         uv run python collect_bills_fixed.py
         
-    - name: 📰 委員会ニュース収集
-      if: ${{ github.event.inputs.target_scripts == 'all' || github.event.inputs.target_scripts == 'committee' || github.event.inputs.target_scripts == '' }}
+    - name: 📰 委員会ニュース収集（過去データ）
+      if: ${{ github.event.inputs.target_scripts == 'all' || github.event.inputs.target_scripts == 'committee' }}
       working-directory: scripts/uv-data-collection
       run: |
+        echo "📰 委員会ニュースの過去データを収集中..."
         uv run python collect_committee_news_fixed.py
         
-    - name: 📄 マニフェスト収集
-      if: ${{ github.event.inputs.target_scripts == 'all' || github.event.inputs.target_scripts == 'manifestos' || github.event.inputs.target_scripts == '' }}
+    - name: 📄 マニフェスト収集（過去データ）
+      if: ${{ github.event.inputs.target_scripts == 'all' || github.event.inputs.target_scripts == 'manifestos' }}
       working-directory: scripts/uv-data-collection
       run: |
+        echo "📄 マニフェストデータを収集中..."
         uv run python collect_real_manifestos.py
         
     - name: 🔧 大きなファイル分割
       working-directory: scripts/uv-data-collection
       run: |
+        echo "🔧 大きなファイルを分割中..."
         uv run python split_large_files.py || true
         uv run python split_large_monthly.py || true
         
     - name: 📝 週次データ整理
       working-directory: scripts/uv-data-collection
       run: |
+        echo "📝 週次データを整理中..."
         uv run python weekly_data_organizer.py || true
         
     - name: 🔗 リンク修正
       working-directory: scripts/uv-data-collection
       run: |
+        echo "🔗 リンクを修正中..."
         uv run python fix_questions_links.py || true
         
     - name: 💾 変更をコミット
       run: |
         git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action [Data Collection]"
+        git config --local user.name "GitHub Action [Historical Data Collection]"
         git add frontend/public/data/
         if ! git diff --staged --quiet; then
-          git commit -m "📊 自動データ収集: $(date '+%Y-%m-%d %H:%M:%S JST')"
+          git commit -m "📚 過去データ一括収集: ${{ github.event.inputs.months_back || '4' }}ヶ月分 - $(date '+%Y-%m-%d %H:%M:%S JST')"
           git push
-          echo "✅ データ更新完了" >> $GITHUB_STEP_SUMMARY
+          echo "✅ 過去データ更新完了" >> $GITHUB_STEP_SUMMARY
         else
           echo "ℹ️ 更新すべきデータなし" >> $GITHUB_STEP_SUMMARY
         fi
         
     - name: 📊 収集サマリー
       run: |
-        echo "## 📊 データ収集結果" >> $GITHUB_STEP_SUMMARY
+        echo "## 📚 過去データ一括収集結果" >> $GITHUB_STEP_SUMMARY
         echo "- **実行時刻**: $(date '+%Y-%m-%d %H:%M:%S JST')" >> $GITHUB_STEP_SUMMARY
+        echo "- **対象期間**: 過去 ${{ github.event.inputs.months_back || '4' }}ヶ月" >> $GITHUB_STEP_SUMMARY
+        echo "- **強制更新**: ${{ github.event.inputs.force_update || 'true' }}" >> $GITHUB_STEP_SUMMARY
         echo "- **対象スクリプト**: ${{ github.event.inputs.target_scripts || 'all' }}" >> $GITHUB_STEP_SUMMARY
-        echo "- **過去期間**: ${{ github.event.inputs.months_back || '2' }}ヶ月" >> $GITHUB_STEP_SUMMARY
-        echo "- **強制更新**: ${{ github.event.inputs.force_update || 'false' }}" >> $GITHUB_STEP_SUMMARY
         echo "" >> $GITHUB_STEP_SUMMARY
         echo "### 📁 データファイル数" >> $GITHUB_STEP_SUMMARY
         echo "- **議事録**: $(find frontend/public/data/speeches -name '*.json' | wc -l)件" >> $GITHUB_STEP_SUMMARY

@@ -5,9 +5,9 @@ const nextConfig = {
   skipTrailingSlashRedirect: true,
   distDir: 'out',
   
-  // GitHub Pages設定
-  basePath: process.env.NODE_ENV === 'production' ? '/gijiroku-search' : '',
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/gijiroku-search' : '',
+  // GitHub Pages設定 - ローカル開発時は無効
+  basePath: process.env.GITHUB_PAGES === 'true' ? '/gijiroku-search' : '',
+  assetPrefix: process.env.GITHUB_PAGES === 'true' ? '/gijiroku-search' : '',
   
   images: {
     unoptimized: true

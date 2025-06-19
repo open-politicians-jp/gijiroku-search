@@ -15,11 +15,22 @@ export default function StatsPage() {
     const fetchStats = async () => {
       try {
         setLoading(true);
-        const data = await apiClient.getStats();
-        setStats(data);
         setError(null);
+        console.log('StatsPage: Starting to fetch stats...');
+        
+        const data = await apiClient.getStats();
+        console.log('StatsPage: Received stats data:', {
+          total_speeches: data.total_speeches,
+          top_parties_count: data.top_parties.length,
+          top_speakers_count: data.top_speakers.length,
+          top_committees_count: data.top_committees.length
+        });
+        
+        setStats(data);
       } catch (err) {
-        setError(err instanceof Error ? err.message : '統計情報の取得に失敗しました');
+        console.error('StatsPage: Error fetching stats:', err);
+        const errorMessage = err instanceof Error ? err.message : '統計情報の取得に失敗しました';
+        setError(errorMessage);
       } finally {
         setLoading(false);
       }
@@ -102,7 +113,7 @@ export default function StatsPage() {
             <div className="ml-4">
               <p className="text-sm font-medium text-gray-600">政党数</p>
               <p className="text-2xl font-bold text-gray-900">
-                {stats.top_parties.length}
+                {stats.top_parties?.length || 0}
               </p>
             </div>
           </div>
@@ -116,7 +127,7 @@ export default function StatsPage() {
             <div className="ml-4">
               <p className="text-sm font-medium text-gray-600">発言者数</p>
               <p className="text-2xl font-bold text-gray-900">
-                {stats.top_speakers.length}
+                {stats.top_speakers?.length || 0}
               </p>
             </div>
           </div>
@@ -147,8 +158,8 @@ export default function StatsPage() {
           </div>
           
           <div className="space-y-3">
-            {stats.top_parties.slice(0, 10).map(([party, count], index) => {
-              const maxCount = stats.top_parties[0][1];
+            {stats.top_parties && stats.top_parties.length > 0 ? stats.top_parties.slice(0, 10).map(([party, count], index) => {
+              const maxCount = stats.top_parties[0]?.[1] || 1;
               const percentage = (count / maxCount) * 100;
               
               return (
@@ -174,7 +185,9 @@ export default function StatsPage() {
                   </div>
                 </div>
               );
-            })}
+            }) : (
+              <p className="text-gray-500 text-sm">政党データがありません</p>
+            )}
           </div>
         </div>
 
@@ -186,8 +199,8 @@ export default function StatsPage() {
           </div>
           
           <div className="space-y-3">
-            {stats.top_speakers.slice(0, 10).map(([speaker, count], index) => {
-              const maxCount = stats.top_speakers[0][1];
+            {stats.top_speakers && stats.top_speakers.length > 0 ? stats.top_speakers.slice(0, 10).map(([speaker, count], index) => {
+              const maxCount = stats.top_speakers[0]?.[1] || 1;
               const percentage = (count / maxCount) * 100;
               
               return (
@@ -213,7 +226,9 @@ export default function StatsPage() {
                   </div>
                 </div>
               );
-            })}
+            }) : (
+              <p className="text-gray-500 text-sm">発言者データがありません</p>
+            )}
           </div>
         </div>
 
@@ -225,8 +240,8 @@ export default function StatsPage() {
           </div>
           
           <div className="space-y-3">
-            {stats.top_committees.slice(0, 10).map(([committee, count], index) => {
-              const maxCount = stats.top_committees[0][1];
+            {stats.top_committees && stats.top_committees.length > 0 ? stats.top_committees.slice(0, 10).map(([committee, count], index) => {
+              const maxCount = stats.top_committees[0]?.[1] || 1;
               const percentage = (count / maxCount) * 100;
               
               return (
@@ -252,7 +267,9 @@ export default function StatsPage() {
                   </div>
                 </div>
               );
-            })}
+            }) : (
+              <p className="text-gray-500 text-sm">委員会データがありません</p>
+            )}
           </div>
         </div>
       </div>
