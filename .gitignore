@@ -64,11 +64,14 @@ frontend/.env.test.local
 frontend/.env.production.local
 
 # IDE
-.vscode/
 .idea/
 *.swp
 *.swo
 *~
+# .vscode/ - 設定は含めるがワークスペース固有ファイルは除外
+.vscode/launch.json
+.vscode/tasks.json
+.vscode/workspace-*
 
 # OS
 .DS_Store
@@ -118,6 +121,8 @@ scripts/uv-data-collection/.docker/
 *.backup.*
 **/*.backup.json
 frontend/public/data/**/*.backup*
+frontend/public/data/**/*.original
+frontend/public/data/**/*.large_backup
 
 # Temporary files
 *.tmp

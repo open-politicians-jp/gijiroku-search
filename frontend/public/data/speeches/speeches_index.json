@@ -1,0 +1,45 @@
+{
+  "metadata": {
+    "generated_at": "2025-06-19T20:57:27.446697",
+    "total_files": 6,
+    "description": "分割された議事録ファイルのインデックス"
+  },
+  "files": [
+    {
+      "filename": "speeches_2025_01.json",
+      "period": "2025-01",
+      "count": 643,
+      "size_mb": 1.6
+    },
+    {
+      "filename": "speeches_2025_02.json",
+      "period": "2025-02",
+      "count": 13133,
+      "size_mb": 22.2
+    },
+    {
+      "filename": "speeches_2025_03.json",
+      "period": "2025-03",
+      "count": 15976,
+      "size_mb": 26.0
+    },
+    {
+      "filename": "speeches_2025_04.json",
+      "period": "2025-04",
+      "count": 9059,
+      "size_mb": 14.7
+    },
+    {
+      "filename": "speeches_2025_05.json",
+      "period": "2025-05",
+      "count": 765,
+      "size_mb": 1.1
+    },
+    {
+      "filename": "speeches_2025_06.json",
+      "period": "2025-06",
+      "count": 17,
+      "size_mb": 0.0
+    }
+  ]
+}
