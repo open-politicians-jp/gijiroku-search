@@ -1,0 +1,25 @@
+{
+  "cSpell.words": [
+    "pycache",
+    "sdist",
+    "venv",
+    "ehthumbs",
+    "eslintcache",
+    "vercel",
+    "pyproject",
+    "toml",
+    "hironeko",
+    "CODEOWNERS",
+    "gitignore",
+    "ndl",
+    "shugiin",
+    "sangiin",
+    "manifestos"
+  ],
+  "files.associations": {
+    "CODEOWNERS": "plaintext",
+    "*.md": "markdown"
+  },
+  "editor.formatOnSave": true,
+  "typescript.preferences.importModuleSpecifier": "relative"
+}
