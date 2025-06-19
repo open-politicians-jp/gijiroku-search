@@ -14,7 +14,8 @@ eggs/
 scripts/*/lib/
 **/site-packages/
 
-# Include frontend lib directory explicitly
+# Include frontend lib directory explicitly  
+!frontend/lib/
 lib64/
 parts/
 sdist/

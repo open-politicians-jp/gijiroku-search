@@ -27,6 +27,23 @@ class StaticDataLoader {
   
   private lastCacheTime: number = 0;
   private readonly CACHE_DURATION = 30 * 60 * 1000; // 30分キャッシュ
+  
+  // GitHub Pages basePath対応
+  private getBasePath(): string {
+    if (typeof window !== 'undefined') {
+      // ブラウザ環境では現在のパスから推測
+      const path = window.location.pathname;
+      if (path.startsWith('/gijiroku-search/')) {
+        return '/gijiroku-search';
+      }
+    }
+    return process.env.NODE_ENV === 'production' ? '/gijiroku-search' : '';
+  }
+  
+  private getDataPath(path: string): string {
+    const basePath = this.getBasePath();
+    return `${basePath}${path}`;
+  }
 
   /**
    * 議事録データを読み込み
@@ -45,7 +62,7 @@ class StaticDataLoader {
         '/data/speeches/speeches_20250610_105520.json',
         '/data/speeches/speeches_20250610_000325.json',
         '/data/speeches/speeches_20250609_232138.json'
-      ];
+      ].map(path => this.getDataPath(path));
 
       for (const filePath of filesToTry) {
         try {
@@ -97,7 +114,7 @@ class StaticDataLoader {
       const filesToTry = [
         '/data/committee_news/committee_news_latest.json',
         '/data/committee_news/committee_news_20250612_012023.json'
-      ];
+      ].map(path => this.getDataPath(path));
 
       for (const filePath of filesToTry) {
         try {
@@ -141,7 +158,7 @@ class StaticDataLoader {
         '/data/bills/bills_realistic_20250617_085841.json',
         '/data/bills/bills_20250617_084742.json',
         '/data/bills/bills_20250611_200440.json'
-      ];
+      ].map(path => this.getDataPath(path));
 
       for (const filePath of filesToTry) {
         try {
@@ -185,7 +202,7 @@ class StaticDataLoader {
         '/data/questions/questions_enhanced_20250617_084938.json',
         '/data/questions/questions_20250617_083722.json',
         '/data/questions/questions_20250611_200440.json'
-      ];
+      ].map(path => this.getDataPath(path));
 
       for (const filePath of filesToTry) {
         try {

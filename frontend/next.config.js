@@ -5,16 +5,13 @@ const nextConfig = {
   skipTrailingSlashRedirect: true,
   distDir: 'out',
   
-  // GitHub Pagesの場合、basePath設定が必要な場合がある
-  // リポジトリ名がルートでない場合: basePath: '/repository-name'
-  basePath: process.env.NODE_ENV === 'production' ? '' : '',
+  // GitHub Pages設定
+  basePath: process.env.NODE_ENV === 'production' ? '/gijiroku-search' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/gijiroku-search' : '',
   
   images: {
     unoptimized: true
   },
-  
-  // GitHub Pages対応
-  assetPrefix: process.env.NODE_ENV === 'production' ? '' : '',
   
   experimental: {
     serverComponentsExternalPackages: ['flexsearch']

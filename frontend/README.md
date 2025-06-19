@@ -107,7 +107,7 @@ interface BillRecord {
 ## 🌐 デプロイメント
 
 ### GitHub Pages
-- **URL**: `https://hironeko.github.io/new-jp-search`
+- **URL**: `https://open-politicians-jp.github.io/gijiroku-search`
 - **自動デプロイ**: mainブランチpush時
 - **静的サイト**: Next.js static export使用
 
@@ -185,6 +185,6 @@ MIT License - 詳細は[LICENSE](../LICENSE)を参照
 
 ## 📞 サポート
 
-- **プロジェクト**: [GitHub Repository](https://github.com/hironeko/new-jp-search)
+- **プロジェクト**: [GitHub Repository](https://github.com/open-politicians-jp/gijiroku-search)
 - **ドキュメント**: [CLAUDE.md](../CLAUDE.md)
-- **デプロイ**: [GitHub Pages](https://hironeko.github.io/new-jp-search)
+- **デプロイ**: [GitHub Pages](https://open-politicians-jp.github.io/gijiroku-search)
