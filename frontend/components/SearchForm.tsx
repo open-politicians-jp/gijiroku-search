@@ -6,10 +6,11 @@ import { SearchParams } from '@/types';
 
 interface SearchFormProps {
   onSearch: (params: SearchParams) => void;
+  onSearchTypeChange?: () => void;
   loading?: boolean;
 }
 
-export default function SearchForm({ onSearch, loading = false }: SearchFormProps) {
+export default function SearchForm({ onSearch, onSearchTypeChange, loading = false }: SearchFormProps) {
   const [query, setQuery] = useState('');
   const [speaker, setSpeaker] = useState('');
   const [party, setParty] = useState('');
@@ -37,6 +38,11 @@ export default function SearchForm({ onSearch, loading = false }: SearchFormProp
     onSearch(params);
   };
 
+  const handleSearchTypeChange = (newSearchType: 'speeches' | 'committee_news' | 'bills' | 'questions') => {
+    setSearchType(newSearchType);
+    onSearchTypeChange?.();
+  };
+
   const handleReset = () => {
     setQuery('');
     setSpeaker('');
@@ -58,7 +64,7 @@ export default function SearchForm({ onSearch, loading = false }: SearchFormProp
               name="searchType"
               value="speeches"
               checked={searchType === 'speeches'}
-              onChange={(e) => setSearchType(e.target.value as 'speeches' | 'committee_news' | 'bills' | 'questions')}
+              onChange={(e) => handleSearchTypeChange(e.target.value as 'speeches' | 'committee_news' | 'bills' | 'questions')}
               className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2"
             />
             <span className="text-sm font-medium text-gray-700">議事録</span>
@@ -69,7 +75,7 @@ export default function SearchForm({ onSearch, loading = false }: SearchFormProp
               name="searchType"
               value="committee_news"
               checked={searchType === 'committee_news'}
-              onChange={(e) => setSearchType(e.target.value as 'speeches' | 'committee_news' | 'bills' | 'questions')}
+              onChange={(e) => handleSearchTypeChange(e.target.value as 'speeches' | 'committee_news' | 'bills' | 'questions')}
               className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2"
             />
             <span className="text-sm font-medium text-gray-700">委員会活動</span>
@@ -80,7 +86,7 @@ export default function SearchForm({ onSearch, loading = false }: SearchFormProp
               name="searchType"
               value="bills"
               checked={searchType === 'bills'}
-              onChange={(e) => setSearchType(e.target.value as 'speeches' | 'committee_news' | 'bills' | 'questions')}
+              onChange={(e) => handleSearchTypeChange(e.target.value as 'speeches' | 'committee_news' | 'bills' | 'questions')}
               className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2"
             />
             <span className="text-sm font-medium text-gray-700">提出法案</span>
@@ -91,7 +97,7 @@ export default function SearchForm({ onSearch, loading = false }: SearchFormProp
               name="searchType"
               value="questions"
               checked={searchType === 'questions'}
-              onChange={(e) => setSearchType(e.target.value as 'speeches' | 'committee_news' | 'bills' | 'questions')}
+              onChange={(e) => handleSearchTypeChange(e.target.value as 'speeches' | 'committee_news' | 'bills' | 'questions')}
               className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2"
             />
             <span className="text-sm font-medium text-gray-700">質問主意書</span>
