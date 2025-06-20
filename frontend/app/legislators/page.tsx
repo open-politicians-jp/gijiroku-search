@@ -75,8 +75,22 @@ export default function LegislatorsPage() {
                   {new Date(legislatorsData.metadata.last_updated).toLocaleDateString('ja-JP')}
                 </p>
                 <p>
+                  <span className="font-medium">参議院議員数:</span>{' '}
+                  {legislatorsData.metadata.sangiin_count || 0}名
+                  {legislatorsData.metadata.shugiin_count !== undefined && (
+                    <span>、衆議院議員数: {legislatorsData.metadata.shugiin_count}名</span>
+                  )}
+                </p>
+                <p>
                   <span className="font-medium">データソース:</span>{' '}
-                  {legislatorsData.metadata.data_source === 'mock_csv_data' ? 'サンプルデータ' : legislatorsData.metadata.data_source}
+                  <a 
+                    href="https://smartnews-smri.github.io/house-of-councillors/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-blue-600 hover:text-blue-800 underline"
+                  >
+                    SmartNews Media Research Institute (SMRI)
+                  </a>
                 </p>
               </div>
             </div>

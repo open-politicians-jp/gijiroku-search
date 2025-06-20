@@ -2,6 +2,11 @@
 """
 参議院議員CSVファイルをJSONファイルに変換し、適切なサイズに分割するスクリプト
 
+データソース:
+- SmartNews Media Research Institute (SMRI) - House of Councillors Database
+- URL: https://smartnews-smri.github.io/house-of-councillors/
+- ライセンス: 元ソースのライセンス条項に従う
+
 機能:
 - CSVファイルの読み込みと正規化
 - 政党名の正規化
@@ -208,7 +213,10 @@ class SangiinCSVConverter:
                     "legislators_range": f"{start_idx + 1}-{end_idx}",
                     "generated_at": datetime.now().isoformat(),
                     "source_file": "国会議案データベース.csv",
-                    "data_quality": "official_sangiin_data"
+                    "source_url": "https://smartnews-smri.github.io/house-of-councillors/",
+                    "source_attribution": "SmartNews Media Research Institute (SMRI) - House of Councillors Database",
+                    "data_quality": "official_sangiin_data",
+                    "license": "Please refer to the original source for license information"
                 },
                 "data": chunk_legislators
             }
@@ -232,7 +240,10 @@ class SangiinCSVConverter:
                 "total_parts": file_count,
                 "generated_at": datetime.now().isoformat(),
                 "source_file": "国会議案データベース.csv",
-                "data_quality": "official_sangiin_data"
+                "source_url": "https://smartnews-smri.github.io/house-of-councillors/",
+                "source_attribution": "SmartNews Media Research Institute (SMRI) - House of Councillors Database",
+                "data_quality": "official_sangiin_data",
+                "license": "Please refer to the original source for license information"
             },
             "data": legislators
         }

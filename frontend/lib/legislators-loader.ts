@@ -53,7 +53,7 @@ class LegislatorsLoader {
   private async loadSangiinData(): Promise<Legislator[]> {
     try {
       // 最新の統合ファイルを取得
-      const response = await fetch('/data/legislators/sangiin_legislators_unified_20250621_001253.json');
+      const response = await fetch('/data/legislators/sangiin_legislators_unified_20250621_002031.json');
       if (!response.ok) {
         throw new Error(`Failed to fetch sangiin data: ${response.status}`);
       }
