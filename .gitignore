@@ -159,3 +159,10 @@ frontend/.next/analyze/
 # Local development files
 .local/
 scripts/uv-data-collection/.local/
+
+# Large CSV data files (exclude from git, use generated JSON instead)
+*.csv
+国会議案データベース.csv
+**/legislators_*.csv
+**/sangiin_*.csv
+**/shugiin_*.csv
