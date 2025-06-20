@@ -25,6 +25,43 @@ interface ManifestoData {
   data: Manifesto[];
 }
 
+// GitHub Pages basePath対応 - コンポーネント外で定義
+const getBasePath = (): string => {
+  if (typeof window !== 'undefined') {
+    // ブラウザ環境では現在のパスから推測
+    const path = window.location.pathname;
+    if (path.startsWith('/gijiroku-search/')) {
+      return '/gijiroku-search';
+    }
+  }
+  return process.env.GITHUB_PAGES === 'true' ? '/gijiroku-search' : '';
+};
+
+const getDataPath = (path: string): string => {
+  const basePath = getBasePath();
+  return `${basePath}${path}`;
+};
+
+// マニフェストファイルのフォールバック候補を動的生成
+const generateManifestFiles = (): string[] => {
+  const files = ['/data/manifestos/manifestos_latest.json'];
+  
+  // 過去7日分のファイル名パターンを生成（時刻は既知のパターン）
+  const timePatterns = ['193602', '193501', '193406', '193135', '192440'];
+  
+  for (let i = 0; i < 7; i++) {
+    const date = new Date();
+    date.setDate(date.getDate() - i);
+    const dateStr = date.toISOString().slice(0, 10).replace(/-/g, '');
+    
+    timePatterns.forEach(time => {
+      files.push(`/data/manifestos/manifestos_${dateStr}_${time}.json`);
+    });
+  }
+  
+  return files;
+};
+
 export default function ManifestosPage() {
   const [manifestos, setManifestos] = useState<Manifesto[]>([]);
   const [filteredManifestos, setFilteredManifestos] = useState<Manifesto[]>([]);
@@ -38,17 +75,41 @@ export default function ManifestosPage() {
     const fetchManifestos = async () => {
       try {
         setLoading(true);
-        // 静的データファイルから直接読み込み（SPA対応）
-        const response = await fetch('/data/manifestos/manifestos_latest.json');
-        if (!response.ok) {
-          throw new Error('Failed to fetch manifestos');
-        }
-        const data = await response.json();
-        const manifestosData = Array.isArray(data) ? data : data.data || [];
-        setManifestos(manifestosData);
-        setFilteredManifestos(manifestosData);
         setError(null);
+        
+        // 動的にファイル候補を生成
+        const filesToTry = generateManifestFiles().map(path => getDataPath(path));
+
+        console.log('Attempting to load manifestos from:', filesToTry);
+
+        for (const filePath of filesToTry) {
+          try {
+            console.log(`Trying to fetch: ${filePath}`);
+            const response = await fetch(filePath);
+            
+            if (response.ok) {
+              const data = await response.json();
+              console.log(`Successfully loaded manifestos from: ${filePath}`);
+              
+              const manifestosData = Array.isArray(data) ? data : data.data || [];
+              setManifestos(manifestosData);
+              setFilteredManifestos(manifestosData);
+              console.log(`Loaded ${manifestosData.length} manifestos`);
+              return;
+            } else {
+              console.log(`Failed to fetch ${filePath}: ${response.status} ${response.statusText}`);
+            }
+          } catch (fileError) {
+            console.error(`Error loading ${filePath}:`, fileError);
+            continue;
+          }
+        }
+        
+        console.warn('No manifesto files could be loaded from any source');
+        setManifestos([]);
+        setFilteredManifestos([]);
       } catch (err) {
+        console.error('Critical error loading manifestos:', err);
         setError(err instanceof Error ? err.message : 'マニフェストの取得に失敗しました');
       } finally {
         setLoading(false);

@@ -56,6 +56,7 @@ class StaticDataLoader {
    */
   async loadSpeeches(): Promise<Speech[]> {
     if (this.speechesCache.length > 0 && this.isCacheValid()) {
+      console.log(`loadSpeeches: Returning cached speeches (${this.speechesCache.length} items)`);
       return this.speechesCache;
     }
 
@@ -72,21 +73,22 @@ class StaticDataLoader {
         '/data/speeches/speeches_2025_05.json'
       ].map(path => this.getDataPath(path));
 
-      console.log('Attempting to load speeches from:', filesToTry);
+      console.log('loadSpeeches: Attempting to load speeches from:', filesToTry);
 
       for (const filePath of filesToTry) {
         try {
-          console.log(`Trying to fetch: ${filePath}`);
+          console.log(`loadSpeeches: Trying to fetch: ${filePath}`);
           const response = await fetch(filePath);
           
           if (response.ok) {
             const data = await response.json();
-            console.log(`Successfully loaded speeches from: ${filePath}`);
-            console.log(`Response data structure:`, {
+            console.log(`loadSpeeches: Successfully loaded speeches from: ${filePath}`);
+            console.log(`loadSpeeches: Response data structure:`, {
               isArray: Array.isArray(data),
               hasSpeeches: !!data.speeches,
               hasData: !!data.data,
-              keys: Object.keys(data)
+              keys: Object.keys(data),
+              dataSize: data.length || (data.speeches && data.speeches.length) || (data.data && data.data.length) || 'unknown'
             });
             
             let speechData: Speech[] = [];
@@ -98,39 +100,51 @@ class StaticDataLoader {
             } else if (data.data && Array.isArray(data.data)) {
               speechData = data.data;
             } else {
-              console.warn(`Unexpected data format in ${filePath}:`, {
+              console.warn(`loadSpeeches: Unexpected data format in ${filePath}:`, {
                 type: typeof data,
                 keys: Object.keys(data),
-                dataStructure: data
+                sampleData: Object.keys(data).slice(0, 5)
               });
               continue;
             }
             
             // データの有効性チェック
             if (speechData.length === 0) {
-              console.warn(`No speeches found in ${filePath}`);
+              console.warn(`loadSpeeches: No speeches found in ${filePath}`);
               continue;
             }
             
+            // 最初の数件のデータ構造をチェック
+            console.log(`loadSpeeches: Sample speech data:`, {
+              totalCount: speechData.length,
+              sampleSpeech: speechData[0] ? {
+                date: speechData[0].date,
+                speaker: speechData[0].speaker,
+                party: speechData[0].party,
+                committee: speechData[0].committee,
+                hasText: !!speechData[0].text
+              } : 'no data'
+            });
+            
             this.speechesCache = speechData;
             this.updateCacheTime();
-            console.log(`Successfully loaded ${this.speechesCache.length} speeches from ${filePath}`);
+            console.log(`loadSpeeches: Successfully cached ${this.speechesCache.length} speeches from ${filePath}`);
             return this.speechesCache;
           } else {
-            console.log(`Failed to fetch ${filePath}: ${response.status} ${response.statusText}`);
+            console.log(`loadSpeeches: Failed to fetch ${filePath}: ${response.status} ${response.statusText}`);
           }
         } catch (fileError) {
-          console.error(`Error loading ${filePath}:`, fileError);
+          console.error(`loadSpeeches: Error loading ${filePath}:`, fileError);
           continue;
         }
       }
       
-      console.warn('No speech files could be loaded from any source');
+      console.warn('loadSpeeches: No speech files could be loaded from any source');
       this.speechesCache = [];
       this.updateCacheTime();
       return this.speechesCache;
     } catch (error) {
-      console.error('Critical error loading speeches:', error);
+      console.error('loadSpeeches: Critical error loading speeches:', error);
       return [];
     }
   }
@@ -270,38 +284,46 @@ class StaticDataLoader {
    */
   async loadStats(): Promise<Stats> {
     if (this.statsCache && this.isCacheValid()) {
-      console.log('Returning cached stats');
+      console.log('loadStats: Returning cached stats');
       return this.statsCache;
     }
 
     try {
-      console.log('Loading fresh stats data...');
+      console.log('loadStats: Loading fresh stats data...');
+      console.log('loadStats: Current basePath:', this.getBasePath());
+      
       const speeches = await this.loadSpeeches();
       
       if (speeches.length === 0) {
-        console.warn('No speeches loaded, returning default stats');
-        return this.getDefaultStats();
+        console.warn('loadStats: No speeches loaded, returning default stats');
+        const defaultStats = this.getDefaultStats();
+        console.log('loadStats: Default stats:', defaultStats);
+        return defaultStats;
       }
       
-      console.log(`Calculating stats from ${speeches.length} speeches`);
+      console.log(`loadStats: Calculating stats from ${speeches.length} speeches`);
       
       // 統計を動的計算
       const stats: Stats = this.calculateStats(speeches);
       
-      console.log('Stats calculated:', {
+      console.log('loadStats: Stats calculated successfully:', {
         total_speeches: stats.total_speeches,
         top_parties_count: stats.top_parties.length,
         top_speakers_count: stats.top_speakers.length,
         top_committees_count: stats.top_committees.length,
-        date_range: stats.date_range
+        date_range: stats.date_range,
+        sample_parties: stats.top_parties.slice(0, 3),
+        sample_speakers: stats.top_speakers.slice(0, 3)
       });
       
       this.statsCache = stats;
       this.updateCacheTime();
       return stats;
     } catch (error) {
-      console.error('Error loading stats:', error);
-      return this.getDefaultStats();
+      console.error('loadStats: Error loading stats:', error);
+      const defaultStats = this.getDefaultStats();
+      console.log('loadStats: Returning default stats due to error:', defaultStats);
+      return defaultStats;
     }
   }
 

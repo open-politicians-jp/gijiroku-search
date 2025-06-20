@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "generated_at": "2025-06-19T20:57:27.446697",
-    "total_files": 6,
+    "generated_at": "2025-06-20T00:37:27.305251",
+    "total_files": 16,
     "description": "分割された議事録ファイルのインデックス"
   },
   "files": [
@@ -12,22 +12,82 @@
       "size_mb": 1.6
     },
     {
-      "filename": "speeches_2025_02.json",
-      "period": "2025-02",
-      "count": 13133,
-      "size_mb": 22.2
+      "filename": "speeches_2025_02_w01.json",
+      "period": "2025-02-w01",
+      "count": 2575,
+      "size_mb": 4.1
     },
     {
-      "filename": "speeches_2025_03.json",
-      "period": "2025-03",
-      "count": 15976,
-      "size_mb": 26.0
+      "filename": "speeches_2025_02_w02.json",
+      "period": "2025-02-w02",
+      "count": 2143,
+      "size_mb": 3.8
     },
     {
-      "filename": "speeches_2025_04.json",
-      "period": "2025-04",
-      "count": 9059,
-      "size_mb": 14.7
+      "filename": "speeches_2025_02_w03.json",
+      "period": "2025-02-w03",
+      "count": 2092,
+      "size_mb": 3.4
+    },
+    {
+      "filename": "speeches_2025_02_w04.json",
+      "period": "2025-02-w04",
+      "count": 6323,
+      "size_mb": 10.9
+    },
+    {
+      "filename": "speeches_2025_03_w01.json",
+      "period": "2025-03-w01",
+      "count": 2066,
+      "size_mb": 3.0
+    },
+    {
+      "filename": "speeches_2025_03_w02.json",
+      "period": "2025-03-w02",
+      "count": 5350,
+      "size_mb": 9.1
+    },
+    {
+      "filename": "speeches_2025_03_w03.json",
+      "period": "2025-03-w03",
+      "count": 1810,
+      "size_mb": 2.8
+    },
+    {
+      "filename": "speeches_2025_03_w04.json",
+      "period": "2025-03-w04",
+      "count": 6364,
+      "size_mb": 10.4
+    },
+    {
+      "filename": "speeches_2025_03_w05.json",
+      "period": "2025-03-w05",
+      "count": 386,
+      "size_mb": 0.6
+    },
+    {
+      "filename": "speeches_2025_04_w01.json",
+      "period": "2025-04-w01",
+      "count": 2971,
+      "size_mb": 4.7
+    },
+    {
+      "filename": "speeches_2025_04_w02.json",
+      "period": "2025-04-w02",
+      "count": 3381,
+      "size_mb": 5.6
+    },
+    {
+      "filename": "speeches_2025_04_w03.json",
+      "period": "2025-04-w03",
+      "count": 2058,
+      "size_mb": 3.4
+    },
+    {
+      "filename": "speeches_2025_04_w04.json",
+      "period": "2025-04-w04",
+      "count": 649,
+      "size_mb": 1.0
     },
     {
       "filename": "speeches_2025_05.json",

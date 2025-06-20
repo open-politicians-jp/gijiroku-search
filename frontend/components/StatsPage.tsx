@@ -21,16 +21,27 @@ export default function StatsPage() {
         const data = await apiClient.getStats();
         console.log('StatsPage: Received stats data:', {
           total_speeches: data.total_speeches,
-          top_parties_count: data.top_parties.length,
-          top_speakers_count: data.top_speakers.length,
-          top_committees_count: data.top_committees.length
+          top_parties_count: data.top_parties ? data.top_parties.length : 0,
+          top_speakers_count: data.top_speakers ? data.top_speakers.length : 0,
+          top_committees_count: data.top_committees ? data.top_committees.length : 0,
+          date_range: data.date_range,
+          last_updated: data.last_updated
         });
+        
+        // データ検証
+        if (!data || typeof data !== 'object') {
+          throw new Error('無効な統計データを受信しました');
+        }
+        
+        if (data.total_speeches === 0) {
+          console.warn('StatsPage: Received stats with 0 speeches');
+        }
         
         setStats(data);
       } catch (err) {
         console.error('StatsPage: Error fetching stats:', err);
         const errorMessage = err instanceof Error ? err.message : '統計情報の取得に失敗しました';
-        setError(errorMessage);
+        setError(`統計データの読み込みエラー: ${errorMessage}`);
       } finally {
         setLoading(false);
       }

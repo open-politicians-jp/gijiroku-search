@@ -5,8 +5,8 @@
     "generated_at": "2025-06-11T20:04:40.314637",
     "source": "衆議院・参議院公式サイト",
     "collection_method": "parliamentary_scraping",
-    "fixed_at": "2025-06-19T20:36:13.112283",
-    "fixes_applied": 469
+    "fixed_at": "2025-06-20T00:37:27.971474",
+    "fixes_applied": 234
   },
   "data": [
     {
@@ -34,7 +34,7 @@
       "title": "質問(PDF 160KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217001.pdf/$File/a217001.pdf",
       "collected_at": "2025-06-11T20:04:16.811914",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217001.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217001.pdf/$File/a217001.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217001.pdf/$File/a217001.pdf",
@@ -66,7 +66,7 @@
       "title": "質問(PDF 150KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217002.pdf/$File/a217002.pdf",
       "collected_at": "2025-06-11T20:04:16.811922",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217002.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217002.pdf/$File/a217002.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217002.pdf/$File/a217002.pdf",
@@ -98,7 +98,7 @@
       "title": "質問(PDF 127KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217003.pdf/$File/a217003.pdf",
       "collected_at": "2025-06-11T20:04:16.811929",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217003.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217003.pdf/$File/a217003.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217003.pdf/$File/a217003.pdf",
@@ -130,7 +130,7 @@
       "title": "質問(PDF 167KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217004.pdf/$File/a217004.pdf",
       "collected_at": "2025-06-11T20:04:16.811937",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217004.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217004.pdf/$File/a217004.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217004.pdf/$File/a217004.pdf",
@@ -162,7 +162,7 @@
       "title": "質問(PDF 179KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217005.pdf/$File/a217005.pdf",
       "collected_at": "2025-06-11T20:04:16.811944",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217005.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217005.pdf/$File/a217005.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217005.pdf/$File/a217005.pdf",
@@ -194,7 +194,7 @@
       "title": "質問(PDF 141KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217006.pdf/$File/a217006.pdf",
       "collected_at": "2025-06-11T20:04:16.811951",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217006.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217006.pdf/$File/a217006.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217006.pdf/$File/a217006.pdf",
@@ -226,7 +226,7 @@
       "title": "質問(PDF 135KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217007.pdf/$File/a217007.pdf",
       "collected_at": "2025-06-11T20:04:16.811958",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217007.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217007.pdf/$File/a217007.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217007.pdf/$File/a217007.pdf",
@@ -258,7 +258,7 @@
       "title": "質問(PDF 160KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217008.pdf/$File/a217008.pdf",
       "collected_at": "2025-06-11T20:04:16.811966",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217008.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217008.pdf/$File/a217008.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217008.pdf/$File/a217008.pdf",
@@ -290,7 +290,7 @@
       "title": "質問(PDF 175KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217009.pdf/$File/a217009.pdf",
       "collected_at": "2025-06-11T20:04:16.811974",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217009.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217009.pdf/$File/a217009.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217009.pdf/$File/a217009.pdf",
@@ -322,7 +322,7 @@
       "title": "質問(PDF 140KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217010.pdf/$File/a217010.pdf",
       "collected_at": "2025-06-11T20:04:16.811981",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217010.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217010.pdf/$File/a217010.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217010.pdf/$File/a217010.pdf",
@@ -354,7 +354,7 @@
       "title": "質問(PDF 168KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217011.pdf/$File/a217011.pdf",
       "collected_at": "2025-06-11T20:04:16.811988",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217011.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217011.pdf/$File/a217011.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217011.pdf/$File/a217011.pdf",
@@ -386,7 +386,7 @@
       "title": "質問(PDF 159KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217012.pdf/$File/a217012.pdf",
       "collected_at": "2025-06-11T20:04:16.811995",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217012.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217012.pdf/$File/a217012.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217012.pdf/$File/a217012.pdf",
@@ -418,7 +418,7 @@
       "title": "質問(PDF 114KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217013.pdf/$File/a217013.pdf",
       "collected_at": "2025-06-11T20:04:16.812002",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217013.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217013.pdf/$File/a217013.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217013.pdf/$File/a217013.pdf",
@@ -450,7 +450,7 @@
       "title": "質問(PDF 208KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217014.pdf/$File/a217014.pdf",
       "collected_at": "2025-06-11T20:04:16.812009",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217014.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217014.pdf/$File/a217014.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217014.pdf/$File/a217014.pdf",
@@ -482,7 +482,7 @@
       "title": "質問(PDF 132KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217015.pdf/$File/a217015.pdf",
       "collected_at": "2025-06-11T20:04:16.812016",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217015.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217015.pdf/$File/a217015.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217015.pdf/$File/a217015.pdf",
@@ -514,7 +514,7 @@
       "title": "質問(PDF 243KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217016.pdf/$File/a217016.pdf",
       "collected_at": "2025-06-11T20:04:16.812023",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217016.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217016.pdf/$File/a217016.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217016.pdf/$File/a217016.pdf",
@@ -546,7 +546,7 @@
       "title": "質問(PDF 193KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217017.pdf/$File/a217017.pdf",
       "collected_at": "2025-06-11T20:04:16.812030",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217017.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217017.pdf/$File/a217017.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217017.pdf/$File/a217017.pdf",
@@ -578,7 +578,7 @@
       "title": "質問(PDF 141KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217018.pdf/$File/a217018.pdf",
       "collected_at": "2025-06-11T20:04:16.812037",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217018.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217018.pdf/$File/a217018.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217018.pdf/$File/a217018.pdf",
@@ -610,7 +610,7 @@
       "title": "質問(PDF 161KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217019.pdf/$File/a217019.pdf",
       "collected_at": "2025-06-11T20:04:16.812044",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217019.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217019.pdf/$File/a217019.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217019.pdf/$File/a217019.pdf",
@@ -642,7 +642,7 @@
       "title": "質問(PDF 115KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217020.pdf/$File/a217020.pdf",
       "collected_at": "2025-06-11T20:04:16.812051",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217020.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217020.pdf/$File/a217020.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217020.pdf/$File/a217020.pdf",
@@ -674,7 +674,7 @@
       "title": "質問(PDF 128KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217021.pdf/$File/a217021.pdf",
       "collected_at": "2025-06-11T20:04:16.812058",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217021.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217021.pdf/$File/a217021.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217021.pdf/$File/a217021.pdf",
@@ -706,7 +706,7 @@
       "title": "質問(PDF 132KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217022.pdf/$File/a217022.pdf",
       "collected_at": "2025-06-11T20:04:16.812065",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217022.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217022.pdf/$File/a217022.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217022.pdf/$File/a217022.pdf",
@@ -738,7 +738,7 @@
       "title": "質問(PDF 138KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217023.pdf/$File/a217023.pdf",
       "collected_at": "2025-06-11T20:04:16.812072",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217023.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217023.pdf/$File/a217023.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217023.pdf/$File/a217023.pdf",
@@ -770,7 +770,7 @@
       "title": "質問(PDF 159KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217024.pdf/$File/a217024.pdf",
       "collected_at": "2025-06-11T20:04:16.812079",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217024.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217024.pdf/$File/a217024.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217024.pdf/$File/a217024.pdf",
@@ -802,7 +802,7 @@
       "title": "質問(PDF 180KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217025.pdf/$File/a217025.pdf",
       "collected_at": "2025-06-11T20:04:16.812085",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217025.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217025.pdf/$File/a217025.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217025.pdf/$File/a217025.pdf",
@@ -834,7 +834,7 @@
       "title": "質問(PDF 139KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217026.pdf/$File/a217026.pdf",
       "collected_at": "2025-06-11T20:04:16.812091",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217026.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217026.pdf/$File/a217026.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217026.pdf/$File/a217026.pdf",
@@ -866,7 +866,7 @@
       "title": "質問(PDF 154KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217027.pdf/$File/a217027.pdf",
       "collected_at": "2025-06-11T20:04:16.812098",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217027.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217027.pdf/$File/a217027.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217027.pdf/$File/a217027.pdf",
@@ -898,7 +898,7 @@
       "title": "質問(PDF 180KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217028.pdf/$File/a217028.pdf",
       "collected_at": "2025-06-11T20:04:16.812104",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217028.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217028.pdf/$File/a217028.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217028.pdf/$File/a217028.pdf",
@@ -930,7 +930,7 @@
       "title": "質問(PDF 166KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217029.pdf/$File/a217029.pdf",
       "collected_at": "2025-06-11T20:04:16.812111",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217029.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217029.pdf/$File/a217029.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217029.pdf/$File/a217029.pdf",
@@ -962,7 +962,7 @@
       "title": "質問(PDF 142KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217030.pdf/$File/a217030.pdf",
       "collected_at": "2025-06-11T20:04:16.812117",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217030.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217030.pdf/$File/a217030.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217030.pdf/$File/a217030.pdf",
@@ -994,7 +994,7 @@
       "title": "質問(PDF 136KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217031.pdf/$File/a217031.pdf",
       "collected_at": "2025-06-11T20:04:16.812124",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217031.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217031.pdf/$File/a217031.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217031.pdf/$File/a217031.pdf",
@@ -1026,7 +1026,7 @@
       "title": "質問(PDF 126KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217032.pdf/$File/a217032.pdf",
       "collected_at": "2025-06-11T20:04:16.812130",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217032.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217032.pdf/$File/a217032.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217032.pdf/$File/a217032.pdf",
@@ -1058,7 +1058,7 @@
       "title": "質問(PDF 136KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217033.pdf/$File/a217033.pdf",
       "collected_at": "2025-06-11T20:04:16.812139",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217033.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217033.pdf/$File/a217033.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217033.pdf/$File/a217033.pdf",
@@ -1090,7 +1090,7 @@
       "title": "質問(PDF 124KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217034.pdf/$File/a217034.pdf",
       "collected_at": "2025-06-11T20:04:16.812145",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217034.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217034.pdf/$File/a217034.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217034.pdf/$File/a217034.pdf",
@@ -1122,7 +1122,7 @@
       "title": "質問(PDF 137KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217035.pdf/$File/a217035.pdf",
       "collected_at": "2025-06-11T20:04:16.812151",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217035.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217035.pdf/$File/a217035.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217035.pdf/$File/a217035.pdf",
@@ -1154,7 +1154,7 @@
       "title": "質問(PDF 138KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217036.pdf/$File/a217036.pdf",
       "collected_at": "2025-06-11T20:04:16.812158",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217036.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217036.pdf/$File/a217036.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217036.pdf/$File/a217036.pdf",
@@ -1186,7 +1186,7 @@
       "title": "質問(PDF 175KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217037.pdf/$File/a217037.pdf",
       "collected_at": "2025-06-11T20:04:16.812164",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217037.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217037.pdf/$File/a217037.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217037.pdf/$File/a217037.pdf",
@@ -1218,7 +1218,7 @@
       "title": "質問(PDF 143KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217038.pdf/$File/a217038.pdf",
       "collected_at": "2025-06-11T20:04:16.812171",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217038.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217038.pdf/$File/a217038.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217038.pdf/$File/a217038.pdf",
@@ -1250,7 +1250,7 @@
       "title": "質問(PDF 131KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217039.pdf/$File/a217039.pdf",
       "collected_at": "2025-06-11T20:04:16.812177",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217039.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217039.pdf/$File/a217039.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217039.pdf/$File/a217039.pdf",
@@ -1282,7 +1282,7 @@
       "title": "質問(PDF 165KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217040.pdf/$File/a217040.pdf",
       "collected_at": "2025-06-11T20:04:16.812184",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217040.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217040.pdf/$File/a217040.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217040.pdf/$File/a217040.pdf",
@@ -1314,7 +1314,7 @@
       "title": "質問(PDF 174KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217041.pdf/$File/a217041.pdf",
       "collected_at": "2025-06-11T20:04:16.812190",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217041.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217041.pdf/$File/a217041.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217041.pdf/$File/a217041.pdf",
@@ -1346,7 +1346,7 @@
       "title": "質問(PDF 168KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217042.pdf/$File/a217042.pdf",
       "collected_at": "2025-06-11T20:04:16.812197",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217042.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217042.pdf/$File/a217042.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217042.pdf/$File/a217042.pdf",
@@ -1378,7 +1378,7 @@
       "title": "質問(PDF 185KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217043.pdf/$File/a217043.pdf",
       "collected_at": "2025-06-11T20:04:16.812203",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217043.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217043.pdf/$File/a217043.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217043.pdf/$File/a217043.pdf",
@@ -1410,7 +1410,7 @@
       "title": "質問(PDF 80KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217044.pdf/$File/a217044.pdf",
       "collected_at": "2025-06-11T20:04:16.812210",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217044.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217044.pdf/$File/a217044.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217044.pdf/$File/a217044.pdf",
@@ -1442,7 +1442,7 @@
       "title": "質問(PDF 186KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217045.pdf/$File/a217045.pdf",
       "collected_at": "2025-06-11T20:04:16.812216",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217045.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217045.pdf/$File/a217045.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217045.pdf/$File/a217045.pdf",
@@ -1474,7 +1474,7 @@
       "title": "質問(PDF 104KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217046.pdf/$File/a217046.pdf",
       "collected_at": "2025-06-11T20:04:16.812222",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217046.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217046.pdf/$File/a217046.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217046.pdf/$File/a217046.pdf",
@@ -1506,7 +1506,7 @@
       "title": "質問(PDF 128KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217047.pdf/$File/a217047.pdf",
       "collected_at": "2025-06-11T20:04:16.812229",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217047.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217047.pdf/$File/a217047.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217047.pdf/$File/a217047.pdf",
@@ -1538,7 +1538,7 @@
       "title": "質問(PDF 147KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217048.pdf/$File/a217048.pdf",
       "collected_at": "2025-06-11T20:04:16.812236",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217048.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217048.pdf/$File/a217048.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217048.pdf/$File/a217048.pdf",
@@ -1570,7 +1570,7 @@
       "title": "質問(PDF 130KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217049.pdf/$File/a217049.pdf",
       "collected_at": "2025-06-11T20:04:16.812242",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217049.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217049.pdf/$File/a217049.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217049.pdf/$File/a217049.pdf",
@@ -1602,7 +1602,7 @@
       "title": "質問(PDF 156KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217050.pdf/$File/a217050.pdf",
       "collected_at": "2025-06-11T20:04:16.812249",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217050.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217050.pdf/$File/a217050.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217050.pdf/$File/a217050.pdf",
@@ -1634,7 +1634,7 @@
       "title": "質問(PDF 129KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217051.pdf/$File/a217051.pdf",
       "collected_at": "2025-06-11T20:04:16.812255",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217051.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217051.pdf/$File/a217051.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217051.pdf/$File/a217051.pdf",
@@ -1666,7 +1666,7 @@
       "title": "質問(PDF 169KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217052.pdf/$File/a217052.pdf",
       "collected_at": "2025-06-11T20:04:16.812262",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217052.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217052.pdf/$File/a217052.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217052.pdf/$File/a217052.pdf",
@@ -1698,7 +1698,7 @@
       "title": "質問(PDF 152KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217053.pdf/$File/a217053.pdf",
       "collected_at": "2025-06-11T20:04:16.812268",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217053.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217053.pdf/$File/a217053.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217053.pdf/$File/a217053.pdf",
@@ -1730,7 +1730,7 @@
       "title": "質問(PDF 129KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217054.pdf/$File/a217054.pdf",
       "collected_at": "2025-06-11T20:04:16.812274",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217054.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217054.pdf/$File/a217054.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217054.pdf/$File/a217054.pdf",
@@ -1762,7 +1762,7 @@
       "title": "質問(PDF 157KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217055.pdf/$File/a217055.pdf",
       "collected_at": "2025-06-11T20:04:16.812284",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217055.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217055.pdf/$File/a217055.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217055.pdf/$File/a217055.pdf",
@@ -1794,7 +1794,7 @@
       "title": "質問(PDF 196KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217056.pdf/$File/a217056.pdf",
       "collected_at": "2025-06-11T20:04:16.812291",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217056.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217056.pdf/$File/a217056.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217056.pdf/$File/a217056.pdf",
@@ -1826,7 +1826,7 @@
       "title": "質問(PDF 140KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217057.pdf/$File/a217057.pdf",
       "collected_at": "2025-06-11T20:04:16.812297",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217057.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217057.pdf/$File/a217057.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217057.pdf/$File/a217057.pdf",
@@ -1858,7 +1858,7 @@
       "title": "質問(PDF 161KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217058.pdf/$File/a217058.pdf",
       "collected_at": "2025-06-11T20:04:16.812303",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217058.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217058.pdf/$File/a217058.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217058.pdf/$File/a217058.pdf",
@@ -1890,7 +1890,7 @@
       "title": "質問(PDF 118KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217059.pdf/$File/a217059.pdf",
       "collected_at": "2025-06-11T20:04:16.812309",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217059.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217059.pdf/$File/a217059.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217059.pdf/$File/a217059.pdf",
@@ -1922,7 +1922,7 @@
       "title": "質問(PDF 146KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217060.pdf/$File/a217060.pdf",
       "collected_at": "2025-06-11T20:04:16.812316",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217060.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217060.pdf/$File/a217060.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217060.pdf/$File/a217060.pdf",
@@ -1954,7 +1954,7 @@
       "title": "質問(PDF 145KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217061.pdf/$File/a217061.pdf",
       "collected_at": "2025-06-11T20:04:16.812322",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217061.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217061.pdf/$File/a217061.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217061.pdf/$File/a217061.pdf",
@@ -1986,7 +1986,7 @@
       "title": "質問(PDF 139KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217062.pdf/$File/a217062.pdf",
       "collected_at": "2025-06-11T20:04:16.812329",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217062.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217062.pdf/$File/a217062.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217062.pdf/$File/a217062.pdf",
@@ -2018,7 +2018,7 @@
       "title": "質問(PDF 219KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217063.pdf/$File/a217063.pdf",
       "collected_at": "2025-06-11T20:04:16.812335",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217063.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217063.pdf/$File/a217063.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217063.pdf/$File/a217063.pdf",
@@ -2050,7 +2050,7 @@
       "title": "質問(PDF 164KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217064.pdf/$File/a217064.pdf",
       "collected_at": "2025-06-11T20:04:16.812341",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217064.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217064.pdf/$File/a217064.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217064.pdf/$File/a217064.pdf",
@@ -2082,7 +2082,7 @@
       "title": "質問(PDF 195KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217065.pdf/$File/a217065.pdf",
       "collected_at": "2025-06-11T20:04:16.812348",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217065.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217065.pdf/$File/a217065.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217065.pdf/$File/a217065.pdf",
@@ -2114,7 +2114,7 @@
       "title": "質問(PDF 181KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217066.pdf/$File/a217066.pdf",
       "collected_at": "2025-06-11T20:04:16.812354",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217066.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217066.pdf/$File/a217066.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217066.pdf/$File/a217066.pdf",
@@ -2146,7 +2146,7 @@
       "title": "質問(PDF 160KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217067.pdf/$File/a217067.pdf",
       "collected_at": "2025-06-11T20:04:16.812361",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217067.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217067.pdf/$File/a217067.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217067.pdf/$File/a217067.pdf",
@@ -2178,7 +2178,7 @@
       "title": "質問(PDF 150KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217068.pdf/$File/a217068.pdf",
       "collected_at": "2025-06-11T20:04:16.812367",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217068.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217068.pdf/$File/a217068.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217068.pdf/$File/a217068.pdf",
@@ -2210,7 +2210,7 @@
       "title": "質問(PDF 164KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217069.pdf/$File/a217069.pdf",
       "collected_at": "2025-06-11T20:04:16.812378",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217069.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217069.pdf/$File/a217069.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217069.pdf/$File/a217069.pdf",
@@ -2242,7 +2242,7 @@
       "title": "質問(PDF 200KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217070.pdf/$File/a217070.pdf",
       "collected_at": "2025-06-11T20:04:16.812384",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217070.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217070.pdf/$File/a217070.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217070.pdf/$File/a217070.pdf",
@@ -2274,7 +2274,7 @@
       "title": "質問(PDF 86KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217071.pdf/$File/a217071.pdf",
       "collected_at": "2025-06-11T20:04:16.812390",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217071.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217071.pdf/$File/a217071.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217071.pdf/$File/a217071.pdf",
@@ -2306,7 +2306,7 @@
       "title": "質問(PDF 148KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217072.pdf/$File/a217072.pdf",
       "collected_at": "2025-06-11T20:04:16.812397",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217072.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217072.pdf/$File/a217072.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217072.pdf/$File/a217072.pdf",
@@ -2338,7 +2338,7 @@
       "title": "質問(PDF 154KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217073.pdf/$File/a217073.pdf",
       "collected_at": "2025-06-11T20:04:16.812403",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217073.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217073.pdf/$File/a217073.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217073.pdf/$File/a217073.pdf",
@@ -2370,7 +2370,7 @@
       "title": "質問(PDF 177KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217074.pdf/$File/a217074.pdf",
       "collected_at": "2025-06-11T20:04:16.812409",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217074.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217074.pdf/$File/a217074.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217074.pdf/$File/a217074.pdf",
@@ -2402,7 +2402,7 @@
       "title": "質問(PDF 134KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217075.pdf/$File/a217075.pdf",
       "collected_at": "2025-06-11T20:04:16.812416",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217075.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217075.pdf/$File/a217075.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217075.pdf/$File/a217075.pdf",
@@ -2434,7 +2434,7 @@
       "title": "質問(PDF 160KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217076.pdf/$File/a217076.pdf",
       "collected_at": "2025-06-11T20:04:16.812422",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217076.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217076.pdf/$File/a217076.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217076.pdf/$File/a217076.pdf",
@@ -2466,7 +2466,7 @@
       "title": "質問(PDF 187KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217077.pdf/$File/a217077.pdf",
       "collected_at": "2025-06-11T20:04:16.812428",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217077.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217077.pdf/$File/a217077.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217077.pdf/$File/a217077.pdf",
@@ -2498,7 +2498,7 @@
       "title": "質問(PDF 117KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217078.pdf/$File/a217078.pdf",
       "collected_at": "2025-06-11T20:04:16.812435",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217078.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217078.pdf/$File/a217078.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217078.pdf/$File/a217078.pdf",
@@ -2530,7 +2530,7 @@
       "title": "質問(PDF 151KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217079.pdf/$File/a217079.pdf",
       "collected_at": "2025-06-11T20:04:16.812441",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217079.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217079.pdf/$File/a217079.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217079.pdf/$File/a217079.pdf",
@@ -2562,7 +2562,7 @@
       "title": "質問(PDF 131KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217080.pdf/$File/a217080.pdf",
       "collected_at": "2025-06-11T20:04:16.812448",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217080.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217080.pdf/$File/a217080.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217080.pdf/$File/a217080.pdf",
@@ -2594,7 +2594,7 @@
       "title": "質問(PDF 139KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217081.pdf/$File/a217081.pdf",
       "collected_at": "2025-06-11T20:04:16.812454",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217081.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217081.pdf/$File/a217081.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217081.pdf/$File/a217081.pdf",
@@ -2626,7 +2626,7 @@
       "title": "質問(PDF 109KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217082.pdf/$File/a217082.pdf",
       "collected_at": "2025-06-11T20:04:16.812461",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217082.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217082.pdf/$File/a217082.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217082.pdf/$File/a217082.pdf",
@@ -2658,7 +2658,7 @@
       "title": "質問(PDF 177KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217083.pdf/$File/a217083.pdf",
       "collected_at": "2025-06-11T20:04:16.812467",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217083.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217083.pdf/$File/a217083.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217083.pdf/$File/a217083.pdf",
@@ -2690,7 +2690,7 @@
       "title": "質問(PDF 143KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217084.pdf/$File/a217084.pdf",
       "collected_at": "2025-06-11T20:04:16.812474",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217084.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217084.pdf/$File/a217084.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217084.pdf/$File/a217084.pdf",
@@ -2722,7 +2722,7 @@
       "title": "質問(PDF 149KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217085.pdf/$File/a217085.pdf",
       "collected_at": "2025-06-11T20:04:16.812480",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217085.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217085.pdf/$File/a217085.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217085.pdf/$File/a217085.pdf",
@@ -2754,7 +2754,7 @@
       "title": "質問(PDF 236KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217086.pdf/$File/a217086.pdf",
       "collected_at": "2025-06-11T20:04:16.812487",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217086.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217086.pdf/$File/a217086.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217086.pdf/$File/a217086.pdf",
@@ -2786,7 +2786,7 @@
       "title": "質問(PDF 192KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217087.pdf/$File/a217087.pdf",
       "collected_at": "2025-06-11T20:04:16.812493",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217087.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217087.pdf/$File/a217087.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217087.pdf/$File/a217087.pdf",
@@ -2818,7 +2818,7 @@
       "title": "質問(PDF 143KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217088.pdf/$File/a217088.pdf",
       "collected_at": "2025-06-11T20:04:16.812499",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217088.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217088.pdf/$File/a217088.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217088.pdf/$File/a217088.pdf",
@@ -2850,7 +2850,7 @@
       "title": "質問(PDF 101KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217089.pdf/$File/a217089.pdf",
       "collected_at": "2025-06-11T20:04:16.812506",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217089.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217089.pdf/$File/a217089.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217089.pdf/$File/a217089.pdf",
@@ -2882,7 +2882,7 @@
       "title": "質問(PDF 76KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217090.pdf/$File/a217090.pdf",
       "collected_at": "2025-06-11T20:04:16.812513",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217090.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217090.pdf/$File/a217090.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217090.pdf/$File/a217090.pdf",
@@ -2914,7 +2914,7 @@
       "title": "質問(PDF 137KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217091.pdf/$File/a217091.pdf",
       "collected_at": "2025-06-11T20:04:16.812519",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217091.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217091.pdf/$File/a217091.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217091.pdf/$File/a217091.pdf",
@@ -2946,7 +2946,7 @@
       "title": "質問(PDF 161KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217092.pdf/$File/a217092.pdf",
       "collected_at": "2025-06-11T20:04:16.812525",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217092.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217092.pdf/$File/a217092.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217092.pdf/$File/a217092.pdf",
@@ -2978,7 +2978,7 @@
       "title": "質問(PDF 159KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217093.pdf/$File/a217093.pdf",
       "collected_at": "2025-06-11T20:04:16.812532",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217093.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217093.pdf/$File/a217093.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217093.pdf/$File/a217093.pdf",
@@ -3010,7 +3010,7 @@
       "title": "質問(PDF 157KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217094.pdf/$File/a217094.pdf",
       "collected_at": "2025-06-11T20:04:16.812538",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217094.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217094.pdf/$File/a217094.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217094.pdf/$File/a217094.pdf",
@@ -3042,7 +3042,7 @@
       "title": "質問(PDF 160KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217095.pdf/$File/a217095.pdf",
       "collected_at": "2025-06-11T20:04:16.812544",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217095.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217095.pdf/$File/a217095.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217095.pdf/$File/a217095.pdf",
@@ -3074,7 +3074,7 @@
       "title": "質問(PDF 231KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217096.pdf/$File/a217096.pdf",
       "collected_at": "2025-06-11T20:04:16.812551",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217096.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217096.pdf/$File/a217096.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217096.pdf/$File/a217096.pdf",
@@ -3106,7 +3106,7 @@
       "title": "質問(PDF 174KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217097.pdf/$File/a217097.pdf",
       "collected_at": "2025-06-11T20:04:16.812557",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217097.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217097.pdf/$File/a217097.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217097.pdf/$File/a217097.pdf",
@@ -3138,7 +3138,7 @@
       "title": "質問(PDF 175KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217098.pdf/$File/a217098.pdf",
       "collected_at": "2025-06-11T20:04:16.812564",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217098.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217098.pdf/$File/a217098.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217098.pdf/$File/a217098.pdf",
@@ -3170,7 +3170,7 @@
       "title": "質問(PDF 196KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217099.pdf/$File/a217099.pdf",
       "collected_at": "2025-06-11T20:04:16.812570",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217099.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217099.pdf/$File/a217099.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217099.pdf/$File/a217099.pdf",
@@ -3202,7 +3202,7 @@
       "title": "質問(PDF 156KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217100.pdf/$File/a217100.pdf",
       "collected_at": "2025-06-11T20:04:16.812576",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217100.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217100.pdf/$File/a217100.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217100.pdf/$File/a217100.pdf",
@@ -3234,7 +3234,7 @@
       "title": "質問(PDF 131KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217101.pdf/$File/a217101.pdf",
       "collected_at": "2025-06-11T20:04:16.812583",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217101.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217101.pdf/$File/a217101.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217101.pdf/$File/a217101.pdf",
@@ -3266,7 +3266,7 @@
       "title": "質問(PDF 144KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217102.pdf/$File/a217102.pdf",
       "collected_at": "2025-06-11T20:04:16.812589",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217102.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217102.pdf/$File/a217102.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217102.pdf/$File/a217102.pdf",
@@ -3298,7 +3298,7 @@
       "title": "質問(PDF 224KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217103.pdf/$File/a217103.pdf",
       "collected_at": "2025-06-11T20:04:16.812596",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217103.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217103.pdf/$File/a217103.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217103.pdf/$File/a217103.pdf",
@@ -3330,7 +3330,7 @@
       "title": "質問(PDF 182KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217104.pdf/$File/a217104.pdf",
       "collected_at": "2025-06-11T20:04:16.812602",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217104.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217104.pdf/$File/a217104.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217104.pdf/$File/a217104.pdf",
@@ -3362,7 +3362,7 @@
       "title": "質問(PDF 156KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217105.pdf/$File/a217105.pdf",
       "collected_at": "2025-06-11T20:04:16.812608",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217105.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217105.pdf/$File/a217105.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217105.pdf/$File/a217105.pdf",
@@ -3394,7 +3394,7 @@
       "title": "質問(PDF 108KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217106.pdf/$File/a217106.pdf",
       "collected_at": "2025-06-11T20:04:16.812615",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217106.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217106.pdf/$File/a217106.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217106.pdf/$File/a217106.pdf",
@@ -3426,7 +3426,7 @@
       "title": "質問(PDF 205KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217107.pdf/$File/a217107.pdf",
       "collected_at": "2025-06-11T20:04:16.812621",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217107.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217107.pdf/$File/a217107.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217107.pdf/$File/a217107.pdf",
@@ -3458,7 +3458,7 @@
       "title": "質問(PDF 188KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217108.pdf/$File/a217108.pdf",
       "collected_at": "2025-06-11T20:04:16.812627",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217108.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217108.pdf/$File/a217108.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217108.pdf/$File/a217108.pdf",
@@ -3490,7 +3490,7 @@
       "title": "質問(PDF 182KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217109.pdf/$File/a217109.pdf",
       "collected_at": "2025-06-11T20:04:16.812634",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217109.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217109.pdf/$File/a217109.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217109.pdf/$File/a217109.pdf",
@@ -3522,7 +3522,7 @@
       "title": "質問(PDF 106KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217110.pdf/$File/a217110.pdf",
       "collected_at": "2025-06-11T20:04:16.812640",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217110.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217110.pdf/$File/a217110.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217110.pdf/$File/a217110.pdf",
@@ -3554,7 +3554,7 @@
       "title": "質問(PDF 143KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217111.pdf/$File/a217111.pdf",
       "collected_at": "2025-06-11T20:04:16.812647",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217111.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217111.pdf/$File/a217111.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217111.pdf/$File/a217111.pdf",
@@ -3586,7 +3586,7 @@
       "title": "質問(PDF 142KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217112.pdf/$File/a217112.pdf",
       "collected_at": "2025-06-11T20:04:16.812653",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217112.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217112.pdf/$File/a217112.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217112.pdf/$File/a217112.pdf",
@@ -3618,7 +3618,7 @@
       "title": "質問(PDF 118KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217113.pdf/$File/a217113.pdf",
       "collected_at": "2025-06-11T20:04:16.812660",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217113.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217113.pdf/$File/a217113.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217113.pdf/$File/a217113.pdf",
@@ -3650,7 +3650,7 @@
       "title": "質問(PDF 134KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217114.pdf/$File/a217114.pdf",
       "collected_at": "2025-06-11T20:04:16.812666",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217114.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217114.pdf/$File/a217114.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217114.pdf/$File/a217114.pdf",
@@ -3682,7 +3682,7 @@
       "title": "質問(PDF 168KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217115.pdf/$File/a217115.pdf",
       "collected_at": "2025-06-11T20:04:16.812673",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217115.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217115.pdf/$File/a217115.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217115.pdf/$File/a217115.pdf",
@@ -3714,7 +3714,7 @@
       "title": "質問(PDF 205KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217116.pdf/$File/a217116.pdf",
       "collected_at": "2025-06-11T20:04:16.812679",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217116.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217116.pdf/$File/a217116.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217116.pdf/$File/a217116.pdf",
@@ -3746,7 +3746,7 @@
       "title": "質問(PDF 200KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217117.pdf/$File/a217117.pdf",
       "collected_at": "2025-06-11T20:04:16.812688",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217117.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217117.pdf/$File/a217117.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217117.pdf/$File/a217117.pdf",
@@ -3778,7 +3778,7 @@
       "title": "質問(PDF 131KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217118.pdf/$File/a217118.pdf",
       "collected_at": "2025-06-11T20:04:16.812695",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217118.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217118.pdf/$File/a217118.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217118.pdf/$File/a217118.pdf",
@@ -3810,7 +3810,7 @@
       "title": "質問(PDF 120KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217119.pdf/$File/a217119.pdf",
       "collected_at": "2025-06-11T20:04:16.812701",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217119.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217119.pdf/$File/a217119.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217119.pdf/$File/a217119.pdf",
@@ -3842,7 +3842,7 @@
       "title": "質問(PDF 177KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217120.pdf/$File/a217120.pdf",
       "collected_at": "2025-06-11T20:04:16.812707",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217120.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217120.pdf/$File/a217120.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217120.pdf/$File/a217120.pdf",
@@ -3874,7 +3874,7 @@
       "title": "質問(PDF 125KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217121.pdf/$File/a217121.pdf",
       "collected_at": "2025-06-11T20:04:16.812714",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217121.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217121.pdf/$File/a217121.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217121.pdf/$File/a217121.pdf",
@@ -3906,7 +3906,7 @@
       "title": "質問(PDF 124KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217122.pdf/$File/a217122.pdf",
       "collected_at": "2025-06-11T20:04:16.812720",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217122.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217122.pdf/$File/a217122.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217122.pdf/$File/a217122.pdf",
@@ -3938,7 +3938,7 @@
       "title": "質問(PDF 171KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217123.pdf/$File/a217123.pdf",
       "collected_at": "2025-06-11T20:04:16.812727",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217123.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217123.pdf/$File/a217123.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217123.pdf/$File/a217123.pdf",
@@ -3970,7 +3970,7 @@
       "title": "質問(PDF 157KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217124.pdf/$File/a217124.pdf",
       "collected_at": "2025-06-11T20:04:16.812733",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217124.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217124.pdf/$File/a217124.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217124.pdf/$File/a217124.pdf",
@@ -4002,7 +4002,7 @@
       "title": "質問(PDF 171KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217125.pdf/$File/a217125.pdf",
       "collected_at": "2025-06-11T20:04:16.812739",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217125.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217125.pdf/$File/a217125.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217125.pdf/$File/a217125.pdf",
@@ -4034,7 +4034,7 @@
       "title": "質問(PDF 149KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217126.pdf/$File/a217126.pdf",
       "collected_at": "2025-06-11T20:04:16.812746",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217126.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217126.pdf/$File/a217126.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217126.pdf/$File/a217126.pdf",
@@ -4066,7 +4066,7 @@
       "title": "質問(PDF 139KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217127.pdf/$File/a217127.pdf",
       "collected_at": "2025-06-11T20:04:16.812752",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217127.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217127.pdf/$File/a217127.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217127.pdf/$File/a217127.pdf",
@@ -4098,7 +4098,7 @@
       "title": "質問(PDF 185KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217128.pdf/$File/a217128.pdf",
       "collected_at": "2025-06-11T20:04:16.812758",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217128.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217128.pdf/$File/a217128.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217128.pdf/$File/a217128.pdf",
@@ -4130,7 +4130,7 @@
       "title": "質問(PDF 151KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217129.pdf/$File/a217129.pdf",
       "collected_at": "2025-06-11T20:04:16.812765",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217129.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217129.pdf/$File/a217129.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217129.pdf/$File/a217129.pdf",
@@ -4162,7 +4162,7 @@
       "title": "質問(PDF 128KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217130.pdf/$File/a217130.pdf",
       "collected_at": "2025-06-11T20:04:16.812771",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217130.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217130.pdf/$File/a217130.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217130.pdf/$File/a217130.pdf",
@@ -4194,7 +4194,7 @@
       "title": "質問(PDF 98KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217131.pdf/$File/a217131.pdf",
       "collected_at": "2025-06-11T20:04:16.812778",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217131.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217131.pdf/$File/a217131.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217131.pdf/$File/a217131.pdf",
@@ -4226,7 +4226,7 @@
       "title": "質問(PDF 125KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217132.pdf/$File/a217132.pdf",
       "collected_at": "2025-06-11T20:04:16.812785",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217132.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217132.pdf/$File/a217132.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217132.pdf/$File/a217132.pdf",
@@ -4258,7 +4258,7 @@
       "title": "質問(PDF 127KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217133.pdf/$File/a217133.pdf",
       "collected_at": "2025-06-11T20:04:16.812792",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217133.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217133.pdf/$File/a217133.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217133.pdf/$File/a217133.pdf",
@@ -4290,7 +4290,7 @@
       "title": "質問(PDF 202KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217134.pdf/$File/a217134.pdf",
       "collected_at": "2025-06-11T20:04:16.812800",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217134.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217134.pdf/$File/a217134.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217134.pdf/$File/a217134.pdf",
@@ -4322,7 +4322,7 @@
       "title": "質問(PDF 107KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217135.pdf/$File/a217135.pdf",
       "collected_at": "2025-06-11T20:04:16.812806",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217135.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217135.pdf/$File/a217135.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217135.pdf/$File/a217135.pdf",
@@ -4354,7 +4354,7 @@
       "title": "質問(PDF 145KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217136.pdf/$File/a217136.pdf",
       "collected_at": "2025-06-11T20:04:16.812813",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217136.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217136.pdf/$File/a217136.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217136.pdf/$File/a217136.pdf",
@@ -4386,7 +4386,7 @@
       "title": "質問(PDF 155KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217137.pdf/$File/a217137.pdf",
       "collected_at": "2025-06-11T20:04:16.812819",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217137.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217137.pdf/$File/a217137.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217137.pdf/$File/a217137.pdf",
@@ -4418,7 +4418,7 @@
       "title": "質問(PDF 161KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217138.pdf/$File/a217138.pdf",
       "collected_at": "2025-06-11T20:04:16.812825",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217138.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217138.pdf/$File/a217138.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217138.pdf/$File/a217138.pdf",
@@ -4450,7 +4450,7 @@
       "title": "質問(PDF 214KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217139.pdf/$File/a217139.pdf",
       "collected_at": "2025-06-11T20:04:16.812831",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217139.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217139.pdf/$File/a217139.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217139.pdf/$File/a217139.pdf",
@@ -4482,7 +4482,7 @@
       "title": "質問(PDF 198KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217140.pdf/$File/a217140.pdf",
       "collected_at": "2025-06-11T20:04:16.812838",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217140.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217140.pdf/$File/a217140.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217140.pdf/$File/a217140.pdf",
@@ -4514,7 +4514,7 @@
       "title": "質問(PDF 208KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217141.pdf/$File/a217141.pdf",
       "collected_at": "2025-06-11T20:04:16.812844",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217141.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217141.pdf/$File/a217141.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217141.pdf/$File/a217141.pdf",
@@ -4546,7 +4546,7 @@
       "title": "質問(PDF 218KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217142.pdf/$File/a217142.pdf",
       "collected_at": "2025-06-11T20:04:16.812851",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217142.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217142.pdf/$File/a217142.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217142.pdf/$File/a217142.pdf",
@@ -4578,7 +4578,7 @@
       "title": "質問(PDF 77KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217143.pdf/$File/a217143.pdf",
       "collected_at": "2025-06-11T20:04:16.812857",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217143.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217143.pdf/$File/a217143.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217143.pdf/$File/a217143.pdf",
@@ -4610,7 +4610,7 @@
       "title": "質問(PDF 146KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217144.pdf/$File/a217144.pdf",
       "collected_at": "2025-06-11T20:04:16.812863",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217144.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217144.pdf/$File/a217144.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217144.pdf/$File/a217144.pdf",
@@ -4642,7 +4642,7 @@
       "title": "質問(PDF 142KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217145.pdf/$File/a217145.pdf",
       "collected_at": "2025-06-11T20:04:16.812870",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217145.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217145.pdf/$File/a217145.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217145.pdf/$File/a217145.pdf",
@@ -4674,7 +4674,7 @@
       "title": "質問(PDF 102KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217146.pdf/$File/a217146.pdf",
       "collected_at": "2025-06-11T20:04:16.812876",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217146.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217146.pdf/$File/a217146.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217146.pdf/$File/a217146.pdf",
@@ -4706,7 +4706,7 @@
       "title": "質問(PDF 142KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217147.pdf/$File/a217147.pdf",
       "collected_at": "2025-06-11T20:04:16.812883",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217147.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217147.pdf/$File/a217147.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217147.pdf/$File/a217147.pdf",
@@ -4738,7 +4738,7 @@
       "title": "質問(PDF 189KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217148.pdf/$File/a217148.pdf",
       "collected_at": "2025-06-11T20:04:16.812889",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217148.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217148.pdf/$File/a217148.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217148.pdf/$File/a217148.pdf",
@@ -4770,7 +4770,7 @@
       "title": "質問(PDF 98KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217149.pdf/$File/a217149.pdf",
       "collected_at": "2025-06-11T20:04:16.812896",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217149.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217149.pdf/$File/a217149.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217149.pdf/$File/a217149.pdf",
@@ -4802,7 +4802,7 @@
       "title": "質問(PDF 179KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217150.pdf/$File/a217150.pdf",
       "collected_at": "2025-06-11T20:04:16.812902",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217150.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217150.pdf/$File/a217150.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217150.pdf/$File/a217150.pdf",
@@ -4834,7 +4834,7 @@
       "title": "質問(PDF 174KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217151.pdf/$File/a217151.pdf",
       "collected_at": "2025-06-11T20:04:16.812909",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217151.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217151.pdf/$File/a217151.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217151.pdf/$File/a217151.pdf",
@@ -4866,7 +4866,7 @@
       "title": "質問(PDF 122KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217152.pdf/$File/a217152.pdf",
       "collected_at": "2025-06-11T20:04:16.812915",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217152.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217152.pdf/$File/a217152.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217152.pdf/$File/a217152.pdf",
@@ -4898,7 +4898,7 @@
       "title": "質問(PDF 132KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217153.pdf/$File/a217153.pdf",
       "collected_at": "2025-06-11T20:04:16.812921",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217153.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217153.pdf/$File/a217153.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217153.pdf/$File/a217153.pdf",
@@ -4930,7 +4930,7 @@
       "title": "質問(PDF 134KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217154.pdf/$File/a217154.pdf",
       "collected_at": "2025-06-11T20:04:16.812928",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217154.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217154.pdf/$File/a217154.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217154.pdf/$File/a217154.pdf",
@@ -4962,7 +4962,7 @@
       "title": "質問(PDF 177KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217155.pdf/$File/a217155.pdf",
       "collected_at": "2025-06-11T20:04:16.812934",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217155.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217155.pdf/$File/a217155.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217155.pdf/$File/a217155.pdf",
@@ -4994,7 +4994,7 @@
       "title": "質問(PDF 107KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217156.pdf/$File/a217156.pdf",
       "collected_at": "2025-06-11T20:04:16.812941",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217156.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217156.pdf/$File/a217156.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217156.pdf/$File/a217156.pdf",
@@ -5026,7 +5026,7 @@
       "title": "質問(PDF 134KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217157.pdf/$File/a217157.pdf",
       "collected_at": "2025-06-11T20:04:16.812947",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217157.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217157.pdf/$File/a217157.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217157.pdf/$File/a217157.pdf",
@@ -5058,7 +5058,7 @@
       "title": "質問(PDF 108KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217158.pdf/$File/a217158.pdf",
       "collected_at": "2025-06-11T20:04:16.812955",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217158.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217158.pdf/$File/a217158.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217158.pdf/$File/a217158.pdf",
@@ -5090,7 +5090,7 @@
       "title": "質問(PDF 176KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217159.pdf/$File/a217159.pdf",
       "collected_at": "2025-06-11T20:04:16.812961",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217159.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217159.pdf/$File/a217159.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217159.pdf/$File/a217159.pdf",
@@ -5122,7 +5122,7 @@
       "title": "質問(PDF 180KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217160.pdf/$File/a217160.pdf",
       "collected_at": "2025-06-11T20:04:16.812969",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217160.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217160.pdf/$File/a217160.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217160.pdf/$File/a217160.pdf",
@@ -5154,7 +5154,7 @@
       "title": "質問(PDF 182KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217161.pdf/$File/a217161.pdf",
       "collected_at": "2025-06-11T20:04:16.812975",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217161.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217161.pdf/$File/a217161.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217161.pdf/$File/a217161.pdf",
@@ -5186,7 +5186,7 @@
       "title": "質問(PDF 175KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217162.pdf/$File/a217162.pdf",
       "collected_at": "2025-06-11T20:04:16.812982",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217162.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217162.pdf/$File/a217162.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217162.pdf/$File/a217162.pdf",
@@ -5218,7 +5218,7 @@
       "title": "質問(PDF 161KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217163.pdf/$File/a217163.pdf",
       "collected_at": "2025-06-11T20:04:16.812988",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217163.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217163.pdf/$File/a217163.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217163.pdf/$File/a217163.pdf",
@@ -5250,7 +5250,7 @@
       "title": "質問(PDF 263KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217164.pdf/$File/a217164.pdf",
       "collected_at": "2025-06-11T20:04:16.812994",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217164.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217164.pdf/$File/a217164.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217164.pdf/$File/a217164.pdf",
@@ -5282,7 +5282,7 @@
       "title": "質問(PDF 158KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217165.pdf/$File/a217165.pdf",
       "collected_at": "2025-06-11T20:04:16.813001",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217165.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217165.pdf/$File/a217165.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217165.pdf/$File/a217165.pdf",
@@ -5314,7 +5314,7 @@
       "title": "質問(PDF 105KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217166.pdf/$File/a217166.pdf",
       "collected_at": "2025-06-11T20:04:16.813007",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217166.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217166.pdf/$File/a217166.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217166.pdf/$File/a217166.pdf",
@@ -5346,7 +5346,7 @@
       "title": "質問(PDF 146KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217167.pdf/$File/a217167.pdf",
       "collected_at": "2025-06-11T20:04:16.813014",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217167.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217167.pdf/$File/a217167.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217167.pdf/$File/a217167.pdf",
@@ -5378,7 +5378,7 @@
       "title": "質問(PDF 113KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217168.pdf/$File/a217168.pdf",
       "collected_at": "2025-06-11T20:04:16.813020",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217168.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217168.pdf/$File/a217168.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217168.pdf/$File/a217168.pdf",
@@ -5410,7 +5410,7 @@
       "title": "質問(PDF 114KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217169.pdf/$File/a217169.pdf",
       "collected_at": "2025-06-11T20:04:16.813027",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217169.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217169.pdf/$File/a217169.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217169.pdf/$File/a217169.pdf",
@@ -5442,7 +5442,7 @@
       "title": "質問(PDF 116KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217170.pdf/$File/a217170.pdf",
       "collected_at": "2025-06-11T20:04:16.813033",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217170.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217170.pdf/$File/a217170.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217170.pdf/$File/a217170.pdf",
@@ -5474,7 +5474,7 @@
       "title": "質問(PDF 178KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217171.pdf/$File/a217171.pdf",
       "collected_at": "2025-06-11T20:04:16.813040",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217171.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217171.pdf/$File/a217171.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217171.pdf/$File/a217171.pdf",
@@ -5506,7 +5506,7 @@
       "title": "質問(PDF 117KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217172.pdf/$File/a217172.pdf",
       "collected_at": "2025-06-11T20:04:16.813046",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217172.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217172.pdf/$File/a217172.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217172.pdf/$File/a217172.pdf",
@@ -5538,7 +5538,7 @@
       "title": "質問(PDF 142KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217173.pdf/$File/a217173.pdf",
       "collected_at": "2025-06-11T20:04:16.813053",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217173.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217173.pdf/$File/a217173.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217173.pdf/$File/a217173.pdf",
@@ -5570,7 +5570,7 @@
       "title": "質問(PDF 211KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217174.pdf/$File/a217174.pdf",
       "collected_at": "2025-06-11T20:04:16.813059",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217174.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217174.pdf/$File/a217174.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217174.pdf/$File/a217174.pdf",
@@ -5602,7 +5602,7 @@
       "title": "質問(PDF 128KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217175.pdf/$File/a217175.pdf",
       "collected_at": "2025-06-11T20:04:16.813066",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217175.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217175.pdf/$File/a217175.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217175.pdf/$File/a217175.pdf",
@@ -5634,7 +5634,7 @@
       "title": "質問(PDF 159KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217176.pdf/$File/a217176.pdf",
       "collected_at": "2025-06-11T20:04:16.813073",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217176.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217176.pdf/$File/a217176.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217176.pdf/$File/a217176.pdf",
@@ -5666,7 +5666,7 @@
       "title": "質問(PDF 153KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217177.pdf/$File/a217177.pdf",
       "collected_at": "2025-06-11T20:04:16.813080",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217177.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217177.pdf/$File/a217177.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217177.pdf/$File/a217177.pdf",
@@ -5698,7 +5698,7 @@
       "title": "質問(PDF 159KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217178.pdf/$File/a217178.pdf",
       "collected_at": "2025-06-11T20:04:16.813087",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217178.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217178.pdf/$File/a217178.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217178.pdf/$File/a217178.pdf",
@@ -5730,7 +5730,7 @@
       "title": "質問(PDF 215KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217179.pdf/$File/a217179.pdf",
       "collected_at": "2025-06-11T20:04:16.813094",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217179.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217179.pdf/$File/a217179.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217179.pdf/$File/a217179.pdf",
@@ -5762,7 +5762,7 @@
       "title": "質問(PDF 235KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217180.pdf/$File/a217180.pdf",
       "collected_at": "2025-06-11T20:04:16.813101",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217180.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217180.pdf/$File/a217180.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217180.pdf/$File/a217180.pdf",
@@ -5794,7 +5794,7 @@
       "title": "質問(PDF 139KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217181.pdf/$File/a217181.pdf",
       "collected_at": "2025-06-11T20:04:16.813108",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217181.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217181.pdf/$File/a217181.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217181.pdf/$File/a217181.pdf",
@@ -5826,7 +5826,7 @@
       "title": "質問(PDF 140KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217182.pdf/$File/a217182.pdf",
       "collected_at": "2025-06-11T20:04:16.813115",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217182.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217182.pdf/$File/a217182.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217182.pdf/$File/a217182.pdf",
@@ -5858,7 +5858,7 @@
       "title": "質問(PDF 184KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217183.pdf/$File/a217183.pdf",
       "collected_at": "2025-06-11T20:04:16.813121",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217183.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217183.pdf/$File/a217183.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217183.pdf/$File/a217183.pdf",
@@ -5890,7 +5890,7 @@
       "title": "質問(PDF 125KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217184.pdf/$File/a217184.pdf",
       "collected_at": "2025-06-11T20:04:16.813128",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217184.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217184.pdf/$File/a217184.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217184.pdf/$File/a217184.pdf",
@@ -5922,7 +5922,7 @@
       "title": "質問(PDF 127KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217185.pdf/$File/a217185.pdf",
       "collected_at": "2025-06-11T20:04:16.813135",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217185.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217185.pdf/$File/a217185.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217185.pdf/$File/a217185.pdf",
@@ -5954,7 +5954,7 @@
       "title": "質問(PDF 167KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217186.pdf/$File/a217186.pdf",
       "collected_at": "2025-06-11T20:04:16.813142",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217186.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217186.pdf/$File/a217186.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217186.pdf/$File/a217186.pdf",
@@ -5986,7 +5986,7 @@
       "title": "質問(PDF 135KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217187.pdf/$File/a217187.pdf",
       "collected_at": "2025-06-11T20:04:16.813149",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217187.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217187.pdf/$File/a217187.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217187.pdf/$File/a217187.pdf",
@@ -6018,7 +6018,7 @@
       "title": "質問(PDF 155KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217188.pdf/$File/a217188.pdf",
       "collected_at": "2025-06-11T20:04:16.813156",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217188.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217188.pdf/$File/a217188.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217188.pdf/$File/a217188.pdf",
@@ -6050,7 +6050,7 @@
       "title": "質問(PDF 184KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217189.pdf/$File/a217189.pdf",
       "collected_at": "2025-06-11T20:04:16.813163",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217189.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217189.pdf/$File/a217189.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217189.pdf/$File/a217189.pdf",
@@ -6082,7 +6082,7 @@
       "title": "質問(PDF 171KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217190.pdf/$File/a217190.pdf",
       "collected_at": "2025-06-11T20:04:16.813170",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217190.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217190.pdf/$File/a217190.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217190.pdf/$File/a217190.pdf",
@@ -6114,7 +6114,7 @@
       "title": "質問(PDF 146KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217191.pdf/$File/a217191.pdf",
       "collected_at": "2025-06-11T20:04:16.813177",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217191.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217191.pdf/$File/a217191.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217191.pdf/$File/a217191.pdf",
@@ -6146,7 +6146,7 @@
       "title": "質問(PDF 206KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217192.pdf/$File/a217192.pdf",
       "collected_at": "2025-06-11T20:04:16.813183",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217192.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217192.pdf/$File/a217192.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217192.pdf/$File/a217192.pdf",
@@ -6178,7 +6178,7 @@
       "title": "質問(PDF 157KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217193.pdf/$File/a217193.pdf",
       "collected_at": "2025-06-11T20:04:16.813190",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217193.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217193.pdf/$File/a217193.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217193.pdf/$File/a217193.pdf",
@@ -6210,7 +6210,7 @@
       "title": "質問(PDF 117KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217194.pdf/$File/a217194.pdf",
       "collected_at": "2025-06-11T20:04:16.813197",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217194.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217194.pdf/$File/a217194.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217194.pdf/$File/a217194.pdf",
@@ -6242,7 +6242,7 @@
       "title": "質問(PDF 155KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217195.pdf/$File/a217195.pdf",
       "collected_at": "2025-06-11T20:04:16.813204",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217195.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217195.pdf/$File/a217195.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217195.pdf/$File/a217195.pdf",
@@ -6274,7 +6274,7 @@
       "title": "質問(PDF 147KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217196.pdf/$File/a217196.pdf",
       "collected_at": "2025-06-11T20:04:16.813217",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217196.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217196.pdf/$File/a217196.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217196.pdf/$File/a217196.pdf",
@@ -6306,7 +6306,7 @@
       "title": "質問(PDF 145KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217197.pdf/$File/a217197.pdf",
       "collected_at": "2025-06-11T20:04:16.813223",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217197.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217197.pdf/$File/a217197.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217197.pdf/$File/a217197.pdf",
@@ -6338,7 +6338,7 @@
       "title": "質問(PDF 201KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217198.pdf/$File/a217198.pdf",
       "collected_at": "2025-06-11T20:04:16.813230",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217198.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217198.pdf/$File/a217198.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217198.pdf/$File/a217198.pdf",
@@ -6370,7 +6370,7 @@
       "title": "質問(PDF 207KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217199.pdf/$File/a217199.pdf",
       "collected_at": "2025-06-11T20:04:16.813237",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217199.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217199.pdf/$File/a217199.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217199.pdf/$File/a217199.pdf",
@@ -6402,7 +6402,7 @@
       "title": "質問(PDF 207KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217200.pdf/$File/a217200.pdf",
       "collected_at": "2025-06-11T20:04:16.813263",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217200.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217200.pdf/$File/a217200.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217200.pdf/$File/a217200.pdf",
@@ -6434,7 +6434,7 @@
       "title": "質問(PDF 202KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217201.pdf/$File/a217201.pdf",
       "collected_at": "2025-06-11T20:04:16.813270",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217201.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217201.pdf/$File/a217201.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217201.pdf/$File/a217201.pdf",
@@ -6466,7 +6466,7 @@
       "title": "質問(PDF 169KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217202.pdf/$File/a217202.pdf",
       "collected_at": "2025-06-11T20:04:16.813276",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217202.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217202.pdf/$File/a217202.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217202.pdf/$File/a217202.pdf",
@@ -6498,7 +6498,7 @@
       "title": "質問(PDF 284KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217203.pdf/$File/a217203.pdf",
       "collected_at": "2025-06-11T20:04:16.813283",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217203.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217203.pdf/$File/a217203.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217203.pdf/$File/a217203.pdf",
@@ -6530,7 +6530,7 @@
       "title": "質問(PDF 118KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217204.pdf/$File/a217204.pdf",
       "collected_at": "2025-06-11T20:04:16.813290",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217204.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217204.pdf/$File/a217204.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217204.pdf/$File/a217204.pdf",
@@ -6562,7 +6562,7 @@
       "title": "質問(PDF 139KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217205.pdf/$File/a217205.pdf",
       "collected_at": "2025-06-11T20:04:16.813297",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217205.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217205.pdf/$File/a217205.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217205.pdf/$File/a217205.pdf",
@@ -6594,7 +6594,7 @@
       "title": "質問(PDF 150KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217206.pdf/$File/a217206.pdf",
       "collected_at": "2025-06-11T20:04:16.813304",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217206.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217206.pdf/$File/a217206.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217206.pdf/$File/a217206.pdf",
@@ -6626,7 +6626,7 @@
       "title": "質問(PDF 120KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217207.pdf/$File/a217207.pdf",
       "collected_at": "2025-06-11T20:04:16.813311",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217207.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217207.pdf/$File/a217207.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217207.pdf/$File/a217207.pdf",
@@ -6658,7 +6658,7 @@
       "title": "質問(PDF 167KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217208.pdf/$File/a217208.pdf",
       "collected_at": "2025-06-11T20:04:16.813318",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217208.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217208.pdf/$File/a217208.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217208.pdf/$File/a217208.pdf",
@@ -6690,7 +6690,7 @@
       "title": "質問(PDF 215KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217209.pdf/$File/a217209.pdf",
       "collected_at": "2025-06-11T20:04:16.813324",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217209.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217209.pdf/$File/a217209.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217209.pdf/$File/a217209.pdf",
@@ -6722,7 +6722,7 @@
       "title": "質問(PDF 163KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217210.pdf/$File/a217210.pdf",
       "collected_at": "2025-06-11T20:04:16.813331",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217210.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217210.pdf/$File/a217210.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217210.pdf/$File/a217210.pdf",
@@ -6754,7 +6754,7 @@
       "title": "質問(PDF 171KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217211.pdf/$File/a217211.pdf",
       "collected_at": "2025-06-11T20:04:16.813338",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217211.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217211.pdf/$File/a217211.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217211.pdf/$File/a217211.pdf",
@@ -6786,7 +6786,7 @@
       "title": "質問(PDF 172KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217212.pdf/$File/a217212.pdf",
       "collected_at": "2025-06-11T20:04:16.813343",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217212.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217212.pdf/$File/a217212.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217212.pdf/$File/a217212.pdf",
@@ -6818,7 +6818,7 @@
       "title": "質問(PDF 124KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217213.pdf/$File/a217213.pdf",
       "collected_at": "2025-06-11T20:04:16.813348",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217213.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217213.pdf/$File/a217213.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217213.pdf/$File/a217213.pdf",
@@ -6850,7 +6850,7 @@
       "title": "質問(PDF 320KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217214.pdf/$File/a217214.pdf",
       "collected_at": "2025-06-11T20:04:16.813353",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217214.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217214.pdf/$File/a217214.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217214.pdf/$File/a217214.pdf",
@@ -6882,7 +6882,7 @@
       "title": "質問(PDF 226KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217215.pdf/$File/a217215.pdf",
       "collected_at": "2025-06-11T20:04:16.813357",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217215.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217215.pdf/$File/a217215.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217215.pdf/$File/a217215.pdf",
@@ -6914,7 +6914,7 @@
       "title": "質問(PDF 165KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217216.pdf/$File/a217216.pdf",
       "collected_at": "2025-06-11T20:04:16.813362",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217216.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217216.pdf/$File/a217216.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217216.pdf/$File/a217216.pdf",
@@ -6946,7 +6946,7 @@
       "title": "質問(PDF 223KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217217.pdf/$File/a217217.pdf",
       "collected_at": "2025-06-11T20:04:16.813367",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217217.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217217.pdf/$File/a217217.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217217.pdf/$File/a217217.pdf",
@@ -6978,7 +6978,7 @@
       "title": "質問(PDF 209KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217218.pdf/$File/a217218.pdf",
       "collected_at": "2025-06-11T20:04:16.813371",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217218.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217218.pdf/$File/a217218.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217218.pdf/$File/a217218.pdf",
@@ -7010,7 +7010,7 @@
       "title": "質問(PDF 198KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217219.pdf/$File/a217219.pdf",
       "collected_at": "2025-06-11T20:04:16.813376",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217219.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217219.pdf/$File/a217219.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217219.pdf/$File/a217219.pdf",
@@ -7042,7 +7042,7 @@
       "title": "質問(PDF 131KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217220.pdf/$File/a217220.pdf",
       "collected_at": "2025-06-11T20:04:16.813381",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217220.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217220.pdf/$File/a217220.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217220.pdf/$File/a217220.pdf",
@@ -7074,7 +7074,7 @@
       "title": "質問(PDF 221KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217221.pdf/$File/a217221.pdf",
       "collected_at": "2025-06-11T20:04:16.813385",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217221.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217221.pdf/$File/a217221.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217221.pdf/$File/a217221.pdf",
@@ -7106,7 +7106,7 @@
       "title": "質問(PDF 162KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217222.pdf/$File/a217222.pdf",
       "collected_at": "2025-06-11T20:04:16.813390",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217222.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217222.pdf/$File/a217222.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217222.pdf/$File/a217222.pdf",
@@ -7138,7 +7138,7 @@
       "title": "質問(PDF 209KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217223.pdf/$File/a217223.pdf",
       "collected_at": "2025-06-11T20:04:16.813395",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217223.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217223.pdf/$File/a217223.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217223.pdf/$File/a217223.pdf",
@@ -7170,7 +7170,7 @@
       "title": "質問(PDF 114KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217224.pdf/$File/a217224.pdf",
       "collected_at": "2025-06-11T20:04:16.813400",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217224.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217224.pdf/$File/a217224.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217224.pdf/$File/a217224.pdf",
@@ -7202,7 +7202,7 @@
       "title": "質問(PDF 141KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217225.pdf/$File/a217225.pdf",
       "collected_at": "2025-06-11T20:04:16.813405",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217225.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217225.pdf/$File/a217225.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217225.pdf/$File/a217225.pdf",
@@ -7234,7 +7234,7 @@
       "title": "質問(PDF 119KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217226.pdf/$File/a217226.pdf",
       "collected_at": "2025-06-11T20:04:16.813409",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217226.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217226.pdf/$File/a217226.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217226.pdf/$File/a217226.pdf",
@@ -7266,7 +7266,7 @@
       "title": "質問(PDF 114KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217227.pdf/$File/a217227.pdf",
       "collected_at": "2025-06-11T20:04:16.813414",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217227.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217227.pdf/$File/a217227.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217227.pdf/$File/a217227.pdf",
@@ -7298,7 +7298,7 @@
       "title": "質問(PDF 116KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217228.pdf/$File/a217228.pdf",
       "collected_at": "2025-06-11T20:04:16.813419",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217228.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217228.pdf/$File/a217228.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217228.pdf/$File/a217228.pdf",
@@ -7330,7 +7330,7 @@
       "title": "質問(PDF 170KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217229.pdf/$File/a217229.pdf",
       "collected_at": "2025-06-11T20:04:16.813424",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217229.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217229.pdf/$File/a217229.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217229.pdf/$File/a217229.pdf",
@@ -7362,7 +7362,7 @@
       "title": "質問(PDF 154KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217230.pdf/$File/a217230.pdf",
       "collected_at": "2025-06-11T20:04:16.813429",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217230.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217230.pdf/$File/a217230.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217230.pdf/$File/a217230.pdf",
@@ -7394,7 +7394,7 @@
       "title": "質問(PDF 103KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217231.pdf/$File/a217231.pdf",
       "collected_at": "2025-06-11T20:04:16.813433",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217231.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217231.pdf/$File/a217231.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217231.pdf/$File/a217231.pdf",
@@ -7426,7 +7426,7 @@
       "title": "質問(PDF 107KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217232.pdf/$File/a217232.pdf",
       "collected_at": "2025-06-11T20:04:16.813438",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217232.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217232.pdf/$File/a217232.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217232.pdf/$File/a217232.pdf",
@@ -7458,7 +7458,7 @@
       "title": "質問(PDF 140KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217233.pdf/$File/a217233.pdf",
       "collected_at": "2025-06-11T20:04:16.813443",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217233.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217233.pdf/$File/a217233.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217233.pdf/$File/a217233.pdf",
@@ -7490,7 +7490,7 @@
       "title": "質問(PDF 212KB)",
       "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217234.pdf/$File/a217234.pdf",
       "collected_at": "2025-06-11T20:04:16.813447",
-      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217234.htm",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217234.pdf/$File/a217234.pdf",
       "pdf_links": [
         {
           "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217234.pdf/$File/a217234.pdf",

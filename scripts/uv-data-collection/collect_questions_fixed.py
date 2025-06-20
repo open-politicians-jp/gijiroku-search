@@ -18,6 +18,7 @@ from fake_useragent import UserAgent
 from bs4 import BeautifulSoup
 import logging
 import random
+from urllib.parse import urljoin
 
 # ログ設定
 logging.basicConfig(
@@ -129,7 +130,7 @@ class QuestionsCollector:
                 
                 # 質問主意書関連のリンクを判定
                 if self.is_question_link(href, text):
-                    full_url = self.base_url + href if href.startswith('/') else href
+                    full_url = urljoin(self.questions_main_url, href)
                     links.append({
                         'url': full_url,
                         'title': text,
@@ -202,8 +203,8 @@ class QuestionsCollector:
             answer_date = self.extract_answer_date(soup)
             
             # HTML/PDFリンクを探す
-            html_links = self.extract_html_links(soup)
-            pdf_links = self.extract_pdf_links(soup)
+            html_links = self.extract_html_links(soup, link_info['url'])
+            pdf_links = self.extract_pdf_links(soup, link_info['url'])
             
             question_detail = {
                 'title': link_info['title'],
@@ -349,7 +350,7 @@ class QuestionsCollector:
             logger.error(f"答弁日抽出エラー: {str(e)}")
             return ""
     
-    def extract_html_links(self, soup: BeautifulSoup) -> List[Dict[str, str]]:
+    def extract_html_links(self, soup: BeautifulSoup, base_url: str = None) -> List[Dict[str, str]]:
         """HTMLリンクを抽出"""
         links = []
         
@@ -361,7 +362,7 @@ class QuestionsCollector:
                 text = link.get_text(strip=True)
                 
                 if href:
-                    full_url = self.base_url + href if href.startswith('/') else href
+                    full_url = urljoin(base_url or self.base_url, href)
                     links.append({
                         'url': full_url,
                         'title': text or 'HTML文書'
@@ -372,7 +373,7 @@ class QuestionsCollector:
         
         return links
     
-    def extract_pdf_links(self, soup: BeautifulSoup) -> List[Dict[str, str]]:
+    def extract_pdf_links(self, soup: BeautifulSoup, base_url: str = None) -> List[Dict[str, str]]:
         """PDFリンクを抽出"""
         links = []
         
@@ -384,7 +385,7 @@ class QuestionsCollector:
                 text = link.get_text(strip=True)
                 
                 if href:
-                    full_url = self.base_url + href if href.startswith('/') else href
+                    full_url = urljoin(base_url or self.base_url, href)
                     links.append({
                         'url': full_url,
                         'title': text or 'PDF文書'

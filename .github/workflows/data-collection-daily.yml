@@ -19,6 +19,11 @@ on:
         - committee
         - manifestos
 
+# GitHub Actionsでのcommit/push権限設定
+permissions:
+  contents: write
+  actions: read
+
 jobs:
   collect-daily-data:
     runs-on: ubuntu-latest
