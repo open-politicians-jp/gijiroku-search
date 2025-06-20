@@ -97,7 +97,7 @@ export default function SearchResults({
               {speech.committee && (
                 <div className="flex items-center gap-1 max-w-32 sm:max-w-none">
                   <Building className="h-3 w-3 sm:h-4 sm:w-4" />
-                  <span className="text-xs sm:text-sm truncate" title={`${speech.committee}${speech.meeting_info?.meeting_type ? ` (${speech.meeting_info.meeting_type})` : ''}`}>
+                  <span className="text-xs sm:text-sm truncate" title={speech.committee}>
                     {speech.committee.length > 8 ? speech.committee.substring(0, 8) + '...' : speech.committee}
                   </span>
                 </div>
