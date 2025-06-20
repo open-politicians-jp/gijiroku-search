@@ -204,7 +204,7 @@ export default function AboutPage() {
           </div>
           <div className="flex items-center gap-4 pt-4">
             <a
-              href="https://github.com/hironeko/new-jp-search"
+              href="https://github.com/open-politicians-jp/gijiroku-search"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-4 py-2 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors text-sm"
