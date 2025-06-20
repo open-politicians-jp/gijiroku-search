@@ -119,6 +119,16 @@ export default function Home() {
     }
   };
 
+  const handleSearchTypeChange = () => {
+    setSearchResult(null);
+    setCommitteeNewsResult(null);
+    setBillsResult(null);
+    setQuestionsResult(null);
+    setAllSpeeches([]);
+    setCurrentSearchParams(null);
+    setError(null);
+  };
+
   const handlePageChange = (page: 'search' | 'stats' | 'about' | 'manifestos') => {
     setCurrentPage(page);
     setError(null);
@@ -133,7 +143,7 @@ export default function Home() {
           <div className="py-8">
             <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
               {/* 検索フォーム */}
-              <SearchForm onSearch={handleSearch} loading={loading} />
+              <SearchForm onSearch={handleSearch} onSearchTypeChange={handleSearchTypeChange} loading={loading} />
               
               {/* エラー表示 */}
               {error && (
