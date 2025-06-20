@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import './globals.css'
+import GoogleAnalytics from '@/components/GoogleAnalytics'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://open-politicians-jp.github.io/gijiroku-search'),
@@ -27,6 +28,7 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <body className="min-h-screen bg-gray-50">
+        <GoogleAnalytics />
         {children}
       </body>
     </html>
