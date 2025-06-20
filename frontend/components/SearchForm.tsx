@@ -16,7 +16,6 @@ export default function SearchForm({ onSearch, loading = false }: SearchFormProp
   const [committee, setCommittee] = useState('');
   const [dateFrom, setDateFrom] = useState('');
   const [dateTo, setDateTo] = useState('');
-  const [includeMeetingInfo, setIncludeMeetingInfo] = useState(false);
   const [searchType, setSearchType] = useState<'speeches' | 'committee_news' | 'bills' | 'questions'>('speeches');
   const [showAdvanced, setShowAdvanced] = useState(false);
 
@@ -30,7 +29,6 @@ export default function SearchForm({ onSearch, loading = false }: SearchFormProp
       committee: committee.trim() || undefined,
       date_from: dateFrom || undefined,
       date_to: dateTo || undefined,
-      include_meeting_info: searchType === 'speeches' ? includeMeetingInfo : undefined,
       search_type: searchType,
       limit: searchType === 'speeches' ? 50 : 20,
       offset: 0
@@ -230,21 +228,6 @@ export default function SearchForm({ onSearch, loading = false }: SearchFormProp
                 className="search-input"
               />
             </div>
-            
-            {/* 会議録情報を含める（議事録検索のみ） */}
-            {searchType === 'speeches' && (
-              <div className="col-span-2">
-                <label className="flex items-center gap-2 text-sm text-gray-700 cursor-pointer">
-                  <input
-                    type="checkbox"
-                    checked={includeMeetingInfo}
-                    onChange={(e) => setIncludeMeetingInfo(e.target.checked)}
-                    className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2"
-                  />
-                  会議録情報を含める（委員名簿、出席者リスト等）
-                </label>
-              </div>
-            )}
           </div>
         )}
       </form>
