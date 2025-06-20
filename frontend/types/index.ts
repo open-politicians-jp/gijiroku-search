@@ -9,17 +9,6 @@ export interface Speech {
   text: string;
   url: string;
   created_at: string;
-  meeting_info?: {
-    session_name: string;
-    meeting_name: string;
-    house: string;
-    meeting_number: string;
-    date: string;
-    issue: string;
-    pdf_url: string;
-    speech_order: string;
-    meeting_type: string;
-  };
 }
 
 export interface SearchParams {
@@ -31,7 +20,6 @@ export interface SearchParams {
   date_to?: string;
   limit?: number;
   offset?: number;
-  include_meeting_info?: boolean;
   search_type?: 'speeches' | 'committee_news' | 'bills' | 'questions';
 }
 

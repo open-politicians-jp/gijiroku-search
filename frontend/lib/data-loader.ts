@@ -14,7 +14,6 @@ export interface SearchParams {
   date_to?: string;
   limit?: number;
   offset?: number;
-  include_meeting_info?: boolean;
   search_type?: 'speeches' | 'committee_news' | 'bills' | 'questions';
 }
 
