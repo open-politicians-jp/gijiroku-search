@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
+  // 静的サイト生成を基本とし、環境変数でAPI routesを有効化
+  output: process.env.NEXT_PUBLIC_USE_API_ROUTES === 'true' ? 'standalone' : 'export',
   trailingSlash: true,
   skipTrailingSlashRedirect: true,
   distDir: 'out',

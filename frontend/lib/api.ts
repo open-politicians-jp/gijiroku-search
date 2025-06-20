@@ -5,10 +5,14 @@ export class APIClient {
   private useStaticLoader: boolean;
 
   constructor() {
-    // GitHub Pages等の静的サイトでは静的ローダーを使用
-    // API routesが利用可能な環境では API を使用
-    this.useStaticLoader = process.env.NEXT_PUBLIC_USE_STATIC_LOADER === 'true' || 
-                          typeof window !== 'undefined' && window.location.hostname.includes('github.io');
+    // 現在の設定では常に静的ローダーを使用（static export対応）
+    // 将来的にAPI routesを有効にする場合は環境変数で制御
+    this.useStaticLoader = true;
+    
+    // 環境変数でAPI routesを明示的に有効化する場合のみ使用
+    if (process.env.NEXT_PUBLIC_USE_API_ROUTES === 'true' && typeof window !== 'undefined') {
+      this.useStaticLoader = false;
+    }
   }
 
   async search(params: SearchParams): Promise<SearchResult | any> {
