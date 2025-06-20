@@ -1,12 +1,19 @@
 #!/usr/bin/env python3
 """
-毎日実行される過去2ヶ月分データ収集スクリプト
+進行的データ収集スクリプト
 
-GitHub Actions用に設計：
-- 過去2ヶ月分の議事録データを毎日収集
+GitHub Actions用に設計された進行的データ収集システム：
+- 既存データの最古日付を基準とした進行的な過去データ収集
+- デフォルト: 最古データより3ヶ月前まで遡って収集
+- 初回実行時は現在から過去3ヶ月分を収集
 - IP偽装とレート制限対応
-- 新ファイル名形式: speeches_YYYYMMDD_DD.json
+- ファイル名形式: speeches_YYYYMMDD_DD.json
 - 生データを data/raw/speeches/ に保存
+
+環境変数:
+- MONTHS_BACK: 収集月数 (デフォルト: 3)
+- USE_PROGRESSIVE: 進行的収集を使用 (デフォルト: true)  
+- FORCE_UPDATE: 強制更新 (デフォルト: false)
 """
 
 import os
@@ -311,35 +318,98 @@ class DailyKokkaiAPIClient:
         file_size = filepath.stat().st_size / (1024 * 1024)
         logger.info(f"💾 保存完了: {filename} ({file_size:.1f} MB)")
 
+def get_progressive_collection_months(client, months_to_collect=3):
+    """既存データベースを基に進行的な収集対象月を決定"""
+    
+    # 既存データから最古の日付を検索
+    oldest_date = None
+    
+    # すべての既存ファイルから最古の日付を探す
+    existing_files = list(client.raw_data_dir.glob("speeches_*.json"))
+    
+    if existing_files:
+        logger.info(f"🔍 既存ファイル {len(existing_files)} 件から最古日付を検索中...")
+        
+        for file_path in existing_files:
+            try:
+                with open(file_path, 'r', encoding='utf-8') as f:
+                    data = json.load(f)
+                    
+                # データ内の日付をチェック
+                if 'data' in data:
+                    for speech in data['data']:
+                        if 'date' in speech and speech['date']:
+                            try:
+                                speech_date = datetime.fromisoformat(speech['date'].replace('Z', '+00:00'))
+                                if oldest_date is None or speech_date < oldest_date:
+                                    oldest_date = speech_date
+                            except (ValueError, TypeError):
+                                continue
+                                
+            except Exception as e:
+                logger.warning(f"ファイル読み込みエラー {file_path}: {e}")
+                continue
+    
+    target_months = []
+    
+    if oldest_date:
+        logger.info(f"📊 既存データの最古日付: {oldest_date.strftime('%Y-%m-%d')}")
+        
+        # 最古日付よりも過去の月を収集対象とする
+        base_date = oldest_date.replace(day=1) - relativedelta(months=1)
+        
+        for i in range(months_to_collect):
+            target_date = base_date - relativedelta(months=i)
+            target_months.append((target_date.year, target_date.month))
+            
+        logger.info(f"📅 進行的収集: 最古日付 {oldest_date.strftime('%Y-%m')} より過去 {months_to_collect} ヶ月分")
+        
+    else:
+        logger.info("📊 既存データなし: 現在日付から過去データを収集")
+        
+        # 既存データがない場合は現在から過去へ
+        current_date = datetime.now()
+        for i in range(months_to_collect):
+            target_date = current_date - relativedelta(months=i)
+            target_months.append((target_date.year, target_date.month))
+            
+        logger.info(f"📅 初回収集: 現在から過去 {months_to_collect} ヶ月分")
+    
+    return target_months
+
 def main():
     """メイン処理"""
     logger.info("🚀 毎日データ収集開始...")
     
     # 環境変数から設定取得
-    months_back = float(os.getenv('MONTHS_BACK', '2'))
+    months_back = float(os.getenv('MONTHS_BACK', '3'))  # デフォルトを3ヶ月に変更
     force_update = os.getenv('FORCE_UPDATE', 'false').lower() == 'true'
+    use_progressive = os.getenv('USE_PROGRESSIVE', 'true').lower() == 'true'
     
-    logger.info(f"📋 設定: 過去{months_back}ヶ月分のデータを収集")
+    logger.info(f"📋 設定: {months_back}ヶ月分のデータを収集")
     logger.info(f"📋 強制更新: {force_update}")
+    logger.info(f"📋 進行的収集: {use_progressive}")
     
     client = DailyKokkaiAPIClient()
     
-    # 小数点月数を適切に処理
-    current_date = datetime.now()
-    target_months = []
-    
-    if months_back < 1:
-        # 1ヶ月未満の場合は現在の月のみ
-        target_months.append((current_date.year, current_date.month))
-        logger.info(f"📅 小数点月数({months_back})のため現在月のみ収集: {current_date.year}年{current_date.month}月")
+    if use_progressive:
+        # 新しい進行的収集ロジック
+        target_months = get_progressive_collection_months(client, int(months_back))
     else:
-        # 1ヶ月以上の場合は整数部分の月数分を収集
-        months_to_collect = int(months_back) + (1 if months_back % 1 > 0 else 0)
-        logger.info(f"📅 小数点月数({months_back})から{months_to_collect}ヶ月分を収集対象とします")
+        # 従来のロジック（後方互換性のため保持）
+        current_date = datetime.now()
+        target_months = []
         
-        for i in range(months_to_collect):
-            target_date = current_date - relativedelta(months=i)
-            target_months.append((target_date.year, target_date.month))
+        if months_back < 1:
+            target_months.append((current_date.year, current_date.month))
+            logger.info(f"📅 小数点月数({months_back})のため現在月のみ収集")
+        else:
+            months_to_collect = int(months_back) + (1 if months_back % 1 > 0 else 0)
+            logger.info(f"📅 従来ロジック: {months_to_collect}ヶ月分を収集対象")
+            
+            for i in range(months_to_collect):
+                target_date = current_date - relativedelta(months=i)
+                target_months.append((target_date.year, target_date.month))
     
     # 収集対象月を表示
     logger.info(f"📅 収集対象月: {', '.join([f'{y}年{m}月' for y, m in target_months])}")
