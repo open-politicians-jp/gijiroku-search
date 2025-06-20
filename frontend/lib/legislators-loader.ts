@@ -52,8 +52,12 @@ class LegislatorsLoader {
    */
   private async loadSangiinData(): Promise<Legislator[]> {
     try {
+      // GitHub Pages対応のパス設定
+      const basePath = process.env.NODE_ENV === 'production' ? '/gijiroku-search' : '';
+      const dataPath = `${basePath}/data/legislators/sangiin_legislators_unified_20250621_002031.json`;
+      
       // 最新の統合ファイルを取得
-      const response = await fetch('/data/legislators/sangiin_legislators_unified_20250621_002031.json');
+      const response = await fetch(dataPath);
       if (!response.ok) {
         throw new Error(`Failed to fetch sangiin data: ${response.status}`);
       }
@@ -111,7 +115,11 @@ class LegislatorsLoader {
    */
   private async loadFallbackData(): Promise<LegislatorsData> {
     try {
-      const response = await fetch('/data/legislators/legislators_mock.csv');
+      // GitHub Pages対応のパス設定
+      const basePath = process.env.NODE_ENV === 'production' ? '/gijiroku-search' : '';
+      const csvPath = `${basePath}/data/legislators/legislators_mock.csv`;
+      
+      const response = await fetch(csvPath);
       if (!response.ok) {
         throw new Error(`Failed to fetch fallback data: ${response.status}`);
       }
