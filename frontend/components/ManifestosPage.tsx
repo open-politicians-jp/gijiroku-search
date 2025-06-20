@@ -42,6 +42,26 @@ const getDataPath = (path: string): string => {
   return `${basePath}${path}`;
 };
 
+// マニフェストファイルのフォールバック候補を動的生成
+const generateManifestFiles = (): string[] => {
+  const files = ['/data/manifestos/manifestos_latest.json'];
+  
+  // 過去7日分のファイル名パターンを生成（時刻は既知のパターン）
+  const timePatterns = ['193602', '193501', '193406', '193135', '192440'];
+  
+  for (let i = 0; i < 7; i++) {
+    const date = new Date();
+    date.setDate(date.getDate() - i);
+    const dateStr = date.toISOString().slice(0, 10).replace(/-/g, '');
+    
+    timePatterns.forEach(time => {
+      files.push(`/data/manifestos/manifestos_${dateStr}_${time}.json`);
+    });
+  }
+  
+  return files;
+};
+
 export default function ManifestosPage() {
   const [manifestos, setManifestos] = useState<Manifesto[]>([]);
   const [filteredManifestos, setFilteredManifestos] = useState<Manifesto[]>([]);
@@ -57,15 +77,8 @@ export default function ManifestosPage() {
         setLoading(true);
         setError(null);
         
-        // basePath対応で利用可能なファイルを優先順位で試行
-        const filesToTry = [
-          '/data/manifestos/manifestos_latest.json',
-          '/data/manifestos/manifestos_20250611_193602.json',
-          '/data/manifestos/manifestos_20250611_193501.json',
-          '/data/manifestos/manifestos_20250611_193406.json',
-          '/data/manifestos/manifestos_20250611_193135.json',
-          '/data/manifestos/manifestos_20250611_192440.json'
-        ].map(path => getDataPath(path));
+        // 動的にファイル候補を生成
+        const filesToTry = generateManifestFiles().map(path => getDataPath(path));
 
         console.log('Attempting to load manifestos from:', filesToTry);
 
