@@ -1,10 +1,10 @@
 'use client';
 
-import { Search, BarChart3, Info, FileText } from 'lucide-react';
+import { Search, BarChart3, Info, FileText, Users } from 'lucide-react';
 
 interface HeaderProps {
-  currentPage?: 'search' | 'stats' | 'about' | 'manifestos';
-  onPageChange?: (page: 'search' | 'stats' | 'about' | 'manifestos') => void;
+  currentPage?: 'search' | 'stats' | 'about' | 'manifestos' | 'legislators';
+  onPageChange?: (page: 'search' | 'stats' | 'about' | 'manifestos' | 'legislators') => void;
 }
 
 export default function Header({ currentPage = 'search', onPageChange }: HeaderProps) {
@@ -52,6 +52,18 @@ export default function Header({ currentPage = 'search', onPageChange }: HeaderP
               >
                 <FileText className="h-4 w-4" />
                 <span className="hidden sm:inline">マニフェスト</span>
+              </button>
+              
+              <button
+                onClick={() => onPageChange('legislators')}
+                className={`flex items-center gap-1 sm:gap-2 px-2 sm:px-3 py-2 rounded-md text-xs sm:text-sm font-medium transition-colors ${
+                  currentPage === 'legislators'
+                    ? 'bg-blue-100 text-blue-700'
+                    : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'
+                }`}
+              >
+                <Users className="h-4 w-4" />
+                <span className="hidden sm:inline">議員一覧</span>
               </button>
               
               <button
