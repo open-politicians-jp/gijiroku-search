@@ -6,7 +6,7 @@ class LegislatorsLoader {
   private readonly CACHE_DURATION = 5 * 60 * 1000; // 5 minutes
 
   /**
-   * CSV形式の議員データを読み込み、JSON形式に変換
+   * JSONファイル形式の議員データを読み込み（参議院・衆議院対応）
    */
   async loadLegislators(): Promise<LegislatorsData> {
     // キャッシュチェック
@@ -15,22 +15,24 @@ class LegislatorsLoader {
     }
 
     try {
-      // モックCSVデータを読み込み
-      const response = await fetch('/data/legislators/legislators_mock.csv');
-      if (!response.ok) {
-        throw new Error(`Failed to fetch legislators data: ${response.status}`);
-      }
-
-      const csvText = await response.text();
-      const legislators = this.parseCSV(csvText);
+      // 参議院データの統合ファイルを読み込み
+      const sangiinData = await this.loadSangiinData();
+      
+      // 衆議院データ（将来追加予定）
+      const shugiinData = await this.loadShugiinData();
+      
+      // データ統合
+      const allLegislators = [...sangiinData, ...shugiinData];
 
       const data: LegislatorsData = {
         metadata: {
-          total_count: legislators.length,
+          total_count: allLegislators.length,
           last_updated: new Date().toISOString(),
-          data_source: 'mock_csv_data',
+          data_source: 'real_json_data',
+          sangiin_count: sangiinData.length,
+          shugiin_count: shugiinData.length,
         },
-        data: legislators,
+        data: allLegislators,
       };
 
       // キャッシュ更新
@@ -40,12 +42,98 @@ class LegislatorsLoader {
       return data;
     } catch (error) {
       console.error('Error loading legislators data:', error);
-      // フォールバック: 空のデータを返す
+      // フォールバック: モックCSVデータを使用
+      return await this.loadFallbackData();
+    }
+  }
+
+  /**
+   * 参議院データを読み込み
+   */
+  private async loadSangiinData(): Promise<Legislator[]> {
+    try {
+      // 最新の統合ファイルを取得
+      const response = await fetch('/data/legislators/sangiin_legislators_unified_20250621_001253.json');
+      if (!response.ok) {
+        throw new Error(`Failed to fetch sangiin data: ${response.status}`);
+      }
+
+      const jsonData = await response.json();
+      return this.normalizeJsonLegislators(jsonData.data);
+    } catch (error) {
+      console.warn('Failed to load sangiin data:', error);
+      return [];
+    }
+  }
+
+  /**
+   * 衆議院データを読み込み（将来実装予定）
+   */
+  private async loadShugiinData(): Promise<Legislator[]> {
+    try {
+      // 衆議院データが追加されたら実装
+      // const response = await fetch('/data/legislators/shugiin_legislators_unified.json');
+      // if (response.ok) {
+      //   const jsonData = await response.json();
+      //   return this.normalizeJsonLegislators(jsonData.data);
+      // }
+      return [];
+    } catch (error) {
+      console.warn('Shugiin data not available yet:', error);
+      return [];
+    }
+  }
+
+  /**
+   * JSONデータを内部形式に正規化
+   */
+  private normalizeJsonLegislators(jsonLegislators: any[]): Legislator[] {
+    return jsonLegislators.map((leg, index) => ({
+      id: leg.id || `leg_${index}`,
+      name: leg.name || '',
+      house: leg.house as 'shugiin' | 'sangiin',
+      party: leg.party || '',
+      constituency: leg.constituency || '',
+      electionYear: leg.first_election_year || new Date().getFullYear(),
+      status: leg.status as 'active' | 'inactive' || 'active',
+      region: leg.region || undefined,
+      // 追加フィールド
+      termCount: leg.term_count,
+      termEnd: leg.term_end,
+      positions: leg.positions,
+      profileUrl: leg.profile_url,
+      photoUrl: leg.photo_url,
+    }));
+  }
+
+  /**
+   * フォールバック用モックデータ読み込み
+   */
+  private async loadFallbackData(): Promise<LegislatorsData> {
+    try {
+      const response = await fetch('/data/legislators/legislators_mock.csv');
+      if (!response.ok) {
+        throw new Error(`Failed to fetch fallback data: ${response.status}`);
+      }
+
+      const csvText = await response.text();
+      const legislators = this.parseCSV(csvText);
+
+      return {
+        metadata: {
+          total_count: legislators.length,
+          last_updated: new Date().toISOString(),
+          data_source: 'fallback_csv_data',
+        },
+        data: legislators,
+      };
+    } catch (error) {
+      console.error('Fallback data also failed:', error);
       return {
         metadata: {
           total_count: 0,
           last_updated: new Date().toISOString(),
-          data_source: 'fallback',
+          data_source: 'empty_fallback',
         },
         data: [],
       };

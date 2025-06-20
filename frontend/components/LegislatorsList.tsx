@@ -75,10 +75,44 @@ export default function LegislatorsList({ legislators, isLoading }: LegislatorsL
                 )}
               </div>
 
-              {/* 初当選年 */}
+              {/* 初当選年・当選回数 */}
               <div className="text-gray-600">
                 <span className="font-medium">初当選:</span> {legislator.electionYear}年
+                {legislator.termCount && (
+                  <span className="ml-2 text-blue-600">({legislator.termCount}期)</span>
+                )}
               </div>
+
+              {/* 役職 */}
+              {legislator.positions && (
+                <div className="text-gray-600 text-xs">
+                  <span className="font-medium">役職:</span> {legislator.positions.length > 50 ? 
+                    `${legislator.positions.substring(0, 50)}...` : 
+                    legislator.positions
+                  }
+                </div>
+              )}
+
+              {/* 任期満了 */}
+              {legislator.termEnd && (
+                <div className="text-gray-500 text-xs">
+                  任期満了: {legislator.termEnd}
+                </div>
+              )}
+
+              {/* プロフィールリンク */}
+              {legislator.profileUrl && (
+                <div className="mt-2">
+                  <a
+                    href={legislator.profileUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-500 hover:text-blue-700 text-xs underline"
+                  >
+                    公式プロフィール →
+                  </a>
+                </div>
+              )}
             </div>
           </div>
         ))}

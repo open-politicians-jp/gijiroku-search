@@ -7,6 +7,12 @@ export interface Legislator {
   electionYear: number;
   status: 'active' | 'inactive'; // 現職 | 非現職
   region?: string; // 地域（比例代表の場合）
+  // 追加フィールド（実際のデータ用）
+  termCount?: number; // 当選回数
+  termEnd?: string; // 任期満了日
+  positions?: string; // 現在の役職
+  profileUrl?: string; // 公式プロフィールURL
+  photoUrl?: string; // 写真URL
 }
 
 export interface LegislatorFilter {
@@ -21,6 +27,8 @@ export interface LegislatorsData {
     total_count: number;
     last_updated: string;
     data_source: string;
+    sangiin_count?: number;
+    shugiin_count?: number;
   };
   data: Legislator[];
 }
