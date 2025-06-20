@@ -10,11 +10,12 @@ import QuestionResults from '@/components/QuestionResults';
 import StatsPage from '@/components/StatsPage';
 import AboutPage from '@/components/AboutPage';
 import ManifestosPage from '@/components/ManifestosPage';
+import LegislatorsPage from './legislators/page';
 import { SearchParams, SearchResult, Stats, CommitteeNewsResult, BillsResult, QuestionsResult } from '@/types';
 import { apiClient } from '@/lib/api';
 
 export default function Home() {
-  const [currentPage, setCurrentPage] = useState<'search' | 'stats' | 'about' | 'manifestos'>('search');
+  const [currentPage, setCurrentPage] = useState<'search' | 'stats' | 'about' | 'manifestos' | 'legislators'>('search');
   const [searchResult, setSearchResult] = useState<SearchResult | null>(null);
   const [committeeNewsResult, setCommitteeNewsResult] = useState<CommitteeNewsResult | null>(null);
   const [billsResult, setBillsResult] = useState<BillsResult | null>(null);
@@ -129,7 +130,7 @@ export default function Home() {
     setError(null);
   };
 
-  const handlePageChange = (page: 'search' | 'stats' | 'about' | 'manifestos') => {
+  const handlePageChange = (page: 'search' | 'stats' | 'about' | 'manifestos' | 'legislators') => {
     setCurrentPage(page);
     setError(null);
   };
@@ -224,6 +225,7 @@ export default function Home() {
         )}
         
         {currentPage === 'manifestos' && <ManifestosPage />}
+        {currentPage === 'legislators' && <LegislatorsPage />}
         {currentPage === 'stats' && <StatsPage />}
         {currentPage === 'about' && <AboutPage />}
       </main>

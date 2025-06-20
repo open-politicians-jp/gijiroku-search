@@ -1,0 +1,462 @@
+{
+  "metadata": {
+    "data_type": "questions_real",
+    "total_count": 10,
+    "generated_at": "2025-06-20T19:59:53.040581",
+    "source": "衆議院質問主意書データベース（実データ）",
+    "collection_method": "real_site_scraping",
+    "data_quality": "authentic"
+  },
+  "data": [
+    {
+      "title": "創薬力強化機構あるいは創薬支援基金に関する質問主意書",
+      "question_number": "1",
+      "questioner": "福田玄君",
+      "house": "衆議院",
+      "submission_date": "",
+      "answer_date": "",
+      "question_content": "令和七年一月二十四日提出質問第一号創薬力強化機構あるいは創薬支援基金に関する質問主意書",
+      "answer_content": "",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217001.htm",
+      "answer_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/menu_m.htm",
+      "html_links": [
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217001.htm",
+          "title": "質問(HTML)",
+          "type": "html"
+        }
+      ],
+      "pdf_links": [
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217001.pdf/$File/a217001.pdf",
+          "title": "質問本文(PDF)へ",
+          "type": "pdf"
+        },
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_t.nsf/html/shitsumon/pdfT/b217001.pdf/$File/b217001.pdf",
+          "title": "答弁本文(PDF)へ",
+          "type": "pdf"
+        },
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217001.pdf/$File/a217001.pdf",
+          "title": "質問本文(PDF)へ",
+          "type": "pdf"
+        },
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_t.nsf/html/shitsumon/pdfT/b217001.pdf/$File/b217001.pdf",
+          "title": "答弁本文(PDF)へ",
+          "type": "pdf"
+        }
+      ],
+      "category": "一般",
+      "collected_at": "2025-06-20T19:59:21.129385",
+      "year": 2025,
+      "week": 25
+    },
+    {
+      "title": "日本航空の運航乗務員による過剰飲酒を原因とする遅延にかかる一部報道に関する質問主意書",
+      "question_number": "2",
+      "questioner": "福田玄君",
+      "house": "衆議院",
+      "submission_date": "",
+      "answer_date": "",
+      "question_content": "令和七年一月二十四日提出質問第二号日本航空の運航乗務員による過剰飲酒を原因とする遅延にかかる一部報道に関する質問主意書",
+      "answer_content": "",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217002.htm",
+      "answer_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/menu_m.htm",
+      "html_links": [
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217002.htm",
+          "title": "質問(HTML)",
+          "type": "html"
+        }
+      ],
+      "pdf_links": [
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217002.pdf/$File/a217002.pdf",
+          "title": "質問本文(PDF)へ",
+          "type": "pdf"
+        },
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_t.nsf/html/shitsumon/pdfT/b217002.pdf/$File/b217002.pdf",
+          "title": "答弁本文(PDF)へ",
+          "type": "pdf"
+        },
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217002.pdf/$File/a217002.pdf",
+          "title": "質問本文(PDF)へ",
+          "type": "pdf"
+        },
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_t.nsf/html/shitsumon/pdfT/b217002.pdf/$File/b217002.pdf",
+          "title": "答弁本文(PDF)へ",
+          "type": "pdf"
+        }
+      ],
+      "category": "一般",
+      "collected_at": "2025-06-20T19:59:23.183220",
+      "year": 2025,
+      "week": 25
+    },
+    {
+      "title": "事業所税に関する質問主意書",
+      "question_number": "3",
+      "questioner": "西川将人君",
+      "house": "衆議院",
+      "submission_date": "",
+      "answer_date": "",
+      "question_content": "令和七年一月二十四日提出質問第三号事業所税に関する質問主意書",
+      "answer_content": "",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217003.htm",
+      "answer_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/menu_m.htm",
+      "html_links": [
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217003.htm",
+          "title": "質問(HTML)",
+          "type": "html"
+        }
+      ],
+      "pdf_links": [
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217003.pdf/$File/a217003.pdf",
+          "title": "質問本文(PDF)へ",
+          "type": "pdf"
+        },
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_t.nsf/html/shitsumon/pdfT/b217003.pdf/$File/b217003.pdf",
+          "title": "答弁本文(PDF)へ",
+          "type": "pdf"
+        },
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217003.pdf/$File/a217003.pdf",
+          "title": "質問本文(PDF)へ",
+          "type": "pdf"
+        },
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_t.nsf/html/shitsumon/pdfT/b217003.pdf/$File/b217003.pdf",
+          "title": "答弁本文(PDF)へ",
+          "type": "pdf"
+        }
+      ],
+      "category": "予算・税制",
+      "collected_at": "2025-06-20T19:59:27.905896",
+      "year": 2025,
+      "week": 25
+    },
+    {
+      "title": "高規格道路旭川十勝道路「旭川東神楽道路」ほかの整備促進等に関する質問主意書",
+      "question_number": "4",
+      "questioner": "西川将人君",
+      "house": "衆議院",
+      "submission_date": "",
+      "answer_date": "",
+      "question_content": "令和七年一月二十四日提出質問第四号高規格道路旭川十勝道路「旭川東神楽道路」ほかの整備促進等に関する質問主意書",
+      "answer_content": "",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217004.htm",
+      "answer_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/menu_m.htm",
+      "html_links": [
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217004.htm",
+          "title": "質問(HTML)",
+          "type": "html"
+        }
+      ],
+      "pdf_links": [
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217004.pdf/$File/a217004.pdf",
+          "title": "質問本文(PDF)へ",
+          "type": "pdf"
+        },
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_t.nsf/html/shitsumon/pdfT/b217004.pdf/$File/b217004.pdf",
+          "title": "答弁本文(PDF)へ",
+          "type": "pdf"
+        },
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217004.pdf/$File/a217004.pdf",
+          "title": "質問本文(PDF)へ",
+          "type": "pdf"
+        },
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_t.nsf/html/shitsumon/pdfT/b217004.pdf/$File/b217004.pdf",
+          "title": "答弁本文(PDF)へ",
+          "type": "pdf"
+        }
+      ],
+      "category": "一般",
+      "collected_at": "2025-06-20T19:59:30.479361",
+      "year": 2025,
+      "week": 25
+    },
+    {
+      "title": "日本の農業の振興と農村地域活性化に関する質問主意書",
+      "question_number": "5",
+      "questioner": "小熊慎司君",
+      "house": "衆議院",
+      "submission_date": "",
+      "answer_date": "",
+      "question_content": "令和七年一月二十四日提出質問第五号日本の農業の振興と農村地域活性化に関する質問主意書",
+      "answer_content": "",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217005.htm",
+      "answer_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/menu_m.htm",
+      "html_links": [
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217005.htm",
+          "title": "質問(HTML)",
+          "type": "html"
+        }
+      ],
+      "pdf_links": [
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217005.pdf/$File/a217005.pdf",
+          "title": "質問本文(PDF)へ",
+          "type": "pdf"
+        },
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_t.nsf/html/shitsumon/pdfT/b217005.pdf/$File/b217005.pdf",
+          "title": "答弁本文(PDF)へ",
+          "type": "pdf"
+        },
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217005.pdf/$File/a217005.pdf",
+          "title": "質問本文(PDF)へ",
+          "type": "pdf"
+        },
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_t.nsf/html/shitsumon/pdfT/b217005.pdf/$File/b217005.pdf",
+          "title": "答弁本文(PDF)へ",
+          "type": "pdf"
+        }
+      ],
+      "category": "地方・都市",
+      "collected_at": "2025-06-20T19:59:32.636916",
+      "year": 2025,
+      "week": 25
+    },
+    {
+      "title": "日朝間の外交交渉における記録欠落と内容の漏洩に関する質問主意書",
+      "question_number": "6",
+      "questioner": "島田洋一君",
+      "house": "衆議院",
+      "submission_date": "",
+      "answer_date": "",
+      "question_content": "令和七年一月二十四日提出質問第六号日朝間の外交交渉における記録欠落と内容の漏洩に関する質問主意書",
+      "answer_content": "",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217006.htm",
+      "answer_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/menu_m.htm",
+      "html_links": [
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217006.htm",
+          "title": "質問(HTML)",
+          "type": "html"
+        }
+      ],
+      "pdf_links": [
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217006.pdf/$File/a217006.pdf",
+          "title": "質問本文(PDF)へ",
+          "type": "pdf"
+        },
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_t.nsf/html/shitsumon/pdfT/b217006.pdf/$File/b217006.pdf",
+          "title": "答弁本文(PDF)へ",
+          "type": "pdf"
+        },
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217006.pdf/$File/a217006.pdf",
+          "title": "質問本文(PDF)へ",
+          "type": "pdf"
+        },
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_t.nsf/html/shitsumon/pdfT/b217006.pdf/$File/b217006.pdf",
+          "title": "答弁本文(PDF)へ",
+          "type": "pdf"
+        }
+      ],
+      "category": "外交・安全保障",
+      "collected_at": "2025-06-20T19:59:37.173398",
+      "year": 2025,
+      "week": 25
+    },
+    {
+      "title": "電気通信事業者における検閲に関する質問主意書",
+      "question_number": "7",
+      "questioner": "原口一博君",
+      "house": "衆議院",
+      "submission_date": "",
+      "answer_date": "",
+      "question_content": "令和七年一月二十七日提出質問第七号電気通信事業者における検閲に関する質問主意書",
+      "answer_content": "",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217007.htm",
+      "answer_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/menu_m.htm",
+      "html_links": [
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217007.htm",
+          "title": "質問(HTML)",
+          "type": "html"
+        }
+      ],
+      "pdf_links": [
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217007.pdf/$File/a217007.pdf",
+          "title": "質問本文(PDF)へ",
+          "type": "pdf"
+        },
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_t.nsf/html/shitsumon/pdfT/b217007.pdf/$File/b217007.pdf",
+          "title": "答弁本文(PDF)へ",
+          "type": "pdf"
+        },
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217007.pdf/$File/a217007.pdf",
+          "title": "質問本文(PDF)へ",
+          "type": "pdf"
+        },
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_t.nsf/html/shitsumon/pdfT/b217007.pdf/$File/b217007.pdf",
+          "title": "答弁本文(PDF)へ",
+          "type": "pdf"
+        }
+      ],
+      "category": "一般",
+      "collected_at": "2025-06-20T19:59:41.289475",
+      "year": 2025,
+      "week": 25
+    },
+    {
+      "title": "我が国産業の国際競争力の低下に関する質問主意書",
+      "question_number": "8",
+      "questioner": "原口一博君",
+      "house": "衆議院",
+      "submission_date": "",
+      "answer_date": "",
+      "question_content": "令和七年一月二十七日提出質問第八号我が国産業の国際競争力の低下に関する質問主意書",
+      "answer_content": "",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217008.htm",
+      "answer_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/menu_m.htm",
+      "html_links": [
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217008.htm",
+          "title": "質問(HTML)",
+          "type": "html"
+        }
+      ],
+      "pdf_links": [
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217008.pdf/$File/a217008.pdf",
+          "title": "質問本文(PDF)へ",
+          "type": "pdf"
+        },
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_t.nsf/html/shitsumon/pdfT/b217008.pdf/$File/b217008.pdf",
+          "title": "答弁本文(PDF)へ",
+          "type": "pdf"
+        },
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217008.pdf/$File/a217008.pdf",
+          "title": "質問本文(PDF)へ",
+          "type": "pdf"
+        },
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_t.nsf/html/shitsumon/pdfT/b217008.pdf/$File/b217008.pdf",
+          "title": "答弁本文(PDF)へ",
+          "type": "pdf"
+        }
+      ],
+      "category": "外交・安全保障",
+      "collected_at": "2025-06-20T19:59:45.534212",
+      "year": 2025,
+      "week": 25
+    },
+    {
+      "title": "九州新幹線西九州ルートの整備費負担に関する質問主意書",
+      "question_number": "9",
+      "questioner": "原口一博君",
+      "house": "衆議院",
+      "submission_date": "",
+      "answer_date": "",
+      "question_content": "令和七年一月二十七日提出質問第九号九州新幹線西九州ルートの整備費負担に関する質問主意書",
+      "answer_content": "",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217009.htm",
+      "answer_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/menu_m.htm",
+      "html_links": [
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217009.htm",
+          "title": "質問(HTML)",
+          "type": "html"
+        }
+      ],
+      "pdf_links": [
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217009.pdf/$File/a217009.pdf",
+          "title": "質問本文(PDF)へ",
+          "type": "pdf"
+        },
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_t.nsf/html/shitsumon/pdfT/b217009.pdf/$File/b217009.pdf",
+          "title": "答弁本文(PDF)へ",
+          "type": "pdf"
+        },
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217009.pdf/$File/a217009.pdf",
+          "title": "質問本文(PDF)へ",
+          "type": "pdf"
+        },
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_t.nsf/html/shitsumon/pdfT/b217009.pdf/$File/b217009.pdf",
+          "title": "答弁本文(PDF)へ",
+          "type": "pdf"
+        }
+      ],
+      "category": "一般",
+      "collected_at": "2025-06-20T19:59:49.736745",
+      "year": 2025,
+      "week": 25
+    },
+    {
+      "title": "フラット35の不正融資問題に関する質問主意書",
+      "question_number": "10",
+      "questioner": "原口一博君",
+      "house": "衆議院",
+      "submission_date": "",
+      "answer_date": "",
+      "question_content": "令和七年一月二十七日提出質問第一〇号フラット３５の不正融資問題に関する質問主意書",
+      "answer_content": "",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217010.htm",
+      "answer_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/menu_m.htm",
+      "html_links": [
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217010.htm",
+          "title": "質問(HTML)",
+          "type": "html"
+        }
+      ],
+      "pdf_links": [
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217010.pdf/$File/a217010.pdf",
+          "title": "質問本文(PDF)へ",
+          "type": "pdf"
+        },
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_t.nsf/html/shitsumon/pdfT/b217010.pdf/$File/b217010.pdf",
+          "title": "答弁本文(PDF)へ",
+          "type": "pdf"
+        },
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217010.pdf/$File/a217010.pdf",
+          "title": "質問本文(PDF)へ",
+          "type": "pdf"
+        },
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_t.nsf/html/shitsumon/pdfT/b217010.pdf/$File/b217010.pdf",
+          "title": "答弁本文(PDF)へ",
+          "type": "pdf"
+        }
+      ],
+      "category": "一般",
+      "collected_at": "2025-06-20T19:59:53.040383",
+      "year": 2025,
+      "week": 25
+    }
+  ]
+}
