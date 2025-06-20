@@ -543,8 +543,27 @@ class StaticDataLoader {
 
     const paginatedBills = filteredBills.slice(offset, offset + limit);
 
+    // URLを正規化・フィルタリング
+    const processedBills = paginatedBills.map(bill => ({
+      ...bill,
+      detail_url: bill.detail_url ? this.normalizeUrl(bill.detail_url) : '',
+      related_urls: bill.related_urls ? bill.related_urls
+        .map(link => ({
+          ...link,
+          url: this.normalizeBillUrl(link.url, bill.session_number, bill.bill_number)
+        }))
+        .filter(link => {
+          // 審議経過URLが404になる場合は除外
+          if (link.title?.includes('審議経過') && link.url.includes('keika/')) {
+            console.warn(`Filtering out potentially invalid progress URL: ${link.url}`);
+            return false;
+          }
+          return true;
+        }) : []
+    }));
+
     return {
-      bills: paginatedBills,
+      bills: processedBills,
       total,
       limit,
       offset,
@@ -649,6 +668,13 @@ class StaticDataLoader {
     
     // 相対パス（現在ディレクトリ）
     return `https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/${url}`;
+  }
+
+  private normalizeBillUrl(url: string, sessionNumber: number, billNumber: string): string {
+    if (!url) return '';
+    
+    // 通常のURL正規化を適用
+    return this.normalizeUrl(url);
   }
 
   private calculateStats(speeches: Speech[]): Stats {
