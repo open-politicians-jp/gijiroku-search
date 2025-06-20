@@ -52,7 +52,7 @@ class StaticDataLoader {
   }
 
   /**
-   * 議事録データを読み込み
+   * 議事録データを読み込み（全ファイル統合）
    */
   async loadSpeeches(): Promise<Speech[]> {
     if (this.speechesCache.length > 0 && this.isCacheValid()) {
@@ -61,20 +61,33 @@ class StaticDataLoader {
     }
 
     try {
-      // 利用可能なファイルを優先順位で試行（確実に存在するファイルを優先）
+      console.log('loadSpeeches: Loading and merging all speech files...');
+      
+      // 利用可能な全ファイルを対象に
       const filesToTry = [
-        '/data/speeches/speeches_latest.json',
-        '/data/speeches/speeches_20250610_112452.json',
-        '/data/speeches/speeches_20250610_110612.json',
-        '/data/speeches/speeches_20250610_105520.json',
-        '/data/speeches/speeches_20250610_000325.json',
-        '/data/speeches/speeches_20250609_232138.json',
-        '/data/speeches/speeches_2025_06.json',
-        '/data/speeches/speeches_2025_05.json'
+        '/data/speeches/speeches_2025_01.json',
+        '/data/speeches/speeches_2025_02_w01.json',
+        '/data/speeches/speeches_2025_02_w02.json',
+        '/data/speeches/speeches_2025_02_w03.json',
+        '/data/speeches/speeches_2025_02_w04.json',
+        '/data/speeches/speeches_2025_03_w01.json',
+        '/data/speeches/speeches_2025_03_w02.json',
+        '/data/speeches/speeches_2025_03_w03.json',
+        '/data/speeches/speeches_2025_03_w04.json',
+        '/data/speeches/speeches_2025_03_w05.json',
+        '/data/speeches/speeches_2025_04_w01.json',
+        '/data/speeches/speeches_2025_04_w02.json',
+        '/data/speeches/speeches_2025_04_w03.json',
+        '/data/speeches/speeches_2025_04_w04.json',
+        '/data/speeches/speeches_2025_05.json',
+        '/data/speeches/speeches_2025_06.json'
       ].map(path => this.getDataPath(path));
 
-      console.log('loadSpeeches: Attempting to load speeches from:', filesToTry);
+      console.log('loadSpeeches: Attempting to load and merge from:', filesToTry.length, 'files');
 
+      const allSpeeches: Speech[] = [];
+      let loadedFiles = 0;
+      
       for (const filePath of filesToTry) {
         try {
           console.log(`loadSpeeches: Trying to fetch: ${filePath}`);
@@ -82,14 +95,7 @@ class StaticDataLoader {
           
           if (response.ok) {
             const data = await response.json();
-            console.log(`loadSpeeches: Successfully loaded speeches from: ${filePath}`);
-            console.log(`loadSpeeches: Response data structure:`, {
-              isArray: Array.isArray(data),
-              hasSpeeches: !!data.speeches,
-              hasData: !!data.data,
-              keys: Object.keys(data),
-              dataSize: data.length || (data.speeches && data.speeches.length) || (data.data && data.data.length) || 'unknown'
-            });
+            console.log(`loadSpeeches: Successfully loaded from: ${filePath}`);
             
             let speechData: Speech[] = [];
             
@@ -102,34 +108,18 @@ class StaticDataLoader {
             } else {
               console.warn(`loadSpeeches: Unexpected data format in ${filePath}:`, {
                 type: typeof data,
-                keys: Object.keys(data),
-                sampleData: Object.keys(data).slice(0, 5)
+                keys: Object.keys(data)
               });
               continue;
             }
             
-            // データの有効性チェック
-            if (speechData.length === 0) {
+            if (speechData.length > 0) {
+              allSpeeches.push(...speechData);
+              loadedFiles++;
+              console.log(`loadSpeeches: Added ${speechData.length} speeches from ${filePath}, total: ${allSpeeches.length}`);
+            } else {
               console.warn(`loadSpeeches: No speeches found in ${filePath}`);
-              continue;
             }
-            
-            // 最初の数件のデータ構造をチェック
-            console.log(`loadSpeeches: Sample speech data:`, {
-              totalCount: speechData.length,
-              sampleSpeech: speechData[0] ? {
-                date: speechData[0].date,
-                speaker: speechData[0].speaker,
-                party: speechData[0].party,
-                committee: speechData[0].committee,
-                hasText: !!speechData[0].text
-              } : 'no data'
-            });
-            
-            this.speechesCache = speechData;
-            this.updateCacheTime();
-            console.log(`loadSpeeches: Successfully cached ${this.speechesCache.length} speeches from ${filePath}`);
-            return this.speechesCache;
           } else {
             console.log(`loadSpeeches: Failed to fetch ${filePath}: ${response.status} ${response.statusText}`);
           }
@@ -139,10 +129,33 @@ class StaticDataLoader {
         }
       }
       
-      console.warn('loadSpeeches: No speech files could be loaded from any source');
-      this.speechesCache = [];
+      if (allSpeeches.length === 0) {
+        console.warn('loadSpeeches: No speech data could be loaded from any file');
+        this.speechesCache = [];
+        this.updateCacheTime();
+        return this.speechesCache;
+      }
+
+      // 重複除去（IDベース）
+      const uniqueSpeeches = new Map<string, Speech>();
+      allSpeeches.forEach(speech => {
+        const key = speech.id || `${speech.date}-${speech.speaker}-${speech.text.substring(0, 50)}`;
+        if (!uniqueSpeeches.has(key)) {
+          uniqueSpeeches.set(key, speech);
+        }
+      });
+
+      const finalSpeeches = Array.from(uniqueSpeeches.values());
+      
+      // 日付順でソート（新しい順）
+      finalSpeeches.sort((a, b) => b.date.localeCompare(a.date));
+      
+      console.log(`loadSpeeches: Successfully merged ${loadedFiles} files, total ${finalSpeeches.length} unique speeches`);
+      
+      this.speechesCache = finalSpeeches;
       this.updateCacheTime();
       return this.speechesCache;
+      
     } catch (error) {
       console.error('loadSpeeches: Critical error loading speeches:', error);
       return [];
