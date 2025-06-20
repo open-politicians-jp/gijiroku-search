@@ -9,4 +9,5 @@ dependencies = [
     "fake-useragent>=2.2.0",
     "requests>=2.32.4",
     "requests-ip-rotator>=1.0.14",
+    "python-dateutil>=2.8.2",
 ]

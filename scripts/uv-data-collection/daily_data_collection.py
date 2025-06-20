@@ -14,7 +14,9 @@ import json
 import time
 import random
 import requests
+import calendar
 from datetime import datetime, timedelta
+from dateutil.relativedelta import relativedelta
 from pathlib import Path
 from typing import Dict, List, Any, Optional
 from fake_useragent import UserAgent
@@ -77,6 +79,10 @@ class DailyKokkaiAPIClient:
         wait_time = random.uniform(1.0, 3.0)
         time.sleep(wait_time)
         
+    def get_last_day_of_month(self, year: int, month: int) -> int:
+        """指定年月の最終日を取得（うるう年対応）"""
+        return calendar.monthrange(year, month)[1]
+        
     def get_monthly_data(self, year: int, month: int) -> List[Dict[str, Any]]:
         """指定月の議事録データを取得"""
         logger.info(f"📅 {year}年{month}月のデータ収集開始...")
@@ -84,6 +90,10 @@ class DailyKokkaiAPIClient:
         all_speeches = []
         start_record = 1
         records_per_request = 100
+        
+        # 指定月の最後の日を取得
+        last_day = self.get_last_day_of_month(year, month)
+        logger.info(f"📅 {year}年{month}月: 1日〜{last_day}日 (計{last_day}日)")
         
         while True:
             self.rate_limit()
@@ -93,7 +103,7 @@ class DailyKokkaiAPIClient:
                 'maximumRecords': records_per_request,
                 'recordPacking': 'json',
                 'from': f"{year}-{month:02d}-01",
-                'until': f"{year}-{month:02d}-31"
+                'until': f"{year}-{month:02d}-{last_day:02d}"
             }
             
             try:
@@ -273,7 +283,9 @@ class DailyKokkaiAPIClient:
             last_day = dates[-1].split('-')[2]
             day_range = f"{first_day}_{last_day}" if first_day != last_day else first_day
         else:
-            day_range = "31"
+            # データがない場合は月の最終日を使用
+            last_day_of_month = self.get_last_day_of_month(year, month)
+            day_range = f"{last_day_of_month:02d}"
             
         filename = self.generate_filename(year, month, day_range)
         filepath = self.raw_data_dir / filename
@@ -304,7 +316,7 @@ def main():
     logger.info("🚀 毎日データ収集開始...")
     
     # 環境変数から設定取得
-    months_back = int(os.getenv('MONTHS_BACK', '2'))
+    months_back = float(os.getenv('MONTHS_BACK', '2'))
     force_update = os.getenv('FORCE_UPDATE', 'false').lower() == 'true'
     
     logger.info(f"📋 設定: 過去{months_back}ヶ月分のデータを収集")
@@ -312,14 +324,28 @@ def main():
     
     client = DailyKokkaiAPIClient()
     
-    # 過去2ヶ月分のデータを収集
+    # 小数点月数を適切に処理
     current_date = datetime.now()
+    target_months = []
     
-    for i in range(months_back):
-        target_date = current_date - timedelta(days=30 * i)
-        year = target_date.year
-        month = target_date.month
+    if months_back < 1:
+        # 1ヶ月未満の場合は現在の月のみ
+        target_months.append((current_date.year, current_date.month))
+        logger.info(f"📅 小数点月数({months_back})のため現在月のみ収集: {current_date.year}年{current_date.month}月")
+    else:
+        # 1ヶ月以上の場合は整数部分の月数分を収集
+        months_to_collect = int(months_back) + (1 if months_back % 1 > 0 else 0)
+        logger.info(f"📅 小数点月数({months_back})から{months_to_collect}ヶ月分を収集対象とします")
         
+        for i in range(months_to_collect):
+            target_date = current_date - relativedelta(months=i)
+            target_months.append((target_date.year, target_date.month))
+    
+    # 収集対象月を表示
+    logger.info(f"📅 収集対象月: {', '.join([f'{y}年{m}月' for y, m in target_months])}")
+    
+    # 各月のデータを収集
+    for year, month in target_months:
         # 既存ファイルチェック
         existing_files = list(client.raw_data_dir.glob(f"speeches_{year}{month:02d}*.json"))
         
