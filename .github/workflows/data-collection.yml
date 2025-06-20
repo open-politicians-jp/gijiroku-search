@@ -55,12 +55,13 @@ jobs:
       run: |
         uv sync
         
-    - name: 📊 議事録データ収集
+    - name: 📊 議事録データ収集（進行的収集）
       if: ${{ github.event.inputs.target_scripts == 'all' || github.event.inputs.target_scripts == 'speeches' || github.event.inputs.target_scripts == '' }}
       working-directory: scripts/uv-data-collection
       env:
-        MONTHS_BACK: ${{ github.event.inputs.months_back || '2' }}
+        MONTHS_BACK: ${{ github.event.inputs.months_back || '3' }}
         FORCE_UPDATE: ${{ github.event.inputs.force_update || 'false' }}
+        USE_PROGRESSIVE: 'true'
       run: |
         uv run python daily_data_collection.py
         
