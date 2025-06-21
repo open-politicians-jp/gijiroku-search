@@ -147,3 +147,4 @@ checker.update_last_processed('committee_news')
         echo "- **実行時刻**: $(date '+%Y-%m-%d %H:%M:%S JST')" >> $GITHUB_STEP_SUMMARY
         echo "- **対象**: 増分データ（過去1週間）" >> $GITHUB_STEP_SUMMARY
         echo "- **対象スクリプト**: ${{ github.event.inputs.target_scripts || 'all' }}" >> $GITHUB_STEP_SUMMARY
+
