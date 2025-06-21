@@ -53,8 +53,8 @@ jobs:
       run: |
         echo "## 🔍 Update Check Results" >> $GITHUB_STEP_SUMMARY
         
-        # Check each data type
-        for data_type in speeches committee_news manifestos; do
+        # Check each data type (manifestos now handled by weekly workflow)
+        for data_type in speeches committee_news; do
           if uv run python update_checker.py --data-type $data_type; then
             echo "should_run_${data_type}=true" >> $GITHUB_OUTPUT
             echo "✅ $data_type: Will collect" >> $GITHUB_STEP_SUMMARY
@@ -63,6 +63,9 @@ jobs:
             echo "⏭️ $data_type: Skip" >> $GITHUB_STEP_SUMMARY
           fi
         done
+        
+        # Note about manifestos
+        echo "📄 manifestos: Handled by weekly workflow" >> $GITHUB_STEP_SUMMARY
         
         # Show summary
         echo "" >> $GITHUB_STEP_SUMMARY
@@ -107,17 +110,13 @@ checker = UpdateChecker()
 checker.update_last_processed('committee_news')
 "
         
-    - name: 📄 マニフェスト収集（増分）
-      if: ${{ (github.event.inputs.target_scripts == 'all' || github.event.inputs.target_scripts == 'manifestos' || github.event.inputs.target_scripts == '') && steps.update-check.outputs.should_run_manifestos == 'true' }}
-      working-directory: scripts/uv-data-collection
-      run: |
-        uv run python collect_real_manifestos.py
-        # Update last processed timestamp
-        uv run python -c "
-from update_checker import UpdateChecker
-checker = UpdateChecker()
-checker.update_last_processed('manifestos')
-"
+    # マニフェスト収集は週次ワークフローに移行
+    # - name: 📄 マニフェスト収集（増分）
+    #   if: ${{ github.event.inputs.target_scripts == 'manifestos' }}
+    #   working-directory: scripts/uv-data-collection
+    #   run: |
+    #     echo "📄 マニフェスト収集は週次ワークフローで実行されます"
+    #     echo "手動実行する場合: uv run python collect_real_manifestos.py --weekly --archive"
         
     - name: 🔧 大きなファイル分割
       working-directory: scripts/uv-data-collection

@@ -3,13 +3,15 @@
 実際の政党マニフェスト収集スクリプト
 
 主要政党の公式サイトから最新マニフェストを収集
+週次実行対応・過去データアーカイブ機能付き
 """
 
 import json
 import requests
 import time
 import re
-from datetime import datetime
+import argparse
+from datetime import datetime, timedelta
 from pathlib import Path
 from typing import Dict, List, Any, Optional
 from fake_useragent import UserAgent
@@ -26,15 +28,22 @@ logger = logging.getLogger(__name__)
 class ManifestoCollector:
     """政党マニフェスト収集クラス"""
     
-    def __init__(self):
+    def __init__(self, weekly_mode=False, archive_mode=False):
         self.ua = UserAgent()
         self.session = requests.Session()
         self.update_headers()
+        self.weekly_mode = weekly_mode
+        self.archive_mode = archive_mode
         
         # 出力ディレクトリ設定
         self.project_root = Path(__file__).parent.parent.parent
         self.frontend_manifestos_dir = self.project_root / "frontend" / "public" / "data" / "manifestos"
         self.frontend_manifestos_dir.mkdir(parents=True, exist_ok=True)
+        
+        # アーカイブディレクトリ設定
+        if self.archive_mode:
+            self.archive_dir = self.frontend_manifestos_dir / "archive"
+            self.archive_dir.mkdir(parents=True, exist_ok=True)
         
         # 政党情報
         self.parties = {
@@ -253,54 +262,113 @@ class ManifestoCollector:
             return
             
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        current_date = datetime.now()
+        
+        # 週次モードの場合は週番号を含むファイル名
+        if self.weekly_mode:
+            year = current_date.year
+            week = current_date.isocalendar()[1]
+            weekly_filename = f"manifestos_{year}_w{week:02d}.json"
+            weekly_filepath = self.frontend_manifestos_dir / weekly_filename
+        
+        # 通常のタイムスタンプファイル名
         filename = f"manifestos_{timestamp}.json"
         filepath = self.frontend_manifestos_dir / filename
         
+        # メタデータ準備
+        metadata = {
+            "data_type": "manifestos",
+            "total_count": len(manifestos),
+            "generated_at": current_date.isoformat(),
+            "source": "各政党公式サイト",
+            "collection_method": "weekly_automated_collection" if self.weekly_mode else "real_party_scraping"
+        }
+        
+        if self.weekly_mode:
+            metadata.update({
+                "collection_week": f"{current_date.year}-W{current_date.isocalendar()[1]:02d}",
+                "archive_enabled": self.archive_mode
+            })
+        
         data = {
-            "metadata": {
-                "data_type": "manifestos",
-                "total_count": len(manifestos),
-                "generated_at": datetime.now().isoformat(),
-                "source": "各政党公式サイト",
-                "collection_method": "real_party_scraping"
-            },
+            "metadata": metadata,
             "data": manifestos
         }
         
+        # 通常ファイル保存
         with open(filepath, 'w', encoding='utf-8') as f:
             json.dump(data, f, ensure_ascii=False, indent=2)
             
         file_size = filepath.stat().st_size / 1024
         logger.info(f"💾 保存完了: {filename} ({file_size:.1f} KB)")
         
-        # 古いサンプルファイルを削除
-        self.remove_sample_files()
+        # 週次モードの場合は週次ファイルも保存
+        if self.weekly_mode and weekly_filepath != filepath:
+            with open(weekly_filepath, 'w', encoding='utf-8') as f:
+                json.dump(data, f, ensure_ascii=False, indent=2)
+            logger.info(f"📅 週次ファイル保存: {weekly_filename}")
         
-    def remove_sample_files(self):
-        """サンプルファイルを削除"""
-        # 古いサンプルファイルパターン（今日作成した新しいファイルは除外）
-        current_date = datetime.now().strftime("%Y%m%d")
+        # アーカイブモードの場合は過去のファイルを保持
+        if self.archive_mode:
+            self.archive_old_files()
+            logger.info("📚 アーカイブ機能有効: 過去データを保持")
+        
+        # latest ファイルを更新
+        latest_filepath = self.frontend_manifestos_dir / "manifestos_latest.json"
+        with open(latest_filepath, 'w', encoding='utf-8') as f:
+            json.dump(data, f, ensure_ascii=False, indent=2)
+        logger.info("🔄 latest ファイル更新完了")
+        
+    def archive_old_files(self):
+        """古いファイルをアーカイブディレクトリに移動"""
+        if not self.archive_mode:
+            return
+            
+        # 2日以上古いファイルをアーカイブに移動
+        cutoff_date = datetime.now() - timedelta(days=2)
+        archived_count = 0
         
         all_files = list(self.frontend_manifestos_dir.glob("manifestos_*.json"))
-        sample_files = []
         
         for file in all_files:
-            filename = file.name
-            # 今日より前のファイル、またはsampleという文字列を含むファイルを削除対象とする
-            if ("sample" in filename.lower() or 
-                (filename.startswith("manifestos_202506") and current_date not in filename)):
-                sample_files.append(file)
-        
-        for sample_file in sample_files:
+            # latest ファイルと週次ファイルは除外
+            if file.name in ["manifestos_latest.json"] or "_w" in file.name:
+                continue
+                
+            # ファイルの作成日時をチェック
             try:
-                sample_file.unlink()
-                logger.info(f"🗑️ サンプルファイル削除: {sample_file.name}")
+                file_mtime = datetime.fromtimestamp(file.stat().st_mtime)
+                if file_mtime < cutoff_date:
+                    # アーカイブディレクトリに移動
+                    archive_path = self.archive_dir / file.name
+                    file.rename(archive_path)
+                    logger.info(f"📚 アーカイブ移動: {file.name}")
+                    archived_count += 1
             except Exception as e:
-                logger.error(f"❌ ファイル削除エラー: {e}")
+                logger.error(f"❌ アーカイブエラー {file.name}: {e}")
+        
+        if archived_count > 0:
+            logger.info(f"📚 {archived_count}件のファイルをアーカイブしました")
 
 def main():
     """メイン処理"""
-    collector = ManifestoCollector()
+    # コマンドライン引数解析
+    parser = argparse.ArgumentParser(description='政党マニフェスト収集スクリプト')
+    parser.add_argument('--weekly', action='store_true', help='週次モード（週番号付きファイル生成）')
+    parser.add_argument('--archive', action='store_true', help='アーカイブモード（過去データ保持）')
+    parser.add_argument('--no-cleanup', action='store_true', help='ファイル削除を無効化（非推奨）')
+    
+    args = parser.parse_args()
+    
+    # 収集器を初期化
+    collector = ManifestoCollector(
+        weekly_mode=args.weekly,
+        archive_mode=args.archive
+    )
+    
+    logger.info(f"📄 マニフェスト収集開始...")
+    logger.info(f"📅 週次モード: {'有効' if args.weekly else '無効'}")
+    logger.info(f"📚 アーカイブモード: {'有効' if args.archive else '無効'}")
     
     # 全政党のマニフェストを収集
     manifestos = collector.collect_all_manifestos()
