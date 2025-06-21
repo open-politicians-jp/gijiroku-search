@@ -9,7 +9,12 @@
     "lint": "next lint",
     "type-check": "tsc --noEmit",
     "fetch:latest": "tsx lib/fetch-latest.ts",
-    "fetch:history": "tsx lib/fetch-history.ts"
+    "fetch:history": "tsx lib/fetch-history.ts",
+    "version:patch": "npm version patch --no-git-tag-version",
+    "version:minor": "npm version minor --no-git-tag-version",
+    "version:major": "npm version major --no-git-tag-version",
+    "build:production": "NODE_ENV=production GITHUB_PAGES=true npm run build",
+    "deploy:pages": "npm run build:production && touch out/.nojekyll"
   },
   "dependencies": {
     "next": "14.0.3",

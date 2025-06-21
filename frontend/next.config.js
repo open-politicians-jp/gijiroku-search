@@ -7,8 +7,8 @@ const nextConfig = {
   distDir: 'out',
   
   // GitHub Pages設定 - ローカル開発時は無効
-  basePath: process.env.GITHUB_PAGES === 'true' ? '/gijiroku-search' : '',
-  assetPrefix: process.env.GITHUB_PAGES === 'true' ? '/gijiroku-search' : '',
+  basePath: process.env.GITHUB_PAGES === 'true' || process.env.NODE_ENV === 'production' ? '/gijiroku-search' : '',
+  assetPrefix: process.env.GITHUB_PAGES === 'true' || process.env.NODE_ENV === 'production' ? '/gijiroku-search/' : '',
   
   images: {
     unoptimized: true
@@ -20,6 +20,24 @@ const nextConfig = {
   
   // 静的ファイル最適化
   compress: true,
+  
+  // バージョン情報の設定
+  publicRuntimeConfig: {
+    version: process.env.NEXT_PUBLIC_VERSION || require('./package.json').version,
+    buildTime: process.env.NEXT_PUBLIC_BUILD_TIME || new Date().toISOString(),
+    gitCommit: process.env.GITHUB_SHA || 'local',
+  },
+  
+  // Webpack設定の最適化
+  webpack: (config, { isServer }) => {
+    if (!isServer) {
+      config.resolve.fallback = {
+        ...config.resolve.fallback,
+        fs: false,
+      };
+    }
+    return config;
+  },
   
   // PWA対応（将来的に）
   // headers: 静的エクスポートでは使用不可

@@ -201,6 +201,49 @@ docker run -it --rm \
 - **Lintチェック**: コミット前に必ず`npm run lint`を実行
 - **ビルドテスト**: プロダクション動作を`npm run build`で確認
 
+## リリース・デプロイメント管理
+
+### 自動リリース・デプロイワークフロー
+- **リリースタグ作成**: GitHub Actions自動実行（main ブランチプッシュ時）
+- **バージョン管理**: セマンティックバージョニング（major.minor.patch）
+- **自動デプロイ**: GitHub Pages への自動デプロイ
+- **バージョン表示**: フロントエンドでバージョン情報表示
+
+### リリース作成方法
+
+#### 1. 手動リリース作成
+```bash
+# GitHub Actions 手動実行
+# Workflow: "🚀 Release Tag and Deployment"
+# Inputs:
+#   - Release Type: major/minor/patch
+#   - Release Notes: (任意)
+```
+
+#### 2. 自動リリース作成
+```bash
+# main ブランチへのプッシュで自動実行
+git checkout main
+git merge release/release-1
+git push origin main
+```
+
+### リリースファイル・ワークフロー
+- **`.github/workflows/release-tag-deploy.yml`**: メインリリースワークフロー
+- **`.github/workflows/github-pages-deploy.yml`**: GitHub Pages デプロイ専用
+- **`frontend/components/VersionInfo.tsx`**: バージョン情報表示コンポーネント
+- **`frontend/next.config.js`**: GitHub Pages設定・バージョン管理
+
+### バージョン情報システム
+- **表示場所**: 画面右下のバージョンバッジ
+- **情報内容**: バージョン、ビルド日時、コミットハッシュ、環境
+- **設定方法**: next.config.js の publicRuntimeConfig
+
+### デプロイメント環境
+- **本番環境**: GitHub Pages (https://open-politicians-jp.github.io/gijiroku-search/)
+- **ステージング**: ローカル開発環境
+- **データ更新**: GitHub Actions による自動データ収集
+
 ## データ収集・処理の標準ルール
 
 ### GitHub Actions自動化ルール

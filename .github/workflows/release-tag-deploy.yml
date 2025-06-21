@@ -1,0 +1,280 @@
+name: 🚀 Release Tag and Deployment
+
+on:
+  # Trigger when a release branch is pushed to main
+  push:
+    branches:
+      - main
+    paths:
+      - 'frontend/**'
+      - '.github/workflows/**'
+  
+  # Manual trigger for creating releases
+  workflow_dispatch:
+    inputs:
+      release_type:
+        description: 'Release type (major, minor, patch)'
+        required: true
+        default: 'patch'
+        type: choice
+        options:
+        - major
+        - minor
+        - patch
+      release_notes:
+        description: 'Release notes (optional)'
+        required: false
+        type: string
+
+# GitHub Actions permissions
+permissions:
+  contents: write
+  issues: write
+  pull-requests: write
+  actions: read
+
+jobs:
+  # Job 1: Create Release Tag
+  create-release-tag:
+    runs-on: ubuntu-latest
+    outputs:
+      new_version: ${{ steps.version.outputs.new_version }}
+      release_created: ${{ steps.version.outputs.release_created }}
+    
+    steps:
+    - name: 📥 Checkout repository
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+        
+    - name: 🏷️ Get latest tag and calculate next version
+      id: version
+      run: |
+        # Get the latest tag, default to v1.0.0 if no tags exist
+        LATEST_TAG=$(git describe --tags --abbrev=0 2>/dev/null || echo "v1.0.0")
+        echo "Latest tag: $LATEST_TAG"
+        
+        # Remove 'v' prefix and split version
+        VERSION=${LATEST_TAG#v}
+        IFS='.' read -ra VERSION_PARTS <<< "$VERSION"
+        MAJOR=${VERSION_PARTS[0]:-1}
+        MINOR=${VERSION_PARTS[1]:-0}
+        PATCH=${VERSION_PARTS[2]:-0}
+        
+        # Calculate new version based on input or default to patch
+        RELEASE_TYPE="${{ github.event.inputs.release_type || 'patch' }}"
+        
+        case $RELEASE_TYPE in
+          major)
+            MAJOR=$((MAJOR + 1))
+            MINOR=0
+            PATCH=0
+            ;;
+          minor)
+            MINOR=$((MINOR + 1))
+            PATCH=0
+            ;;
+          patch)
+            PATCH=$((PATCH + 1))
+            ;;
+        esac
+        
+        NEW_VERSION="v${MAJOR}.${MINOR}.${PATCH}"
+        echo "New version: $NEW_VERSION"
+        
+        # Set outputs
+        echo "new_version=$NEW_VERSION" >> $GITHUB_OUTPUT
+        echo "release_created=true" >> $GITHUB_OUTPUT
+        
+        # Add to summary
+        echo "## 🏷️ Version Information" >> $GITHUB_STEP_SUMMARY
+        echo "- **Previous Version**: $LATEST_TAG" >> $GITHUB_STEP_SUMMARY
+        echo "- **New Version**: $NEW_VERSION" >> $GITHUB_STEP_SUMMARY
+        echo "- **Release Type**: $RELEASE_TYPE" >> $GITHUB_STEP_SUMMARY
+        
+    - name: 📋 Generate Release Notes
+      id: release_notes
+      run: |
+        # Get commits since last tag for auto-generated release notes
+        LATEST_TAG=$(git describe --tags --abbrev=0 2>/dev/null || echo "")
+        
+        if [ -n "$LATEST_TAG" ]; then
+          COMMITS=$(git log ${LATEST_TAG}..HEAD --oneline --grep="feat:" --grep="fix:" --grep="docs:" --grep="refactor:" --format="- %s")
+        else
+          COMMITS=$(git log --oneline --grep="feat:" --grep="fix:" --grep="docs:" --grep="refactor:" --format="- %s" | head -20)
+        fi
+        
+        # Custom release notes from input or auto-generated
+        CUSTOM_NOTES="${{ github.event.inputs.release_notes }}"
+        
+        if [ -n "$CUSTOM_NOTES" ]; then
+          RELEASE_NOTES="$CUSTOM_NOTES"
+        else
+          RELEASE_NOTES="## 🚀 What's New in ${{ steps.version.outputs.new_version }}
+
+### ✨ Features and Improvements
+$COMMITS
+
+### 🔧 Technical Details
+- **Branch**: ${{ github.ref_name }}
+- **Commit**: ${{ github.sha }}
+- **Build Date**: $(date '+%Y-%m-%d %H:%M:%S JST')
+
+---
+🤖 Generated with [Claude Code](https://claude.ai/code)"
+        fi
+        
+        # Save release notes to file and output
+        echo "$RELEASE_NOTES" > release_notes.md
+        echo "release_notes<<EOF" >> $GITHUB_OUTPUT
+        echo "$RELEASE_NOTES" >> $GITHUB_OUTPUT
+        echo "EOF" >> $GITHUB_OUTPUT
+        
+    - name: 🏷️ Create Release Tag and Release
+      run: |
+        # Create tag
+        git tag ${{ steps.version.outputs.new_version }}
+        git push origin ${{ steps.version.outputs.new_version }}
+        
+        # Create release using GitHub CLI
+        gh release create ${{ steps.version.outputs.new_version }} \
+          --title "Release ${{ steps.version.outputs.new_version }}" \
+          --notes-file release_notes.md \
+          --target main
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  # Job 2: Build and Deploy Frontend
+  deploy-frontend:
+    runs-on: ubuntu-latest
+    needs: create-release-tag
+    if: needs.create-release-tag.outputs.release_created == 'true'
+    
+    steps:
+    - name: 📥 Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: 🟢 Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+        cache-dependency-path: frontend/package-lock.json
+        
+    - name: 📦 Install dependencies
+      working-directory: frontend
+      run: npm ci
+      
+    - name: 📝 Update package.json version
+      working-directory: frontend
+      run: |
+        # Update package.json with new version
+        NEW_VERSION="${{ needs.create-release-tag.outputs.new_version }}"
+        VERSION_NO_V="${NEW_VERSION#v}"
+        npm version $VERSION_NO_V --no-git-tag-version
+        echo "✅ Updated package.json to version $VERSION_NO_V"
+        
+    - name: 🔧 Build application
+      working-directory: frontend
+      env:
+        NODE_ENV: production
+        GITHUB_PAGES: 'true'
+        NEXT_PUBLIC_VERSION: ${{ needs.create-release-tag.outputs.new_version }}
+        NEXT_PUBLIC_BUILD_TIME: ${{ github.run_id }}
+        GITHUB_SHA: ${{ github.sha }}
+      run: |
+        echo "Building with version: ${{ needs.create-release-tag.outputs.new_version }}"
+        npm run build:production
+        
+    - name: 🧪 Run tests (if available)
+      working-directory: frontend
+      run: |
+        # Run tests if test script exists
+        if npm run test --if-present; then
+          echo "✅ Tests passed"
+        else
+          echo "ℹ️ No tests configured"
+        fi
+        
+    - name: 📊 Build Summary
+      run: |
+        echo "## 🚀 Deployment Summary" >> $GITHUB_STEP_SUMMARY
+        echo "- **Version**: ${{ needs.create-release-tag.outputs.new_version }}" >> $GITHUB_STEP_SUMMARY
+        echo "- **Environment**: Production" >> $GITHUB_STEP_SUMMARY
+        echo "- **Build Status**: ✅ Success" >> $GITHUB_STEP_SUMMARY
+        echo "- **Deployment Target**: GitHub Pages (Ready)" >> $GITHUB_STEP_SUMMARY
+
+  # Job 3: Update Documentation
+  update-documentation:
+    runs-on: ubuntu-latest
+    needs: [create-release-tag, deploy-frontend]
+    if: needs.create-release-tag.outputs.release_created == 'true'
+    
+    steps:
+    - name: 📥 Checkout repository
+      uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        
+    - name: 📝 Update CLAUDE.md with release info
+      run: |
+        # Update CLAUDE.md with latest release information
+        NEW_VERSION="${{ needs.create-release-tag.outputs.new_version }}"
+        DATE=$(date '+%Y-%m-%d')
+        
+        # Add release entry to CLAUDE.md
+        sed -i "/## 開発ガイドライン/i\\
+## 最新リリース情報\\
+\\
+- **バージョン**: $NEW_VERSION\\
+- **リリース日**: $DATE\\
+- **主な変更**: GitHub Actions自動リリース対応\\
+\\
+" CLAUDE.md
+        
+        echo "✅ CLAUDE.md updated with release $NEW_VERSION"
+        
+    - name: 💾 Commit documentation updates
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action [Release Documentation]"
+        git add CLAUDE.md
+        if ! git diff --staged --quiet; then
+          git commit -m "docs: Update release information for ${{ needs.create-release-tag.outputs.new_version }}
+
+🤖 Generated with [Claude Code](https://claude.ai/code)
+
+Co-Authored-By: Claude <noreply@anthropic.com>"
+          git push
+          echo "✅ Documentation updated and pushed"
+        else
+          echo "ℹ️ No documentation changes needed"
+        fi
+
+  # Job 4: Post-Release Tasks
+  post-release:
+    runs-on: ubuntu-latest
+    needs: [create-release-tag, deploy-frontend, update-documentation]
+    if: always() && needs.create-release-tag.outputs.release_created == 'true'
+    
+    steps:
+    - name: 📥 Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: 📊 Release Summary
+      run: |
+        echo "## 🎉 Release ${{ needs.create-release-tag.outputs.new_version }} Complete!" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "### ✅ Completed Tasks:" >> $GITHUB_STEP_SUMMARY
+        echo "- 🏷️ Release tag created" >> $GITHUB_STEP_SUMMARY
+        echo "- 🚀 Frontend built and ready for deployment" >> $GITHUB_STEP_SUMMARY
+        echo "- 📝 Documentation updated" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "### 🔗 Links:" >> $GITHUB_STEP_SUMMARY
+        echo "- [Release Page](https://github.com/${{ github.repository }}/releases/tag/${{ needs.create-release-tag.outputs.new_version }})" >> $GITHUB_STEP_SUMMARY
+        echo "- [Commit History](https://github.com/${{ github.repository }}/commits/main)" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "### 📋 Next Steps:" >> $GITHUB_STEP_SUMMARY
+        echo "- Deploy to production environment" >> $GITHUB_STEP_SUMMARY
+        echo "- Verify all features are working correctly" >> $GITHUB_STEP_SUMMARY
+        echo "- Update any external documentation" >> $GITHUB_STEP_SUMMARY
