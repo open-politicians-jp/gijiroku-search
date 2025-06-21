@@ -66,11 +66,13 @@ class LegislatorsLoader {
         const response = await fetch(dataPath);
         if (response.ok) {
           const jsonData = await response.json();
-          console.warn(`議員データ読み込み成功: ${dataPath}`);
           return this.normalizeJsonLegislators(jsonData.data);
         }
       } catch (error) {
-        console.warn(`議員データ読み込み失敗: ${dataPath}`, error);
+        // 最後のファイルの場合のみエラーログを出力
+        if (dataPath === possiblePaths[possiblePaths.length - 1]) {
+          console.error('議員データの読み込みに失敗しました', error);
+        }
         continue;
       }
     }
