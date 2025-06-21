@@ -548,10 +548,24 @@ class StaticDataLoader {
           url: this.normalizeBillUrl(link.url, bill.session_number, bill.bill_number)
         }))
         .filter(link => {
-          // 審議経過URLが404になる場合は除外
+          // 審議経過URLの有効性チェック
           if (link.title?.includes('審議経過') && link.url.includes('keika/')) {
-            console.warn(`Filtering out potentially invalid progress URL: ${link.url}`);
-            return false;
+            // URLパターンが正しいかチェック（第217回国会の場合）
+            const urlPattern = /keika\/217\d{4}\.htm$/;
+            if (!urlPattern.test(link.url)) {
+              if (process.env.NODE_ENV === 'development') {
+                console.warn(`法案検索: 無効な審議経過URLパターン - ${link.url}`);
+              }
+              return false;
+            }
+            // 有効なパターンでも404の可能性があるURLは除外
+            const billNumber = link.url.match(/217(\d{4})/)?.[1];
+            if (billNumber && parseInt(billNumber) > 200) {
+              if (process.env.NODE_ENV === 'development') {
+                console.warn(`法案検索: 存在しない可能性のある法案番号 - ${billNumber}`);
+              }
+              return false;
+            }
           }
           return true;
         }) : []
