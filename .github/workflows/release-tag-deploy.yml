@@ -110,18 +110,21 @@ jobs:
         if [ -n "$CUSTOM_NOTES" ]; then
           RELEASE_NOTES="$CUSTOM_NOTES"
         else
-          RELEASE_NOTES="## 🚀 What's New in ${{ steps.version.outputs.new_version }}
+          RELEASE_NOTES=$(cat <<EOF
+        ## 🚀 What's New in ${{ steps.version.outputs.new_version }}
 
-### ✨ Features and Improvements
-$COMMITS
+        ### ✨ Features and Improvements
+        $COMMITS
 
-### 🔧 Technical Details
-- **Branch**: ${{ github.ref_name }}
-- **Commit**: ${{ github.sha }}
-- **Build Date**: $(date '+%Y-%m-%d %H:%M:%S JST')
+        ### 🔧 Technical Details
+        - **Branch**: ${{ github.ref_name }}
+        - **Commit**: ${{ github.sha }}
+        - **Build Date**: $(date '+%Y-%m-%d %H:%M:%S JST')
 
----
-🤖 Generated with [Claude Code](https://claude.ai/code)"
+        ---
+        🤖 Generated with [Claude Code](https://claude.ai/code)
+        EOF
+        )
         fi
         
         # Save release notes to file and output

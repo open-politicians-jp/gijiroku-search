@@ -67,11 +67,7 @@ jobs:
       run: |
         uv run python collect_real_manifestos.py --weekly --archive
         # Update last processed timestamp
-        uv run python -c "
-from update_checker import UpdateChecker
-checker = UpdateChecker()
-checker.update_last_processed('manifestos')
-"
+        uv run python -c "from update_checker import UpdateChecker; checker = UpdateChecker(); checker.update_last_processed('manifestos')"
         
     - name: 💾 変更をコミット
       run: |
