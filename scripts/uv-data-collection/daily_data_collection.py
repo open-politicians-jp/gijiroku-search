@@ -273,7 +273,7 @@ class DailyKokkaiAPIClient:
             return 'その他'
         
     def generate_filename(self, year: int, month: int, day_range: str) -> str:
-        """統一ファイル名形式で生成: speeches_YYYYMMDD_HHMMSS.json"""
+        """統一ファイル名形式で生成: speeches_YYYYMM01_HHMMSS.json（データ期間基準）"""
         timestamp = datetime.now().strftime("%H%M%S")
         return f"speeches_{year}{month:02d}01_{timestamp}.json"
         

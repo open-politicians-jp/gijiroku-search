@@ -475,17 +475,20 @@ class BillsCollector:
             logger.warning("保存する議案データがありません")
             return
         
-        timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
+        # データ期間を基準としたファイル名（現在の年月 + 時刻）
+        current_date = datetime.now()
+        data_period = current_date.strftime('%Y%m01')  # 当月のデータとして保存
+        timestamp = current_date.strftime('%H%M%S')
         
         # 生データ保存
-        raw_filename = f"bills_{timestamp}.json"
+        raw_filename = f"bills_{data_period}_{timestamp}.json"
         raw_filepath = self.bills_dir / raw_filename
         
         with open(raw_filepath, 'w', encoding='utf-8') as f:
             json.dump(bills, f, ensure_ascii=False, indent=2)
         
         # フロントエンド用データ保存
-        frontend_filename = f"bills_{timestamp}.json"
+        frontend_filename = f"bills_{data_period}_{timestamp}.json"
         frontend_filepath = self.frontend_bills_dir / frontend_filename
         
         with open(frontend_filepath, 'w', encoding='utf-8') as f:

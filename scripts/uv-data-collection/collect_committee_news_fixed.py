@@ -310,17 +310,20 @@ class CommitteeNewsCollector:
             logger.warning("保存するニュースデータがありません")
             return
         
-        timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
+        # データ期間を基準としたファイル名（現在の年月 + 時刻）
+        current_date = datetime.now()
+        data_period = current_date.strftime('%Y%m01')  # 当月のデータとして保存
+        timestamp = current_date.strftime('%H%M%S')
         
         # 生データ保存
-        raw_filename = f"committee_news_{timestamp}.json"
+        raw_filename = f"committee_news_{data_period}_{timestamp}.json"
         raw_filepath = self.news_dir / raw_filename
         
         with open(raw_filepath, 'w', encoding='utf-8') as f:
             json.dump(news_items, f, ensure_ascii=False, indent=2)
         
         # フロントエンド用データ保存
-        frontend_filename = f"committee_news_{timestamp}.json"
+        frontend_filename = f"committee_news_{data_period}_{timestamp}.json"
         frontend_filepath = self.frontend_news_dir / frontend_filename
         
         with open(frontend_filepath, 'w', encoding='utf-8') as f:
