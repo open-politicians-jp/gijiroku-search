@@ -341,10 +341,13 @@ uv run python fix_questions_links.py
 
 ### リリース管理
 - **リリースサイクル**: 3-5個の機能をまとめて定期リリース
-- **リリースブランチ**: `release/release-{N}` (N=1,2,3...)
+- **リリースブランチ**: 
+  - 現在: `release/release-{N}` (N=1,2,3...)
+  - 次回以降: `release/yyyymm-first-week-release{N}` (例: `release/202506-first-week-release2`)
 - **リリースタグ**: `v1.0.0`, `v1.1.0`, `v2.0.0` (セマンティックバージョニング)
 - **自動化**: GitHub Actionsによるタグ作成・デプロイメント
 - **機能選定**: 相互依存のない独立した機能を優先
+- **PR管理**: releaseブランチは最初のマージ後、mainに向けてdraft PRを作成
 
 ## 計画中の機能開発
 
