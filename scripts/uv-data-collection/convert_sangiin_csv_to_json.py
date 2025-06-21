@@ -199,7 +199,7 @@ class SangiinCSVConverter:
             chunk_legislators = legislators[start_idx:end_idx]
             
             # ファイル名: sangiin_legislators_YYYYMMDD_HHMMSS_part1.json
-            filename = f"sangiin_legislators_{timestamp}_part{i+1:02d}.json"
+            filename = f"legislators_{timestamp}_part{i+1:02d}.json"
             filepath = self.output_dir / filename
             
             # メタデータ付きでJSONファイル作成
@@ -229,7 +229,7 @@ class SangiinCSVConverter:
             print(f"💾 {filename}: {len(chunk_legislators)}名 ({file_size:.1f} MB)")
             
         # 統合ファイルも作成
-        unified_filename = f"sangiin_legislators_unified_{timestamp}.json"
+        unified_filename = f"legislators_{timestamp}.json"
         unified_filepath = self.output_dir / unified_filename
         
         unified_data = {
