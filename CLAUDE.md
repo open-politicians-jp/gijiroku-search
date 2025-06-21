@@ -157,6 +157,12 @@ docker run -it --rm \
 - **CI/CD**: GitHub Actions
 - **Deployment**: Vercel / Cloudflare Pages（予定）
 
+## 最新リリース情報
+
+- **バージョン**: v1.0.1
+- **リリース日**: 2025-06-21
+- **主な変更**: GitHub Actions自動リリース対応
+
 ## 開発ガイドライン
 
 ### データ収集
