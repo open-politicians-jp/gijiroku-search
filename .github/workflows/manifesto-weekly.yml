@@ -1,0 +1,95 @@
+name: 📄 週次マニフェスト収集（アーカイブ保存）
+
+on:
+  schedule:
+    # 毎週月曜日午前5時（JST）に実行（UTC 20:00）
+    - cron: '0 20 * * 1'
+  workflow_dispatch:
+    inputs:
+      force_collection:
+        description: '強制収集（週次チェックをスキップ）'
+        required: false
+        default: false
+        type: boolean
+
+# GitHub Actionsでのcommit/push権限設定
+permissions:
+  contents: write
+  actions: read
+
+jobs:
+  collect-weekly-manifestos:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: 📥 Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: 🐍 Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+        
+    - name: 📦 Install uv
+      run: |
+        curl -LsSf https://astral.sh/uv/install.sh | sh
+        echo "$HOME/.local/bin" >> $GITHUB_PATH
+        
+    - name: 🔧 Setup uv environment
+      working-directory: scripts/uv-data-collection
+      run: |
+        uv sync
+        
+    - name: 🔍 Check for manifesto updates (Smart Skip)
+      id: update-check
+      working-directory: scripts/uv-data-collection
+      run: |
+        echo "## 🔍 週次マニフェスト更新チェック" >> $GITHUB_STEP_SUMMARY
+        
+        if [ "${{ github.event.inputs.force_collection }}" = "true" ]; then
+          echo "should_run_manifestos=true" >> $GITHUB_OUTPUT
+          echo "✅ マニフェスト: 強制収集実行" >> $GITHUB_STEP_SUMMARY
+        elif uv run python update_checker.py --data-type manifestos; then
+          echo "should_run_manifestos=true" >> $GITHUB_OUTPUT
+          echo "✅ マニフェスト: 週次収集実行（月曜日）" >> $GITHUB_STEP_SUMMARY
+        else
+          echo "should_run_manifestos=false" >> $GITHUB_OUTPUT
+          echo "⏭️ マニフェスト: スキップ（週次チェック）" >> $GITHUB_STEP_SUMMARY
+        fi
+        
+        # Show summary
+        echo "" >> $GITHUB_STEP_SUMMARY
+        uv run python update_checker.py --summary >> $GITHUB_STEP_SUMMARY
+        
+    - name: 📄 マニフェスト収集（週次・アーカイブ保存）
+      if: ${{ steps.update-check.outputs.should_run_manifestos == 'true' }}
+      working-directory: scripts/uv-data-collection
+      run: |
+        uv run python collect_real_manifestos.py --weekly --archive
+        # Update last processed timestamp
+        uv run python -c "
+from update_checker import UpdateChecker
+checker = UpdateChecker()
+checker.update_last_processed('manifestos')
+"
+        
+    - name: 💾 変更をコミット
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action [Weekly Manifesto Collection]"
+        git add frontend/public/data/manifestos/
+        if ! git diff --staged --quiet; then
+          git commit -m "📄 週次マニフェスト収集: $(date '+%Y-%m-%d %H:%M:%S JST')"
+          git push
+          echo "✅ 週次マニフェスト更新完了" >> $GITHUB_STEP_SUMMARY
+        else
+          echo "ℹ️ マニフェスト変更なし" >> $GITHUB_STEP_SUMMARY
+        fi
+        
+    - name: 📊 収集サマリー
+      run: |
+        echo "## 📄 週次マニフェスト収集結果" >> $GITHUB_STEP_SUMMARY
+        echo "- **実行時刻**: $(date '+%Y-%m-%d %H:%M:%S JST')" >> $GITHUB_STEP_SUMMARY
+        echo "- **収集頻度**: 週次（毎週月曜日）" >> $GITHUB_STEP_SUMMARY
+        echo "- **対象政党**: 自民党、立民、維新、公明、共産、国民、れいわ、参政党" >> $GITHUB_STEP_SUMMARY
+        echo "- **アーカイブ**: 過去データ保存有効" >> $GITHUB_STEP_SUMMARY

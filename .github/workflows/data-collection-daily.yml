@@ -2,8 +2,8 @@ name: 📊 日次データ収集（増分更新）
 
 on:
   schedule:
-    # 毎日午前3時（JST）に実行（UTC 18:00）
-    - cron: '0 18 * * *'
+    # 毎日午前5時（JST）に実行（UTC 20:00）
+    - cron: '0 20 * * *'
   workflow_dispatch:
     inputs:
       target_scripts:
@@ -47,14 +47,44 @@ jobs:
       run: |
         uv sync
         
+    - name: 🔍 Check for updates (Smart Skip)
+      id: update-check
+      working-directory: scripts/uv-data-collection
+      run: |
+        echo "## 🔍 Update Check Results" >> $GITHUB_STEP_SUMMARY
+        
+        # Check each data type (manifestos now handled by weekly workflow)
+        for data_type in speeches committee_news; do
+          if uv run python update_checker.py --data-type $data_type; then
+            echo "should_run_${data_type}=true" >> $GITHUB_OUTPUT
+            echo "✅ $data_type: Will collect" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "should_run_${data_type}=false" >> $GITHUB_OUTPUT
+            echo "⏭️ $data_type: Skip" >> $GITHUB_STEP_SUMMARY
+          fi
+        done
+        
+        # Note about manifestos
+        echo "📄 manifestos: Handled by weekly workflow" >> $GITHUB_STEP_SUMMARY
+        
+        # Show summary
+        echo "" >> $GITHUB_STEP_SUMMARY
+        uv run python update_checker.py --summary >> $GITHUB_STEP_SUMMARY
+        
     - name: 📊 議事録データ収集（過去1週間）
-      if: ${{ github.event.inputs.target_scripts == 'all' || github.event.inputs.target_scripts == 'speeches' || github.event.inputs.target_scripts == '' }}
+      if: ${{ (github.event.inputs.target_scripts == 'all' || github.event.inputs.target_scripts == 'speeches' || github.event.inputs.target_scripts == '') && steps.update-check.outputs.should_run_speeches == 'true' }}
       working-directory: scripts/uv-data-collection
       env:
         MONTHS_BACK: '0.25'  # 約1週間
         FORCE_UPDATE: 'false'
       run: |
         uv run python daily_data_collection.py
+        # Update last processed timestamp
+        uv run python -c "
+from update_checker import UpdateChecker
+checker = UpdateChecker()
+checker.update_last_processed('speeches')
+"
         
     # - name: 📋 質問主意書収集（増分）
     #   if: ${{ github.event.inputs.target_scripts == 'all' || github.event.inputs.target_scripts == 'questions' || github.event.inputs.target_scripts == '' }}
@@ -69,16 +99,24 @@ jobs:
     #     uv run python collect_bills_fixed.py
         
     - name: 📰 委員会ニュース収集（増分）
-      if: ${{ github.event.inputs.target_scripts == 'all' || github.event.inputs.target_scripts == 'committee' || github.event.inputs.target_scripts == '' }}
+      if: ${{ (github.event.inputs.target_scripts == 'all' || github.event.inputs.target_scripts == 'committee' || github.event.inputs.target_scripts == '') && steps.update-check.outputs.should_run_committee_news == 'true' }}
       working-directory: scripts/uv-data-collection
       run: |
         uv run python collect_committee_news_fixed.py
+        # Update last processed timestamp
+        uv run python -c "
+from update_checker import UpdateChecker
+checker = UpdateChecker()
+checker.update_last_processed('committee_news')
+"
         
-    - name: 📄 マニフェスト収集（増分）
-      if: ${{ github.event.inputs.target_scripts == 'all' || github.event.inputs.target_scripts == 'manifestos' || github.event.inputs.target_scripts == '' }}
-      working-directory: scripts/uv-data-collection
-      run: |
-        uv run python collect_real_manifestos.py
+    # マニフェスト収集は週次ワークフローに移行
+    # - name: 📄 マニフェスト収集（増分）
+    #   if: ${{ github.event.inputs.target_scripts == 'manifestos' }}
+    #   working-directory: scripts/uv-data-collection
+    #   run: |
+    #     echo "📄 マニフェスト収集は週次ワークフローで実行されます"
+    #     echo "手動実行する場合: uv run python collect_real_manifestos.py --weekly --archive"
         
     - name: 🔧 大きなファイル分割
       working-directory: scripts/uv-data-collection
@@ -94,13 +132,13 @@ jobs:
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action [Daily Data Collection]"
-        git add frontend/public/data/
+        git add frontend/public/data/ scripts/uv-data-collection/data/
         if ! git diff --staged --quiet; then
           git commit -m "📊 日次データ収集: $(date '+%Y-%m-%d %H:%M:%S JST')"
           git push
           echo "✅ 新規データ更新完了" >> $GITHUB_STEP_SUMMARY
         else
-          echo "ℹ️ 新規データなし" >> $GITHUB_STEP_SUMMARY
+          echo "ℹ️ 新規データなし（スマートスキップ実行）" >> $GITHUB_STEP_SUMMARY
         fi
         
     - name: 📊 収集サマリー
