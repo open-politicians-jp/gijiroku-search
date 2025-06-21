@@ -89,3 +89,4 @@ jobs:
         echo "- **収集頻度**: 週次（毎週月曜日）" >> $GITHUB_STEP_SUMMARY
         echo "- **対象政党**: 自民党、立民、維新、公明、共産、国民、れいわ、参政党" >> $GITHUB_STEP_SUMMARY
         echo "- **アーカイブ**: 過去データ保存有効" >> $GITHUB_STEP_SUMMARY
+
