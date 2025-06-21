@@ -80,24 +80,19 @@ export default function ManifestosPage() {
         // 動的にファイル候補を生成
         const filesToTry = generateManifestFiles().map(path => getDataPath(path));
 
-        console.log('Attempting to load manifestos from:', filesToTry);
 
         for (const filePath of filesToTry) {
           try {
-            console.log(`Trying to fetch: ${filePath}`);
             const response = await fetch(filePath);
             
             if (response.ok) {
               const data = await response.json();
-              console.log(`Successfully loaded manifestos from: ${filePath}`);
               
               const manifestosData = Array.isArray(data) ? data : data.data || [];
               setManifestos(manifestosData);
               setFilteredManifestos(manifestosData);
-              console.log(`Loaded ${manifestosData.length} manifestos`);
               return;
             } else {
-              console.log(`Failed to fetch ${filePath}: ${response.status} ${response.statusText}`);
             }
           } catch (fileError) {
             console.error(`Error loading ${filePath}:`, fileError);

@@ -3,7 +3,7 @@
 import { Speech } from '@/types';
 import { Calendar, User, Users, Building, ExternalLink } from 'lucide-react';
 import { format, parseISO } from 'date-fns';
-import SpeakerLink from './SpeakerLink';
+// import SpeakerLink from './SpeakerLink'; // 一時的に無効化（404エラー回避）
 
 interface SearchResultsProps {
   speeches: Speech[];
@@ -114,10 +114,9 @@ export default function SearchResults({
             <div className="flex flex-wrap items-center gap-2 sm:gap-4 mb-3">
               <div className="flex items-center gap-2">
                 <User className="h-4 w-4 sm:h-5 sm:w-5 text-gray-400" />
-                <SpeakerLink 
-                  speakerName={speech.speaker} 
-                  className="font-medium text-gray-900 text-sm sm:text-base"
-                />
+                <span className="font-medium text-gray-900 text-sm sm:text-base">
+                  {speech.speaker}
+                </span>
               </div>
               
               {speech.party && (

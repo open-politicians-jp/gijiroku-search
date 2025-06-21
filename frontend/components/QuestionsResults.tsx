@@ -1,7 +1,7 @@
 'use client';
 
 import { ExternalLink, Calendar, Building, Tag, FileText, User, MessageSquare } from 'lucide-react';
-import SpeakerLink from './SpeakerLink';
+// import SpeakerLink from './SpeakerLink'; // 一時的に無効化（404エラー回避）
 
 interface Question {
   title: string;
@@ -142,10 +142,9 @@ export default function QuestionsResults({ questions, total, loading = false }: 
               {/* 質問者 */}
               <div className="flex items-center gap-1">
                 <User className="h-4 w-4" />
-                <SpeakerLink 
-                  speakerName={question.questioner} 
-                  className="text-gray-900 font-medium"
-                />
+                <span className="text-gray-900 font-medium">
+                  {question.questioner}
+                </span>
               </div>
 
               {/* カテゴリ */}

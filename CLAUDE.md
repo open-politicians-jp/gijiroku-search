@@ -26,6 +26,8 @@
 - ✅ リンク修正システム（相対URL→絶対URL変換）
 - ✅ 週次データ管理（週単位でのデータ分類）
 - ✅ 請願・陳情データ収集
+- ✅ 議員一覧機能（参議院データ統合）
+- ✅ console.log削除・ESLintルール強化
 
 ## 開発コマンド
 
@@ -193,6 +195,12 @@ docker run -it --rm \
 - 帰化歴等の機微情報は明示的公開時のみ表示
 - オープンソース・透明性重視
 
+### コードクオリティ・ESLint設定
+- **console.log禁止**: 本番コードでは使用不可（console.warn, console.errorは許可）
+- **ESLintルール**: `"no-console": ["error", { "allow": ["warn", "error"] }]`
+- **Lintチェック**: コミット前に必ず`npm run lint`を実行
+- **ビルドテスト**: プロダクション動作を`npm run build`で確認
+
 ## データ収集・処理の標準ルール
 
 ### GitHub Actions自動化ルール
@@ -305,6 +313,7 @@ uv run python fix_questions_links.py
 13. **GitHub Actions**: 全自動化でローカル作業不要
 14. **UV使用**: Python パッケージ管理は UV で統一
 15. **バックアップなし**: 不要なバックアップファイルは作成しない
+16. **console.log禁止**: 本番コードではconsole.logを使用しない（console.warn, console.errorは許可）
 
 ## 確立されたワークフロー
 
@@ -322,6 +331,9 @@ uv run python fix_questions_links.py
 
 ### Git管理ルール
 - **メインブランチ保護**: 直接pushせずPRワークフロー必須
+- **ブランチ戦略**: 
+  - `fix/` (bugラベル): mainから直接作成
+  - `feat/`, `docs/`, `refactor/`: releaseブランチから作成、複数機能をまとめてリリース
 - **ブランチ命名**: `feat/`, `fix/`, `docs/` プレフィックス使用
 - **コミットメッセージ**: 日本語で分かりやすい説明
 - **PR説明**: Summary, Test plan を含む構造化された説明
