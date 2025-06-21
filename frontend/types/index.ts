@@ -4,6 +4,7 @@ export interface Speech {
   session: number;
   house: string;
   committee: string;
+  meeting_number?: string; // 第○号（委員会の会議回次）
   speaker: string;
   party: string | null;
   text: string;

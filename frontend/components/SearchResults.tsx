@@ -108,6 +108,12 @@ export default function SearchResults({
                   第{speech.session}回
                 </span>
               )}
+              
+              {speech.meeting_number && (
+                <span className="px-2 py-1 bg-blue-100 text-blue-800 rounded text-xs">
+                  第{speech.meeting_number}号
+                </span>
+              )}
             </div>
 
             {/* 発言者情報 */}

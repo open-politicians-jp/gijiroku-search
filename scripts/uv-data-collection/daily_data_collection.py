@@ -22,6 +22,7 @@ import time
 import random
 import requests
 import calendar
+import re
 from datetime import datetime, timedelta
 from dateutil.relativedelta import relativedelta
 from pathlib import Path
@@ -165,6 +166,7 @@ class DailyKokkaiAPIClient:
                 'session': int(speech.get('session', 0)),
                 'house': speech.get('nameOfHouse', ''),
                 'committee': speech.get('nameOfMeeting', ''),
+                'meeting_number': self.extract_meeting_number(speech),
                 'meeting_info': self.extract_meeting_details(speech),
                 'speaker': speech.get('speaker', ''),
                 'party': None,
@@ -229,6 +231,43 @@ class DailyKokkaiAPIClient:
         
         return aliases_mapping.get(party_name, [])
         
+    def extract_meeting_number(self, speech: Dict[str, Any]) -> Optional[str]:
+        """
+        議会番号（第○号）を抽出
+        委員会の何回目の会議かを示す番号
+        """
+        try:
+            # 1. API の meetingNumber フィールドから直接取得
+            meeting_number = speech.get('meetingNumber', '')
+            if meeting_number and meeting_number.strip():
+                return meeting_number.strip()
+            
+            # 2. nameOfMeeting から「第○号」パターンを抽出
+            meeting_name = speech.get('nameOfMeeting', '')
+            if meeting_name:
+                # 委員会名の後にある「第○号」を抽出
+                # 例: "予算委員会第5号" -> "5"
+                pattern = r'第(\d+)号'
+                match = re.search(pattern, meeting_name)
+                if match:
+                    return match.group(1)
+            
+            # 3. speechURL から推定を試行
+            speech_url = speech.get('speechURL', '')
+            if speech_url:
+                # URL パターンから番号を抽出
+                # 例: "...giin_o12405_04.htm" -> "4"
+                url_pattern = r'_(\d+)\.htm'
+                url_match = re.search(url_pattern, speech_url)
+                if url_match:
+                    return url_match.group(1)
+            
+            return None
+            
+        except Exception as e:
+            logger.warning(f"議会番号抽出エラー: {e}")
+            return None
+
     def extract_meeting_details(self, speech: Dict[str, Any]) -> Dict[str, Any]:
         """会議の詳細情報を抽出"""
         try:
