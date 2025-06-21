@@ -273,8 +273,9 @@ class DailyKokkaiAPIClient:
             return 'その他'
         
     def generate_filename(self, year: int, month: int, day_range: str) -> str:
-        """新しいファイル名形式で生成: speeches_YYYYMMDD_DD.json"""
-        return f"speeches_{year}{month:02d}01_{day_range}.json"
+        """統一ファイル名形式で生成: speeches_YYYYMM01_HHMMSS.json（データ期間基準）"""
+        timestamp = datetime.now().strftime("%H%M%S")
+        return f"speeches_{year}{month:02d}01_{timestamp}.json"
         
     def save_monthly_data(self, speeches: List[Dict[str, Any]], year: int, month: int):
         """月次データを保存"""
@@ -307,7 +308,7 @@ class DailyKokkaiAPIClient:
                 "generated_at": datetime.now().isoformat(),
                 "source": "https://kokkai.ndl.go.jp/api.html",
                 "collection_method": "daily_automated_collection",
-                "filename_format": "speeches_YYYYMMDD_DD.json"
+                "filename_format": "speeches_YYYYMMDD_HHMMSS.json"
             },
             "data": speeches
         }

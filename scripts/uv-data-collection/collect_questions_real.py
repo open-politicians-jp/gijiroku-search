@@ -506,14 +506,14 @@ class RealQuestionsCollector:
         }
         
         # 生データ保存
-        raw_filename = f"questions_real_{timestamp}.json"
+        raw_filename = f"questions_{timestamp}.json"
         raw_filepath = self.questions_dir / raw_filename
         
         with open(raw_filepath, 'w', encoding='utf-8') as f:
             json.dump(structured_data, f, ensure_ascii=False, indent=2)
         
         # フロントエンド用データ保存
-        frontend_filename = f"questions_real_{timestamp}.json"
+        frontend_filename = f"questions_{timestamp}.json"
         frontend_filepath = self.frontend_questions_dir / frontend_filename
         
         with open(frontend_filepath, 'w', encoding='utf-8') as f:

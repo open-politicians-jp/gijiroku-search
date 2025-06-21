@@ -190,7 +190,10 @@ class SangiinCSVConverter:
         
         print(f"📁 {total_legislators}名を{legislators_per_file}名/ファイルで{file_count}ファイルに分割")
         
-        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        # データ期間を基準としたファイル名（現在の年月 + 時刻）
+        current_date = datetime.now()
+        data_period = current_date.strftime('%Y%m01')  # 当月のデータとして保存
+        timestamp = current_date.strftime('%H%M%S')
         
         for i in range(file_count):
             start_idx = i * legislators_per_file
@@ -198,8 +201,8 @@ class SangiinCSVConverter:
             
             chunk_legislators = legislators[start_idx:end_idx]
             
-            # ファイル名: sangiin_legislators_YYYYMMDD_HHMMSS_part1.json
-            filename = f"sangiin_legislators_{timestamp}_part{i+1:02d}.json"
+            # ファイル名: legislators_YYYYMM01_HHMMSS_part1.json
+            filename = f"legislators_{data_period}_{timestamp}_part{i+1:02d}.json"
             filepath = self.output_dir / filename
             
             # メタデータ付きでJSONファイル作成
@@ -229,7 +232,7 @@ class SangiinCSVConverter:
             print(f"💾 {filename}: {len(chunk_legislators)}名 ({file_size:.1f} MB)")
             
         # 統合ファイルも作成
-        unified_filename = f"sangiin_legislators_unified_{timestamp}.json"
+        unified_filename = f"legislators_{data_period}_{timestamp}.json"
         unified_filepath = self.output_dir / unified_filename
         
         unified_data = {

@@ -252,8 +252,11 @@ class ManifestoCollector:
             logger.warning("⚠️ 保存するマニフェストデータがありません")
             return
             
-        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        filename = f"manifestos_{timestamp}.json"
+        # データ期間を基準としたファイル名（現在の年月 + 時刻）
+        current_date = datetime.now()
+        data_period = current_date.strftime('%Y%m01')  # 当月のデータとして保存
+        timestamp = current_date.strftime('%H%M%S')
+        filename = f"manifestos_{data_period}_{timestamp}.json"
         filepath = self.frontend_manifestos_dir / filename
         
         data = {

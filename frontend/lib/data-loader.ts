@@ -47,6 +47,54 @@ class StaticDataLoader {
   }
 
   /**
+   * 利用可能な議事録ファイル一覧を動的に取得
+   * YYYYMMDD_HHMMSS命名規則に対応
+   */
+  private async getAvailableSpeechFiles(): Promise<string[]> {
+    try {
+      // speeches_index.json から利用可能ファイル一覧を取得
+      const indexPath = this.getDataPath('/data/speeches/speeches_index.json');
+      const response = await fetch(indexPath);
+      
+      if (response.ok) {
+        const indexData = await response.json();
+        if (indexData.available_files) {
+          return indexData.available_files.map((filename: string) => 
+            this.getDataPath(`/data/speeches/${filename}`)
+          );
+        }
+      }
+    } catch (error) {
+      console.warn('speeches_index.json読み込み失敗、フォールバックを使用');
+    }
+
+    // フォールバック: 現在の統一命名規則ファイル
+    const fallbackFiles = [
+      'speeches_20250101_000000.json',
+      'speeches_20250203_000000.json',
+      'speeches_20250210_000000.json',
+      'speeches_20250217_000000.json',
+      'speeches_20250224_000000.json',
+      'speeches_20250303_000000.json',
+      'speeches_20250310_000000.json',
+      'speeches_20250317_000000.json',
+      'speeches_20250324_000000.json',
+      'speeches_20250331_000000.json',
+      'speeches_20250407_000000.json',
+      'speeches_20250414_000000.json',
+      'speeches_20250421_000000.json',
+      'speeches_20250428_000000.json',
+      'speeches_20250501_000000.json',
+      'speeches_20250601_000000.json',
+      'speeches_latest.json'
+    ];
+
+    return fallbackFiles.map(filename => 
+      this.getDataPath(`/data/speeches/${filename}`)
+    );
+  }
+
+  /**
    * 議事録データを読み込み（全ファイル統合）
    */
   async loadSpeeches(): Promise<Speech[]> {
@@ -56,25 +104,8 @@ class StaticDataLoader {
 
     try {
       
-      // 利用可能な全ファイルを対象に
-      const filesToTry = [
-        '/data/speeches/speeches_2025_01.json',
-        '/data/speeches/speeches_2025_02_w01.json',
-        '/data/speeches/speeches_2025_02_w02.json',
-        '/data/speeches/speeches_2025_02_w03.json',
-        '/data/speeches/speeches_2025_02_w04.json',
-        '/data/speeches/speeches_2025_03_w01.json',
-        '/data/speeches/speeches_2025_03_w02.json',
-        '/data/speeches/speeches_2025_03_w03.json',
-        '/data/speeches/speeches_2025_03_w04.json',
-        '/data/speeches/speeches_2025_03_w05.json',
-        '/data/speeches/speeches_2025_04_w01.json',
-        '/data/speeches/speeches_2025_04_w02.json',
-        '/data/speeches/speeches_2025_04_w03.json',
-        '/data/speeches/speeches_2025_04_w04.json',
-        '/data/speeches/speeches_2025_05.json',
-        '/data/speeches/speeches_2025_06.json'
-      ].map(path => this.getDataPath(path));
+      // 統一命名規則（YYYYMMDD_HHMMSS）対応の動的ファイル検索
+      const filesToTry = await this.getAvailableSpeechFiles();
 
 
       const allSpeeches: Speech[] = [];
@@ -517,10 +548,24 @@ class StaticDataLoader {
           url: this.normalizeBillUrl(link.url, bill.session_number, bill.bill_number)
         }))
         .filter(link => {
-          // 審議経過URLが404になる場合は除外
+          // 審議経過URLの有効性チェック
           if (link.title?.includes('審議経過') && link.url.includes('keika/')) {
-            console.warn(`Filtering out potentially invalid progress URL: ${link.url}`);
-            return false;
+            // URLパターンが正しいかチェック（第217回国会の場合）
+            const urlPattern = /keika\/217\d{4}\.htm$/;
+            if (!urlPattern.test(link.url)) {
+              if (process.env.NODE_ENV === 'development') {
+                console.warn(`法案検索: 無効な審議経過URLパターン - ${link.url}`);
+              }
+              return false;
+            }
+            // 有効なパターンでも404の可能性があるURLは除外
+            const billNumber = link.url.match(/217(\d{4})/)?.[1];
+            if (billNumber && parseInt(billNumber) > 200) {
+              if (process.env.NODE_ENV === 'development') {
+                console.warn(`法案検索: 存在しない可能性のある法案番号 - ${billNumber}`);
+              }
+              return false;
+            }
           }
           return true;
         }) : []

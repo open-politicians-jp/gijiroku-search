@@ -1,102 +1,120 @@
 {
   "metadata": {
-    "generated_at": "2025-06-20T18:15:45.289784",
+    "generated_at": "2025-06-21T00:00:00.000000",
     "total_files": 16,
-    "description": "分割された議事録ファイルのインデックス"
+    "description": "統一命名規則（YYYYMMDD_HHMMSS）対応の議事録ファイルインデックス"
   },
+  "available_files": [
+    "speeches_20250101_000000.json",
+    "speeches_20250203_000000.json",
+    "speeches_20250210_000000.json",
+    "speeches_20250217_000000.json",
+    "speeches_20250224_000000.json",
+    "speeches_20250303_000000.json",
+    "speeches_20250310_000000.json",
+    "speeches_20250317_000000.json",
+    "speeches_20250324_000000.json",
+    "speeches_20250331_000000.json",
+    "speeches_20250407_000000.json",
+    "speeches_20250414_000000.json",
+    "speeches_20250421_000000.json",
+    "speeches_20250428_000000.json",
+    "speeches_20250501_000000.json",
+    "speeches_20250601_000000.json"
+  ],
   "files": [
     {
-      "filename": "speeches_2025_01.json",
+      "filename": "speeches_20250101_000000.json",
       "period": "2025-01",
       "count": 605,
       "size_mb": 1.5
     },
     {
-      "filename": "speeches_2025_02_w01.json",
+      "filename": "speeches_20250203_000000.json",
       "period": "2025-02-w01",
       "count": 2562,
       "size_mb": 4.0
     },
     {
-      "filename": "speeches_2025_02_w02.json",
+      "filename": "speeches_20250210_000000.json",
       "period": "2025-02-w02",
       "count": 2126,
       "size_mb": 3.8
     },
     {
-      "filename": "speeches_2025_02_w03.json",
+      "filename": "speeches_20250217_000000.json",
       "period": "2025-02-w03",
       "count": 2077,
       "size_mb": 3.4
     },
     {
-      "filename": "speeches_2025_02_w04.json",
+      "filename": "speeches_20250224_000000.json",
       "period": "2025-02-w04",
       "count": 6297,
       "size_mb": 10.8
     },
     {
-      "filename": "speeches_2025_03_w01.json",
+      "filename": "speeches_20250303_000000.json",
       "period": "2025-03-w01",
       "count": 2052,
       "size_mb": 3.0
     },
     {
-      "filename": "speeches_2025_03_w02.json",
+      "filename": "speeches_20250310_000000.json",
       "period": "2025-03-w02",
       "count": 5298,
       "size_mb": 9.0
     },
     {
-      "filename": "speeches_2025_03_w03.json",
+      "filename": "speeches_20250317_000000.json",
       "period": "2025-03-w03",
       "count": 1791,
       "size_mb": 2.7
     },
     {
-      "filename": "speeches_2025_03_w04.json",
+      "filename": "speeches_20250324_000000.json",
       "period": "2025-03-w04",
       "count": 6319,
       "size_mb": 10.3
     },
     {
-      "filename": "speeches_2025_03_w05.json",
+      "filename": "speeches_20250331_000000.json",
       "period": "2025-03-w05",
       "count": 379,
       "size_mb": 0.6
     },
     {
-      "filename": "speeches_2025_04_w01.json",
+      "filename": "speeches_20250407_000000.json",
       "period": "2025-04-w01",
       "count": 2944,
       "size_mb": 4.6
     },
     {
-      "filename": "speeches_2025_04_w02.json",
+      "filename": "speeches_20250414_000000.json",
       "period": "2025-04-w02",
       "count": 3351,
       "size_mb": 5.5
     },
     {
-      "filename": "speeches_2025_04_w03.json",
+      "filename": "speeches_20250421_000000.json",
       "period": "2025-04-w03",
       "count": 2035,
       "size_mb": 3.3
     },
     {
-      "filename": "speeches_2025_04_w04.json",
+      "filename": "speeches_20250428_000000.json",
       "period": "2025-04-w04",
       "count": 640,
       "size_mb": 1.0
     },
     {
-      "filename": "speeches_2025_05.json",
+      "filename": "speeches_20250501_000000.json",
       "period": "2025-05",
       "count": 734,
       "size_mb": 1.0
     },
     {
-      "filename": "speeches_2025_06.json",
+      "filename": "speeches_20250601_000000.json",
       "period": "2025-06",
       "count": 14,
       "size_mb": 0.0

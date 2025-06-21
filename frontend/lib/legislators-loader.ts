@@ -51,23 +51,34 @@ class LegislatorsLoader {
    * 参議院データを読み込み
    */
   private async loadSangiinData(): Promise<Legislator[]> {
-    try {
-      // GitHub Pages対応のパス設定
-      const basePath = process.env.NODE_ENV === 'production' ? '/gijiroku-search' : '';
-      const dataPath = `${basePath}/data/legislators/sangiin_legislators_unified_20250621_002031.json`;
-      
-      // 最新の統合ファイルを取得
-      const response = await fetch(dataPath);
-      if (!response.ok) {
-        throw new Error(`Failed to fetch sangiin data: ${response.status}`);
-      }
+    const basePath = process.env.NODE_ENV === 'production' ? '/gijiroku-search' : '';
+    
+    // 試行するファイルパス（新しい命名規則 → 古い命名規則の順）
+    const possiblePaths = [
+      `${basePath}/data/legislators/legislators_20250601_120005.json`,
+      `${basePath}/data/legislators/legislators_20250601_120004.json`,
+      `${basePath}/data/legislators/sangiin_legislators_unified_20250621_002031.json`,
+      `${basePath}/data/legislators/sangiin_legislators_unified_20250621_001253.json`
+    ];
 
-      const jsonData = await response.json();
-      return this.normalizeJsonLegislators(jsonData.data);
-    } catch (error) {
-      console.warn('Failed to load sangiin data:', error);
-      return [];
+    for (const dataPath of possiblePaths) {
+      try {
+        const response = await fetch(dataPath);
+        if (response.ok) {
+          const jsonData = await response.json();
+          return this.normalizeJsonLegislators(jsonData.data);
+        }
+      } catch (error) {
+        // 最後のファイルの場合のみエラーログを出力
+        if (dataPath === possiblePaths[possiblePaths.length - 1]) {
+          console.error('議員データの読み込みに失敗しました', error);
+        }
+        continue;
+      }
     }
+
+    console.error('全ての議員データファイルの読み込みに失敗しました');
+    return [];
   }
 
   /**
