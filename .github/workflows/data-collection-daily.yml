@@ -80,11 +80,7 @@ jobs:
       run: |
         uv run python daily_data_collection.py
         # Update last processed timestamp
-        uv run python -c "
-from update_checker import UpdateChecker
-checker = UpdateChecker()
-checker.update_last_processed('speeches')
-"
+        uv run python -c "from update_checker import UpdateChecker; checker = UpdateChecker(); checker.update_last_processed('speeches')"
         
     # - name: 📋 質問主意書収集（増分）
     #   if: ${{ github.event.inputs.target_scripts == 'all' || github.event.inputs.target_scripts == 'questions' || github.event.inputs.target_scripts == '' }}
@@ -104,11 +100,7 @@ checker.update_last_processed('speeches')
       run: |
         uv run python collect_committee_news_fixed.py
         # Update last processed timestamp
-        uv run python -c "
-from update_checker import UpdateChecker
-checker = UpdateChecker()
-checker.update_last_processed('committee_news')
-"
+        uv run python -c "from update_checker import UpdateChecker; checker = UpdateChecker(); checker.update_last_processed('committee_news')"
         
     # マニフェスト収集は週次ワークフローに移行
     # - name: 📄 マニフェスト収集（増分）
