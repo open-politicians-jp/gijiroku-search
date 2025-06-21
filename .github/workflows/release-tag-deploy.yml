@@ -223,14 +223,7 @@ $COMMITS
         DATE=$(date '+%Y-%m-%d')
         
         # Add release entry to CLAUDE.md
-        sed -i "/## 開発ガイドライン/i\\
-## 最新リリース情報\\
-\\
-- **バージョン**: $NEW_VERSION\\
-- **リリース日**: $DATE\\
-- **主な変更**: GitHub Actions自動リリース対応\\
-\\
-" CLAUDE.md
+        sed -i "/## 開発ガイドライン/i\\## 最新リリース情報\n\n- **バージョン**: $NEW_VERSION\n- **リリース日**: $DATE\n- **主な変更**: GitHub Actions自動リリース対応\n" CLAUDE.md
         
         echo "✅ CLAUDE.md updated with release $NEW_VERSION"
         
