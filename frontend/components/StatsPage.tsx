@@ -16,17 +16,8 @@ export default function StatsPage() {
       try {
         setLoading(true);
         setError(null);
-        console.log('StatsPage: Starting to fetch stats...');
         
         const data = await apiClient.getStats();
-        console.log('StatsPage: Received stats data:', {
-          total_speeches: data.total_speeches,
-          top_parties_count: data.top_parties ? data.top_parties.length : 0,
-          top_speakers_count: data.top_speakers ? data.top_speakers.length : 0,
-          top_committees_count: data.top_committees ? data.top_committees.length : 0,
-          date_range: data.date_range,
-          last_updated: data.last_updated
-        });
         
         // データ検証
         if (!data || typeof data !== 'object') {

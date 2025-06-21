@@ -32,21 +32,17 @@ class StaticDataLoader {
     if (typeof window !== 'undefined') {
       // ブラウザ環境では現在のパスから推測
       const path = window.location.pathname;
-      console.log('Current pathname:', path);
       if (path.startsWith('/gijiroku-search/')) {
-        console.log('Detected GitHub Pages environment, using basePath: /gijiroku-search');
         return '/gijiroku-search';
       }
     }
     const basePath = process.env.GITHUB_PAGES === 'true' ? '/gijiroku-search' : '';
-    console.log('Using basePath:', basePath);
     return basePath;
   }
   
   private getDataPath(path: string): string {
     const basePath = this.getBasePath();
     const fullPath = `${basePath}${path}`;
-    console.log(`Resolved path: ${path} -> ${fullPath}`);
     return fullPath;
   }
 
@@ -55,12 +51,10 @@ class StaticDataLoader {
    */
   async loadSpeeches(): Promise<Speech[]> {
     if (this.speechesCache.length > 0 && this.isCacheValid()) {
-      console.log(`loadSpeeches: Returning cached speeches (${this.speechesCache.length} items)`);
       return this.speechesCache;
     }
 
     try {
-      console.log('loadSpeeches: Loading and merging all speech files...');
       
       // 利用可能な全ファイルを対象に
       const filesToTry = [
@@ -82,19 +76,16 @@ class StaticDataLoader {
         '/data/speeches/speeches_2025_06.json'
       ].map(path => this.getDataPath(path));
 
-      console.log('loadSpeeches: Attempting to load and merge from:', filesToTry.length, 'files');
 
       const allSpeeches: Speech[] = [];
       let loadedFiles = 0;
       
       for (const filePath of filesToTry) {
         try {
-          console.log(`loadSpeeches: Trying to fetch: ${filePath}`);
           const response = await fetch(filePath);
           
           if (response.ok) {
             const data = await response.json();
-            console.log(`loadSpeeches: Successfully loaded from: ${filePath}`);
             
             let speechData: Speech[] = [];
             
@@ -115,12 +106,10 @@ class StaticDataLoader {
             if (speechData.length > 0) {
               allSpeeches.push(...speechData);
               loadedFiles++;
-              console.log(`loadSpeeches: Added ${speechData.length} speeches from ${filePath}, total: ${allSpeeches.length}`);
             } else {
               console.warn(`loadSpeeches: No speeches found in ${filePath}`);
             }
           } else {
-            console.log(`loadSpeeches: Failed to fetch ${filePath}: ${response.status} ${response.statusText}`);
           }
         } catch (fileError) {
           console.error(`loadSpeeches: Error loading ${filePath}:`, fileError);
@@ -149,7 +138,6 @@ class StaticDataLoader {
       // 日付順でソート（新しい順）
       finalSpeeches.sort((a, b) => b.date.localeCompare(a.date));
       
-      console.log(`loadSpeeches: Successfully merged ${loadedFiles} files, total ${finalSpeeches.length} unique speeches`);
       
       this.speechesCache = finalSpeeches;
       this.updateCacheTime();
@@ -180,15 +168,12 @@ class StaticDataLoader {
           const response = await fetch(filePath);
           if (response.ok) {
             const data = await response.json();
-            console.log(`Loaded committee news from: ${filePath}`);
             
             this.committeeNewsCache = Array.isArray(data) ? data : data.data || [];
             this.updateCacheTime();
-            console.log(`Loaded ${this.committeeNewsCache.length} committee news items`);
             return this.committeeNewsCache;
           }
         } catch (fileError) {
-          console.log(`Failed to load ${filePath}:`, fileError);
           continue;
         }
       }
@@ -224,15 +209,12 @@ class StaticDataLoader {
           const response = await fetch(filePath);
           if (response.ok) {
             const data = await response.json();
-            console.log(`Loaded bills from: ${filePath}`);
             
             this.billsCache = Array.isArray(data) ? data : data.bills || data.data || [];
             this.updateCacheTime();
-            console.log(`Loaded ${this.billsCache.length} bills`);
             return this.billsCache;
           }
         } catch (fileError) {
-          console.log(`Failed to load ${filePath}:`, fileError);
           continue;
         }
       }
@@ -268,15 +250,12 @@ class StaticDataLoader {
           const response = await fetch(filePath);
           if (response.ok) {
             const data = await response.json();
-            console.log(`Loaded questions from: ${filePath}`);
             
             this.questionsCache = Array.isArray(data) ? data : data.questions || data.data || [];
             this.updateCacheTime();
-            console.log(`Loaded ${this.questionsCache.length} questions`);
             return this.questionsCache;
           }
         } catch (fileError) {
-          console.log(`Failed to load ${filePath}:`, fileError);
           continue;
         }
       }
@@ -296,37 +275,23 @@ class StaticDataLoader {
    */
   async loadStats(): Promise<Stats> {
     if (this.statsCache && this.isCacheValid()) {
-      console.log('loadStats: Returning cached stats');
       return this.statsCache;
     }
 
     try {
-      console.log('loadStats: Loading fresh stats data...');
-      console.log('loadStats: Current basePath:', this.getBasePath());
       
       const speeches = await this.loadSpeeches();
       
       if (speeches.length === 0) {
         console.warn('loadStats: No speeches loaded, returning default stats');
         const defaultStats = this.getDefaultStats();
-        console.log('loadStats: Default stats:', defaultStats);
         return defaultStats;
       }
       
-      console.log(`loadStats: Calculating stats from ${speeches.length} speeches`);
       
       // 統計を動的計算
       const stats: Stats = this.calculateStats(speeches);
       
-      console.log('loadStats: Stats calculated successfully:', {
-        total_speeches: stats.total_speeches,
-        top_parties_count: stats.top_parties.length,
-        top_speakers_count: stats.top_speakers.length,
-        top_committees_count: stats.top_committees.length,
-        date_range: stats.date_range,
-        sample_parties: stats.top_parties.slice(0, 3),
-        sample_speakers: stats.top_speakers.slice(0, 3)
-      });
       
       this.statsCache = stats;
       this.updateCacheTime();
@@ -334,7 +299,6 @@ class StaticDataLoader {
     } catch (error) {
       console.error('loadStats: Error loading stats:', error);
       const defaultStats = this.getDefaultStats();
-      console.log('loadStats: Returning default stats due to error:', defaultStats);
       return defaultStats;
     }
   }
@@ -678,7 +642,6 @@ class StaticDataLoader {
   }
 
   private calculateStats(speeches: Speech[]): Stats {
-    console.log('Starting stats calculation...');
     
     // 政党別集計
     const partyCount: { [key: string]: number } = {};
@@ -690,14 +653,6 @@ class StaticDataLoader {
 
     speeches.forEach((speech, index) => {
       // データ品質チェック（最初の10件）
-      if (index < 10) {
-        console.log(`Speech ${index}:`, {
-          date: speech.date,
-          speaker: speech.speaker,
-          party: speech.party,
-          committee: speech.committee
-        });
-      }
       
       // 政党集計（null値のチェック）
       if (speech.party && speech.party.trim() !== '') {
@@ -725,12 +680,6 @@ class StaticDataLoader {
       }
     });
 
-    console.log('Raw counts:', {
-      parties: Object.keys(partyCount).length,
-      speakers: Object.keys(speakerCount).length,
-      committees: Object.keys(committeeCount).length,
-      dateRange: { minDate, maxDate }
-    });
 
     // 上位項目をソート
     const topParties = Object.entries(partyCount)
@@ -745,11 +694,6 @@ class StaticDataLoader {
       .sort(([,a], [,b]) => b - a)
       .slice(0, 15);
 
-    console.log('Top stats preview:', {
-      topParties: topParties.slice(0, 3),
-      topSpeakers: topSpeakers.slice(0, 3),
-      topCommittees: topCommittees.slice(0, 3)
-    });
 
     return {
       total_speeches: speeches.length,
