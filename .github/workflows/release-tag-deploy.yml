@@ -122,7 +122,6 @@ jobs:
         - **Build Date**: $(date '+%Y-%m-%d %H:%M:%S JST')
 
         ---
-        🤖 Generated with [Claude Code](https://claude.ai/code)
         EOF
         )
         fi
@@ -236,11 +235,7 @@ jobs:
         git config --local user.name "GitHub Action [Release Documentation]"
         git add CLAUDE.md
         if ! git diff --staged --quiet; then
-          git commit -m "docs: Update release information for ${{ needs.create-release-tag.outputs.new_version }}
-
-🤖 Generated with [Claude Code](https://claude.ai/code)
-
-Co-Authored-By: Claude <noreply@anthropic.com>"
+          git commit -m "docs: Update release information for ${{ needs.create-release-tag.outputs.new_version }}"
           git push
           echo "✅ Documentation updated and pushed"
         else
