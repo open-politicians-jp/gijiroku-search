@@ -132,19 +132,10 @@ jobs:
         echo "$RELEASE_NOTES" >> $GITHUB_OUTPUT
         echo "EOF" >> $GITHUB_OUTPUT
         
-    - name: 🏷️ Create Release Tag and Release
+    - name: 🏷️ Prepare Release Notes
       run: |
-        # Create tag
-        git tag ${{ steps.version.outputs.new_version }}
-        git push origin ${{ steps.version.outputs.new_version }}
-        
-        # Create release using GitHub CLI
-        gh release create ${{ steps.version.outputs.new_version }} \
-          --title "Release ${{ steps.version.outputs.new_version }}" \
-          --notes-file release_notes.md \
-          --target main
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        echo "✅ Release notes prepared for ${{ steps.version.outputs.new_version }}"
+        echo "Tag will be created after successful deployment"
 
   # Job 2: Build and Deploy Frontend
   deploy-frontend:
@@ -197,6 +188,20 @@ jobs:
         else
           echo "ℹ️ No tests configured"
         fi
+        
+    - name: 🏷️ Create Release Tag and Release
+      run: |
+        # Create tag only after successful build
+        git tag ${{ needs.create-release-tag.outputs.new_version }}
+        git push origin ${{ needs.create-release-tag.outputs.new_version }}
+        
+        # Create release using GitHub CLI
+        gh release create ${{ needs.create-release-tag.outputs.new_version }} \
+          --title "Release ${{ needs.create-release-tag.outputs.new_version }}" \
+          --notes "${{ needs.create-release-tag.outputs.release_notes }}" \
+          --target main
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         
     - name: 📊 Build Summary
       run: |
