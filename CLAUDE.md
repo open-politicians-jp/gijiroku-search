@@ -349,6 +349,7 @@ uv run python fix_questions_links.py
 - **ブランチ命名**: `feat/`, `fix/`, `docs/` プレフィックス使用
 - **コミットメッセージ**: 日本語で分かりやすい説明
 - **PR説明**: Summary, Test plan を含む構造化された説明
+- **Issue自動クローズ**: PRマージ時にissueが自動で閉じるよう、コミットメッセージやPR説明に「Close #数字」「Fix #数字」「Resolve #数字」を必ず含める
 
 ## 計画中の機能開発
 
