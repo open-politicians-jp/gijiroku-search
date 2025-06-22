@@ -338,25 +338,50 @@ uv run python fix_questions_links.py
 ### 標準作業手順
 **対応完了後は必ず以下の手順で進める:**
 
-1. **ブランチ作成**: `git checkout -b feat/機能名` でブランチ作成
+1. **ブランチ作成**: `git checkout -b feature/機能名 origin/main` でorigin/mainから分岐
 2. **作業実行**: 要求された機能・修正を実装
 3. **動作確認**: ローカルでテスト・ビルド確認
 4. **変更コミット**: `git add . && git commit -m "説明"`
 5. **プッシュ**: `git push -u origin ブランチ名`
 6. **PR作成**: `gh pr create` でプルリクエスト作成
+7. **⚠️ 重要**: 手動デプロイメント実行は禁止（自動デプロイメントに依存）
 
 **ワークフロー自動化**: 上記手順は一連の流れで自動実行する
 
 ### Git管理ルール
+
+#### ⚠️ 絶対禁止事項
+- **🚫 mainブランチ直接push**: 一切禁止（リポジトリオーナーのみ例外）
+- **🚫 手動デプロイメント実行**: GitHub Actions「🌐 Deploy to GitHub Pages」の手動実行禁止
+- **🚫 ローカルmainからの分岐**: 必ず `git checkout -b branch-name origin/main` でorigin/mainから分岐
+
+#### 正しいワークフロー
 - **メインブランチ保護**: 直接pushせずPRワークフロー必須
 - **ブランチ戦略**: 
-  - `fix/` (bugラベル): mainから直接作成
-  - `feat/`, `docs/`, `refactor/`: releaseブランチから作成、複数機能をまとめてリリース
-- **ブランチ命名**: `feat/`, `fix/`, `docs/` プレフィックス使用
+  - `fix/` (bugラベル): origin/mainから直接作成
+  - `feature/`, `docs/`, `refactor/`: origin/mainから作成、複数機能をまとめてリリース
+- **ブランチ命名**: `feature/`, `fix/`, `docs/`, `hotfix/` プレフィックス使用
 - **コミットメッセージ**: 日本語で分かりやすい説明
 - **PR説明**: Summary, Test plan を含む構造化された説明
 - **Issue自動クローズ**: PRマージ時にissueが自動で閉じるよう、コミットメッセージやPR説明に「Close #数字」「Fix #数字」「Resolve #数字」を必ず含める
-- **最新main必須**: ブランチ作成前は必ず `git checkout main && git pull origin main` で最新状態に更新
+- **origin/main分岐**: ブランチ作成は必ず `git checkout -b feature/name origin/main` でorigin/mainから分岐
+
+## デプロイメント管理ルール
+
+### 自動デプロイメント
+- **GitHub Actions自動実行**: PRマージ時に自動でデプロイメントが開始
+- **手動実行禁止**: `gh workflow run "🌐 Deploy to GitHub Pages"` の実行禁止
+- **デプロイ失敗時**: hotfix PRを作成してESLint・ビルドエラーを修正
+
+### デプロイメント監視
+- **エラー監視**: GitHub Actions失敗時は即座に原因調査
+- **本番確認**: デプロイ完了後は本番環境での動作確認
+- **ロールバック**: 重大な問題発生時のみリポジトリオーナーが対応
+
+### 緊急時対応
+- **hotfix ブランチ**: `hotfix/` プレフィックスで緊急修正
+- **即座PR**: 緊急修正は即座にPR作成・マージ
+- **原因記録**: 緊急対応の原因と対策をCLAUDE.mdに記録
 
 ## 計画中の機能開発
 
