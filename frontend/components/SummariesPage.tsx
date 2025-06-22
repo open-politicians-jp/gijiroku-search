@@ -218,20 +218,11 @@ const SummariesPage: React.FC<SummariesPageProps> = ({
   const handleSearch = async (newParams: SummarySearchParams) => {
     setIsLoading(true);
     try {
-      const response = await fetch('/api/summaries?' + new URLSearchParams(
-        Object.entries(newParams).reduce((acc, [key, value]) => {
-          if (value !== undefined && value !== '') {
-            acc[key] = Array.isArray(value) ? value.join(',') : String(value);
-          }
-          return acc;
-        }, {} as Record<string, string>)
-      ));
-      
-      if (response.ok) {
-        const result = await response.json();
-        setSummaries(result.summaries);
-        setSearchParams(newParams);
-      }
+      // 静的エクスポート対応: クライアントサイドローダーを使用
+      const { SummariesClientLoader } = await import('@/lib/summaries-client-loader');
+      const result = await SummariesClientLoader.searchSummaries(newParams);
+      setSummaries(result.summaries);
+      setSearchParams(newParams);
     } catch (error) {
       console.error('検索エラー:', error);
     } finally {

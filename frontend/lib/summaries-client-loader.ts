@@ -1,18 +1,11 @@
 import { MeetingSummary, SummarySearchParams, SummariesResult } from '@/types';
-import { promises as fs } from 'fs';
-import path from 'path';
 
 /**
- * 議会要約データローダー（本番環境最適化版）
+ * 議会要約クライアントサイドローダー（静的エクスポート対応）
  */
-export class SummariesLoader {
-  private dataDir: string;
+export class SummariesClientLoader {
   private static cache: Map<string, { data: MeetingSummary[], timestamp: number }> = new Map();
   private static readonly CACHE_TTL = 5 * 60 * 1000; // 5分間キャッシュ
-
-  constructor() {
-    this.dataDir = path.join(process.cwd(), 'public', 'data', 'summaries');
-  }
 
   /**
    * キャッシュをクリア（開発用）
@@ -24,66 +17,79 @@ export class SummariesLoader {
   /**
    * キャッシュの有効性をチェック
    */
-  private isCacheValid(timestamp: number): boolean {
-    return Date.now() - timestamp < SummariesLoader.CACHE_TTL;
+  private static isCacheValid(timestamp: number): boolean {
+    return Date.now() - timestamp < this.CACHE_TTL;
   }
 
   /**
-   * 全ての要約ファイルを読み込み（動的ファイル検出対応・キャッシュ対応）
+   * 単一の要約ファイルを読み込み
    */
-  async loadAllSummaries(): Promise<MeetingSummary[]> {
+  private static async loadSummaryFile(fileName: string): Promise<MeetingSummary | null> {
+    try {
+      const response = await fetch(`/data/summaries/${fileName}`);
+      if (!response.ok) {
+        console.warn(`Failed to load summary file: ${fileName}`);
+        return null;
+      }
+      
+      const summary: MeetingSummary = await response.json();
+      
+      // データ品質チェック
+      if (!summary.meeting_info?.date || !summary.meeting_info?.house || !summary.meeting_info?.committee) {
+        console.warn(`Invalid summary data in ${fileName}`);
+        return null;
+      }
+      
+      return summary;
+    } catch (error) {
+      console.error(`Error loading summary file ${fileName}:`, error);
+      return null;
+    }
+  }
+
+  /**
+   * 利用可能な要約ファイル一覧を取得（静的リスト）
+   */
+  private static getSummaryFileNames(): string[] {
+    // 静的エクスポート環境では、既知のファイル名をハードコード
+    return [
+      'summary_20250603_衆議_議院運営委員会.json',
+      'summary_20250530_衆議_議院運営委員会.json',
+      'summary_20250530_参議_議院運営委員会.json',
+      'summary_20250528_参議_議院運営委員会.json',
+      'summary_20250527_衆議_議院運営委員会.json',
+      'summary_20250523_衆議_予算委員会.json',
+      'summary_20250523_参議_議院運営委員会.json',
+      'summary_20250522_衆議_議院運営委員会.json',
+      'summary_20241009_衆議_本会議.json',
+      'summary_20241009_衆議_議院運営委員会.json',
+      'summary_20241009_参議_本会議.json'
+    ];
+  }
+
+  /**
+   * 全ての要約ファイルを読み込み（クライアントサイド）
+   */
+  static async loadAllSummaries(): Promise<MeetingSummary[]> {
     try {
       // キャッシュチェック
-      const cacheKey = 'all_summaries';
-      const cached = SummariesLoader.cache.get(cacheKey);
+      const cacheKey = 'all_summaries_client';
+      const cached = this.cache.get(cacheKey);
       
       if (cached && this.isCacheValid(cached.timestamp)) {
         return cached.data;
       }
-
-      // ディレクトリが存在しない場合は作成
-      try {
-        await fs.access(this.dataDir);
-      } catch {
-        console.warn(`Summaries directory not found: ${this.dataDir}`);
-        return [];
-      }
-
-      const files = await fs.readdir(this.dataDir);
-      const summaryFiles = files.filter(file => 
-        file.startsWith('summary_') && file.endsWith('.json')
-      );
-
-      const summaries: MeetingSummary[] = [];
       
-      // 並列処理で高速化
-      const summaryPromises = summaryFiles.map(async (file) => {
-        try {
-          const filePath = path.join(this.dataDir, file);
-          const content = await fs.readFile(filePath, 'utf-8');
-          const summary: MeetingSummary = JSON.parse(content);
-          
-          // データ品質チェック
-          if (!summary.meeting_info?.date || !summary.meeting_info?.house || !summary.meeting_info?.committee) {
-            console.warn(`⚠️ Invalid summary data in ${file}`);
-            return null;
-          }
-          
-          return summary;
-        } catch (error) {
-          console.error(`❌ Error loading summary file ${file}:`, error);
-          return null;
-        }
-      });
+      const fileNames = this.getSummaryFileNames();
 
+      // 並列処理で高速化
+      const summaryPromises = fileNames.map(fileName => this.loadSummaryFile(fileName));
       const loadedSummaries = await Promise.all(summaryPromises);
       
       // null値を除外
-      loadedSummaries.forEach(summary => {
-        if (summary) {
-          summaries.push(summary);
-        }
-      });
+      const summaries = loadedSummaries.filter((summary): summary is MeetingSummary => 
+        summary !== null
+      );
 
       // 日付順にソート（新しい順）
       summaries.sort((a, b) => 
@@ -91,7 +97,7 @@ export class SummariesLoader {
       );
 
       // キャッシュに保存
-      SummariesLoader.cache.set(cacheKey, {
+      this.cache.set(cacheKey, {
         data: summaries,
         timestamp: Date.now()
       });
@@ -104,9 +110,9 @@ export class SummariesLoader {
   }
 
   /**
-   * 要約検索
+   * 要約検索（クライアントサイド）
    */
-  async searchSummaries(params: SummarySearchParams): Promise<SummariesResult> {
+  static async searchSummaries(params: SummarySearchParams): Promise<SummariesResult> {
     const allSummaries = await this.loadAllSummaries();
     let filteredSummaries = allSummaries;
 
@@ -176,7 +182,7 @@ export class SummariesLoader {
   /**
    * 利用可能な院の一覧を取得
    */
-  async getAvailableHouses(): Promise<string[]> {
+  static async getAvailableHouses(): Promise<string[]> {
     const summaries = await this.loadAllSummaries();
     const houses = new Set(summaries.map(s => s.meeting_info.house));
     return Array.from(houses).sort();
@@ -185,7 +191,7 @@ export class SummariesLoader {
   /**
    * 利用可能な委員会の一覧を取得
    */
-  async getAvailableCommittees(): Promise<string[]> {
+  static async getAvailableCommittees(): Promise<string[]> {
     const summaries = await this.loadAllSummaries();
     const committees = new Set(summaries.map(s => s.meeting_info.committee));
     return Array.from(committees).sort();
@@ -194,7 +200,7 @@ export class SummariesLoader {
   /**
    * 利用可能なキーワードの一覧を取得
    */
-  async getAvailableKeywords(): Promise<string[]> {
+  static async getAvailableKeywords(): Promise<string[]> {
     const summaries = await this.loadAllSummaries();
     const keywords = new Set<string>();
     
@@ -208,7 +214,7 @@ export class SummariesLoader {
   /**
    * 統計情報を取得
    */
-  async getSummaryStats() {
+  static async getSummaryStats() {
     const summaries = await this.loadAllSummaries();
     
     if (summaries.length === 0) {
