@@ -112,12 +112,23 @@ class LegislatorsLoader {
       electionYear: leg.first_election_year || new Date().getFullYear(),
       status: leg.status as 'active' | 'inactive' || 'active',
       region: leg.region || undefined,
-      // 追加フィールド
+      // 基本追加フィールド
       termCount: leg.term_count,
       termEnd: leg.term_end,
       positions: leg.positions,
       profileUrl: leg.profile_url,
       photoUrl: leg.photo_url,
+      // 詳細情報フィールド (Issue #19対応)
+      wikipediaUrl: leg.wikipedia?.url,
+      wikipediaTitle: leg.wikipedia?.title,
+      wikipediaSummary: leg.wikipedia?.summary,
+      personalWebsite: leg.personal_website?.url,
+      personalWebsiteTitle: leg.personal_website?.title,
+      snsAccounts: leg.sns_accounts || {},
+      openpoliticsUrl: leg.openpolitics_url,
+      detailsEnhancedAt: leg.details_enhanced_at,
+      // その他のリンク
+      otherLinks: leg.other_links || [],
     }));
   }
 
