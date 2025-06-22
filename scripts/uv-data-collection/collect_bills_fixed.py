@@ -52,9 +52,9 @@ class BillsCollector:
         self.base_url = "https://www.shugiin.go.jp"
         self.bills_base_url = "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/"
         
-        # 収集する国会の範囲（第200回〜最新）
-        self.start_session = 200
-        self.end_session = 220  # 現在の第217回＋予備
+        # 収集する国会の範囲（第217回を重点的に）
+        self.start_session = 217  # Issue #47対応: 第217回国会を重点対象
+        self.end_session = 217   # 第217回国会のみテスト
         
     def update_headers(self):
         """User-Agent更新とIP偽装"""
@@ -75,6 +75,35 @@ class BillsCollector:
         """ランダム遅延でレート制限対応"""
         delay = random.uniform(min_seconds, max_seconds)
         time.sleep(delay)
+    
+    def build_absolute_url(self, href: str, base_page_url: str) -> Optional[str]:
+        """相対URLを絶対URLに変換 (Issue #47対応)"""
+        if not href or href.strip() == '':
+            return None
+        
+        # アンカーリンク（#で始まる）は無効
+        if href.startswith('#'):
+            return None
+        
+        # 既に絶対URLの場合
+        if href.startswith('http'):
+            return href
+        
+        # 相対URL処理
+        if href.startswith('./'):
+            # ./honbun/g20009011.htm → https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g20009011.htm
+            relative_path = href[2:]  # ./ を除去
+            base_dir = '/'.join(base_page_url.split('/')[:-1])  # ファイル名を除去
+            return f"{base_dir}/{relative_path}"
+        
+        elif href.startswith('/'):
+            # 絶対パス
+            return f"{self.base_url}{href}"
+        
+        else:
+            # 相対パス
+            base_dir = '/'.join(base_page_url.split('/')[:-1])
+            return f"{base_dir}/{href}"
     
     def collect_all_bills(self) -> List[Dict[str, Any]]:
         """全国会の議案を収集"""
@@ -145,6 +174,9 @@ class BillsCollector:
         links = []
         
         try:
+            # ベースURLを構築
+            session_url = f"{self.bills_base_url}kaiji{session_number}.htm"
+            
             # 議案リンクパターンを探す
             link_elements = soup.find_all('a', href=True)
             
@@ -154,7 +186,9 @@ class BillsCollector:
                 
                 # 議案関連のリンクを判定
                 if self.is_bill_link(href, text):
-                    full_url = self.base_url + href if href.startswith('/') else href
+                    full_url = self.build_absolute_url(href, session_url)
+                    if not full_url:  # 無効なURLはスキップ
+                        continue
                     bill_number = self.extract_bill_number(text, href)
                     
                     links.append({
@@ -179,17 +213,23 @@ class BillsCollector:
             return []
     
     def is_bill_link(self, href: str, text: str) -> bool:
-        """議案リンクかどうか判定"""
+        """議案リンクかどうか判定 (Issue #47対応)"""
+        
+        # 無効なリンクを除外
+        if not href or href.startswith('#') or href.strip() == '':
+            return False
+        
         # 議案関連キーワード
         bill_keywords = [
             '法案', '議案', '法律', '法', '条例',
-            '改正', '設置', '廃止', '案'
+            '改正', '設置', '廃止', '案', '本文', '経過'
         ]
         
-        # URL パターン
+        # URL パターン（より具体的に）
         url_patterns = [
-            'itdb_gian', 'gian', 'bill',
-            'houan', 'hou'
+            'honbun/',  # 本文リンク
+            'keika/',   # 経過リンク
+            'gian',     # 議案関連
         ]
         
         # テキストに議案キーワードが含まれるかチェック
@@ -198,7 +238,8 @@ class BillsCollector:
         # URLに関連パターンが含まれるかチェック
         url_match = any(pattern in href.lower() for pattern in url_patterns)
         
-        return text_match or url_match
+        # より厳密な判定
+        return text_match and (url_match or '.' in href)
     
     def extract_bill_number(self, text: str, href: str) -> str:
         """議案番号を抽出"""
@@ -429,11 +470,12 @@ class BillsCollector:
                 
                 # 関連文書のリンクを判定
                 if any(ext in href.lower() for ext in ['.pdf', '.doc', '.html']):
-                    full_url = self.base_url + href if href.startswith('/') else href
-                    links.append({
-                        'url': full_url,
-                        'title': text or '関連文書'
-                    })
+                    full_url = self.build_absolute_url(href, self.bills_base_url)
+                    if full_url:
+                        links.append({
+                            'url': full_url,
+                            'title': text or '関連文書'
+                        })
             
         except Exception as e:
             logger.error(f"関連リンク抽出エラー: {str(e)}")
