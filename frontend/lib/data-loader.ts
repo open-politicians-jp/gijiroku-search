@@ -63,7 +63,11 @@ class StaticDataLoader {
       const indexData = await indexResponse.json();
       const totalChunks = indexData.metadata.total_chunks;
       
-      // Loading speech chunks
+      // GitHub Pages最適化環境での制限対応
+      const isOptimizedEnv = indexData.metadata.optimization_applied;
+      if (isOptimizedEnv) {
+        console.warn('📊 GitHub Pages optimized environment detected - using reduced dataset');
+      }
       
       // 全チャンクを並列読み込み
       const chunkPromises = [];
