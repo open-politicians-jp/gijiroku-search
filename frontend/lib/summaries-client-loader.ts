@@ -22,11 +22,25 @@ export class SummariesClientLoader {
   }
 
   /**
+   * GitHub Pages basePath対応
+   */
+  private static getBasePath(): string {
+    if (typeof window !== 'undefined') {
+      const path = window.location.pathname;
+      if (path.startsWith('/gijiroku-search/')) {
+        return '/gijiroku-search';
+      }
+    }
+    return process.env.GITHUB_PAGES === 'true' ? '/gijiroku-search' : '';
+  }
+
+  /**
    * 単一の要約ファイルを読み込み
    */
   private static async loadSummaryFile(fileName: string): Promise<MeetingSummary | null> {
     try {
-      const response = await fetch(`/data/summaries/${fileName}`);
+      const basePath = this.getBasePath();
+      const response = await fetch(`${basePath}/data/summaries/${fileName}`);
       if (!response.ok) {
         console.warn(`Failed to load summary file: ${fileName}`);
         return null;

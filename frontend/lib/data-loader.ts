@@ -47,6 +47,76 @@ class StaticDataLoader {
   }
 
   /**
+   * 分割されたスピーチデータを読み込み
+   */
+  private async loadSpeechesFromChunks(): Promise<Speech[]> {
+    try {
+      // インデックスファイルを読み込み
+      const indexPath = this.getDataPath('/data/speeches/speeches_index.json');
+      const indexResponse = await fetch(indexPath);
+      
+      if (!indexResponse.ok) {
+        console.warn('Speeches index not found, falling back to latest');
+        return await this.loadSpeechesFromLatest();
+      }
+      
+      const indexData = await indexResponse.json();
+      const totalChunks = indexData.metadata.total_chunks;
+      
+      console.log(`Loading ${totalChunks} speech chunks...`);
+      
+      // 全チャンクを並列読み込み
+      const chunkPromises = [];
+      for (let i = 1; i <= totalChunks; i++) {
+        const chunkPath = this.getDataPath(`/data/speeches/speeches_chunk_${i.toString().padStart(2, '0')}.json`);
+        chunkPromises.push(
+          fetch(chunkPath)
+            .then(response => response.ok ? response.json() : null)
+            .catch(() => null)
+        );
+      }
+      
+      const chunkResults = await Promise.all(chunkPromises);
+      const allSpeeches: Speech[] = [];
+      
+      for (const chunkData of chunkResults) {
+        if (chunkData && chunkData.data) {
+          allSpeeches.push(...chunkData.data);
+        }
+      }
+      
+      console.log(`Loaded ${allSpeeches.length} speeches from ${totalChunks} chunks`);
+      return allSpeeches;
+      
+    } catch (error) {
+      console.error('Error loading chunked speeches data:', error);
+      return await this.loadSpeechesFromLatest();
+    }
+  }
+
+  /**
+   * 従来のlatest.jsonからスピーチデータを読み込み（フォールバック）
+   */
+  private async loadSpeechesFromLatest(): Promise<Speech[]> {
+    try {
+      const speechesPath = this.getDataPath('/data/speeches/speeches_latest.json');
+      const response = await fetch(speechesPath);
+      
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+      }
+      
+      const data = await response.json();
+      console.log(`Loaded ${data.data?.length || 0} speeches from latest.json`);
+      return data.data || [];
+      
+    } catch (error) {
+      console.error('Error loading speeches from latest.json:', error);
+      return [];
+    }
+  }
+
+  /**
    * 利用可能な議事録ファイル一覧を動的に取得
    * YYYYMMDD_HHMMSS命名規則に対応
    */
@@ -95,7 +165,7 @@ class StaticDataLoader {
   }
 
   /**
-   * 議事録データを読み込み（全ファイル統合）
+   * 議事録データを読み込み（分割チャンク対応）
    */
   async loadSpeeches(): Promise<Speech[]> {
     if (this.speechesCache.length > 0 && this.isCacheValid()) {
@@ -103,53 +173,13 @@ class StaticDataLoader {
     }
 
     try {
+      console.log('Loading speeches data...');
       
-      // 統一命名規則（YYYYMMDD_HHMMSS）対応の動的ファイル検索
-      const filesToTry = await this.getAvailableSpeechFiles();
-
-
-      const allSpeeches: Speech[] = [];
-      let loadedFiles = 0;
-      
-      for (const filePath of filesToTry) {
-        try {
-          const response = await fetch(filePath);
-          
-          if (response.ok) {
-            const data = await response.json();
-            
-            let speechData: Speech[] = [];
-            
-            if (Array.isArray(data)) {
-              speechData = data;
-            } else if (data.speeches && Array.isArray(data.speeches)) {
-              speechData = data.speeches;
-            } else if (data.data && Array.isArray(data.data)) {
-              speechData = data.data;
-            } else {
-              console.warn(`loadSpeeches: Unexpected data format in ${filePath}:`, {
-                type: typeof data,
-                keys: Object.keys(data)
-              });
-              continue;
-            }
-            
-            if (speechData.length > 0) {
-              allSpeeches.push(...speechData);
-              loadedFiles++;
-            } else {
-              console.warn(`loadSpeeches: No speeches found in ${filePath}`);
-            }
-          } else {
-          }
-        } catch (fileError) {
-          console.error(`loadSpeeches: Error loading ${filePath}:`, fileError);
-          continue;
-        }
-      }
+      // 分割データから読み込み（優先）
+      const allSpeeches = await this.loadSpeechesFromChunks();
       
       if (allSpeeches.length === 0) {
-        console.warn('loadSpeeches: No speech data could be loaded from any file');
+        console.warn('loadSpeeches: No speech data could be loaded');
         this.speechesCache = [];
         this.updateCacheTime();
         return this.speechesCache;
