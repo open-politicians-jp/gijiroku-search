@@ -52,6 +52,14 @@ jobs:
       with:
         static_site_generator: next
         
+    - name: 📊 Optimize data for GitHub Pages
+      working-directory: frontend
+      env:
+        GITHUB_PAGES: 'true'
+      run: |
+        echo "Optimizing data files for GitHub Pages deployment..."
+        node scripts/optimize-production-data.js
+        
     - name: 🔧 Build with Next.js
       working-directory: frontend
       env:
