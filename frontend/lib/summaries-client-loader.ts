@@ -40,23 +40,57 @@ export class SummariesClientLoader {
   private static async loadSummaryFile(fileName: string): Promise<MeetingSummary | null> {
     try {
       const basePath = this.getBasePath();
-      const response = await fetch(`${basePath}/data/summaries/${fileName}`);
+      // ファイル名をURL エンコード（日本語文字対応）
+      const encodedFileName = encodeURIComponent(fileName);
+      const url = `${basePath}/data/summaries/${encodedFileName}`;
+      
+      // デバッグログ（本番環境でのURL確認用）
+      console.warn(`🔍 Attempting to load summary: ${url}`);
+      console.warn(`📝 Original filename: ${fileName}`);
+      console.warn(`🔗 Encoded filename: ${encodedFileName}`);
+      
+      const response = await fetch(url);
+      
+      console.warn(`📡 Response status for ${fileName}: ${response.status} ${response.statusText}`);
+      
       if (!response.ok) {
-        console.warn(`Failed to load summary file: ${fileName}`);
-        return null;
+        console.warn(`❌ Failed to load summary file: ${fileName} (${response.status})`);
+        
+        // フォールバック：エンコードしないURLも試す
+        const fallbackUrl = `${basePath}/data/summaries/${fileName}`;
+        console.warn(`🔄 Trying fallback URL: ${fallbackUrl}`);
+        
+        const fallbackResponse = await fetch(fallbackUrl);
+        console.warn(`📡 Fallback response status: ${fallbackResponse.status} ${fallbackResponse.statusText}`);
+        
+        if (!fallbackResponse.ok) {
+          return null;
+        }
+        
+        const summary: MeetingSummary = await fallbackResponse.json();
+        
+        // データ品質チェック
+        if (!summary.meeting_info?.date || !summary.meeting_info?.house || !summary.meeting_info?.committee) {
+          console.warn(`⚠️ Invalid summary data in ${fileName}`);
+          return null;
+        }
+        
+        console.warn(`✅ Successfully loaded via fallback: ${fileName}`);
+        return summary;
       }
       
       const summary: MeetingSummary = await response.json();
       
       // データ品質チェック
       if (!summary.meeting_info?.date || !summary.meeting_info?.house || !summary.meeting_info?.committee) {
-        console.warn(`Invalid summary data in ${fileName}`);
+        console.warn(`⚠️ Invalid summary data in ${fileName}`);
         return null;
       }
       
+      console.warn(`✅ Successfully loaded: ${fileName}`);
       return summary;
     } catch (error) {
-      console.error(`Error loading summary file ${fileName}:`, error);
+      console.error(`❌ Error loading summary file ${fileName}:`, error);
       return null;
     }
   }
@@ -95,19 +129,43 @@ export class SummariesClientLoader {
       const cached = this.cache.get(cacheKey);
       
       if (cached && this.isCacheValid(cached.timestamp)) {
+        console.warn('📦 Using cached summaries data');
         return cached.data;
       }
       
       const fileNames = this.getSummaryFileNames();
-
-      // 並列処理で高速化
-      const summaryPromises = fileNames.map(fileName => this.loadSummaryFile(fileName));
-      const loadedSummaries = await Promise.all(summaryPromises);
+      console.warn(`🚀 Loading ${fileNames.length} summary files...`);
       
-      // null値を除外
-      const summaries = loadedSummaries.filter((summary): summary is MeetingSummary => 
-        summary !== null
-      );
+      // デバッグ用：basePath確認
+      const basePath = this.getBasePath();
+      console.warn(`🌐 Base path detected: "${basePath}"`);
+      console.warn(`🏠 Window location: ${typeof window !== 'undefined' ? window.location.href : 'SSR'}`);
+
+      // 段階的読み込み（並列処理を制限してリソース負荷軽減）
+      const BATCH_SIZE = 3; // 一度に3ファイルずつ処理
+      const summaries: MeetingSummary[] = [];
+      
+      for (let i = 0; i < fileNames.length; i += BATCH_SIZE) {
+        const batch = fileNames.slice(i, i + BATCH_SIZE);
+        console.warn(`📚 Loading batch ${Math.floor(i/BATCH_SIZE) + 1}/${Math.ceil(fileNames.length/BATCH_SIZE)}: ${batch.length} files`);
+        
+        const batchPromises = batch.map(fileName => this.loadSummaryFile(fileName));
+        const batchResults = await Promise.all(batchPromises);
+        
+        // null値を除外してsummariesに追加
+        const validSummaries = batchResults.filter((summary): summary is MeetingSummary => 
+          summary !== null
+        );
+        
+        summaries.push(...validSummaries);
+        
+        // 短い遅延（レート制限対策）
+        if (i + BATCH_SIZE < fileNames.length) {
+          await new Promise(resolve => setTimeout(resolve, 100));
+        }
+      }
+
+      console.warn(`✅ Successfully loaded ${summaries.length}/${fileNames.length} summary files`);
 
       // 日付順にソート（新しい順）
       summaries.sort((a, b) => 
@@ -123,6 +181,12 @@ export class SummariesClientLoader {
       return summaries;
     } catch (error) {
       console.error('❌ Error loading summaries:', error);
+      // フォールバック：空の配列を返すのではなく、部分的にでも読み込めたデータを返す
+      const cachedData = this.cache.get('all_summaries_client');
+      if (cachedData) {
+        console.warn('🔄 Returning cached data as fallback');
+        return cachedData.data;
+      }
       return [];
     }
   }

@@ -35,25 +35,46 @@ export default function SummariesPageWrapper() {
     date_range: { from: '', to: '' }
   });
   const [isLoading, setIsLoading] = useState(true);
+  const [loadingProgress, setLoadingProgress] = useState<string>('初期化中...');
+  const [hasError, setHasError] = useState(false);
 
   useEffect(() => {
     const loadInitialData = async () => {
       try {
-        const [summariesResult, housesData, committeesData, keywordsData, statsData] = await Promise.all([
-          SummariesClientLoader.searchSummaries({ limit: 10, offset: 0 }),
-          SummariesClientLoader.getAvailableHouses(),
-          SummariesClientLoader.getAvailableCommittees(),
-          SummariesClientLoader.getAvailableKeywords(),
-          SummariesClientLoader.getSummaryStats()
-        ]);
-
+        setLoadingProgress('要約データを取得中...');
+        
+        // 順次実行でデバッグしやすくする
+        const summariesResult = await SummariesClientLoader.searchSummaries({ limit: 10, offset: 0 });
+        console.warn(`📊 Loaded summaries: ${summariesResult.summaries.length} items`);
         setInitialSummaries(summariesResult.summaries);
+        
+        setLoadingProgress('利用可能な院を取得中...');
+        const housesData = await SummariesClientLoader.getAvailableHouses();
+        console.warn(`🏛️ Available houses: ${housesData.length} items`);
         setHouses(housesData);
+        
+        setLoadingProgress('委員会情報を取得中...');
+        const committeesData = await SummariesClientLoader.getAvailableCommittees();
+        console.warn(`🏢 Available committees: ${committeesData.length} items`);
         setCommittees(committeesData);
+        
+        setLoadingProgress('キーワードを取得中...');
+        const keywordsData = await SummariesClientLoader.getAvailableKeywords();
+        console.warn(`🔑 Available keywords: ${keywordsData.length} items`);
         setKeywords(keywordsData);
+        
+        setLoadingProgress('統計データを取得中...');
+        const statsData = await SummariesClientLoader.getSummaryStats();
+        console.warn(`📈 Stats loaded:`, statsData);
         setStats(statsData);
+        
+        setLoadingProgress('完了');
+        console.warn('✅ All summaries data loaded successfully');
+        
       } catch (error) {
         console.error('❌ Error loading initial data:', error);
+        setHasError(true);
+        setLoadingProgress('エラーが発生しました');
       } finally {
         setIsLoading(false);
       }
@@ -65,9 +86,24 @@ export default function SummariesPageWrapper() {
   if (isLoading) {
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-        <div className="text-center">
+        <div className="text-center max-w-md mx-auto px-4">
           <div className="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mb-4"></div>
-          <p className="text-gray-600">議会要約データを読み込み中...</p>
+          <p className="text-gray-600 mb-2">議会要約データを読み込み中...</p>
+          <p className="text-sm text-gray-500">{loadingProgress}</p>
+          {hasError && (
+            <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-lg">
+              <p className="text-red-700 text-sm">
+                データの読み込みに失敗しました。<br />
+                コンソールでエラー詳細を確認してください。
+              </p>
+              <button 
+                onClick={() => window.location.reload()} 
+                className="mt-2 px-4 py-2 bg-red-600 text-white rounded hover:bg-red-700 transition-colors"
+              >
+                再読み込み
+              </button>
+            </div>
+          )}
         </div>
       </div>
     );
