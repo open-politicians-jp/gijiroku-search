@@ -6,6 +6,7 @@ import { Legislator, LegislatorFilter, LegislatorsData } from '@/types/legislato
 import { legislatorsLoader } from '@/lib/legislators-loader';
 import LegislatorsFilter from '@/components/LegislatorsFilter';
 import LegislatorsList from '@/components/LegislatorsList';
+import Header from '@/components/Header';
 
 export default function LegislatorsPage() {
   const [legislatorsData, setLegislatorsData] = useState<LegislatorsData | null>(null);
@@ -54,8 +55,10 @@ export default function LegislatorsPage() {
   };
 
   return (
-    <div className="py-8">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-gray-50">
+      <Header currentPage="legislators" />
+      <main className="py-8">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* ヘッダー */}
         <div className="mb-8">
           <div className="flex items-center mb-4">
@@ -109,7 +112,8 @@ export default function LegislatorsPage() {
           legislators={filteredLegislators}
           isLoading={isLoading}
         />
-      </div>
+        </div>
+      </main>
     </div>
   );
 }
