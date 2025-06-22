@@ -1,0 +1,36 @@
+{
+  "metadata": {
+    "generated_at": "2025-06-22T18:07:52.711747",
+    "total_summaries": 1,
+    "llm_type": "mock",
+    "model": "mock",
+    "version": "1.0"
+  },
+  "summaries": [
+    {
+      "title": "2025-06-04 議院運営委員会会議要約",
+      "overview": "2025-06-04に開催された議院運営委員会会議では、1政党から2名の議員が6回の発言を行いました。",
+      "key_points": [
+        "主要参加政党: 自由民主党",
+        "発言者数: 2名",
+        "総発言回数: 6回",
+        "詳細な議論内容は元データをご参照ください。"
+      ],
+      "conclusion": "会議は予定通り進行し、各党から活発な議論が行われました。",
+      "participants": {
+        "speakers": [
+          "牧野たかお",
+          "小林史武"
+        ],
+        "parties": [
+          "自由民主党"
+        ]
+      },
+      "metadata": {
+        "summary_type": "mock",
+        "model": "statistical_analysis",
+        "generated_at": "2025-06-22T18:07:52.711744"
+      }
+    }
+  ]
+}

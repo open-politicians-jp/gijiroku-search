@@ -146,3 +146,56 @@ export interface QuestionsResult {
   offset: number;
   has_more: boolean;
 }
+
+// 議会要約関連の型定義
+export interface MeetingSummary {
+  metadata: {
+    summary_type: string;
+    meeting_key: string;
+    generated_at: string;
+    model_used: string;
+    speech_count: number;
+    speakers_count: number;
+    parties_count: number;
+  };
+  meeting_info: {
+    date: string;
+    house: string;
+    committee: string;
+    session: number;
+    meeting_key: string;
+  };
+  summary: {
+    text: string;
+    length: number;
+    keywords: string[];
+  };
+  participants: {
+    speakers: string[];
+    parties: string[];
+  };
+  speeches_references: Array<{
+    speech_id: string;
+    speaker: string;
+    url: string;
+  }>;
+}
+
+export interface SummarySearchParams {
+  q?: string;
+  house?: string;
+  committee?: string;
+  date_from?: string;
+  date_to?: string;
+  keywords?: string[];
+  limit?: number;
+  offset?: number;
+}
+
+export interface SummariesResult {
+  summaries: MeetingSummary[];
+  total: number;
+  limit: number;
+  offset: number;
+  has_more: boolean;
+}

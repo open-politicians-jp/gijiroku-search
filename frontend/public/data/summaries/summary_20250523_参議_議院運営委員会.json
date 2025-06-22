@@ -1,0 +1,89 @@
+{
+  "metadata": {
+    "summary_type": "meeting_summary",
+    "meeting_key": "2025-05-23_参議院_議院運営委員会",
+    "generated_at": "2025-06-22T20:34:05.953099",
+    "model_used": "llama3.2:3b",
+    "speech_count": 16,
+    "speakers_count": 2,
+    "parties_count": 1
+  },
+  "meeting_info": {
+    "date": "2025-05-23",
+    "house": "参議院",
+    "committee": "議院運営委員会",
+    "session": 217,
+    "meeting_key": "2025-05-23_参議院_議院運営委員会"
+  },
+  "summary": {
+    "text": "会議概要：\n参議院議院運営委員会第217回国会の本会議で、日程第一、第三、第四、五、六を一括して議題とした後、各部門の長が報告し、採決を行った。\n\n主要な議論・審議内容：\n1. 実務総長の説明を受け、議事を進めることに異議がないか問い合った。\n2. 予定時間と休憩時間について議論した。\n3. 本会議の議事を進めることに異議がないか問い合った。\n\n決定事項・結論：\n議事を進めることに異議がないことと、予定時間と休憩時間が決まったことが決定された。\n\n発言者・政党：\n牧野たかお（自由民主党）\n\n備考：\nこの会議は約15分で終了し、重要な議事が進行されました。",
+    "length": 280,
+    "keywords": [
+      "審議",
+      "本会議",
+      "委員会",
+      "採決"
+    ]
+  },
+  "participants": {
+    "speakers": [
+      "牧野たかお",
+      "小林史武"
+    ],
+    "parties": [
+      "自由民主党"
+    ]
+  },
+  "speeches_references": [
+    {
+      "speech_id": "121714024X02220250523_001",
+      "speaker": "牧野たかお",
+      "url": "https://kokkai.ndl.go.jp/txt/121714024X02220250523/1"
+    },
+    {
+      "speech_id": "121714024X02220250523_002",
+      "speaker": "小林史武",
+      "url": "https://kokkai.ndl.go.jp/txt/121714024X02220250523/2"
+    },
+    {
+      "speech_id": "121714024X02220250523_003",
+      "speaker": "牧野たかお",
+      "url": "https://kokkai.ndl.go.jp/txt/121714024X02220250523/3"
+    },
+    {
+      "speech_id": "121714024X02220250523_004",
+      "speaker": "牧野たかお",
+      "url": "https://kokkai.ndl.go.jp/txt/121714024X02220250523/4"
+    },
+    {
+      "speech_id": "121714024X02220250523_001",
+      "speaker": "牧野たかお",
+      "url": "https://kokkai.ndl.go.jp/txt/121714024X02220250523/1"
+    },
+    {
+      "speech_id": "121714024X02220250523_002",
+      "speaker": "小林史武",
+      "url": "https://kokkai.ndl.go.jp/txt/121714024X02220250523/2"
+    },
+    {
+      "speech_id": "121714024X02220250523_003",
+      "speaker": "牧野たかお",
+      "url": "https://kokkai.ndl.go.jp/txt/121714024X02220250523/3"
+    },
+    {
+      "speech_id": "121714024X02220250523_004",
+      "speaker": "牧野たかお",
+      "url": "https://kokkai.ndl.go.jp/txt/121714024X02220250523/4"
+    },
+    {
+      "speech_id": "121714024X02220250523_001",
+      "speaker": "牧野たかお",
+      "url": "https://kokkai.ndl.go.jp/txt/121714024X02220250523/1"
+    },
+    {
+      "speech_id": "121714024X02220250523_002",
+      "speaker": "小林史武",
+      "url": "https://kokkai.ndl.go.jp/txt/121714024X02220250523/2"
+    }
+  ]
+}

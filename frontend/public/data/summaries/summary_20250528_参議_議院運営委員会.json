@@ -1,0 +1,90 @@
+{
+  "metadata": {
+    "summary_type": "meeting_summary",
+    "meeting_key": "2025-05-28_参議院_議院運営委員会",
+    "generated_at": "2025-06-22T20:33:30.570262",
+    "model_used": "llama3.2:3b",
+    "speech_count": 40,
+    "speakers_count": 2,
+    "parties_count": 1
+  },
+  "meeting_info": {
+    "date": "2025-05-28",
+    "house": "参議院",
+    "committee": "議院運営委員会",
+    "session": 217,
+    "meeting_key": "2025-05-28_参議院_議院運営委員会"
+  },
+  "summary": {
+    "text": "【会議概要】\n\n本日、国会議員が議会運営委員会を集め、議会の運営に関する事項について議論した。\n\n【主要な議論・審議内容】\n\n1. 国際協同組合の振興を図る決議案について\n2. 日本学術会議法案の趣旨説明と採決について\n\n【決定事項・結論】\n\n議会運営委員会は、国際協同組合の振興を図る決議案を可決した。これに伴い、三原国務大臣が所信表明を行うこととなった。\n\n【発言者・政党】\n\n本日は、小林史武事務総長が主要な発言者であり、日本維新の会と自由民主党が主要な政党であった。\n\n【備考】\n\nこの会議では、国会の運営に関する事項について議論し、決議案を可決した。",
+    "length": 280,
+    "keywords": [
+      "委員会",
+      "可決",
+      "採決",
+      "審議",
+      "法案"
+    ]
+  },
+  "participants": {
+    "speakers": [
+      "牧野たかお",
+      "小林史武"
+    ],
+    "parties": [
+      "自由民主党"
+    ]
+  },
+  "speeches_references": [
+    {
+      "speech_id": "121714024X02320250528_001",
+      "speaker": "牧野たかお",
+      "url": "https://kokkai.ndl.go.jp/txt/121714024X02320250528/1"
+    },
+    {
+      "speech_id": "121714024X02320250528_002",
+      "speaker": "小林史武",
+      "url": "https://kokkai.ndl.go.jp/txt/121714024X02320250528/2"
+    },
+    {
+      "speech_id": "121714024X02320250528_003",
+      "speaker": "牧野たかお",
+      "url": "https://kokkai.ndl.go.jp/txt/121714024X02320250528/3"
+    },
+    {
+      "speech_id": "121714024X02320250528_004",
+      "speaker": "牧野たかお",
+      "url": "https://kokkai.ndl.go.jp/txt/121714024X02320250528/4"
+    },
+    {
+      "speech_id": "121714024X02320250528_005",
+      "speaker": "牧野たかお",
+      "url": "https://kokkai.ndl.go.jp/txt/121714024X02320250528/5"
+    },
+    {
+      "speech_id": "121714024X02320250528_006",
+      "speaker": "牧野たかお",
+      "url": "https://kokkai.ndl.go.jp/txt/121714024X02320250528/6"
+    },
+    {
+      "speech_id": "121714024X02320250528_007",
+      "speaker": "牧野たかお",
+      "url": "https://kokkai.ndl.go.jp/txt/121714024X02320250528/7"
+    },
+    {
+      "speech_id": "121714024X02320250528_008",
+      "speaker": "小林史武",
+      "url": "https://kokkai.ndl.go.jp/txt/121714024X02320250528/8"
+    },
+    {
+      "speech_id": "121714024X02320250528_009",
+      "speaker": "牧野たかお",
+      "url": "https://kokkai.ndl.go.jp/txt/121714024X02320250528/9"
+    },
+    {
+      "speech_id": "121714024X02320250528_010",
+      "speaker": "牧野たかお",
+      "url": "https://kokkai.ndl.go.jp/txt/121714024X02320250528/10"
+    }
+  ]
+}
