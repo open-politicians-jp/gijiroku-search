@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2025-06-11T20:26:08.298089",
+    "generated_at": "2025-06-22T11:45:00.827723",
     "description": "週次データファイルのインデックス"
   },
   "weeks": {
@@ -8,25 +8,36 @@
       "year": 2025,
       "week": 25,
       "files": {
+        "speeches": {
+          "json_file": "speeches_2025_w20.json",
+          "csv_file": "speeches_2025_w20.csv",
+          "size_kb": 1598.3
+        },
+        "questions": {
+          "json_file": "questions_2025_w25.json",
+          "csv_file": "questions_2025_w25.csv",
+          "size_kb": 287.7
+        },
+        "bills": {
+          "json_file": "bills_2025_w25.json",
+          "csv_file": "bills_2025_w25.csv",
+          "size_kb": 427.1
+        },
         "petitions": {
           "json_file": "petitions_2025_w24.json",
           "csv_file": "petitions_2025_w24.csv",
           "size_kb": 29.4
-        },
+        }
+      }
+    },
+    "2024_2024": {
+      "year": 2024,
+      "week": 24,
+      "files": {
         "speeches": {
-          "json_file": "speeches_2025_w06.json",
-          "csv_file": "speeches_2025_w06.csv",
-          "size_kb": 4153.7
-        },
-        "bills": {
-          "json_file": "bills_2025_w24.json",
-          "csv_file": "bills_2025_w24.csv",
-          "size_kb": 51.1
-        },
-        "questions": {
-          "json_file": "questions_2025_w24.json",
-          "csv_file": "questions_2025_w24.csv",
-          "size_kb": 86.0
+          "json_file": "speeches_2024_w52.json",
+          "csv_file": "speeches_2024_w52.csv",
+          "size_kb": 3670.1
         }
       }
     }
