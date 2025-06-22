@@ -63,7 +63,7 @@ class StaticDataLoader {
       const indexData = await indexResponse.json();
       const totalChunks = indexData.metadata.total_chunks;
       
-      console.log(`Loading ${totalChunks} speech chunks...`);
+      // Loading speech chunks
       
       // 全チャンクを並列読み込み
       const chunkPromises = [];
@@ -85,7 +85,7 @@ class StaticDataLoader {
         }
       }
       
-      console.log(`Loaded ${allSpeeches.length} speeches from ${totalChunks} chunks`);
+      // Speeches loaded from chunks
       return allSpeeches;
       
     } catch (error) {
@@ -107,7 +107,7 @@ class StaticDataLoader {
       }
       
       const data = await response.json();
-      console.log(`Loaded ${data.data?.length || 0} speeches from latest.json`);
+      // Speeches loaded from latest.json
       return data.data || [];
       
     } catch (error) {
@@ -173,7 +173,7 @@ class StaticDataLoader {
     }
 
     try {
-      console.log('Loading speeches data...');
+      // Loading speeches data
       
       // 分割データから読み込み（優先）
       const allSpeeches = await this.loadSpeechesFromChunks();
