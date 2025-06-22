@@ -10,4 +10,5 @@ dependencies = [
     "requests>=2.32.4",
     "requests-ip-rotator>=1.0.14",
     "python-dateutil>=2.8.2",
+    "psutil>=7.0.0",
 ]
