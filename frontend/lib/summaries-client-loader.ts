@@ -49,10 +49,12 @@ export class SummariesClientLoader {
 
   /**
    * 利用可能な要約ファイル一覧を取得（静的リスト）
+   * 2024年の過去データと2025年の最新データを含む
    */
   private static getSummaryFileNames(): string[] {
     // 静的エクスポート環境では、既知のファイル名をハードコード
     return [
+      // 2025年最新データ
       'summary_20250603_衆議_議院運営委員会.json',
       'summary_20250530_衆議_議院運営委員会.json',
       'summary_20250530_参議_議院運営委員会.json',
@@ -61,6 +63,8 @@ export class SummariesClientLoader {
       'summary_20250523_衆議_予算委員会.json',
       'summary_20250523_参議_議院運営委員会.json',
       'summary_20250522_衆議_議院運営委員会.json',
+      
+      // 2024年過去データ（手動収集済み）
       'summary_20241009_衆議_本会議.json',
       'summary_20241009_衆議_議院運営委員会.json',
       'summary_20241009_参議_本会議.json'
