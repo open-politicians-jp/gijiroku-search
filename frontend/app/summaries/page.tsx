@@ -35,6 +35,8 @@ export default function SummariesPageWrapper() {
     date_range: { from: '', to: '' }
   });
   const [isLoading, setIsLoading] = useState(true);
+  const [loadingProgress, setLoadingProgress] = useState<string>('初期化中...');
+  const [hasError, setHasError] = useState(false);
 
   useEffect(() => {
     const loadInitialData = async () => {
@@ -53,7 +55,7 @@ export default function SummariesPageWrapper() {
         setKeywords(keywordsData);
         setStats(statsData);
       } catch (error) {
-        console.error('❌ Error loading initial data:', error);
+        setHasError(true);
       } finally {
         setIsLoading(false);
       }
@@ -68,6 +70,26 @@ export default function SummariesPageWrapper() {
         <div className="text-center">
           <div className="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mb-4"></div>
           <p className="text-gray-600">議会要約データを読み込み中...</p>
+        </div>
+      </div>
+    );
+  }
+
+  if (hasError) {
+    return (
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+        <div className="text-center max-w-md mx-auto px-4">
+          <div className="mb-4 p-4 bg-red-50 border border-red-200 rounded-lg">
+            <p className="text-red-700 text-sm">
+              議会要約データの読み込みに失敗しました。
+            </p>
+            <button 
+              onClick={() => window.location.reload()} 
+              className="mt-2 px-4 py-2 bg-red-600 text-white rounded hover:bg-red-700 transition-colors"
+            >
+              再読み込み
+            </button>
+          </div>
         </div>
       </div>
     );

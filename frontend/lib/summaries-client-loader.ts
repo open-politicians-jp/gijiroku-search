@@ -40,9 +40,11 @@ export class SummariesClientLoader {
   private static async loadSummaryFile(fileName: string): Promise<MeetingSummary | null> {
     try {
       const basePath = this.getBasePath();
-      const response = await fetch(`${basePath}/data/summaries/${fileName}`);
+      // 日本語ファイル名をURLエンコード
+      const encodedFileName = encodeURIComponent(fileName);
+      const response = await fetch(`${basePath}/data/summaries/${encodedFileName}`);
+      
       if (!response.ok) {
-        console.warn(`Failed to load summary file: ${fileName}`);
         return null;
       }
       
@@ -50,13 +52,11 @@ export class SummariesClientLoader {
       
       // データ品質チェック
       if (!summary.meeting_info?.date || !summary.meeting_info?.house || !summary.meeting_info?.committee) {
-        console.warn(`Invalid summary data in ${fileName}`);
         return null;
       }
       
       return summary;
     } catch (error) {
-      console.error(`Error loading summary file ${fileName}:`, error);
       return null;
     }
   }
@@ -122,7 +122,6 @@ export class SummariesClientLoader {
 
       return summaries;
     } catch (error) {
-      console.error('❌ Error loading summaries:', error);
       return [];
     }
   }
