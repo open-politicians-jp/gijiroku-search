@@ -211,8 +211,8 @@ jobs:
         echo "- **Build Status**: ✅ Success" >> $GITHUB_STEP_SUMMARY
         echo "- **Deployment Target**: GitHub Pages (Ready)" >> $GITHUB_STEP_SUMMARY
 
-  # Job 3: Update Documentation
-  update-documentation:
+  # Job 3: Verify Deployment (Documentation update removed)
+  verify-deployment:
     runs-on: ubuntu-latest
     needs: [create-release-tag, deploy-frontend]
     if: needs.create-release-tag.outputs.release_created == 'true'
@@ -220,37 +220,16 @@ jobs:
     steps:
     - name: 📥 Checkout repository
       uses: actions/checkout@v4
-      with:
-        token: ${{ secrets.GITHUB_TOKEN }}
         
-    - name: 📝 Update CLAUDE.md with release info
+    - name: ✅ Verify Release
       run: |
-        # Update CLAUDE.md with latest release information
-        NEW_VERSION="${{ needs.create-release-tag.outputs.new_version }}"
-        DATE=$(date '+%Y-%m-%d')
-        
-        # Add release entry to CLAUDE.md
-        sed -i "/## 開発ガイドライン/i\\## 最新リリース情報\n\n- **バージョン**: $NEW_VERSION\n- **リリース日**: $DATE\n- **主な変更**: GitHub Actions自動リリース対応\n" CLAUDE.md
-        
-        echo "✅ CLAUDE.md updated with release $NEW_VERSION"
-        
-    - name: 💾 Commit documentation updates
-      run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action [Release Documentation]"
-        git add CLAUDE.md
-        if ! git diff --staged --quiet; then
-          git commit -m "docs: Update release information for ${{ needs.create-release-tag.outputs.new_version }}"
-          git push
-          echo "✅ Documentation updated and pushed"
-        else
-          echo "ℹ️ No documentation changes needed"
-        fi
+        echo "✅ Release ${{ needs.create-release-tag.outputs.new_version }} verification complete"
+        echo "📋 Release ready for production deployment"
 
   # Job 4: Post-Release Tasks
   post-release:
     runs-on: ubuntu-latest
-    needs: [create-release-tag, deploy-frontend, update-documentation]
+    needs: [create-release-tag, deploy-frontend, verify-deployment]
     if: always() && needs.create-release-tag.outputs.release_created == 'true'
     
     steps:
