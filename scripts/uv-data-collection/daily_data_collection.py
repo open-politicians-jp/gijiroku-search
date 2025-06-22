@@ -1,19 +1,19 @@
 #!/usr/bin/env python3
 """
-進行的データ収集スクリプト
+進行的データ収集スクリプト (Issue #26対応)
 
 GitHub Actions用に設計された進行的データ収集システム：
 - 既存データの最古日付を基準とした進行的な過去データ収集
-- デフォルト: 最古データより3ヶ月前まで遡って収集
-- 初回実行時は現在から過去3ヶ月分を収集
+- ファイル名解析により既存データの期間を把握
+- 不足期間を自動計算して過去データを収集
 - IP偽装とレート制限対応
-- ファイル名形式: speeches_YYYYMMDD_DD.json
-- 生データを data/raw/speeches/ に保存
+- ファイル名形式: speeches_YYYYMM01_HHMMSS.json (データ期間基準)
 
 環境変数:
 - MONTHS_BACK: 収集月数 (デフォルト: 3)
 - USE_PROGRESSIVE: 進行的収集を使用 (デフォルト: true)  
 - FORCE_UPDATE: 強制更新 (デフォルト: false)
+- PAST_DATA_MODE: 過去データ専用モード (デフォルト: false)
 """
 
 import os
@@ -37,7 +37,7 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 class DailyKokkaiAPIClient:
-    """毎日実行用の国会API収集クライアント"""
+    """毎日実行用の国会API収集クライアント (Issue #26対応)"""
     
     def __init__(self):
         self.base_url = "https://kokkai.ndl.go.jp/api/speech"
@@ -49,7 +49,9 @@ class DailyKokkaiAPIClient:
         # 出力ディレクトリ設定
         self.project_root = Path(__file__).parent.parent.parent
         self.raw_data_dir = self.project_root / "data" / "raw" / "speeches"
+        self.frontend_data_dir = self.project_root / "frontend" / "public" / "data" / "speeches"
         self.raw_data_dir.mkdir(parents=True, exist_ok=True)
+        self.frontend_data_dir.mkdir(parents=True, exist_ok=True)
         
     def update_headers(self):
         """リクエストヘッダーを更新"""
@@ -273,107 +275,137 @@ class DailyKokkaiAPIClient:
             return 'その他'
         
     def generate_filename(self, year: int, month: int, day_range: str) -> str:
-        """新しいファイル名形式で生成: speeches_YYYYMMDD_DD.json"""
-        return f"speeches_{year}{month:02d}01_{day_range}.json"
+        """統一ファイル名形式で生成: speeches_YYYYMM01_HHMMSS.json（データ期間基準）"""
+        timestamp = datetime.now().strftime("%H%M%S")
+        return f"speeches_{year}{month:02d}01_{timestamp}.json"
         
     def save_monthly_data(self, speeches: List[Dict[str, Any]], year: int, month: int):
-        """月次データを保存"""
+        """月次データを保存（フロントエンド用にも同時保存）"""
         if not speeches:
             logger.warning(f"⚠️ {year}年{month}月: データが空のためスキップ")
             return
             
-        # 日付範囲の計算
-        dates = [s['date'] for s in speeches if s['date']]
-        if dates:
-            dates.sort()
-            first_day = dates[0].split('-')[2]
-            last_day = dates[-1].split('-')[2]
-            day_range = f"{first_day}_{last_day}" if first_day != last_day else first_day
-        else:
-            # データがない場合は月の最終日を使用
-            last_day_of_month = self.get_last_day_of_month(year, month)
-            day_range = f"{last_day_of_month:02d}"
-            
-        filename = self.generate_filename(year, month, day_range)
-        filepath = self.raw_data_dir / filename
+        filename = self.generate_filename(year, month, "")
+        raw_filepath = self.raw_data_dir / filename
+        frontend_filepath = self.frontend_data_dir / filename
         
         # メタデータ付きで保存
         data = {
             "metadata": {
-                "data_type": "speeches_raw",
+                "data_type": "speeches",
                 "year": year,
                 "month": month,
                 "total_count": len(speeches),
                 "generated_at": datetime.now().isoformat(),
                 "source": "https://kokkai.ndl.go.jp/api.html",
-                "collection_method": "daily_automated_collection",
-                "filename_format": "speeches_YYYYMMDD_DD.json"
+                "collection_method": "progressive_past_data_collection",
+                "filename_format": "speeches_YYYYMM01_HHMMSS.json",
+                "period": f"{year}-{month:02d}",
+                "is_past_data": os.getenv('PAST_DATA_MODE', 'false').lower() == 'true'
             },
             "data": speeches
         }
         
-        with open(filepath, 'w', encoding='utf-8') as f:
+        # 生データ保存
+        with open(raw_filepath, 'w', encoding='utf-8') as f:
+            json.dump(data, f, ensure_ascii=False, indent=2)
+        
+        # フロントエンド用データ保存
+        with open(frontend_filepath, 'w', encoding='utf-8') as f:
             json.dump(data, f, ensure_ascii=False, indent=2)
             
-        file_size = filepath.stat().st_size / (1024 * 1024)
+        file_size = raw_filepath.stat().st_size / (1024 * 1024)
         logger.info(f"💾 保存完了: {filename} ({file_size:.1f} MB)")
+        logger.info(f"  - 生データ: {raw_filepath}")
+        logger.info(f"  - フロントエンド: {frontend_filepath}")
+
+def analyze_existing_data_periods(client):
+    """既存データのファイル名解析により収集済み期間を把握 (Issue #26)"""
+    
+    # フロントエンドディレクトリの既存ファイルを確認
+    existing_files = list(client.frontend_data_dir.glob("speeches_*.json"))
+    covered_periods = set()
+    oldest_period = None
+    newest_period = None
+    
+    logger.info(f"🔍 既存ファイル {len(existing_files)} 件から収集済み期間を解析中...")
+    
+    for file_path in existing_files:
+        try:
+            filename = file_path.name
+            
+            # ファイル名パターンをチェック
+            if filename.startswith('speeches_') and filename.endswith('.json'):
+                # speeches_YYYYMM01_HHMMSS.json パターン
+                import re
+                match = re.match(r'speeches_(\d{4})(\d{2})01_\d{6}\.json', filename)
+                if match:
+                    year, month = int(match.group(1)), int(match.group(2))
+                    period = (year, month)
+                    covered_periods.add(period)
+                    
+                    # 最古・最新期間の更新
+                    if oldest_period is None or period < oldest_period:
+                        oldest_period = period
+                    if newest_period is None or period > newest_period:
+                        newest_period = period
+                        
+                # 旧形式も対応（speeches_2025_01.json等）
+                elif re.match(r'speeches_(\d{4})_(\d{2})\.json', filename):
+                    match = re.match(r'speeches_(\d{4})_(\d{2})\.json', filename)
+                    if match:
+                        year, month = int(match.group(1)), int(match.group(2))
+                        period = (year, month)
+                        covered_periods.add(period)
+                        
+                        if oldest_period is None or period < oldest_period:
+                            oldest_period = period
+                        if newest_period is None or period > newest_period:
+                            newest_period = period
+                            
+        except Exception as e:
+            logger.warning(f"ファイル名解析エラー {file_path}: {e}")
+            continue
+    
+    return covered_periods, oldest_period, newest_period
 
 def get_progressive_collection_months(client, months_to_collect=3):
-    """既存データベースを基に進行的な収集対象月を決定"""
+    """既存データファイル名解析を基に進行的な収集対象月を決定 (Issue #26対応)"""
     
-    # 既存データから最古の日付を検索
-    oldest_date = None
+    covered_periods, oldest_period, newest_period = analyze_existing_data_periods(client)
     
-    # すべての既存ファイルから最古の日付を探す
-    existing_files = list(client.raw_data_dir.glob("speeches_*.json"))
-    
-    if existing_files:
-        logger.info(f"🔍 既存ファイル {len(existing_files)} 件から最古日付を検索中...")
-        
-        for file_path in existing_files:
-            try:
-                with open(file_path, 'r', encoding='utf-8') as f:
-                    data = json.load(f)
-                    
-                # データ内の日付をチェック
-                if 'data' in data:
-                    for speech in data['data']:
-                        if 'date' in speech and speech['date']:
-                            try:
-                                speech_date = datetime.fromisoformat(speech['date'].replace('Z', '+00:00'))
-                                if oldest_date is None or speech_date < oldest_date:
-                                    oldest_date = speech_date
-                            except (ValueError, TypeError):
-                                continue
-                                
-            except Exception as e:
-                logger.warning(f"ファイル読み込みエラー {file_path}: {e}")
-                continue
-    
-    target_months = []
-    
-    if oldest_date:
-        logger.info(f"📊 既存データの最古日付: {oldest_date.strftime('%Y-%m-%d')}")
-        
-        # 最古日付よりも過去の月を収集対象とする
-        base_date = oldest_date.replace(day=1) - relativedelta(months=1)
-        
-        for i in range(months_to_collect):
-            target_date = base_date - relativedelta(months=i)
-            target_months.append((target_date.year, target_date.month))
-            
-        logger.info(f"📅 進行的収集: 最古日付 {oldest_date.strftime('%Y-%m')} より過去 {months_to_collect} ヶ月分")
-        
-    else:
+    if not covered_periods:
         logger.info("📊 既存データなし: 現在日付から過去データを収集")
-        
-        # 既存データがない場合は現在から過去へ
         current_date = datetime.now()
+        target_months = []
         for i in range(months_to_collect):
             target_date = current_date - relativedelta(months=i)
             target_months.append((target_date.year, target_date.month))
-            
-        logger.info(f"📅 初回収集: 現在から過去 {months_to_collect} ヶ月分")
+        return target_months
+    
+    logger.info(f"📊 収集済み期間: {len(covered_periods)}ヶ月分")
+    logger.info(f"📊 最古期間: {oldest_period[0]}年{oldest_period[1]}月")
+    logger.info(f"📊 最新期間: {newest_period[0]}年{newest_period[1]}月")
+    
+    # 最古期間より過去のデータを収集対象とする
+    target_months = []
+    base_year, base_month = oldest_period
+    base_date = datetime(base_year, base_month, 1)
+    
+    # 過去に向かって未収集の月を特定
+    for i in range(1, months_to_collect + 1):
+        target_date = base_date - relativedelta(months=i)
+        target_period = (target_date.year, target_date.month)
+        
+        # 既に収集済みの期間はスキップ
+        if target_period not in covered_periods:
+            target_months.append(target_period)
+    
+    if target_months:
+        logger.info(f"📅 過去データ収集: 最古期間 {base_year}年{base_month}月 より過去 {len(target_months)}ヶ月分")
+        logger.info(f"📅 収集対象: {', '.join([f'{y}年{m}月' for y, m in target_months])}")
+    else:
+        logger.info(f"✅ 過去 {months_to_collect}ヶ月分のデータは既に収集済み")
     
     return target_months
 
