@@ -6,6 +6,7 @@ import SummariesPage from '@/components/SummariesPage';
 import Header from '@/components/Header';
 import { SummariesClientLoader } from '@/lib/summaries-client-loader';
 import { MeetingSummary } from '@/types';
+import { useRouter } from 'next/navigation';
 
 // 静的エクスポート対応のため、メタデータを外部に移動
 const metadata = {
@@ -15,6 +16,7 @@ const metadata = {
 };
 
 export default function SummariesPageWrapper() {
+  const router = useRouter();
   const [initialSummaries, setInitialSummaries] = useState<MeetingSummary[]>([]);
   const [houses, setHouses] = useState<string[]>([]);
   const [committees, setCommittees] = useState<string[]>([]);
@@ -95,9 +97,24 @@ export default function SummariesPageWrapper() {
     );
   }
 
+  const handlePageChange = (page: 'search' | 'stats' | 'about' | 'manifestos' | 'legislators') => {
+    if (page === 'search') {
+      router.push('/');
+    } else if (page === 'manifestos') {
+      router.push('/#manifestos');
+    } else if (page === 'stats') {
+      router.push('/#stats');
+    } else if (page === 'about') {
+      router.push('/#about');
+    } else if (page === 'legislators') {
+      router.push('/legislators');
+    }
+    // summaries の場合は現在のページなので何もしない
+  };
+
   return (
     <div className="min-h-screen bg-gray-50">
-      <Header currentPage="summaries" />
+      <Header currentPage="summaries" onPageChange={handlePageChange} />
       <main>
         <SummariesPage
           initialSummaries={initialSummaries}

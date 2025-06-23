@@ -13,10 +13,10 @@ export default function Header({ currentPage = 'search', onPageChange }: HeaderP
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   const navigationItems = [
-    { key: 'search', icon: Search, label: '検索', href: '/', onClick: () => onPageChange?.('search') },
+    { key: 'search', icon: Search, label: '検索', href: '/' },
     { key: 'summaries', icon: Bot, label: '議会要約', href: '/summaries', badge: 'Beta' },
     { key: 'manifestos', icon: FileText, label: 'マニフェスト', onClick: () => onPageChange?.('manifestos') },
-    { key: 'legislators', icon: Users, label: '議員一覧', href: '/legislators', onClick: () => onPageChange?.('legislators') },
+    { key: 'legislators', icon: Users, label: '議員一覧', href: '/legislators' },
     { key: 'stats', icon: BarChart3, label: '統計', onClick: () => onPageChange?.('stats') },
     { key: 'about', icon: Info, label: 'About', onClick: () => onPageChange?.('about') }
   ];

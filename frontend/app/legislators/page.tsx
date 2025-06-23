@@ -7,8 +7,10 @@ import { legislatorsLoader } from '@/lib/legislators-loader';
 import LegislatorsFilter from '@/components/LegislatorsFilter';
 import LegislatorsList from '@/components/LegislatorsList';
 import Header from '@/components/Header';
+import { useRouter } from 'next/navigation';
 
 export default function LegislatorsPage() {
+  const router = useRouter();
   const [legislatorsData, setLegislatorsData] = useState<LegislatorsData | null>(null);
   const [filteredLegislators, setFilteredLegislators] = useState<Legislator[]>([]);
   const [filter, setFilter] = useState<LegislatorFilter>({
@@ -54,9 +56,24 @@ export default function LegislatorsPage() {
     setFilter(newFilter);
   };
 
+  const handlePageChange = (page: 'search' | 'stats' | 'about' | 'manifestos' | 'legislators') => {
+    if (page === 'search') {
+      router.push('/');
+    } else if (page === 'manifestos') {
+      router.push('/#manifestos');
+    } else if (page === 'stats') {
+      router.push('/#stats');
+    } else if (page === 'about') {
+      router.push('/#about');
+    } else if (page === 'legislators') {
+      // 現在のページなので何もしない
+      return;
+    }
+  };
+
   return (
     <div className="min-h-screen bg-gray-50">
-      <Header currentPage="legislators" />
+      <Header currentPage="legislators" onPageChange={handlePageChange} />
       <main className="py-8">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* ヘッダー */}
