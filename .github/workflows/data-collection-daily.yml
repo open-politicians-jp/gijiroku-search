@@ -82,17 +82,17 @@ jobs:
         # Update last processed timestamp
         uv run python -c "from update_checker import UpdateChecker; checker = UpdateChecker(); checker.update_last_processed('speeches')"
         
-    # - name: 📋 質問主意書収集（増分）
-    #   if: ${{ github.event.inputs.target_scripts == 'all' || github.event.inputs.target_scripts == 'questions' || github.event.inputs.target_scripts == '' }}
-    #   working-directory: scripts/uv-data-collection
-    #   run: |
-    #     uv run python collect_questions_fixed.py
+    - name: 📋 質問主意書収集（増分）
+      if: ${{ github.event.inputs.target_scripts == 'all' || github.event.inputs.target_scripts == 'questions' || github.event.inputs.target_scripts == '' }}
+      working-directory: scripts/uv-data-collection
+      run: |
+        uv run python collect_questions_fixed.py --days 30
         
-    # - name: 📜 提出法案収集（増分）
-    #   if: ${{ github.event.inputs.target_scripts == 'all' || github.event.inputs.target_scripts == 'bills' || github.event.inputs.target_scripts == '' }}
-    #   working-directory: scripts/uv-data-collection
-    #   run: |
-    #     uv run python collect_bills_fixed.py
+    - name: 📜 提出法案収集（増分）
+      if: ${{ github.event.inputs.target_scripts == 'all' || github.event.inputs.target_scripts == 'bills' || github.event.inputs.target_scripts == '' }}
+      working-directory: scripts/uv-data-collection
+      run: |
+        uv run python collect_bills_fixed.py
         
     - name: 📰 委員会ニュース収集（増分）
       if: ${{ (github.event.inputs.target_scripts == 'all' || github.event.inputs.target_scripts == 'committee' || github.event.inputs.target_scripts == '') && steps.update-check.outputs.should_run_committee_news == 'true' }}

@@ -224,29 +224,45 @@ class StaticDataLoader {
     }
 
     try {
+      // 委員会ニュースデータ読み込み
       const filesToTry = [
-        '/data/committee_news/committee_news_latest.json',
-        '/data/committee_news/committee_news_20250612_012023.json'
+        '/data/committee_news/committee_news_latest.json'
       ].map(path => this.getDataPath(path));
+
+      const allNews: CommitteeNews[] = [];
+      const seenTitles = new Set<string>(); // 重複除去用
 
       for (const filePath of filesToTry) {
         try {
           const response = await fetch(filePath);
           if (response.ok) {
             const data = await response.json();
+            const newsItems = Array.isArray(data) ? data : data.data || [];
             
-            this.committeeNewsCache = Array.isArray(data) ? data : data.data || [];
-            this.updateCacheTime();
-            return this.committeeNewsCache;
+            // 重複除去しながら統合
+            for (const item of newsItems) {
+              if (item.title && !seenTitles.has(item.title)) {
+                seenTitles.add(item.title);
+                allNews.push(item);
+              }
+            }
           }
         } catch (fileError) {
+          console.warn(`委員会ニュースファイル読み込みエラー: ${filePath}`, fileError);
           continue;
         }
       }
       
-      console.warn('No committee news files could be loaded');
-      this.committeeNewsCache = [];
+      // 日付順でソート（新しい順）
+      allNews.sort((a, b) => {
+        const dateA = a.date || a.collected_at;
+        const dateB = b.date || b.collected_at;
+        return dateB.localeCompare(dateA);
+      });
+      
+      this.committeeNewsCache = allNews;
       this.updateCacheTime();
+      
       return this.committeeNewsCache;
     } catch (error) {
       console.error('Error loading committee news:', error);

@@ -20,7 +20,7 @@
 - ✅ Next.js専用アーキテクチャ（Docker Compose廃止）
 - ✅ 構造化ディレクトリ（speeches/, manifestos/, legislators/, questions/, bills/, committee_news/）
 - ✅ データ日付ベースのファイル命名システム
-- ✅ 委員会ニュース検索機能
+- ✅ 委員会ニュース検索機能（全22委員会・強化版データ収集）
 - ✅ 提出法案検索機能（ステータス・審議状況付き）
 - ✅ 質問主意書検索機能（HTML/PDFリンク付き）
 - ✅ リンク修正システム（相対URL→絶対URL変換）
@@ -67,8 +67,8 @@ uv run python data_processing_pipeline.py
 # 質問主意書収集
 uv run python collect_questions_fixed.py
 
-# 委員会ニュース収集
-uv run python collect_committee_news.py
+# 委員会ニュース収集（強化版）
+uv run python collect_committee_news_enhanced.py
 
 # 提出法案収集
 uv run python collect_bills.py
@@ -258,14 +258,32 @@ uv run python collect_questions_fixed.py
 # 3. 提出法案収集
 uv run python collect_bills.py
 
-# 4. 委員会ニュース収集
-uv run python collect_committee_news.py
+# 4. 委員会ニュース収集（強化版）
+uv run python collect_committee_news_enhanced.py
 
 # 5. 週次データ整理
 uv run python weekly_data_organizer.py
 
 # 6. リンク修正
 uv run python fix_questions_links.py
+```
+
+### 委員会ニュース収集オプション
+```bash
+# 増分収集（デフォルト）
+uv run python collect_committee_news_enhanced.py
+
+# 特定国会回次
+uv run python collect_committee_news_enhanced.py --session 217
+
+# 複数回次
+uv run python collect_committee_news_enhanced.py --sessions 217,216,215
+
+# 過去データ一括取得
+uv run python collect_committee_news_enhanced.py --session-range 215-217
+
+# 過去30日分
+uv run python collect_committee_news_enhanced.py --days 30
 ```
 
 ### 運用方針
@@ -332,6 +350,14 @@ uv run python fix_questions_links.py
 14. **UV使用**: Python パッケージ管理は UV で統一
 15. **バックアップなし**: 不要なバックアップファイルは作成しない
 16. **console.log禁止**: 本番コードではconsole.logを使用しない（console.warn, console.errorは許可）
+
+### データ管理・クリーンアップルール
+17. **不要ディレクトリ削除**: 使用されていないデータディレクトリは即座に削除
+18. **重複ファイル排除**: 同じ内容のファイルが複数存在する場合は最新版以外を削除
+19. **データ容量最適化**: ファイルサイズと件数を定期的にチェックし、効率的な構造を維持
+20. **アーカイブ方針**: 長期保存が必要な場合のみ別途アーカイブディレクトリを作成
+21. **命名規則統一**: データファイルは `[data_type]_session_[number].json` 形式に統一（timestampは不要）
+22. **latest.json管理**: 各データタイプごとに最新版を `*_latest.json` として保持
 
 ## 確立されたワークフロー
 
