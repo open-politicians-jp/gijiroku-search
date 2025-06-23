@@ -57,6 +57,10 @@ export class SummariesClientLoader {
       
       return summary;
     } catch (error) {
+      // デバッグ用: 本番環境でのエラー詳細を確認
+      if (typeof window !== 'undefined') {
+        console.error(`Failed to load summary file ${fileName}:`, error);
+      }
       return null;
     }
   }
@@ -122,7 +126,15 @@ export class SummariesClientLoader {
 
       return summaries;
     } catch (error) {
-      return [];
+      // デバッグ用: 本番環境でのエラー詳細を確認
+      if (typeof window !== 'undefined') {
+        console.error('Failed to load all summaries:', error);
+        // 一時的にアラートでエラー詳細を表示
+        setTimeout(() => {
+          alert(`Summaries loader error: ${error instanceof Error ? error.message : 'Unknown error'}`);
+        }, 500);
+      }
+      throw error; // エラーを上位に伝播してUIで表示
     }
   }
 

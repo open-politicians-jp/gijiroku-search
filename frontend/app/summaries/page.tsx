@@ -37,6 +37,7 @@ export default function SummariesPageWrapper() {
   const [isLoading, setIsLoading] = useState(true);
   const [loadingProgress, setLoadingProgress] = useState<string>('初期化中...');
   const [hasError, setHasError] = useState(false);
+  const [errorMessage, setErrorMessage] = useState<string>('');
 
   useEffect(() => {
     const loadInitialData = async () => {
@@ -56,6 +57,13 @@ export default function SummariesPageWrapper() {
         setStats(statsData);
       } catch (error) {
         setHasError(true);
+        setErrorMessage(error instanceof Error ? error.message : 'Unknown error occurred');
+        // デバッグ用: 本番環境でもエラー詳細を確認できるよう一時的にアラート表示
+        if (typeof window !== 'undefined') {
+          setTimeout(() => {
+            alert(`Summaries loading error: ${error instanceof Error ? error.message : 'Unknown error'}`);
+          }, 1000);
+        }
       } finally {
         setIsLoading(false);
       }
@@ -80,9 +88,14 @@ export default function SummariesPageWrapper() {
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
         <div className="text-center max-w-md mx-auto px-4">
           <div className="mb-4 p-4 bg-red-50 border border-red-200 rounded-lg">
-            <p className="text-red-700 text-sm">
+            <p className="text-red-700 text-sm mb-2">
               議会要約データの読み込みに失敗しました。
             </p>
+            {errorMessage && (
+              <p className="text-red-600 text-xs mb-2 font-mono">
+                エラー詳細: {errorMessage}
+              </p>
+            )}
             <button 
               onClick={() => window.location.reload()} 
               className="mt-2 px-4 py-2 bg-red-600 text-white rounded hover:bg-red-700 transition-colors"
