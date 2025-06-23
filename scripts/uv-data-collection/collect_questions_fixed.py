@@ -30,10 +30,15 @@ logger = logging.getLogger(__name__)
 class QuestionsCollector:
     """質問主意書収集クラス（正式版）"""
     
-    def __init__(self):
+    def __init__(self, start_date: Optional[str] = None, end_date: Optional[str] = None):
         self.ua = UserAgent()
         self.session = requests.Session()
         self.update_headers()
+        
+        # 日付範囲設定
+        self.start_date = start_date or (datetime.now() - timedelta(days=60)).strftime("%Y-%m-%d")
+        self.end_date = end_date or datetime.now().strftime("%Y-%m-%d")
+        logger.info(f"収集期間: {self.start_date} から {self.end_date}")
         
         # 出力ディレクトリ設定
         self.project_root = Path(__file__).parent.parent.parent
@@ -43,6 +48,9 @@ class QuestionsCollector:
         # ディレクトリ作成
         self.questions_dir.mkdir(parents=True, exist_ok=True)
         self.frontend_questions_dir.mkdir(parents=True, exist_ok=True)
+        
+        # 既存データロード
+        self.existing_questions = self.load_existing_questions()
         
         # 週次ディレクトリ作成
         current_date = datetime.now()
@@ -73,6 +81,62 @@ class QuestionsCollector:
         delay = random.uniform(min_seconds, max_seconds)
         time.sleep(delay)
     
+    def load_existing_questions(self) -> set:
+        """既存の質問主意書データから質問番号セットを読み込み"""
+        existing_ids = set()
+        
+        # フロントエンド用最新ファイルから読み込み
+        latest_file = self.frontend_questions_dir / "questions_latest.json"
+        if latest_file.exists():
+            try:
+                with open(latest_file, 'r', encoding='utf-8') as f:
+                    data = json.load(f)
+                    if 'data' in data:
+                        for question in data['data']:
+                            # 質問番号や質問件名をキーとして使用
+                            if 'question_number' in question:
+                                existing_ids.add(question['question_number'])
+                            elif 'title' in question:
+                                existing_ids.add(question['title'])
+                logger.info(f"既存質問データ読み込み完了: {len(existing_ids)}件")
+            except Exception as e:
+                logger.warning(f"既存データ読み込みエラー: {e}")
+        
+        # 処理済みファイルからも読み込み
+        for file_path in self.questions_dir.glob("questions_*.json"):
+            try:
+                with open(file_path, 'r', encoding='utf-8') as f:
+                    data = json.load(f)
+                    if 'data' in data:
+                        for question in data['data']:
+                            if 'question_number' in question:
+                                existing_ids.add(question['question_number'])
+                            elif 'title' in question:
+                                existing_ids.add(question['title'])
+            except Exception as e:
+                logger.warning(f"ファイル読み込みエラー {file_path}: {e}")
+        
+        logger.info(f"既存質問総数: {len(existing_ids)}件")
+        return existing_ids
+    
+    def is_duplicate_question(self, question_data: Dict[str, Any]) -> bool:
+        """質問の重複チェック"""
+        question_id = question_data.get('question_number') or question_data.get('title')
+        if question_id and question_id in self.existing_questions:
+            return True
+        return False
+    
+    def is_within_date_range(self, question_date: str) -> bool:
+        """質問日付が指定範囲内かチェック"""
+        try:
+            question_dt = datetime.strptime(question_date, "%Y-%m-%d")
+            start_dt = datetime.strptime(self.start_date, "%Y-%m-%d")
+            end_dt = datetime.strptime(self.end_date, "%Y-%m-%d")
+            return start_dt <= question_dt <= end_dt
+        except (ValueError, TypeError):
+            # 日付パースエラーの場合は収集対象とする
+            return True
+    
     def collect_questions(self) -> List[Dict[str, Any]]:
         """質問主意書収集（メインページから）"""
         logger.info("質問主意書収集開始...")
@@ -102,6 +166,16 @@ class QuestionsCollector:
                     
                     question_detail = self.extract_question_detail(link_info)
                     if question_detail:
+                        # 重複チェック
+                        if self.is_duplicate_question(question_detail):
+                            logger.info(f"重複質問をスキップ ({idx+1}/{len(question_links)}): {question_detail['title'][:50]}...")
+                            continue
+                        
+                        # 日付範囲チェック
+                        if 'date' in question_detail and not self.is_within_date_range(question_detail['date']):
+                            logger.info(f"範囲外質問をスキップ ({idx+1}/{len(question_links)}): {question_detail['date']} - {question_detail['title'][:50]}...")
+                            continue
+                        
                         questions.append(question_detail)
                         logger.info(f"質問詳細取得成功 ({idx+1}/{len(question_links)}): {question_detail['title'][:50]}...")
                     
@@ -463,16 +537,39 @@ class QuestionsCollector:
 
 def main():
     """メイン実行関数"""
-    collector = QuestionsCollector()
+    import argparse
+    
+    parser = argparse.ArgumentParser(description='質問主意書収集スクリプト')
+    parser.add_argument('--start-date', type=str, help='収集開始日 (YYYY-MM-DD)')
+    parser.add_argument('--end-date', type=str, help='収集終了日 (YYYY-MM-DD)')
+    parser.add_argument('--days', type=int, default=60, help='過去何日分を収集するか (デフォルト: 60日)')
+    
+    args = parser.parse_args()
+    
+    # 日付範囲の設定
+    if args.start_date and args.end_date:
+        start_date = args.start_date
+        end_date = args.end_date
+    elif args.days:
+        end_date = datetime.now().strftime("%Y-%m-%d")
+        start_date = (datetime.now() - timedelta(days=args.days)).strftime("%Y-%m-%d")
+    else:
+        # デフォルト: 過去60日
+        end_date = datetime.now().strftime("%Y-%m-%d")
+        start_date = (datetime.now() - timedelta(days=60)).strftime("%Y-%m-%d")
+    
+    collector = QuestionsCollector(start_date=start_date, end_date=end_date)
     
     try:
         # 質問主意書収集
         questions = collector.collect_questions()
         
-        # データ保存
-        collector.save_questions_data(questions)
-        
-        logger.info("質問主意書収集処理完了")
+        if questions:
+            # データ保存
+            collector.save_questions_data(questions)
+            logger.info(f"新規質問主意書収集完了: {len(questions)}件")
+        else:
+            logger.info("新規質問主意書は見つかりませんでした")
         
     except Exception as e:
         logger.error(f"メイン処理エラー: {str(e)}")

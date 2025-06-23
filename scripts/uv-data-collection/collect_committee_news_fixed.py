@@ -297,10 +297,44 @@ class CommitteeNewsCollector:
         if not text:
             return ""
         
+        # JavaScript無効メッセージの除去
+        js_messages = [
+            'ブラウザのJavaScriptが無効のため、サイト内検索はご利用いただけません。',
+            'JavaScriptが無効です',
+            'JavaScript を有効にしてください',
+            'JavaScriptを有効にしてください',
+            'ブラウザのJavaScriptが無効のため',
+            'サイト内検索はご利用いただけません'
+        ]
+        
+        for msg in js_messages:
+            text = text.replace(msg, '')
+        
+        # ナビゲーション・フッター等の不要な定型文除去
+        unwanted_phrases = [
+            'ホーム',
+            'サイトマップ',
+            'プライバシーポリシー',
+            'ご利用案内',
+            '国会に関するお問い合わせ',
+            '文字サイズ変更',
+            'Foreign Language',
+            'トップページ',
+            'ページの先頭',
+            'ページトップへ戻る'
+        ]
+        
+        for phrase in unwanted_phrases:
+            text = text.replace(phrase, '')
+        
         # 改行・スペースの正規化
         text = re.sub(r'\n\s*\n', '\n\n', text)  # 連続空行を2行まで
         text = re.sub(r'[ \t]+', ' ', text)  # 連続スペースを1つに
         text = re.sub(r'[\u3000]+', ' ', text)  # 全角スペースを半角に
+        
+        # 空の行を除去
+        lines = [line.strip() for line in text.split('\n') if line.strip()]
+        text = '\n'.join(lines)
         
         return text.strip()
     
