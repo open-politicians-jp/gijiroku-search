@@ -17,7 +17,7 @@ export default function SearchForm({ onSearch, onSearchTypeChange, loading = fal
   const [committee, setCommittee] = useState('');
   const [dateFrom, setDateFrom] = useState('');
   const [dateTo, setDateTo] = useState('');
-  const [searchType, setSearchType] = useState<'speeches' | 'committee_news' | 'bills' | 'questions'>('speeches');
+  const [searchType, setSearchType] = useState<'speeches' | 'committee_news' | 'bills' | 'questions' | 'manifestos'>('speeches');
   const [showAdvanced, setShowAdvanced] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -26,7 +26,7 @@ export default function SearchForm({ onSearch, onSearchTypeChange, loading = fal
     const params: SearchParams = {
       q: query.trim() || undefined,
       speaker: searchType === 'speeches' ? speaker.trim() || undefined : undefined,
-      party: searchType === 'speeches' ? party.trim() || undefined : undefined,
+      party: (searchType === 'speeches' || searchType === 'manifestos') ? party.trim() || undefined : undefined,
       committee: committee.trim() || undefined,
       date_from: dateFrom || undefined,
       date_to: dateTo || undefined,
@@ -38,7 +38,7 @@ export default function SearchForm({ onSearch, onSearchTypeChange, loading = fal
     onSearch(params);
   };
 
-  const handleSearchTypeChange = (newSearchType: 'speeches' | 'committee_news' | 'bills' | 'questions') => {
+  const handleSearchTypeChange = (newSearchType: 'speeches' | 'committee_news' | 'bills' | 'questions' | 'manifestos') => {
     setSearchType(newSearchType);
     onSearchTypeChange?.();
   };
@@ -64,7 +64,7 @@ export default function SearchForm({ onSearch, onSearchTypeChange, loading = fal
               name="searchType"
               value="speeches"
               checked={searchType === 'speeches'}
-              onChange={(e) => handleSearchTypeChange(e.target.value as 'speeches' | 'committee_news' | 'bills' | 'questions')}
+              onChange={(e) => handleSearchTypeChange(e.target.value as 'speeches' | 'committee_news' | 'bills' | 'questions' | 'manifestos')}
               className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2"
             />
             <span className="text-sm font-medium text-gray-700">議事録</span>
@@ -75,7 +75,7 @@ export default function SearchForm({ onSearch, onSearchTypeChange, loading = fal
               name="searchType"
               value="committee_news"
               checked={searchType === 'committee_news'}
-              onChange={(e) => handleSearchTypeChange(e.target.value as 'speeches' | 'committee_news' | 'bills' | 'questions')}
+              onChange={(e) => handleSearchTypeChange(e.target.value as 'speeches' | 'committee_news' | 'bills' | 'questions' | 'manifestos')}
               className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2"
             />
             <span className="text-sm font-medium text-gray-700">委員会活動</span>
@@ -86,7 +86,7 @@ export default function SearchForm({ onSearch, onSearchTypeChange, loading = fal
               name="searchType"
               value="bills"
               checked={searchType === 'bills'}
-              onChange={(e) => handleSearchTypeChange(e.target.value as 'speeches' | 'committee_news' | 'bills' | 'questions')}
+              onChange={(e) => handleSearchTypeChange(e.target.value as 'speeches' | 'committee_news' | 'bills' | 'questions' | 'manifestos')}
               className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2"
             />
             <span className="text-sm font-medium text-gray-700">提出法案</span>
@@ -97,10 +97,21 @@ export default function SearchForm({ onSearch, onSearchTypeChange, loading = fal
               name="searchType"
               value="questions"
               checked={searchType === 'questions'}
-              onChange={(e) => handleSearchTypeChange(e.target.value as 'speeches' | 'committee_news' | 'bills' | 'questions')}
+              onChange={(e) => handleSearchTypeChange(e.target.value as 'speeches' | 'committee_news' | 'bills' | 'questions' | 'manifestos')}
               className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2"
             />
             <span className="text-sm font-medium text-gray-700">質問主意書</span>
+          </label>
+          <label className="flex items-center gap-2 cursor-pointer">
+            <input
+              type="radio"
+              name="searchType"
+              value="manifestos"
+              checked={searchType === 'manifestos'}
+              onChange={(e) => handleSearchTypeChange(e.target.value as 'speeches' | 'committee_news' | 'bills' | 'questions' | 'manifestos')}
+              className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 focus:ring-2"
+            />
+            <span className="text-sm font-medium text-gray-700">マニフェスト</span>
           </label>
         </div>
 
@@ -117,7 +128,8 @@ export default function SearchForm({ onSearch, onSearchTypeChange, loading = fal
               searchType === 'speeches' ? "議事録を検索（例：デジタル改革、社会保障制度、環境政策）" :
               searchType === 'committee_news' ? "委員会ニュースを検索（例：法案審議、委員会開催）" :
               searchType === 'bills' ? "提出法案を検索（例：デジタル庁設置法、環境基本法改正案）" :
-              "質問主意書を検索（例：年金制度、外交政策、エネルギー問題）"
+              searchType === 'questions' ? "質問主意書を検索（例：年金制度、外交政策、エネルギー問題）" :
+              "マニフェストを検索（例：経済政策、社会保障、外交・安保）"
             }
             className="search-input pl-10"
           />

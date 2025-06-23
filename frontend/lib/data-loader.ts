@@ -3,7 +3,7 @@
  * GitHub Pages用の静的データ読み込み機能
  */
 
-import { Speech, SearchResult, Stats, CommitteeNews, Bill, Question } from '@/types';
+import { Speech, SearchResult, Stats, CommitteeNews, Bill, Question, Manifesto } from '@/types';
 
 export interface SearchParams {
   q?: string;
@@ -14,7 +14,7 @@ export interface SearchParams {
   date_to?: string;
   limit?: number;
   offset?: number;
-  search_type?: 'speeches' | 'committee_news' | 'bills' | 'questions';
+  search_type?: 'speeches' | 'committee_news' | 'bills' | 'questions' | 'manifestos';
 }
 
 class StaticDataLoader {
@@ -22,6 +22,7 @@ class StaticDataLoader {
   private committeeNewsCache: CommitteeNews[] = [];
   private billsCache: Bill[] = [];
   private questionsCache: Question[] = [];
+  private manifestosCache: Manifesto[] = [];
   private statsCache: Stats | null = null;
   
   private lastCacheTime: number = 0;
@@ -401,6 +402,39 @@ class StaticDataLoader {
   }
 
   /**
+   * マニフェスト読み込み
+   */
+  async loadManifestos(): Promise<Manifesto[]> {
+    if (this.manifestosCache.length > 0 && this.isCacheValid()) {
+      return this.manifestosCache;
+    }
+
+    try {
+      const response = await fetch(this.getDataPath('/data/manifestos/manifestos_latest.json'));
+      if (!response.ok) {
+        throw new Error('マニフェストデータの読み込みに失敗しました');
+      }
+
+      const data = await response.json();
+      this.manifestosCache = data.data || [];
+      this.updateCacheTime();
+      
+      return this.manifestosCache;
+    } catch (error) {
+      console.error('マニフェスト読み込みエラー:', error);
+      return [];
+    }
+  }
+
+  /**
+   * マニフェスト検索
+   */
+  async searchManifestos(params: SearchParams) {
+    const manifestos = await this.loadManifestos();
+    return this.performManifestosSearch(manifestos, params);
+  }
+
+  /**
    * 統合検索
    */
   async search(params: SearchParams): Promise<SearchResult | any> {
@@ -411,6 +445,8 @@ class StaticDataLoader {
         return this.searchBills(params);
       case 'questions':
         return this.searchQuestions(params);
+      case 'manifestos':
+        return this.searchManifestos(params);
       default:
         return this.searchSpeeches(params);
     }
@@ -683,6 +719,76 @@ class StaticDataLoader {
 
     return {
       questions: processedQuestions,
+      total,
+      limit,
+      offset,
+      has_more: offset + limit < total
+    };
+  }
+
+  private performManifestosSearch(manifestos: Manifesto[], params: SearchParams) {
+    let filteredManifestos = [...manifestos];
+
+    // テキスト検索
+    if (params.q) {
+      const query = params.q.toLowerCase();
+      filteredManifestos = filteredManifestos.filter(manifesto =>
+        manifesto.title.toLowerCase().includes(query) ||
+        manifesto.content.toLowerCase().includes(query) ||
+        manifesto.party.toLowerCase().includes(query) ||
+        (manifesto.category && manifesto.category.toLowerCase().includes(query))
+      );
+    }
+
+    // 政党検索
+    if (params.party) {
+      const party = params.party.toLowerCase();
+      filteredManifestos = filteredManifestos.filter(manifesto =>
+        manifesto.party.toLowerCase().includes(party) ||
+        (manifesto.party_aliases && manifesto.party_aliases.some(alias => 
+          alias.toLowerCase().includes(party)
+        ))
+      );
+    }
+
+    // カテゴリ検索（委員会パラメータを流用）
+    if (params.committee) {
+      const category = params.committee.toLowerCase();
+      filteredManifestos = filteredManifestos.filter(manifesto =>
+        manifesto.category && manifesto.category.toLowerCase().includes(category)
+      );
+    }
+
+    // 年検索（日付範囲を年として使用）
+    if (params.date_from) {
+      const yearFrom = parseInt(params.date_from);
+      if (!isNaN(yearFrom)) {
+        filteredManifestos = filteredManifestos.filter(manifesto =>
+          manifesto.year >= yearFrom
+        );
+      }
+    }
+
+    if (params.date_to) {
+      const yearTo = parseInt(params.date_to);
+      if (!isNaN(yearTo)) {
+        filteredManifestos = filteredManifestos.filter(manifesto =>
+          manifesto.year <= yearTo
+        );
+      }
+    }
+
+    // 収集日時順でソート（新しい順）
+    filteredManifestos.sort((a, b) => b.collected_at.localeCompare(a.collected_at));
+
+    const total = filteredManifestos.length;
+    const limit = params.limit || 20;
+    const offset = params.offset || 0;
+
+    const paginatedManifestos = filteredManifestos.slice(offset, offset + limit);
+
+    return {
+      manifestos: paginatedManifestos,
       total,
       limit,
       offset,
