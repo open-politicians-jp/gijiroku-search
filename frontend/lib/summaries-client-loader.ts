@@ -62,13 +62,32 @@ export class SummariesClientLoader {
   }
 
   /**
-   * 利用可能な要約ファイル一覧を取得（静的リスト）
-   * 2024年の過去データと2025年の最新データを含む
+   * 利用可能な要約ファイル一覧を取得
+   * インデックスファイルから効率的に取得、フォールバックで静的リスト
    */
-  private static getSummaryFileNames(): string[] {
-    // 静的エクスポート環境では、既知のファイル名をハードコード
+  private static async getSummaryFileNames(): Promise<string[]> {
+    try {
+      const basePath = this.getBasePath();
+      
+      // まず、サマリーインデックスファイルを試す
+      const indexResponse = await fetch(`${basePath}/data/summaries/summaries_index.json`);
+      if (indexResponse.ok) {
+        const indexData = await indexResponse.json();
+        if (indexData.files && Array.isArray(indexData.files)) {
+          // 日付順でソート（新しい順）
+          return indexData.files.sort((a: string, b: string) => {
+            const dateA = a.match(/summary_(\d{8})/)?.[1] || '';
+            const dateB = b.match(/summary_(\d{8})/)?.[1] || '';
+            return dateB.localeCompare(dateA);
+          });
+        }
+      }
+    } catch (error) {
+      // インデックスファイル読み込み失敗時はフォールバック
+    }
+    
+    // フォールバック: 既知の存在ファイルを返す
     return [
-      // 2025年最新データ
       'summary_20250603_衆議_議院運営委員会.json',
       'summary_20250530_衆議_議院運営委員会.json',
       'summary_20250530_参議_議院運営委員会.json',
@@ -77,8 +96,6 @@ export class SummariesClientLoader {
       'summary_20250523_衆議_予算委員会.json',
       'summary_20250523_参議_議院運営委員会.json',
       'summary_20250522_衆議_議院運営委員会.json',
-      
-      // 2024年過去データ（手動収集済み）
       'summary_20241009_衆議_本会議.json',
       'summary_20241009_衆議_議院運営委員会.json',
       'summary_20241009_参議_本会議.json'
@@ -98,7 +115,7 @@ export class SummariesClientLoader {
         return cached.data;
       }
       
-      const fileNames = this.getSummaryFileNames();
+      const fileNames = await this.getSummaryFileNames();
 
       // 並列処理で高速化
       const summaryPromises = fileNames.map(fileName => this.loadSummaryFile(fileName));

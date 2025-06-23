@@ -381,6 +381,9 @@ class MeetingSummaryGenerator:
         
         # 統計表示
         self.display_summary_stats(summaries)
+        
+        # インデックスファイル更新
+        self.update_summaries_index()
     
     def display_summary_stats(self, summaries: List[Dict[str, Any]]):
         """要約統計を表示"""
@@ -408,6 +411,39 @@ class MeetingSummaryGenerator:
         
         logger.info(f"\n平均発言者数: {avg_speakers:.1f}名/会議")
         logger.info(f"使用モデル: {self.model_name}")
+    
+    def update_summaries_index(self):
+        """要約ファイルのインデックスを更新"""
+        try:
+            # summariesディレクトリ内のJSONファイルを取得
+            summary_files = []
+            if self.summaries_dir.exists():
+                for file_path in self.summaries_dir.glob("summary_*.json"):
+                    summary_files.append(file_path.name)
+            
+            # 日付順でソート（新しい順）
+            summary_files.sort(key=lambda x: x, reverse=True)
+            
+            # インデックスデータ作成
+            index_data = {
+                "metadata": {
+                    "generated_at": datetime.now().isoformat(),
+                    "total_files": len(summary_files),
+                    "description": "Summary files index for dynamic loading"
+                },
+                "files": summary_files
+            }
+            
+            # インデックスファイル保存
+            index_path = self.summaries_dir / "summaries_index.json"
+            with open(index_path, 'w', encoding='utf-8') as f:
+                json.dump(index_data, f, ensure_ascii=False, indent=2)
+            
+            logger.info(f"📁 要約インデックス更新完了: {len(summary_files)}ファイル")
+            logger.info(f"  - インデックスファイル: {index_path}")
+            
+        except Exception as e:
+            logger.error(f"インデックス更新エラー: {e}")
 
 def main():
     """メイン実行関数"""
