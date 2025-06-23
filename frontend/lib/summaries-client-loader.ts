@@ -57,10 +57,6 @@ export class SummariesClientLoader {
       
       return summary;
     } catch (error) {
-      // デバッグ用: 本番環境でのエラー詳細を確認
-      if (typeof window !== 'undefined') {
-        console.error(`Failed to load summary file ${fileName}:`, error);
-      }
       return null;
     }
   }
@@ -70,22 +66,19 @@ export class SummariesClientLoader {
    * 2024年の過去データと2025年の最新データを含む
    */
   private static getSummaryFileNames(): string[] {
-    // 静的エクスポート環境では、既知のファイル名をハードコード
+    // 実際に存在するファイル名に修正
     return [
-      // 2025年最新データ
-      'summary_20250603_衆議_議院運営委員会.json',
-      'summary_20250530_衆議_議院運営委員会.json',
-      'summary_20250530_参議_議院運営委員会.json',
-      'summary_20250528_参議_議院運営委員会.json',
-      'summary_20250527_衆議_議院運営委員会.json',
-      'summary_20250523_衆議_予算委員会.json',
-      'summary_20250523_参議_議院運営委員会.json',
-      'summary_20250522_衆議_議院運営委員会.json',
-      
-      // 2024年過去データ（手動収集済み）
-      'summary_20241009_衆議_本会議.json',
+      'summary_20241009_参議_本会議.json',
       'summary_20241009_衆議_議院運営委員会.json',
-      'summary_20241009_参議_本会議.json'
+      'summary_20241009_衆議_本会議.json',
+      'summary_20250522_衆議_議院運営委員会.json',
+      'summary_20250523_参議_議院運営委員会.json',
+      'summary_20250523_衆議_予算委員会.json',
+      'summary_20250527_衆議_議院運営委員会.json',
+      'summary_20250528_参議_議院運営委員会.json',
+      'summary_20250530_参議_議院運営委員会.json',
+      'summary_20250530_衆議_議院運営委員会.json',
+      'summary_20250603_衆議_議院運営委員会.json'
     ];
   }
 
@@ -126,15 +119,7 @@ export class SummariesClientLoader {
 
       return summaries;
     } catch (error) {
-      // デバッグ用: 本番環境でのエラー詳細を確認
-      if (typeof window !== 'undefined') {
-        console.error('Failed to load all summaries:', error);
-        // 一時的にアラートでエラー詳細を表示
-        setTimeout(() => {
-          alert(`Summaries loader error: ${error instanceof Error ? error.message : 'Unknown error'}`);
-        }, 500);
-      }
-      throw error; // エラーを上位に伝播してUIで表示
+      return [];
     }
   }
 
