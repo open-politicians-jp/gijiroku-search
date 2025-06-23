@@ -142,6 +142,32 @@ export class APIClient {
       throw new Error(`質問主意書検索に失敗しました: ${error instanceof Error ? error.message : '不明なエラー'}`);
     }
   }
+
+  async searchManifestos(params: SearchParams) {
+    try {
+      if (this.useStaticLoader) {
+        return await dataLoader.searchManifestos(params);
+      }
+
+      const response = await fetch('/api/manifestos', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(params),
+      });
+
+      if (!response.ok) {
+        const error = await response.json();
+        throw new Error(error.error || `HTTP ${response.status}`);
+      }
+
+      return await response.json();
+    } catch (error) {
+      console.error('Manifestos search error:', error);
+      throw new Error(`マニフェスト検索に失敗しました: ${error instanceof Error ? error.message : '不明なエラー'}`);
+    }
+  }
 }
 
 export const apiClient = new APIClient();

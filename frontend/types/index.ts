@@ -20,7 +20,7 @@ export interface SearchParams {
   date_to?: string;
   limit?: number;
   offset?: number;
-  search_type?: 'speeches' | 'committee_news' | 'bills' | 'questions';
+  search_type?: 'speeches' | 'committee_news' | 'bills' | 'questions' | 'manifestos';
 }
 
 export interface SearchResult {
@@ -194,6 +194,25 @@ export interface SummarySearchParams {
 
 export interface SummariesResult {
   summaries: MeetingSummary[];
+  total: number;
+  limit: number;
+  offset: number;
+  has_more: boolean;
+}
+
+export interface Manifesto {
+  party: string;
+  title: string;
+  year: number;
+  category: string;
+  content: string;
+  url: string;
+  collected_at: string;
+  party_aliases: string[];
+}
+
+export interface ManifestosResult {
+  manifestos: Manifesto[];
   total: number;
   limit: number;
   offset: number;
