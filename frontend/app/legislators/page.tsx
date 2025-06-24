@@ -30,10 +30,25 @@ export default function LegislatorsPage() {
           legislatorsLoader.getHouseCounts()
         ]);
         
-        setLegislatorsData(data);
-        setHouseCounts(counts);
+        if (data) {
+          setLegislatorsData(data);
+        }
+        if (counts) {
+          setHouseCounts(counts);
+        }
       } catch (error) {
-        console.error('Error loading legislators data:', error);
+        console.warn('Error loading legislators data:', error);
+        // Fallback: Set empty data to prevent crashes
+        setLegislatorsData({
+          metadata: {
+            total_count: 0,
+            last_updated: new Date().toISOString(),
+            data_source: 'fallback',
+            sangiin_count: 0,
+            shugiin_count: 0
+          },
+          data: []
+        });
       } finally {
         setIsLoading(false);
       }
@@ -70,7 +85,7 @@ export default function LegislatorsPage() {
           </p>
           
           {/* データ情報 */}
-          {legislatorsData && (
+          {legislatorsData && legislatorsData.metadata && (
             <div className="mt-4 p-4 bg-blue-50 rounded-lg">
               <div className="text-sm text-blue-800">
                 <p>
@@ -92,7 +107,7 @@ export default function LegislatorsPage() {
                     rel="noopener noreferrer"
                     className="text-blue-600 hover:text-blue-800 underline"
                   >
-                    SmartNews Media Research Institute (SMRI)
+                    SmartNews Media Research Institute
                   </a>
                 </p>
               </div>
