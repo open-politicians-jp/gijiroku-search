@@ -6,9 +6,6 @@
 1. 各委員会の個別ニュースページ (例: naikaku217.htm) を探す
 2. 個別ページから具体的なニュース項目 (naikaku21720250606026_m.htm) にアクセス
 3. 詳細情報を抽出してJSON化
-
-従来の方法（一覧ページからの文字列抽出）ではなく、
-個別ニュースページから法案情報、PDF情報等を適切に収集する
 """
 
 import json
@@ -30,7 +27,7 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-class CommitteeNewsCollectorFixed:
+class CommitteeNewsCollectorCorrect:
     """委員会ニュース収集クラス（修正版）"""
     
     def __init__(self):
@@ -51,10 +48,11 @@ class CommitteeNewsCollectorFixed:
         self.base_url = "https://www.shugiin.go.jp"
         self.news_base_url = "https://www.shugiin.go.jp/internet/itdb_rchome.nsf/html/rchome/News/"
         
-        # 第217回国会用の委員会一覧（存在確認済み）
+        # 第217回国会用の委員会一覧
         self.committees = {
             'naikaku': '内閣委員会',
-            'houmu': '法務委員会', 
+            'somu': '総務委員会',
+            'houmu': '法務委員会',
             'gaimu': '外務委員会',
             'zaimu': '財務金融委員会',
             'bunka': '文部科学委員会',
@@ -64,7 +62,10 @@ class CommitteeNewsCollectorFixed:
             'kokudo': '国土交通委員会',
             'kankyo': '環境委員会',
             'anzen': '安全保障委員会',
-            'yosan': '予算委員会'
+            'yosan': '予算委員会',
+            'ketsusan': '決算行政監視委員会',
+            'sensyo': '議院運営委員会',
+            'kouki': '懲罰委員会'
         }
         
         # 現在日時
@@ -162,6 +163,8 @@ class CommitteeNewsCollectorFixed:
         links = []
         
         try:
+            # 実際の委員会ニュースページのリンクパターンを探す
+            # 例: naikaku21720250530025_m.htm のようなパターン
             link_elements = soup.find_all('a', href=True)
             
             for link in link_elements:
@@ -239,12 +242,12 @@ class CommitteeNewsCollectorFixed:
             pdf_info = self.extract_pdf_info(soup)
             
             news_detail = {
-                'title': self.generate_news_title(link_info, content_info, bill_info),
+                'title': self.generate_news_title(link_info, content_info),
                 'url': link_info['url'],
                 'committee': link_info['committee'],
                 'date': link_info['date'],
-                'news_type': self.classify_news_type_from_content(content_info, bill_info, pdf_info),
-                'content': self.format_content(link_info, content_info, bill_info, pdf_info),
+                'news_type': self.classify_news_type_from_content(content_info),
+                'content': self.format_content(content_info, bill_info, pdf_info),
                 'content_length': len(content_info.get('raw_text', '')),
                 'collected_at': datetime.now().isoformat(),
                 'year': self.year,
@@ -319,14 +322,14 @@ class CommitteeNewsCollectorFixed:
             for pattern in bill_patterns:
                 matches = re.findall(pattern, page_text)
                 if matches:
-                    if isinstance(matches[0], tuple) and len(matches[0]) > 1:
+                    if isinstance(matches[0], tuple):
                         bill_info['bill_title'] = matches[0][0]
-                        bill_info['bill_number'] = matches[0][1]
+                        if len(matches[0]) > 1:
+                            bill_info['bill_number'] = matches[0][1]
                     else:
-                        title = matches[0] if isinstance(matches[0], str) else matches[0][0]
-                        bill_info['bill_title'] = title
+                        bill_info['bill_title'] = matches[0]
                     bill_info['bill_keyword'] = '法律案'
-                    bill_info['bill_source'] = 'list_item'
+                    bill_info['bill_source'] = 'page_content'
                     break
             
             return bill_info if bill_info else None
@@ -367,45 +370,46 @@ class CommitteeNewsCollectorFixed:
             logger.error(f"PDF情報抽出エラー: {str(e)}")
             return None
     
-    def generate_news_title(self, link_info: Dict[str, str], content_info: Dict[str, Any], bill_info: Optional[Dict]) -> str:
+    def generate_news_title(self, link_info: Dict[str, str], content_info: Dict[str, Any]) -> str:
         """ニュースタイトルを生成"""
-        # 法案がある場合
-        if bill_info and bill_info.get('bill_title'):
-            return f"【{link_info['committee']}】{bill_info['bill_title']}"
-        
         # 既存のタイトルがある場合
         if link_info.get('title') and link_info['title'] != f"【{link_info['committee']}】ニュース":
             return link_info['title']
         
+        # 内容から法案名を抽出してタイトル作成
+        raw_text = content_info.get('raw_text', '')
+        
+        # 法案タイトル抽出
+        bill_match = re.search(r'(.+?法律?案)（', raw_text)
+        if bill_match:
+            bill_title = bill_match.group(1)
+            return f"【{link_info['committee']}】{bill_title}"
+        
         # 日付ベースのタイトル
-        date_parts = link_info['date'].split('-')
-        if len(date_parts) == 3:
-            year, month, day = date_parts
-            # 令和年号変換 (2019年が令和元年)
-            reiwa_year = int(year) - 2018
-            date_str = f"令和{reiwa_year}年{int(month)}月{int(day)}日"
+        date_str = link_info['date'].replace('-', '')
+        if '202505' in date_str:
+            date_display = link_info['date'].replace('-', '年').replace('年0', '年') + '日'
         else:
-            date_str = link_info['date']
+            date_display = link_info['date']
         
-        return f"【{link_info['committee']}】第217回国会{date_str}{link_info['committee']}ニュース"
+        return f"【{link_info['committee']}】第217回国会{date_display}{link_info['committee']}ニュース"
     
-    def classify_news_type_from_content(self, content_info: Dict[str, Any], bill_info: Optional[Dict], pdf_info: Optional[Dict]) -> str:
+    def classify_news_type_from_content(self, content_info: Dict[str, Any]) -> str:
         """内容からニュースタイプを分類"""
-        if bill_info:
-            return '法案審議'
-        elif pdf_info:
-            return '委員会資料'
-        
         raw_text = content_info.get('raw_text', '').lower()
         
-        if any(keyword in raw_text for keyword in ['質疑', '質問', '答弁']):
+        if any(keyword in raw_text for keyword in ['法案', '議案', '法律案']):
+            return '法案審議'
+        elif any(keyword in raw_text for keyword in ['pdf', '資料', 'ニュース']):
+            return '委員会資料'
+        elif any(keyword in raw_text for keyword in ['質疑', '質問', '答弁']):
             return '質疑応答'
         elif any(keyword in raw_text for keyword in ['開催', '予定']):
             return '委員会開催'
         else:
             return '一般ニュース'
     
-    def format_content(self, link_info: Dict[str, str], content_info: Dict[str, Any], bill_info: Optional[Dict], pdf_info: Optional[Dict]) -> str:
+    def format_content(self, content_info: Dict[str, Any], bill_info: Optional[Dict], pdf_info: Optional[Dict]) -> str:
         """内容をフォーマット"""
         formatted_parts = []
         
@@ -416,25 +420,14 @@ class CommitteeNewsCollectorFixed:
                 formatted_parts.append(f"議案番号: {bill_info['bill_number']}")
         
         # 基本情報
-        formatted_parts.append(f"委員会: {link_info['committee']}")
-        
-        # 日付変換
-        date_parts = link_info['date'].split('-')
-        if len(date_parts) == 3:
-            year, month, day = date_parts
-            reiwa_year = int(year) - 2018
-            date_display = f"令和{reiwa_year}年{int(month)}月{int(day)}日"
-        else:
-            date_display = link_info['date']
-        formatted_parts.append(f"開催日: {date_display}")
-        
-        if bill_info:
-            formatted_parts.append(f"議案キーワード: {bill_info.get('bill_keyword', '')}")
-            formatted_parts.append(f"データソース: {bill_info.get('bill_source', '')}")
+        if content_info.get('raw_text'):
+            # 簡潔な内容説明
+            clean_text = content_info['raw_text'][:200] + '...' if len(content_info['raw_text']) > 200 else content_info['raw_text']
+            formatted_parts.append(f"内容: {clean_text}")
         
         # PDF情報
         if pdf_info:
-            formatted_parts.append("関連資料:")
+            formatted_parts.append(f"関連資料:")
             formatted_parts.append(f"- {pdf_info['pdf_title']} ({pdf_info['pdf_url']})")
         
         return '\n'.join(formatted_parts)
@@ -502,7 +495,7 @@ class CommitteeNewsCollectorFixed:
 
 def main():
     """メイン実行関数"""
-    collector = CommitteeNewsCollectorFixed()
+    collector = CommitteeNewsCollectorCorrect()
     
     try:
         # 全委員会ニュース収集
