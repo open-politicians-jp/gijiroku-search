@@ -33,7 +33,7 @@ export default function Home() {
         const stats = await apiClient.getStats();
         setFooterStats(stats);
       } catch (err) {
-        console.error('Failed to fetch footer stats:', err);
+        console.warn('Failed to fetch footer stats:', err);
       }
     };
     fetchFooterStats();
