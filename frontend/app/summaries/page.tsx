@@ -98,7 +98,7 @@ export default function SummariesPageWrapper() {
   return (
     <div className="min-h-screen bg-gray-50">
       <Header currentPage="summaries" />
-      <main>
+      <main className="pt-16">
         <SummariesPage
           initialSummaries={initialSummaries}
           houses={houses}

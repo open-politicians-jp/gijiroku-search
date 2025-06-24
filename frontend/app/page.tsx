@@ -7,21 +7,18 @@ import SearchResults from '@/components/SearchResults';
 import CommitteeNewsResults from '@/components/CommitteeNewsResults';
 import BillsResults from '@/components/BillsResults';
 import QuestionResults from '@/components/QuestionResults';
-import ManifestosResults from '@/components/ManifestosResults';
 import StatsPage from '@/components/StatsPage';
 import AboutPage from '@/components/AboutPage';
-import ManifestosPage from '@/components/ManifestosPage';
 import LegislatorsPage from './legislators/page';
-import { SearchParams, SearchResult, Stats, CommitteeNewsResult, BillsResult, QuestionsResult, ManifestosResult } from '@/types';
+import { SearchParams, SearchResult, Stats, CommitteeNewsResult, BillsResult, QuestionsResult } from '@/types';
 import { apiClient } from '@/lib/api';
 
 export default function Home() {
-  const [currentPage, setCurrentPage] = useState<'search' | 'stats' | 'about' | 'manifestos' | 'legislators'>('search');
+  const [currentPage, setCurrentPage] = useState<'search' | 'stats' | 'about' | 'legislators'>('search');
   const [searchResult, setSearchResult] = useState<SearchResult | null>(null);
   const [committeeNewsResult, setCommitteeNewsResult] = useState<CommitteeNewsResult | null>(null);
   const [billsResult, setBillsResult] = useState<BillsResult | null>(null);
   const [questionsResult, setQuestionsResult] = useState<QuestionsResult | null>(null);
-  const [manifestosResult, setManifestosResult] = useState<ManifestosResult | null>(null);
   const [allSpeeches, setAllSpeeches] = useState<any[]>([]);
   const [currentSearchParams, setCurrentSearchParams] = useState<SearchParams | null>(null);
   const [loading, setLoading] = useState(false);
@@ -55,28 +52,18 @@ export default function Home() {
         setSearchResult(null);
         setBillsResult(null);
         setQuestionsResult(null);
-        setManifestosResult(null);
         setAllSpeeches([]);
       } else if (params.search_type === 'bills') {
         setBillsResult(result);
         setSearchResult(null);
         setCommitteeNewsResult(null);
         setQuestionsResult(null);
-        setManifestosResult(null);
         setAllSpeeches([]);
       } else if (params.search_type === 'questions') {
         setQuestionsResult(result);
         setSearchResult(null);
         setCommitteeNewsResult(null);
         setBillsResult(null);
-        setManifestosResult(null);
-        setAllSpeeches([]);
-      } else if (params.search_type === 'manifestos') {
-        setManifestosResult(result);
-        setSearchResult(null);
-        setCommitteeNewsResult(null);
-        setBillsResult(null);
-        setQuestionsResult(null);
         setAllSpeeches([]);
       } else {
         // 議事録検索
@@ -84,7 +71,6 @@ export default function Home() {
         setCommitteeNewsResult(null);
         setBillsResult(null);
         setQuestionsResult(null);
-        setManifestosResult(null);
         setAllSpeeches(result.speeches);
       }
       
@@ -95,7 +81,6 @@ export default function Home() {
       setCommitteeNewsResult(null);
       setBillsResult(null);
       setQuestionsResult(null);
-      setManifestosResult(null);
       setAllSpeeches([]);
       setCurrentSearchParams(null);
     } finally {
@@ -139,13 +124,12 @@ export default function Home() {
     setCommitteeNewsResult(null);
     setBillsResult(null);
     setQuestionsResult(null);
-    setManifestosResult(null);
     setAllSpeeches([]);
     setCurrentSearchParams(null);
     setError(null);
   };
 
-  const handlePageChange = (page: 'search' | 'stats' | 'about' | 'manifestos' | 'legislators') => {
+  const handlePageChange = (page: 'search' | 'stats' | 'about' | 'legislators') => {
     setCurrentPage(page);
     setError(null);
   };
@@ -154,7 +138,7 @@ export default function Home() {
     <div className="min-h-screen bg-gray-50">
       <Header currentPage={currentPage} onPageChange={handlePageChange} />
       
-      <main>
+      <main className="pt-16">
         {currentPage === 'search' && (
           <div className="py-8">
             <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -210,17 +194,9 @@ export default function Home() {
                 />
               )}
               
-              {/* マニフェスト検索結果 */}
-              {manifestosResult && (
-                <ManifestosResults
-                  manifestos={manifestosResult.manifestos}
-                  total={manifestosResult.total}
-                  loading={loading}
-                />
-              )}
               
               {/* 初期状態メッセージ */}
-              {!searchResult && !committeeNewsResult && !billsResult && !questionsResult && !manifestosResult && !loading && !error && (
+              {!searchResult && !committeeNewsResult && !billsResult && !questionsResult && !loading && !error && (
                 <div className="max-w-4xl mx-auto mt-12 text-center">
                   <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-12">
                     <h2 className="text-2xl font-bold text-gray-900 mb-4">
@@ -230,8 +206,7 @@ export default function Home() {
                       議事録検索：政策名、議員名、政党名、委員会名などで検索<br/>
                       委員会活動：最新の委員会開催情報、法案審議状況を検索<br/>
                       提出法案：法案タイトル、ステータス、提出者、審議状況を検索<br/>
-                      質問主意書：国会議員の政府への質問と答弁を検索<br/>
-                      マニフェスト：各政党の政策公約、政策方針を検索
+                      質問主意書：国会議員の政府への質問と答弁を検索
                     </p>
                     <div className="text-sm text-gray-500 space-y-2">
                       <p>検索例：</p>
@@ -249,7 +224,6 @@ export default function Home() {
           </div>
         )}
         
-        {currentPage === 'manifestos' && <ManifestosPage />}
         {currentPage === 'legislators' && <LegislatorsPage />}
         {currentPage === 'stats' && <StatsPage />}
         {currentPage === 'about' && <AboutPage />}
