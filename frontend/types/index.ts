@@ -20,7 +20,7 @@ export interface SearchParams {
   date_to?: string;
   limit?: number;
   offset?: number;
-  search_type?: 'speeches' | 'committee_news' | 'bills' | 'questions' | 'manifestos';
+  search_type?: 'speeches' | 'committee_news' | 'bills' | 'questions';
 }
 
 export interface SearchResult {
