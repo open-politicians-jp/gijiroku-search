@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { Manifesto } from '@/types';
 import { dataLoader } from '@/lib/data-loader';
 import { Search, FileText, Users, Calendar, ExternalLink } from 'lucide-react';
+import Header from '@/components/Header';
 
 export default function ManifestosPage() {
   const [manifestos, setManifestos] = useState<Manifesto[]>([]);
@@ -88,7 +89,8 @@ export default function ManifestosPage() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <div className="container mx-auto px-4 py-8">
+      <Header currentPage="manifestos" />
+      <div className="container mx-auto px-4 py-8 pt-24">
         {/* ヘッダー */}
         <div className="mb-8">
           <h1 className="text-3xl font-bold text-gray-900 mb-2">政党マニフェスト</h1>
