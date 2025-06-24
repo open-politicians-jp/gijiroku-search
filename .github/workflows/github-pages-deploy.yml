@@ -52,13 +52,13 @@ jobs:
       with:
         static_site_generator: next
         
-    - name: 📊 Optimize data for GitHub Pages
+    - name: 📊 Prepare data for GitHub Pages
       working-directory: frontend
       env:
         GITHUB_PAGES: 'true'
       run: |
-        echo "Optimizing data files for GitHub Pages deployment..."
-        node scripts/optimize-production-data.js
+        echo "Preparing data files for GitHub Pages deployment..."
+        echo "Data files are ready for production build."
         
     - name: 🔧 Build with Next.js
       working-directory: frontend
@@ -71,7 +71,7 @@ jobs:
       run: |
         echo "Building for GitHub Pages..."
         echo "Version: $NEXT_PUBLIC_VERSION"
-        npm run build:production
+        npm run build
         
     - name: 📤 Upload artifact
       uses: actions/upload-pages-artifact@v3
