@@ -18,12 +18,14 @@ export default function LegislatorsPage() {
     status: 'all'
   });
   const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
   const [houseCounts, setHouseCounts] = useState<{ shugiin: number; sangiin: number; total: number }>();
 
   // データ読み込み
   useEffect(() => {
     const loadData = async () => {
       setIsLoading(true);
+      setError(null);
       try {
         const [data, counts] = await Promise.all([
           legislatorsLoader.loadLegislators(),
@@ -36,19 +38,24 @@ export default function LegislatorsPage() {
         if (counts) {
           setHouseCounts(counts);
         }
-      } catch (error) {
-        console.warn('Error loading legislators data:', error);
-        // Fallback: Set empty data to prevent crashes
+      } catch (err) {
+        const errorMessage = '議員データの読み込みに失敗しました。しばらく時間をおいて再度お試しください。';
+        console.warn('議員データの読み込みに失敗しました:', err);
+        setError(errorMessage);
+        
+        // Fallback: Set empty data to prevent crashes with proper error state
         setLegislatorsData({
           metadata: {
             total_count: 0,
             last_updated: new Date().toISOString(),
-            data_source: 'fallback',
+            data_source: 'エラー時フォールバック',
             sangiin_count: 0,
             shugiin_count: 0
           },
           data: []
         });
+        // Set empty house counts as fallback
+        setHouseCounts({ shugiin: 0, sangiin: 0, total: 0 });
       } finally {
         setIsLoading(false);
       }
@@ -67,6 +74,34 @@ export default function LegislatorsPage() {
 
   const handleFilterChange = (newFilter: LegislatorFilter) => {
     setFilter(newFilter);
+  };
+
+  const handleRetry = () => {
+    const loadData = async () => {
+      setIsLoading(true);
+      setError(null);
+      try {
+        const [data, counts] = await Promise.all([
+          legislatorsLoader.loadLegislators(),
+          legislatorsLoader.getHouseCounts()
+        ]);
+        
+        if (data) {
+          setLegislatorsData(data);
+        }
+        if (counts) {
+          setHouseCounts(counts);
+        }
+      } catch (err) {
+        const errorMessage = '議員データの読み込みに失敗しました。しばらく時間をおいて再度お試しください。';
+        console.warn('議員データの読み込みに失敗しました:', err);
+        setError(errorMessage);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    loadData();
   };
 
   return (
@@ -110,6 +145,25 @@ export default function LegislatorsPage() {
                     SmartNews Media Research Institute
                   </a>
                 </p>
+              </div>
+            </div>
+          )}
+
+          {/* エラー表示 */}
+          {error && (
+            <div className="mt-4 p-4 bg-red-50 border border-red-200 rounded-lg">
+              <div className="flex items-center justify-between">
+                <div className="flex items-center">
+                  <Users className="h-5 w-5 text-red-500 mr-2" />
+                  <p className="text-red-700 text-sm">{error}</p>
+                </div>
+                <button
+                  onClick={handleRetry}
+                  disabled={isLoading}
+                  className="px-3 py-1 bg-red-600 text-white text-sm rounded hover:bg-red-700 disabled:bg-gray-400 transition-colors"
+                >
+                  {isLoading ? '読み込み中...' : '再試行'}
+                </button>
               </div>
             </div>
           )}
