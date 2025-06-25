@@ -7,9 +7,9 @@ export default function AboutPageWrapper() {
   return (
     <div className="min-h-screen bg-gray-50">
       <Header currentPage="about" />
-      <main className="pt-16">
+      <div className="container mx-auto px-4 py-8 pt-24">
         <AboutPage />
-      </main>
+      </div>
     </div>
   );
 }
