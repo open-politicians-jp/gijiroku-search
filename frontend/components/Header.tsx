@@ -5,7 +5,7 @@ import { Search, BarChart3, Info, FileText, Users, Bot, Menu, X } from 'lucide-r
 import Link from 'next/link';
 
 interface HeaderProps {
-  currentPage?: 'search' | 'stats' | 'about' | 'legislators' | 'summaries' | 'manifestos';
+  currentPage?: 'search' | 'about' | 'legislators' | 'summaries' | 'manifestos';
   onPageChange?: (page: 'search') => void;
 }
 
@@ -17,7 +17,6 @@ export default function Header({ currentPage = 'search', onPageChange }: HeaderP
     { key: 'summaries', icon: Bot, label: '議会要約', href: '/summaries', badge: 'Beta' },
     { key: 'manifestos', icon: FileText, label: 'マニフェスト', href: '/manifestos' },
     { key: 'legislators', icon: Users, label: '議員一覧', href: '/legislators' },
-    { key: 'stats', icon: BarChart3, label: '統計', href: '/stats' },
     { key: 'about', icon: Info, label: 'About', href: '/about' }
   ];
 
