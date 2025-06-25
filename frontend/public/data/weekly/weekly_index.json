@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "generated_at": "2025-06-22T11:45:00.827723",
+    "generated_at": "2025-06-25T15:21:48.705601",
     "description": "週次データファイルのインデックス"
   },
   "weeks": {
@@ -11,7 +11,7 @@
         "speeches": {
           "json_file": "speeches_2025_w20.json",
           "csv_file": "speeches_2025_w20.csv",
-          "size_kb": 1598.3
+          "size_kb": 3196.3
         },
         "questions": {
           "json_file": "questions_2025_w25.json",
@@ -37,7 +37,7 @@
         "speeches": {
           "json_file": "speeches_2024_w52.json",
           "csv_file": "speeches_2024_w52.csv",
-          "size_kb": 3670.1
+          "size_kb": 7340.0
         }
       }
     }
