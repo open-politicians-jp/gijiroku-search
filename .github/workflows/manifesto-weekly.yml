@@ -1,13 +1,24 @@
-name: 📄 週次マニフェスト収集（アーカイブ保存）
+name: 📄 政党マニフェスト収集（手動実行）
 
 on:
-  schedule:
-    # 毎週月曜日午前5時（JST）に実行（UTC 20:00）
-    - cron: '0 20 * * 1'
   workflow_dispatch:
     inputs:
-      force_collection:
-        description: '強制収集（週次チェックをスキップ）'
+      collection_mode:
+        description: '収集モード'
+        required: false
+        default: 'standard'
+        type: choice
+        options:
+        - standard
+        - archive
+        - forced
+      target_parties:
+        description: '対象政党（all, ldp, cdp, etc.）'
+        required: false
+        default: 'all'
+        type: string
+      skip_update_check:
+        description: '更新チェックをスキップ'
         required: false
         default: false
         type: boolean
@@ -18,7 +29,7 @@ permissions:
   actions: read
 
 jobs:
-  collect-weekly-manifestos:
+  collect-manual-manifestos:
     runs-on: ubuntu-latest
     
     steps:
@@ -40,53 +51,85 @@ jobs:
       run: |
         uv sync
         
-    - name: 🔍 Check for manifesto updates (Smart Skip)
-      id: update-check
+    - name: 🔍 マニフェスト収集設定確認
+      id: collection-setup
       working-directory: scripts/uv-data-collection
       run: |
-        echo "## 🔍 週次マニフェスト更新チェック" >> $GITHUB_STEP_SUMMARY
+        echo "## 📄 マニフェスト収集設定" >> $GITHUB_STEP_SUMMARY
+        echo "- **収集モード**: ${{ github.event.inputs.collection_mode }}" >> $GITHUB_STEP_SUMMARY
+        echo "- **対象政党**: ${{ github.event.inputs.target_parties }}" >> $GITHUB_STEP_SUMMARY
+        echo "- **更新チェックスキップ**: ${{ github.event.inputs.skip_update_check }}" >> $GITHUB_STEP_SUMMARY
         
-        if [ "${{ github.event.inputs.force_collection }}" = "true" ]; then
-          echo "should_run_manifestos=true" >> $GITHUB_OUTPUT
-          echo "✅ マニフェスト: 強制収集実行" >> $GITHUB_STEP_SUMMARY
-        elif uv run python update_checker.py --data-type manifestos; then
-          echo "should_run_manifestos=true" >> $GITHUB_OUTPUT
-          echo "✅ マニフェスト: 週次収集実行（月曜日）" >> $GITHUB_STEP_SUMMARY
-        else
-          echo "should_run_manifestos=false" >> $GITHUB_OUTPUT
-          echo "⏭️ マニフェスト: スキップ（週次チェック）" >> $GITHUB_STEP_SUMMARY
+        # 実行パラメータ設定
+        COLLECTION_MODE="${{ github.event.inputs.collection_mode }}"
+        TARGET_PARTIES="${{ github.event.inputs.target_parties }}"
+        SKIP_UPDATE_CHECK="${{ github.event.inputs.skip_update_check }}"
+        
+        echo "collection_mode=${COLLECTION_MODE}" >> $GITHUB_OUTPUT
+        echo "target_parties=${TARGET_PARTIES}" >> $GITHUB_OUTPUT
+        echo "skip_update_check=${SKIP_UPDATE_CHECK}" >> $GITHUB_OUTPUT
+        
+        echo "should_run_manifestos=true" >> $GITHUB_OUTPUT
+        echo "✅ マニフェスト: 手動収集実行" >> $GITHUB_STEP_SUMMARY
+        
+    - name: 📄 マニフェスト収集（手動実行）
+      if: ${{ steps.collection-setup.outputs.should_run_manifestos == 'true' }}
+      working-directory: scripts/uv-data-collection
+      run: |
+        # 収集モードに応じた実行
+        COLLECTION_MODE="${{ steps.collection-setup.outputs.collection_mode }}"
+        TARGET_PARTIES="${{ steps.collection-setup.outputs.target_parties }}"
+        SKIP_UPDATE_CHECK="${{ steps.collection-setup.outputs.skip_update_check }}"
+        
+        # 基本コマンド構築
+        CMD="uv run python collect_real_manifestos.py"
+        
+        # モード別オプション追加
+        case "$COLLECTION_MODE" in
+          "archive")
+            CMD="$CMD --archive"
+            ;;
+          "forced")
+            CMD="$CMD --force"
+            ;;
+          "standard"|*)
+            # 標準モード（デフォルト）
+            ;;
+        esac
+        
+        # 対象政党指定
+        if [ "$TARGET_PARTIES" != "all" ]; then
+          CMD="$CMD --parties $TARGET_PARTIES"
         fi
         
-        # Show summary
-        echo "" >> $GITHUB_STEP_SUMMARY
-        uv run python update_checker.py --summary >> $GITHUB_STEP_SUMMARY
+        # 更新チェックスキップ
+        if [ "$SKIP_UPDATE_CHECK" = "true" ]; then
+          CMD="$CMD --skip-update-check"
+        fi
         
-    - name: 📄 マニフェスト収集（週次・アーカイブ保存）
-      if: ${{ steps.update-check.outputs.should_run_manifestos == 'true' }}
-      working-directory: scripts/uv-data-collection
-      run: |
-        uv run python collect_real_manifestos.py --weekly --archive
-        # Update last processed timestamp
-        uv run python -c "from update_checker import UpdateChecker; checker = UpdateChecker(); checker.update_last_processed('manifestos')"
+        echo "実行コマンド: $CMD"
+        eval $CMD
         
     - name: 💾 変更をコミット
       run: |
         git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action [Weekly Manifesto Collection]"
+        git config --local user.name "GitHub Action [Manual Manifesto Collection]"
         git add frontend/public/data/manifestos/
         if ! git diff --staged --quiet; then
-          git commit -m "📄 週次マニフェスト収集: $(date '+%Y-%m-%d %H:%M:%S JST')"
+          COLLECTION_MODE="${{ steps.collection-setup.outputs.collection_mode }}"
+          git commit -m "📄 マニフェスト収集（手動・${COLLECTION_MODE}）: $(date '+%Y-%m-%d %H:%M:%S JST')"
           git push
-          echo "✅ 週次マニフェスト更新完了" >> $GITHUB_STEP_SUMMARY
+          echo "✅ マニフェスト更新完了" >> $GITHUB_STEP_SUMMARY
         else
           echo "ℹ️ マニフェスト変更なし" >> $GITHUB_STEP_SUMMARY
         fi
         
     - name: 📊 収集サマリー
       run: |
-        echo "## 📄 週次マニフェスト収集結果" >> $GITHUB_STEP_SUMMARY
+        echo "## 📄 マニフェスト収集結果" >> $GITHUB_STEP_SUMMARY
         echo "- **実行時刻**: $(date '+%Y-%m-%d %H:%M:%S JST')" >> $GITHUB_STEP_SUMMARY
-        echo "- **収集頻度**: 週次（毎週月曜日）" >> $GITHUB_STEP_SUMMARY
-        echo "- **対象政党**: 自民党、立民、維新、公明、共産、国民、れいわ、参政党" >> $GITHUB_STEP_SUMMARY
-        echo "- **アーカイブ**: 過去データ保存有効" >> $GITHUB_STEP_SUMMARY
+        echo "- **実行方式**: 手動実行" >> $GITHUB_STEP_SUMMARY
+        echo "- **収集モード**: ${{ steps.collection-setup.outputs.collection_mode }}" >> $GITHUB_STEP_SUMMARY
+        echo "- **対象政党**: ${{ steps.collection-setup.outputs.target_parties }}" >> $GITHUB_STEP_SUMMARY
+        echo "- **更新チェック**: ${{ steps.collection-setup.outputs.skip_update_check == 'true' && 'スキップ' || '実行' }}" >> $GITHUB_STEP_SUMMARY
 
