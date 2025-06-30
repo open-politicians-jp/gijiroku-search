@@ -1,0 +1,195 @@
+name: 🏛️ 参院選2025候補者データ収集
+
+on:
+  workflow_dispatch:
+    inputs:
+      data_format:
+        description: '出力データ形式'
+        required: false
+        default: 'both'
+        type: choice
+        options:
+        - both
+        - json
+        - csv
+      target_parties:
+        description: '対象政党（all, ldp, cdp, etc.）'
+        required: false
+        default: 'all'
+        type: string
+      update_mode:
+        description: '更新モード'
+        required: false
+        default: 'incremental'
+        type: choice
+        options:
+        - incremental
+        - full
+        - test
+      max_candidates:
+        description: '最大候補者数（テスト用）'
+        required: false
+        default: '1000'
+        type: string
+
+# GitHub Actionsでのcommit/push権限設定
+permissions:
+  contents: write
+  actions: read
+
+jobs:
+  collect-sangiin-candidates:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    
+    steps:
+    - name: 📥 Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: 🐍 Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+        
+    - name: 📦 Install uv
+      run: |
+        curl -LsSf https://astral.sh/uv/install.sh | sh
+        echo "$HOME/.local/bin" >> $GITHUB_PATH
+        
+    - name: 🔧 Setup uv environment
+      working-directory: scripts/uv-data-collection
+      run: |
+        uv sync
+        
+    - name: 📊 実行前状況確認
+      working-directory: scripts/uv-data-collection
+      run: |
+        echo "## 🏛️ 参院選2025候補者データ収集開始" >> $GITHUB_STEP_SUMMARY
+        echo "- **実行時刻**: $(date '+%Y-%m-%d %H:%M:%S UTC')" >> $GITHUB_STEP_SUMMARY
+        echo "- **データ形式**: ${{ github.event.inputs.data_format || 'both' }}" >> $GITHUB_STEP_SUMMARY
+        echo "- **対象政党**: ${{ github.event.inputs.target_parties || 'all' }}" >> $GITHUB_STEP_SUMMARY
+        echo "- **更新モード**: ${{ github.event.inputs.update_mode || 'incremental' }}" >> $GITHUB_STEP_SUMMARY
+        echo "- **最大候補者数**: ${{ github.event.inputs.max_candidates || '1000' }}" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        
+        # 既存データファイル確認
+        if [ -f "../../frontend/public/data/sangiin_candidates/candidates_latest.json" ]; then
+          candidates_count=$(jq '.data | length' ../../frontend/public/data/sangiin_candidates/candidates_latest.json 2>/dev/null || echo "0")
+          echo "📊 **既存候補者データ**: ${candidates_count}名" >> $GITHUB_STEP_SUMMARY
+        else
+          echo "📊 **既存候補者データ**: なし（初回実行）" >> $GITHUB_STEP_SUMMARY
+        fi
+        
+    - name: 🏛️ 参院選2025候補者データ収集
+      working-directory: scripts/uv-data-collection
+      env:
+        DATA_FORMAT: ${{ github.event.inputs.data_format || 'both' }}
+        TARGET_PARTIES: ${{ github.event.inputs.target_parties || 'all' }}
+        UPDATE_MODE: ${{ github.event.inputs.update_mode || 'incremental' }}
+        MAX_CANDIDATES: ${{ github.event.inputs.max_candidates || '1000' }}
+      run: |
+        echo "🏛️ 参院選2025候補者データ収集を開始します..."
+        
+        # コマンドライン引数を構築
+        args=""
+        
+        if [ "$DATA_FORMAT" = "json" ]; then
+          args="$args --json-only"
+        elif [ "$DATA_FORMAT" = "csv" ]; then
+          args="$args --csv-only"
+        fi
+        
+        if [ "$TARGET_PARTIES" != "all" ]; then
+          args="$args --parties $TARGET_PARTIES"
+        fi
+        
+        if [ "$UPDATE_MODE" = "full" ]; then
+          args="$args --force-update"
+        elif [ "$UPDATE_MODE" = "test" ]; then
+          args="$args --test-mode"
+        fi
+        
+        if [ "$MAX_CANDIDATES" != "1000" ]; then
+          args="$args --max-candidates $MAX_CANDIDATES"
+        fi
+        
+        # スクリプト実行
+        echo "実行コマンド: uv run python collect_sangiin_2025_candidates.py $args"
+        uv run python collect_sangiin_2025_candidates.py $args
+        
+    - name: 📊 収集結果の確認と集計
+      working-directory: scripts/uv-data-collection
+      run: |
+        echo "## 📊 収集結果" >> $GITHUB_STEP_SUMMARY
+        
+        # JSON形式の結果確認
+        if [ -f "../../frontend/public/data/sangiin_candidates/candidates_latest.json" ]; then
+          candidates_count=$(jq '.data | length' ../../frontend/public/data/sangiin_candidates/candidates_latest.json 2>/dev/null || echo "0")
+          echo "- **JSON候補者数**: ${candidates_count}名" >> $GITHUB_STEP_SUMMARY
+          
+          # 政党別集計
+          echo "### 政党別候補者数" >> $GITHUB_STEP_SUMMARY
+          jq -r '.data | group_by(.party) | .[] | "\(.length)名: \(.[0].party)"' ../../frontend/public/data/sangiin_candidates/candidates_latest.json 2>/dev/null | sort -nr >> $GITHUB_STEP_SUMMARY || echo "- 集計エラー" >> $GITHUB_STEP_SUMMARY
+        else
+          echo "- **JSON結果**: ファイルが見つかりません" >> $GITHUB_STEP_SUMMARY
+        fi
+        
+        # CSV形式の結果確認
+        if [ -f "../../frontend/public/data/sangiin_candidates/candidates_latest.csv" ]; then
+          csv_count=$(tail -n +2 ../../frontend/public/data/sangiin_candidates/candidates_latest.csv | wc -l | tr -d ' ')
+          echo "- **CSV候補者数**: ${csv_count}名" >> $GITHUB_STEP_SUMMARY
+        else
+          echo "- **CSV結果**: ファイルが見つかりません" >> $GITHUB_STEP_SUMMARY
+        fi
+        
+        # データ品質チェック
+        echo "### データ品質チェック" >> $GITHUB_STEP_SUMMARY
+        if [ -f "../../frontend/public/data/sangiin_candidates/candidates_latest.json" ]; then
+          # 空フィールドのチェック
+          empty_names=$(jq '[.data[] | select(.name == "" or .name == null)] | length' ../../frontend/public/data/sangiin_candidates/candidates_latest.json 2>/dev/null || echo "0")
+          empty_parties=$(jq '[.data[] | select(.party == "" or .party == null)] | length' ../../frontend/public/data/sangiin_candidates/candidates_latest.json 2>/dev/null || echo "0")
+          
+          echo "- **空の候補者名**: ${empty_names}件" >> $GITHUB_STEP_SUMMARY
+          echo "- **空の政党名**: ${empty_parties}件" >> $GITHUB_STEP_SUMMARY
+        fi
+        
+    - name: 💾 変更をコミット
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action [Sangiin Candidates Collection]"
+        
+        # 候補者データディレクトリを追加
+        git add frontend/public/data/sangiin_candidates/ || true
+        
+        if ! git diff --staged --quiet; then
+          timestamp=$(date '+%Y-%m-%d %H:%M:%S JST')
+          candidates_count="0"
+          
+          # 候補者数を取得してコミットメッセージに含める
+          if [ -f "frontend/public/data/sangiin_candidates/candidates_latest.json" ]; then
+            candidates_count=$(jq '.data | length' frontend/public/data/sangiin_candidates/candidates_latest.json 2>/dev/null || echo "0")
+          fi
+          
+          commit_message="🏛️ 参院選2025候補者データ収集: ${candidates_count}名 - ${timestamp}"
+          git commit -m "$commit_message"
+          git push
+          
+          echo "✅ **コミット完了**: $commit_message" >> $GITHUB_STEP_SUMMARY
+        else
+          echo "ℹ️ **変更なし**: 新規データなし" >> $GITHUB_STEP_SUMMARY
+        fi
+        
+    - name: 📋 実行サマリー
+      if: always()
+      run: |
+        echo "## 📋 実行完了サマリー" >> $GITHUB_STEP_SUMMARY
+        echo "- **完了時刻**: $(date '+%Y-%m-%d %H:%M:%S UTC')" >> $GITHUB_STEP_SUMMARY
+        echo "- **実行ステータス**: ${{ job.status }}" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "### 次回実行時の推奨設定" >> $GITHUB_STEP_SUMMARY
+        echo "- **定期実行**: 週1回（金曜日）推奨" >> $GITHUB_STEP_SUMMARY
+        echo "- **更新モード**: incremental（差分更新）推奨" >> $GITHUB_STEP_SUMMARY
+        echo "- **データ形式**: both（JSON + CSV）推奨" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "🔗 **PR #84**: 参院選2025候補者データ収集システム実装" >> $GITHUB_STEP_SUMMARY
+        echo "🔗 **Issue #83**: 参院選2025候補者データ収集システム実装" >> $GITHUB_STEP_SUMMARY
