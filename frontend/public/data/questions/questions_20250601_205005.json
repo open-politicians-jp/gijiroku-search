@@ -4,7 +4,9 @@
     "total_count": 956,
     "generated_at": "2025-06-30T23:48:45.926620",
     "optimization_applied": true,
-    "original_count": 959
+    "original_count": 959,
+    "fixed_at": "2025-07-01T21:08:32.028590",
+    "fixes_applied": 956
   },
   "data": [
     {
