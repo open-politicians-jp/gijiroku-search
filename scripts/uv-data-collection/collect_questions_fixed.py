@@ -30,15 +30,17 @@ logger = logging.getLogger(__name__)
 class QuestionsCollector:
     """質問主意書収集クラス（正式版）"""
     
-    def __init__(self, start_date: Optional[str] = None, end_date: Optional[str] = None):
+    def __init__(self, start_date: Optional[str] = None, end_date: Optional[str] = None, session: Optional[int] = None):
         self.ua = UserAgent()
         self.session = requests.Session()
         self.update_headers()
         
         # 日付範囲設定
-        self.start_date = start_date or (datetime.now() - timedelta(days=60)).strftime("%Y-%m-%d")
+        self.start_date = start_date or (datetime.now() - timedelta(days=30)).strftime("%Y-%m-%d")
         self.end_date = end_date or datetime.now().strftime("%Y-%m-%d")
+        self.session_number = session or 217  # 現在の国会回次
         logger.info(f"収集期間: {self.start_date} から {self.end_date}")
+        logger.info(f"対象国会: 第{self.session_number}回")
         
         # 出力ディレクトリ設定
         self.project_root = Path(__file__).parent.parent.parent
@@ -59,7 +61,8 @@ class QuestionsCollector:
         
         # 基本URL（正式版）
         self.base_url = "https://www.shugiin.go.jp"
-        self.questions_main_url = "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/menu_m.htm"
+        self.questions_main_url = f"https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/ka{self.session_number}.htm"
+        self.questions_list_url = f"https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/menu_s.htm"
         
     def update_headers(self):
         """User-Agent更新とIP偽装"""

@@ -511,35 +511,93 @@ class BillsCollector:
         
         return text.strip()
     
+    def validate_bill_data(self, bill: Dict[str, Any]) -> bool:
+        """議案データの妥当性をチェック"""
+        required_fields = ['title', 'bill_number', 'session_number']
+        
+        # 必須フィールドのチェック
+        for field in required_fields:
+            if not bill.get(field):
+                return False
+        
+        # タイトルが意味のあるものかチェック
+        if bill['title'] in ['本文', 'メイン', 'エラー', '']:
+            return False
+        
+        # URLの妥当性チェック
+        url = bill.get('url', '')
+        if not url or 'menu.htm' in url or 'index.nsf' in url:
+            return False
+        
+        return True
+
     def save_bills_data(self, bills: List[Dict[str, Any]]):
         """議案データを保存"""
         if not bills:
             logger.warning("保存する議案データがありません")
             return
         
-        # データ期間を基準としたファイル名（現在の年月 + 時刻）
+        # データの妥当性チェックとフィルタリング
+        valid_bills = [bill for bill in bills if self.validate_bill_data(bill)]
+        invalid_count = len(bills) - len(valid_bills)
+        
+        if invalid_count > 0:
+            logger.warning(f"無効なデータを除外: {invalid_count}件")
+        
+        if not valid_bills:
+            logger.warning("有効な議案データがありません")
+            return
+        
+        # データ期間を基準としたファイル名（現在の年月日 + 時刻）
         current_date = datetime.now()
-        data_period = current_date.strftime('%Y%m01')  # 当月のデータとして保存
+        data_period = current_date.strftime('%Y%m%d')
         timestamp = current_date.strftime('%H%M%S')
+        
+        # 統一されたデータ構造
+        data_structure = {
+            "metadata": {
+                "data_type": "shugiin_bills",
+                "collection_method": "incremental_scraping",
+                "total_bills": len(valid_bills),
+                "generated_at": current_date.isoformat(),
+                "source_site": "www.shugiin.go.jp",
+                "quality_info": {
+                    "valid_bills": len(valid_bills),
+                    "invalid_bills": invalid_count,
+                    "validation_criteria": "title, bill_number, session_number, url"
+                }
+            },
+            "data": valid_bills
+        }
         
         # 生データ保存
         raw_filename = f"bills_{data_period}_{timestamp}.json"
         raw_filepath = self.bills_dir / raw_filename
         
         with open(raw_filepath, 'w', encoding='utf-8') as f:
-            json.dump(bills, f, ensure_ascii=False, indent=2)
+            json.dump(data_structure, f, ensure_ascii=False, indent=2)
         
         # フロントエンド用データ保存
         frontend_filename = f"bills_{data_period}_{timestamp}.json"
         frontend_filepath = self.frontend_bills_dir / frontend_filename
         
         with open(frontend_filepath, 'w', encoding='utf-8') as f:
-            json.dump(bills, f, ensure_ascii=False, indent=2)
+            json.dump(data_structure, f, ensure_ascii=False, indent=2)
+        
+        # 最新ファイル更新（データが正常な場合のみ）
+        if len(valid_bills) > 10:  # 最低限の件数チェック
+            latest_file = self.frontend_bills_dir / "bills_latest.json"
+            with open(latest_file, 'w', encoding='utf-8') as f:
+                json.dump(data_structure, f, ensure_ascii=False, indent=2)
+            logger.info(f"📁 最新ファイル更新: {latest_file}")
         
         logger.info(f"議案データ保存完了:")
         logger.info(f"  - 生データ: {raw_filepath}")
         logger.info(f"  - フロントエンド: {frontend_filepath}")
-        logger.info(f"  - 件数: {len(bills)}")
+        logger.info(f"  - 有効件数: {len(valid_bills)}")
+        logger.info(f"  - 無効除外: {invalid_count}")
+        
+        return data_structure
 
 def main():
     """メイン実行関数"""

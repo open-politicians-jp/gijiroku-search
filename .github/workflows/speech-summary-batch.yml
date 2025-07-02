@@ -1,0 +1,182 @@
+name: 📝 議事録要約生成バッチ
+
+on:
+  schedule:
+    # 毎週土曜日の午前2時（JST）に実行（UTC 17:00 金曜日）
+    - cron: '0 17 * * 5'
+  workflow_dispatch:
+    inputs:
+      target_period:
+        description: '要約対象期間（all, recent_week, recent_month）'
+        required: false
+        default: 'recent_week'
+        type: choice
+        options:
+        - recent_week
+        - recent_month
+        - all
+      force_regenerate:
+        description: '既存要約の再生成'
+        required: false
+        default: false
+        type: boolean
+      max_speeches:
+        description: '最大処理件数（テスト用）'
+        required: false
+        default: '100'
+        type: string
+
+# GitHub Actionsでのcommit/push権限設定
+permissions:
+  contents: write
+  actions: read
+
+jobs:
+  generate-speech-summaries:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    
+    steps:
+    - name: 📥 Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: 🐍 Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+        
+    - name: 📦 Install uv
+      run: |
+        curl -LsSf https://astral.sh/uv/install.sh | sh
+        echo "$HOME/.local/bin" >> $GITHUB_PATH
+        
+    - name: 🔧 Setup uv environment
+      working-directory: scripts/uv-data-collection
+      run: |
+        uv sync
+        
+    - name: 📊 実行前状況確認
+      working-directory: scripts/uv-data-collection
+      run: |
+        echo "## 📝 議事録要約生成バッチ開始" >> $GITHUB_STEP_SUMMARY
+        echo "- **実行時刻**: $(date '+%Y-%m-%d %H:%M:%S UTC')" >> $GITHUB_STEP_SUMMARY
+        echo "- **対象期間**: ${{ github.event.inputs.target_period || 'recent_week' }}" >> $GITHUB_STEP_SUMMARY
+        echo "- **強制再生成**: ${{ github.event.inputs.force_regenerate || 'false' }}" >> $GITHUB_STEP_SUMMARY
+        echo "- **最大処理件数**: ${{ github.event.inputs.max_speeches || '100' }}" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        
+        # 既存議事録データ確認
+        speeches_count=$(find ../../frontend/public/data/speeches -name "*.json" | wc -l | tr -d ' ')
+        echo "📊 **既存議事録ファイル数**: ${speeches_count}件" >> $GITHUB_STEP_SUMMARY
+        
+        # 既存要約データ確認
+        if [ -d "../../frontend/public/data/summaries" ]; then
+          summaries_count=$(find ../../frontend/public/data/summaries -name "*.json" | wc -l | tr -d ' ')
+          echo "📊 **既存要約ファイル数**: ${summaries_count}件" >> $GITHUB_STEP_SUMMARY
+        else
+          echo "📊 **既存要約ファイル数**: 0件（初回実行）" >> $GITHUB_STEP_SUMMARY
+        fi
+        
+    - name: 📝 議事録要約生成
+      working-directory: scripts/uv-data-collection
+      env:
+        TARGET_PERIOD: ${{ github.event.inputs.target_period || 'recent_week' }}
+        FORCE_REGENERATE: ${{ github.event.inputs.force_regenerate || 'false' }}
+        MAX_SPEECHES: ${{ github.event.inputs.max_speeches || '100' }}
+        # OpenAI API Key (GitHub Secretsから設定する場合)
+        # OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      run: |
+        echo "📝 議事録要約生成を開始します..."
+        
+        # コマンドライン引数を構築
+        args="--period $TARGET_PERIOD"
+        
+        if [ "$FORCE_REGENERATE" = "true" ]; then
+          args="$args --force-regenerate"
+        fi
+        
+        if [ "$MAX_SPEECHES" != "100" ]; then
+          args="$args --max-speeches $MAX_SPEECHES"
+        fi
+        
+        # スクリプト実行
+        echo "実行コマンド: uv run python generate_speech_summaries.py $args"
+        uv run python generate_speech_summaries.py $args
+        
+    - name: 📊 要約生成結果の確認
+      working-directory: scripts/uv-data-collection
+      run: |
+        echo "## 📊 要約生成結果" >> $GITHUB_STEP_SUMMARY
+        
+        # 生成された要約ファイル確認
+        if [ -d "../../frontend/public/data/summaries" ]; then
+          summaries_count=$(find ../../frontend/public/data/summaries -name "*.json" | wc -l | tr -d ' ')
+          echo "- **生成要約ファイル数**: ${summaries_count}件" >> $GITHUB_STEP_SUMMARY
+          
+          # 最新要約ファイルの詳細
+          latest_summary=$(find ../../frontend/public/data/summaries -name "*.json" -type f -exec ls -t {} + | head -1)
+          if [ -n "$latest_summary" ]; then
+            summary_items=$(jq 'length' "$latest_summary" 2>/dev/null || echo "0")
+            echo "- **最新要約件数**: ${summary_items}件" >> $GITHUB_STEP_SUMMARY
+            
+            # ファイルサイズ
+            file_size=$(ls -lh "$latest_summary" | awk '{print $5}')
+            echo "- **最新ファイルサイズ**: ${file_size}" >> $GITHUB_STEP_SUMMARY
+          fi
+        else
+          echo "- **要約結果**: ファイルが見つかりません" >> $GITHUB_STEP_SUMMARY
+        fi
+        
+        # エラーログ確認
+        if [ -f "summary_generation.log" ]; then
+          error_count=$(grep -c "ERROR" summary_generation.log || echo "0")
+          warning_count=$(grep -c "WARNING" summary_generation.log || echo "0")
+          echo "- **エラー件数**: ${error_count}件" >> $GITHUB_STEP_SUMMARY
+          echo "- **警告件数**: ${warning_count}件" >> $GITHUB_STEP_SUMMARY
+        fi
+        
+    - name: 🔧 大きなファイル分割
+      working-directory: scripts/uv-data-collection
+      run: |
+        # 大きな要約ファイルを分割
+        uv run python split_large_summaries.py || true
+        
+    - name: 💾 変更をコミット
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action [Speech Summary Generation]"
+        
+        # 要約データディレクトリを追加
+        git add frontend/public/data/summaries/ || true
+        
+        if ! git diff --staged --quiet; then
+          timestamp=$(date '+%Y-%m-%d %H:%M:%S JST')
+          
+          # 生成された要約数を取得
+          summaries_count="0"
+          if [ -d "frontend/public/data/summaries" ]; then
+            summaries_count=$(find frontend/public/data/summaries -name "*.json" | wc -l | tr -d ' ')
+          fi
+          
+          commit_message="📝 議事録要約生成: ${summaries_count}ファイル - ${timestamp}"
+          git commit -m "$commit_message"
+          git push
+          
+          echo "✅ **コミット完了**: $commit_message" >> $GITHUB_STEP_SUMMARY
+        else
+          echo "ℹ️ **変更なし**: 新規要約なし" >> $GITHUB_STEP_SUMMARY
+        fi
+        
+    - name: 📋 実行サマリー
+      if: always()
+      run: |
+        echo "## 📋 実行完了サマリー" >> $GITHUB_STEP_SUMMARY
+        echo "- **完了時刻**: $(date '+%Y-%m-%d %H:%M:%S UTC')" >> $GITHUB_STEP_SUMMARY
+        echo "- **実行ステータス**: ${{ job.status }}" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "### 次回実行時の推奨設定" >> $GITHUB_STEP_SUMMARY
+        echo "- **定期実行**: 週1回（土曜日早朝）推奨" >> $GITHUB_STEP_SUMMARY
+        echo "- **対象期間**: recent_week（過去1週間）推奨" >> $GITHUB_STEP_SUMMARY
+        echo "- **強制再生成**: false（通常）推奨" >> $GITHUB_STEP_SUMMARY
+        echo "" >> $GITHUB_STEP_SUMMARY
+        echo "💡 **利用目的**: 議事録の要約により政策動向の把握を支援" >> $GITHUB_STEP_SUMMARY

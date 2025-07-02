@@ -194,17 +194,56 @@ export default function SearchForm({ onSearch, onSearchTypeChange, loading = fal
                 <Building className="inline h-4 w-4 mr-1" />
                 委員会
               </label>
-              <input
-                type="text"
+              <select
                 value={committee}
                 onChange={(e) => setCommittee(e.target.value)}
-                placeholder={
-                  searchType === 'speeches' ? "例：政治改革特別委員会" :
-                  searchType === 'committee_news' ? "例：内閣委員会、予算委員会" :
-                  "例：内閣委員会、法務委員会"
-                }
                 className="search-input"
-              />
+              >
+                <option value="">すべての委員会</option>
+                <optgroup label="常任委員会">
+                  <option value="内閣委員会">内閣委員会</option>
+                  <option value="総務委員会">総務委員会</option>
+                  <option value="法務委員会">法務委員会</option>
+                  <option value="外務委員会">外務委員会</option>
+                  <option value="財務金融委員会">財務金融委員会</option>
+                  <option value="文部科学委員会">文部科学委員会</option>
+                  <option value="厚生労働委員会">厚生労働委員会</option>
+                  <option value="農林水産委員会">農林水産委員会</option>
+                  <option value="経済産業委員会">経済産業委員会</option>
+                  <option value="国土交通委員会">国土交通委員会</option>
+                  <option value="環境委員会">環境委員会</option>
+                  <option value="安全保障委員会">安全保障委員会</option>
+                  <option value="予算委員会">予算委員会</option>
+                  <option value="決算行政監視委員会">決算行政監視委員会</option>
+                  <option value="議院運営委員会">議院運営委員会</option>
+                </optgroup>
+                <optgroup label="特別委員会">
+                  <option value="復興災害特別委員会">復興災害特別委員会</option>
+                  <option value="政治改革特別委員会">政治改革特別委員会</option>
+                  <option value="沖縄北方特別委員会">沖縄北方特別委員会</option>
+                  <option value="拉致問題特別委員会">拉致問題特別委員会</option>
+                  <option value="消費者特別委員会">消費者特別委員会</option>
+                  <option value="原子力特別委員会">原子力特別委員会</option>
+                  <option value="地方デジタル特別委員会">地方デジタル特別委員会</option>
+                </optgroup>
+                <optgroup label="調査会">
+                  <option value="憲法調査会">憲法調査会</option>
+                  <option value="科学技術・イノベーション調査会">科学技術・イノベーション調査会</option>
+                </optgroup>
+              </select>
+              
+              {/* 院内検索リンク */}
+              <div className="mt-2">
+                <a
+                  href="https://www.shugiin.go.jp/internet/itdb_iinkai.nsf/html/iinkai/iin_j0000.htm"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs text-blue-600 hover:text-blue-800 flex items-center gap-1"
+                >
+                  <Building className="h-3 w-3" />
+                  衆議院委員会情報（院内検索）
+                </a>
+              </div>
             </div>
 
             {/* 開始日 */}
