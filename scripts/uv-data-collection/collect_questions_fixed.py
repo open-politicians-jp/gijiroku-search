@@ -513,22 +513,45 @@ class QuestionsCollector:
         
         # データ期間を基準としたファイル名（現在の年月 + 時刻）
         current_date = datetime.now()
-        data_period = current_date.strftime('%Y%m01')  # 当月のデータとして保存
+        data_period = current_date.strftime('%Y%m%d')  # 当日のデータとして保存
         timestamp = current_date.strftime('%H%M%S')
+        
+        # 統一されたデータ構造
+        data_structure = {
+            "metadata": {
+                "data_type": "shugiin_questions",
+                "collection_method": "incremental_scraping",
+                "total_questions": len(questions),
+                "generated_at": current_date.isoformat(),
+                "source_site": "www.shugiin.go.jp",
+                "collection_period": {
+                    "start_date": self.start_date,
+                    "end_date": self.end_date
+                }
+            },
+            "data": questions
+        }
         
         # 生データ保存
         raw_filename = f"questions_{data_period}_{timestamp}.json"
         raw_filepath = self.questions_dir / raw_filename
         
         with open(raw_filepath, 'w', encoding='utf-8') as f:
-            json.dump(questions, f, ensure_ascii=False, indent=2)
+            json.dump(data_structure, f, ensure_ascii=False, indent=2)
         
         # フロントエンド用データ保存
         frontend_filename = f"questions_{data_period}_{timestamp}.json"
         frontend_filepath = self.frontend_questions_dir / frontend_filename
         
         with open(frontend_filepath, 'w', encoding='utf-8') as f:
-            json.dump(questions, f, ensure_ascii=False, indent=2)
+            json.dump(data_structure, f, ensure_ascii=False, indent=2)
+        
+        # 最新ファイル更新（データが正常な場合のみ）
+        if len(questions) > 0:
+            latest_file = self.frontend_questions_dir / "questions_latest.json"
+            with open(latest_file, 'w', encoding='utf-8') as f:
+                json.dump(data_structure, f, ensure_ascii=False, indent=2)
+            logger.info(f"📁 最新ファイル更新: {latest_file}")
         
         logger.info(f"質問データ保存完了:")
         logger.info(f"  - 生データ: {raw_filepath}")

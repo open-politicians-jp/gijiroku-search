@@ -405,11 +405,58 @@ class CompleteGo2senkyoCollector:
         
         return complete_file
 
+    def check_if_update_needed(self) -> bool:
+        """7日間隔での更新必要性チェック"""
+        try:
+            data_dir = Path(__file__).parent.parent.parent / "frontend" / "public" / "data" / "sangiin_candidates"
+            latest_file = data_dir / "go2senkyo_optimized_latest.json"
+            
+            if not latest_file.exists():
+                logger.info("📅 最新ファイルが存在しないため更新実行")
+                return True
+            
+            # ファイルの最終更新日を取得
+            last_modified = datetime.fromtimestamp(latest_file.stat().st_mtime)
+            now = datetime.now()
+            days_since_update = (now - last_modified).days
+            
+            if days_since_update >= 7:
+                logger.info(f"📅 前回更新から{days_since_update}日経過: 更新実行")
+                return True
+            else:
+                logger.info(f"⏭️ 前回更新から{days_since_update}日: 更新スキップ")
+                return False
+                
+        except Exception as e:
+            logger.warning(f"更新チェックエラー: {e}, デフォルトで更新実行")
+            return True
+
 def main():
     """メイン処理"""
-    logger.info("🚀 Go2senkyo.com全47都道府県完全収集開始...")
+    import argparse
+    
+    parser = argparse.ArgumentParser(description='Go2senkyo.com全47都道府県完全収集')
+    parser.add_argument('--force-update', action='store_true', help='7日間隔を無視して強制更新')
+    parser.add_argument('--test-mode', action='store_true', help='テストモード（東京・大阪・神奈川のみ）')
+    parser.add_argument('--max-candidates', type=int, default=1000, help='最大候補者数制限')
+    
+    args = parser.parse_args()
+    
+    logger.info("🚀 Go2senkyo.com参院選候補者データ収集開始...")
     
     collector = CompleteGo2senkyoCollector()
+    
+    # 強制更新フラグがない場合は7日間隔チェック
+    if not args.force_update and not collector.check_if_update_needed():
+        logger.info("📝 7日間隔チェックによりスキップ")
+        return
+    
+    # テストモードの場合は対象都道府県を限定
+    if args.test_mode:
+        logger.info("🧪 テストモード: 東京・大阪・神奈川のみ収集")
+        original_prefectures = collector.prefectures.copy()
+        collector.prefectures = {13: "東京都", 27: "大阪府", 14: "神奈川県"}
+    
     result_file = collector.collect_all_prefectures_complete()
     
     if result_file:
