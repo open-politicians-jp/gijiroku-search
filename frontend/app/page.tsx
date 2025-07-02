@@ -18,6 +18,9 @@ export default function Home() {
   const [billsResult, setBillsResult] = useState<BillsResult | null>(null);
   const [questionsResult, setQuestionsResult] = useState<QuestionsResult | null>(null);
   const [allSpeeches, setAllSpeeches] = useState<any[]>([]);
+  const [allCommitteeNews, setAllCommitteeNews] = useState<any[]>([]);
+  const [allBills, setAllBills] = useState<any[]>([]);
+  const [allQuestions, setAllQuestions] = useState<any[]>([]);
   const [currentSearchParams, setCurrentSearchParams] = useState<SearchParams | null>(null);
   const [loading, setLoading] = useState(false);
   const [loadingMore, setLoadingMore] = useState(false);
@@ -51,18 +54,27 @@ export default function Home() {
         setBillsResult(null);
         setQuestionsResult(null);
         setAllSpeeches([]);
+        setAllCommitteeNews(result.news);
+        setAllBills([]);
+        setAllQuestions([]);
       } else if (params.search_type === 'bills') {
         setBillsResult(result);
         setSearchResult(null);
         setCommitteeNewsResult(null);
         setQuestionsResult(null);
         setAllSpeeches([]);
+        setAllCommitteeNews([]);
+        setAllBills(result.bills);
+        setAllQuestions([]);
       } else if (params.search_type === 'questions') {
         setQuestionsResult(result);
         setSearchResult(null);
         setCommitteeNewsResult(null);
         setBillsResult(null);
         setAllSpeeches([]);
+        setAllCommitteeNews([]);
+        setAllBills([]);
+        setAllQuestions(result.questions);
       } else {
         // 議事録検索
         setSearchResult(result);
@@ -70,6 +82,9 @@ export default function Home() {
         setBillsResult(null);
         setQuestionsResult(null);
         setAllSpeeches(result.speeches);
+        setAllCommitteeNews([]);
+        setAllBills([]);
+        setAllQuestions([]);
       }
       
       setCurrentSearchParams(params);
@@ -80,6 +95,9 @@ export default function Home() {
       setBillsResult(null);
       setQuestionsResult(null);
       setAllSpeeches([]);
+      setAllCommitteeNews([]);
+      setAllBills([]);
+      setAllQuestions([]);
       setCurrentSearchParams(null);
     } finally {
       setLoading(false);
@@ -87,7 +105,7 @@ export default function Home() {
   };
 
   const handleLoadMore = async () => {
-    if (!currentSearchParams || !searchResult) return;
+    if (!currentSearchParams) return;
     
     try {
       setLoadingMore(true);
@@ -98,16 +116,37 @@ export default function Home() {
       
       const result = await apiClient.search(nextParams);
       
-      // 既存の結果に新しい結果を追加
-      const updatedSpeeches = [...allSpeeches, ...result.speeches];
-      setAllSpeeches(updatedSpeeches);
-      
-      // SearchResultの更新
-      setSearchResult({
-        ...result,
-        speeches: updatedSpeeches,
-        offset: nextParams.offset || 0
-      });
+      if (currentSearchParams.search_type === 'committee_news') {
+        const updatedNews = [...allCommitteeNews, ...result.news];
+        setAllCommitteeNews(updatedNews);
+        setCommitteeNewsResult({
+          ...result,
+          news: updatedNews
+        });
+      } else if (currentSearchParams.search_type === 'bills') {
+        const updatedBills = [...allBills, ...result.bills];
+        setAllBills(updatedBills);
+        setBillsResult({
+          ...result,
+          bills: updatedBills
+        });
+      } else if (currentSearchParams.search_type === 'questions') {
+        const updatedQuestions = [...allQuestions, ...result.questions];
+        setAllQuestions(updatedQuestions);
+        setQuestionsResult({
+          ...result,
+          questions: updatedQuestions
+        });
+      } else {
+        // 議事録検索
+        const updatedSpeeches = [...allSpeeches, ...result.speeches];
+        setAllSpeeches(updatedSpeeches);
+        setSearchResult({
+          ...result,
+          speeches: updatedSpeeches,
+          offset: nextParams.offset || 0
+        });
+      }
       
       setCurrentSearchParams(nextParams);
     } catch (err) {
@@ -168,9 +207,12 @@ export default function Home() {
               {/* 委員会ニュース結果 */}
               {committeeNewsResult && (
                 <CommitteeNewsResults
-                  news={committeeNewsResult.news}
+                  news={allCommitteeNews}
                   total={committeeNewsResult.total}
                   loading={loading}
+                  hasMore={committeeNewsResult.has_more}
+                  loadingMore={loadingMore}
+                  onLoadMore={handleLoadMore}
                 />
               )}
               

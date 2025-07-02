@@ -7,9 +7,19 @@ interface CommitteeNewsResultsProps {
   news: CommitteeNews[];
   total: number;
   loading?: boolean;
+  hasMore?: boolean;
+  loadingMore?: boolean;
+  onLoadMore?: () => void;
 }
 
-export default function CommitteeNewsResults({ news, total, loading = false }: CommitteeNewsResultsProps) {
+export default function CommitteeNewsResults({ 
+  news, 
+  total, 
+  loading = false, 
+  hasMore = false,
+  loadingMore = false,
+  onLoadMore 
+}: CommitteeNewsResultsProps) {
   if (loading) {
     return (
       <div className="max-w-4xl mx-auto px-4">
@@ -161,11 +171,27 @@ export default function CommitteeNewsResults({ news, total, loading = false }: C
         ))}
       </div>
 
-      {/* ページング情報（将来的な拡張用） */}
-      {total > news.length && (
+      {/* もっと読み込むボタン */}
+      {hasMore && (
+        <div className="mt-8 text-center">
+          <button
+            onClick={onLoadMore}
+            disabled={loadingMore}
+            className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+          >
+            {loadingMore ? '読み込み中...' : 'もっと読み込む'}
+          </button>
+          <p className="text-sm text-gray-500 mt-2">
+            {news.length}件 / {total}件を表示中
+          </p>
+        </div>
+      )}
+      
+      {/* 全件表示済みの場合 */}
+      {!hasMore && news.length > 0 && (
         <div className="mt-8 text-center">
           <p className="text-sm text-gray-500">
-            {news.length}件 / {total}件を表示中
+            全{total}件を表示済み
           </p>
         </div>
       )}
