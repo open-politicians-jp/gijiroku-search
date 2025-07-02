@@ -1,0 +1,225 @@
+{
+  "metadata": {
+    "data_type": "go2senkyo_clean_sangiin_2025",
+    "collection_method": "constituency_only_cleaned",
+    "total_candidates": 9,
+    "generated_at": "2025-07-01T18:13:35.684510",
+    "source_site": "sangiin.go2senkyo.com + go2senkyo.com",
+    "collection_stats": {
+      "total_candidates": 0,
+      "detailed_profiles": 27,
+      "with_photos": 0,
+      "with_policies": 6,
+      "errors": 0
+    },
+    "quality_metrics": {
+      "detail_coverage": "100.0%",
+      "photo_coverage": "0.0%",
+      "policy_coverage": "22.2%"
+    }
+  },
+  "statistics": {
+    "by_party": {
+      "無所属": 3,
+      "国民民主党": 1,
+      "再生の道": 1,
+      "自由民主党": 1,
+      "日本共産党": 1,
+      "社会民主党": 1,
+      "日本保守党（代表者：百田尚樹）": 1
+    },
+    "by_prefecture": {
+      "東京都": 9
+    },
+    "by_constituency_type": {
+      "single_member": 9
+    }
+  },
+  "data": [
+    {
+      "candidate_id": "go2s_196526",
+      "name": "吉永アイヨシナガアイ",
+      "prefecture": "東京都",
+      "constituency": "東京",
+      "constituency_type": "single_member",
+      "party": "無所属",
+      "party_normalized": "無所属",
+      "profile_url": "https://go2senkyo.com/seijika/196526",
+      "source_page": "https://sangiin.go2senkyo.com/2025/prefecture/13",
+      "source": "go2senkyo_optimized",
+      "collected_at": "2025-07-01T12:22:18.532695",
+      "age_info": "50",
+      "occupation": "肩書",
+      "manifesto_summary": "日本人を守るための外国人政策を推進します・人権侵害の撲滅( 人種・出自・性別など)・外国人の日本語教育・法教育を義務化・イミグレーション手続の国家資格者経由義務化・外国ルーツの専門職( 士業・医師など）の活用・子供の暮らしを守る（不登校対策）",
+      "sns_accounts": {
+        "facebook": "https://www.facebook.com/thesenkyo/",
+        "twitter": "https://twitter.com/go2senkyo",
+        "youtube": "https://www.youtube.com/channel/UCpdtHm6VFP_Qc-IDIsyLh1A",
+        "instagram": "https://www.instagram.com/aiaiyoshinaga"
+      }
+    },
+    {
+      "candidate_id": "go2s_196244",
+      "name": "牛田まゆウシダマユ",
+      "prefecture": "東京都",
+      "constituency": "東京",
+      "constituency_type": "single_member",
+      "party": "国民民主党",
+      "party_normalized": "国民民主党",
+      "profile_url": "https://go2senkyo.com/seijika/196244",
+      "source_page": "https://sangiin.go2senkyo.com/2025/prefecture/13",
+      "source": "go2senkyo_optimized",
+      "collected_at": "2025-07-01T12:22:18.532829",
+      "age_info": "40",
+      "occupation": "肩書",
+      "manifesto_summary": "臨床検査技師の国家資格取得2009年4月から2025年4月まで、NHKでアナウンサーとして勤務。勤務地は、東京都(研修)→山口県→京都府→東京都→大阪府→東京都。自殺防止、発達障害などの取材を経験。手取りを増やす経済政策と共に、国民民主党の柱の一つである「人づくりこそ国づくり」に力を入れていきます。発達障害のある子どもたちの支援拡充や合理的配慮の促進、子どもや若者の孤立が少しでもなくなる社会を目指します。16年間、アナウンサーとして勤めてきました。さまざまなニュースを伝えてきました。児童虐待のニュースや子どものいじめの問題",
+      "sns_accounts": {
+        "twitter": "https://twitter.com/go2senkyo",
+        "youtube": "https://www.youtube.com/channel/UCpdtHm6VFP_Qc-IDIsyLh1A",
+        "instagram": "https://www.instagram.com/ushida.mayu_",
+        "facebook": "https://www.facebook.com/thesenkyo/"
+      }
+    },
+    {
+      "candidate_id": "go2s_196356",
+      "name": "吉田あやヨシダアヤ",
+      "prefecture": "東京都",
+      "constituency": "東京",
+      "constituency_type": "single_member",
+      "party": "再生の道",
+      "party_normalized": "再生の道",
+      "profile_url": "https://go2senkyo.com/seijika/196356",
+      "source_page": "https://sangiin.go2senkyo.com/2025/prefecture/13",
+      "source": "go2senkyo_optimized",
+      "collected_at": "2025-07-01T12:22:18.533014",
+      "age_info": "40",
+      "occupation": "肩書",
+      "manifesto_summary": "政治は対岸の火事でした。それでも沈みゆく日本をどうにかしたいとの想いで自身の1票の重みに期待し、選挙に行きました。しかしながら、政治は何も変わりませんでした。今後、少子高齢化・人口減少が進む中、生産年齢人口（※）は2050年には5,275万人（2021年から29.2％減）に減少する見込みです。これまで以上に限られた労働力で高齢化した社会を支えていかなければなりません。それを担うのは私たちの次の世代です。私たちが作り出した負を次の世代に渡してはいけません。だからこそ今、特に公教育への投資が必須となっており、公教育を党のテーマとしてかかげています",
+      "sns_accounts": {
+        "twitter": "https://twitter.com/go2senkyo",
+        "youtube": "https://www.youtube.com/channel/UCpdtHm6VFP_Qc-IDIsyLh1A",
+        "instagram": "https://www.instagram.com/ayayoshida03",
+        "facebook": "https://www.facebook.com/thesenkyo/"
+      }
+    },
+    {
+      "candidate_id": "go2s_180618",
+      "name": "鈴木大地スズキダイチ",
+      "prefecture": "東京都",
+      "constituency": "東京",
+      "constituency_type": "single_member",
+      "party": "自由民主党",
+      "party_normalized": "自由民主党",
+      "profile_url": "https://go2senkyo.com/seijika/180618",
+      "source_page": "https://sangiin.go2senkyo.com/2025/prefecture/13",
+      "source": "go2senkyo_optimized",
+      "collected_at": "2025-07-01T12:22:18.533073",
+      "age_info": "58",
+      "occupation": "肩書",
+      "sns_accounts": {
+        "facebook": "https://www.facebook.com/thesenkyo/",
+        "twitter": "https://twitter.com/go2senkyo",
+        "youtube": "https://www.youtube.com/channel/UCpdtHm6VFP_Qc-IDIsyLh1A",
+        "instagram": "https://www.instagram.com/suzukidaichi55"
+      }
+    },
+    {
+      "candidate_id": "go2s_77124",
+      "name": "吉良よし子キラヨシコ",
+      "prefecture": "東京都",
+      "constituency": "東京",
+      "constituency_type": "single_member",
+      "party": "日本共産党",
+      "party_normalized": "日本共産党",
+      "profile_url": "https://go2senkyo.com/seijika/77124",
+      "source_page": "https://sangiin.go2senkyo.com/2025/prefecture/13",
+      "source": "go2senkyo_optimized",
+      "collected_at": "2025-07-01T12:22:18.533199",
+      "age_info": "42",
+      "sns_accounts": {
+        "facebook": "https://www.facebook.com/thesenkyo/",
+        "twitter": "https://twitter.com/go2senkyo",
+        "youtube": "https://www.youtube.com/channel/UCpdtHm6VFP_Qc-IDIsyLh1A",
+        "instagram": "https://www.instagram.com/kirayoshiko_official"
+      }
+    },
+    {
+      "candidate_id": "go2s_184574",
+      "name": "西みゆかニシミユカ",
+      "prefecture": "東京都",
+      "constituency": "東京",
+      "constituency_type": "single_member",
+      "party": "社会民主党",
+      "party_normalized": "社会民主党",
+      "profile_url": "https://go2senkyo.com/seijika/184574",
+      "source_page": "https://sangiin.go2senkyo.com/2025/prefecture/13",
+      "source": "go2senkyo_optimized",
+      "collected_at": "2025-07-01T12:22:18.533254",
+      "age_info": "53",
+      "sns_accounts": {
+        "twitter": "https://twitter.com/go2senkyo",
+        "youtube": "https://www.youtube.com/channel/UCpdtHm6VFP_Qc-IDIsyLh1A",
+        "instagram": "https://www.instagram.com/nishi_miyuka",
+        "facebook": "https://www.facebook.com/thesenkyo/"
+      }
+    },
+    {
+      "candidate_id": "go2s_20701",
+      "name": "小坂英二コサカエイジ",
+      "prefecture": "東京都",
+      "constituency": "東京",
+      "constituency_type": "single_member",
+      "party": "日本保守党（代表者：百田尚樹）",
+      "party_normalized": "日本保守党（代表者：百田尚樹）",
+      "profile_url": "https://go2senkyo.com/seijika/20701",
+      "source_page": "https://sangiin.go2senkyo.com/2025/prefecture/13",
+      "source": "go2senkyo_optimized",
+      "collected_at": "2025-07-01T12:22:18.533553",
+      "age_info": "52",
+      "sns_accounts": {
+        "facebook": "https://www.facebook.com/thesenkyo/",
+        "twitter": "https://twitter.com/go2senkyo",
+        "youtube": "https://www.youtube.com/channel/UCpdtHm6VFP_Qc-IDIsyLh1A",
+        "instagram": "https://www.instagram.com/kosakaeiji"
+      }
+    },
+    {
+      "candidate_id": "go2s_196742",
+      "name": "土居賢真ドイケンシン",
+      "prefecture": "東京都",
+      "constituency": "東京",
+      "constituency_type": "single_member",
+      "party": "無所属",
+      "party_normalized": "無所属",
+      "profile_url": "https://go2senkyo.com/seijika/196742",
+      "source_page": "https://sangiin.go2senkyo.com/2025/prefecture/13",
+      "source": "go2senkyo_optimized",
+      "collected_at": "2025-07-01T12:22:18.533793",
+      "age_info": "53",
+      "sns_accounts": {
+        "facebook": "https://www.facebook.com/thesenkyo/",
+        "twitter": "https://twitter.com/go2senkyo",
+        "youtube": "https://www.youtube.com/channel/UCpdtHm6VFP_Qc-IDIsyLh1A"
+      }
+    },
+    {
+      "candidate_id": "go2s_196744",
+      "name": "増田昇マスダマモル",
+      "prefecture": "東京都",
+      "constituency": "東京",
+      "constituency_type": "single_member",
+      "party": "無所属",
+      "party_normalized": "無所属",
+      "profile_url": "https://go2senkyo.com/seijika/196744",
+      "source_page": "https://sangiin.go2senkyo.com/2025/prefecture/13",
+      "source": "go2senkyo_optimized",
+      "collected_at": "2025-07-01T12:22:18.533848",
+      "age_info": "47",
+      "sns_accounts": {
+        "facebook": "https://www.facebook.com/thesenkyo/",
+        "twitter": "https://twitter.com/go2senkyo",
+        "youtube": "https://www.youtube.com/channel/UCpdtHm6VFP_Qc-IDIsyLh1A"
+      }
+    }
+  ]
+}

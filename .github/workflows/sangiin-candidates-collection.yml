@@ -73,8 +73,8 @@ jobs:
         echo "" >> $GITHUB_STEP_SUMMARY
         
         # 既存データファイル確認
-        if [ -f "../../frontend/public/data/sangiin_candidates/candidates_latest.json" ]; then
-          candidates_count=$(jq '.data | length' ../../frontend/public/data/sangiin_candidates/candidates_latest.json 2>/dev/null || echo "0")
+        if [ -f "../../frontend/public/data/sangiin_candidates/go2senkyo_optimized_latest.json" ]; then
+          candidates_count=$(jq '.data | length' ../../frontend/public/data/sangiin_candidates/go2senkyo_optimized_latest.json 2>/dev/null || echo "0")
           echo "📊 **既存候補者データ**: ${candidates_count}名" >> $GITHUB_STEP_SUMMARY
         else
           echo "📊 **既存候補者データ**: なし（初回実行）" >> $GITHUB_STEP_SUMMARY
@@ -114,8 +114,8 @@ jobs:
         fi
         
         # スクリプト実行
-        echo "実行コマンド: uv run python collect_sangiin_2025_candidates.py $args"
-        uv run python collect_sangiin_2025_candidates.py $args
+        echo "実行コマンド: uv run python complete_go2senkyo_collection.py $args"
+        uv run python complete_go2senkyo_collection.py $args
         
     - name: 📊 収集結果の確認と集計
       working-directory: scripts/uv-data-collection
@@ -123,13 +123,13 @@ jobs:
         echo "## 📊 収集結果" >> $GITHUB_STEP_SUMMARY
         
         # JSON形式の結果確認
-        if [ -f "../../frontend/public/data/sangiin_candidates/candidates_latest.json" ]; then
-          candidates_count=$(jq '.data | length' ../../frontend/public/data/sangiin_candidates/candidates_latest.json 2>/dev/null || echo "0")
+        if [ -f "../../frontend/public/data/sangiin_candidates/go2senkyo_optimized_latest.json" ]; then
+          candidates_count=$(jq '.data | length' ../../frontend/public/data/sangiin_candidates/go2senkyo_optimized_latest.json 2>/dev/null || echo "0")
           echo "- **JSON候補者数**: ${candidates_count}名" >> $GITHUB_STEP_SUMMARY
           
           # 政党別集計
           echo "### 政党別候補者数" >> $GITHUB_STEP_SUMMARY
-          jq -r '.data | group_by(.party) | .[] | "\(.length)名: \(.[0].party)"' ../../frontend/public/data/sangiin_candidates/candidates_latest.json 2>/dev/null | sort -nr >> $GITHUB_STEP_SUMMARY || echo "- 集計エラー" >> $GITHUB_STEP_SUMMARY
+          jq -r '.statistics.by_party | to_entries | sort_by(.value) | reverse | .[] | "\(.value)名: \(.key)"' ../../frontend/public/data/sangiin_candidates/go2senkyo_optimized_latest.json 2>/dev/null >> $GITHUB_STEP_SUMMARY || echo "- 集計エラー" >> $GITHUB_STEP_SUMMARY
         else
           echo "- **JSON結果**: ファイルが見つかりません" >> $GITHUB_STEP_SUMMARY
         fi
@@ -144,13 +144,15 @@ jobs:
         
         # データ品質チェック
         echo "### データ品質チェック" >> $GITHUB_STEP_SUMMARY
-        if [ -f "../../frontend/public/data/sangiin_candidates/candidates_latest.json" ]; then
+        if [ -f "../../frontend/public/data/sangiin_candidates/go2senkyo_optimized_latest.json" ]; then
           # 空フィールドのチェック
-          empty_names=$(jq '[.data[] | select(.name == "" or .name == null)] | length' ../../frontend/public/data/sangiin_candidates/candidates_latest.json 2>/dev/null || echo "0")
-          empty_parties=$(jq '[.data[] | select(.party == "" or .party == null)] | length' ../../frontend/public/data/sangiin_candidates/candidates_latest.json 2>/dev/null || echo "0")
+          empty_names=$(jq '[.data[] | select(.name == "" or .name == null)] | length' ../../frontend/public/data/sangiin_candidates/go2senkyo_optimized_latest.json 2>/dev/null || echo "0")
+          empty_parties=$(jq '[.data[] | select(.party == "" or .party == null)] | length' ../../frontend/public/data/sangiin_candidates/go2senkyo_optimized_latest.json 2>/dev/null || echo "0")
+          prefectures_count=$(jq '.metadata.coverage.prefectures' ../../frontend/public/data/sangiin_candidates/go2senkyo_optimized_latest.json 2>/dev/null || echo "0")
           
           echo "- **空の候補者名**: ${empty_names}件" >> $GITHUB_STEP_SUMMARY
           echo "- **空の政党名**: ${empty_parties}件" >> $GITHUB_STEP_SUMMARY
+          echo "- **都道府県カバレッジ**: ${prefectures_count}/47都道府県" >> $GITHUB_STEP_SUMMARY
         fi
         
     - name: 💾 変更をコミット
@@ -166,8 +168,8 @@ jobs:
           candidates_count="0"
           
           # 候補者数を取得してコミットメッセージに含める
-          if [ -f "frontend/public/data/sangiin_candidates/candidates_latest.json" ]; then
-            candidates_count=$(jq '.data | length' frontend/public/data/sangiin_candidates/candidates_latest.json 2>/dev/null || echo "0")
+          if [ -f "frontend/public/data/sangiin_candidates/go2senkyo_optimized_latest.json" ]; then
+            candidates_count=$(jq '.data | length' frontend/public/data/sangiin_candidates/go2senkyo_optimized_latest.json 2>/dev/null || echo "0")
           fi
           
           commit_message="🏛️ 参院選2025候補者データ収集: ${candidates_count}名 - ${timestamp}"
