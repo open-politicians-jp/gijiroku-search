@@ -1,0 +1,231 @@
+{
+  "metadata": {
+    "data_type": "shugiin_questions_incremental",
+    "collection_method": "incremental_url_scanning",
+    "total_questions": 3,
+    "generated_at": "2025-07-03T17:26:24.530987",
+    "source_site": "www.shugiin.go.jp",
+    "target_sessions": [
+      217,
+      216,
+      215
+    ],
+    "data_quality": "incremental_collection",
+    "version": "3.0"
+  },
+  "data": [
+    {
+      "title": "高額療養費制度の見直しに関する質問主意書",
+      "question_number": "101",
+      "session": 217,
+      "questioner": "鈴木庸介君",
+      "house": "衆議院",
+      "submission_date": "",
+      "answer_date": "",
+      "question_content": "高額療養費制度の見直しに関する質問主意書\n令和七年三月十三日提出\n質問第一〇一号\n高額療養費制度の見直しに関する質問主意書\n提出者 鈴木庸介\n高額療養費制度の見直しに関する質問主意書\n令和七年一月二十三日に開催された第百九十二回社会保障審議会医療保険部会において、高額療養費制度の見直しが議題の一つとして取り上げられている。厚生労働省が公開した資料では、高額療養費見直しによる財政影響と保険料軽減効果の推計値が示されているが、その中で「実効給付率が変化した場合に経験的に得られている医療費の増減効果（いわゆる長瀬効果：約マイナス二千二百七十億円（給付費））を見込んでいる。」との記述がある。また、同年二月二十一日の衆議院予算委員会において、政府は、高額療養費見直しの修正案における「いわゆる長瀬効果」の推計値については、約千九百五十億円のマイナス見込みである旨を答弁している。\nこの「いわゆる長瀬効果」とは、給付率と医療費の関係を示した経験則であり、給付率が低くなる制度改革が行われると受診日数が減少し、結果的に医療費の伸びが例年と比べ小さくなるとされている。\nこれらを踏まえ、以下質問する。\n一 前述の第百九十二回社会保障審議会医療保険部会の資料及び令和七年二月二十一日の衆議院予算委員会における政府答弁の中で示された「いわゆる長瀬効果」の推計値について、金額の根拠となる計算方法は何か、具体的な数字を入れた計算式の形で示されたい。また、その計算方法が妥当であると考える理由は何か、政府の見解を示されたい。\n二 政府は、前述の「いわゆる長瀬効果」による給付費減を見込んでいることで、制度改革により高額療養費制度の該当者のうち一定数の受診控えが発生すると見込んでいるものと考えられるが、このような受診控えを誘発する制度改革は、健康保険法（大正十一年法律第七十号）第一条及び国民健康保険法（昭和三十三年法律第百九十二号）第一条の目的に反しないか、政府の見解を示されたい。",
+      "answer_content": "",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217101.htm",
+      "answer_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/b217101.htm",
+      "html_links": [
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/217101.htm",
+          "title": "経過へ",
+          "type": "html"
+        },
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217101.pdf/$File/a217101.pdf",
+          "title": "質問本文(PDF)へ",
+          "type": "html"
+        },
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/b217101.htm",
+          "title": "答弁本文(HTML)へ",
+          "type": "html"
+        },
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_t.nsf/html/shitsumon/pdfT/b217101.pdf/$File/b217101.pdf",
+          "title": "答弁本文(PDF)へ",
+          "type": "html"
+        },
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_annai.nsf/html/statics/accessibility.htm",
+          "title": "Webアクセシビリティ",
+          "type": "html"
+        },
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_annai.nsf/html/statics/link.html",
+          "title": "リンク・著作権等について",
+          "type": "html"
+        },
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_annai.nsf/html/statics/mail.htm",
+          "title": "お問い合わせ",
+          "type": "html"
+        },
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_annai.nsf/html/statics/kokkaimap.htm",
+          "title": "案内図",
+          "type": "html"
+        }
+      ],
+      "pdf_links": [
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217101.pdf/$File/a217101.pdf",
+          "title": "質問本文(PDF)へ",
+          "type": "pdf"
+        },
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_t.nsf/html/shitsumon/pdfT/b217101.pdf/$File/b217101.pdf",
+          "title": "答弁本文(PDF)へ",
+          "type": "pdf"
+        }
+      ],
+      "category": "経済・産業",
+      "collected_at": "2025-07-03T17:26:20.494891",
+      "year": 2025,
+      "week": 27
+    },
+    {
+      "title": "登録有形文化財制度に関する質問主意書",
+      "question_number": "102",
+      "session": 217,
+      "questioner": "鈴木庸介君",
+      "house": "衆議院",
+      "submission_date": "",
+      "answer_date": "",
+      "question_content": "登録有形文化財制度に関する質問主意書\n令和七年三月十三日提出\n質問第一〇二号\n登録有形文化財制度に関する質問主意書\n提出者 鈴木庸介\n登録有形文化財制度に関する質問主意書\n平成八年の文化財保護法改正により創設された建造物の登録有形文化財制度は、重要文化財指定制度と並び、我が国の歴史的建造物を保護することにより後世に残すことを使命とした大変意義のある制度であると考える。しかしながら近年、所有者の廃業、建造物の老朽化、維持費の負担、相続等により所有者が維持管理を諦め、解体する事例が相次いでおり、文化庁のウェブサイトによると、令和六年十二月九日時点での登録有形文化財（建造物）の抹消件数のうち、現状変更等による抹消が三百四十八件、うち解体等による抹消が三百四件となっている。\nまた、令和七年二月十九日の神奈川新聞の報道によると、小田原市が所有する登録有形文化財である「旧内野醬油店」工場も解体が決定し、登録抹消が確実になっているとされている。\nこのように、民間所有の登録文化財だけでなく、地方自治体が自ら所有する登録文化財についても解体による登録抹消がなされる事例が発生し、歴史的建造物の保護という登録有形文化財制度そのものの有効性が疑問視されていると考える。\nこれらの認識を前提に、以下質問する。\n一 前述のとおり、文化庁のウェブサイトにおいては、令和六年十二月九日時点での登録有形文化財（建造物）の抹消件数のうち、現状変更等による抹消が三百四十八件、うち解体等による抹消が三百四件との記載がある。\n１ この件数は何を根拠としたものか。\n２ 当該件数が現状変更完了の報告等の書面のみを根拠としている場合、無届けの現状変更等により、正確な件数を把握できていない事態が考えられるが、そのような事態をどのようにして防止しているか。\n二 登録有形文化財建造物修理等事業においては、保存修理に係る設計監理事業のみが補助対象であり、修繕工事そのものは補助対象となっていない。\n１ この理由は何か。\n２ 文化財の維持管理の観点から修繕工事も補助対象にすべきと考えるが、政府の見解を問う。\n三 重要文化財（建造物）と登録有形文化財（建造物）では相続税、固定資産税等の税法上の優遇措置に差異がある。\n１ この理由は何か。\n２ 所有者の文化財の保護の負担軽減の観点から登録有形文化財の税法上の優遇措置を拡大すべきと考えるが、政府の見解を問う。",
+      "answer_content": "",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217102.htm",
+      "answer_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/b217102.htm",
+      "html_links": [
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/217102.htm",
+          "title": "経過へ",
+          "type": "html"
+        },
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217102.pdf/$File/a217102.pdf",
+          "title": "質問本文(PDF)へ",
+          "type": "html"
+        },
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/b217102.htm",
+          "title": "答弁本文(HTML)へ",
+          "type": "html"
+        },
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_t.nsf/html/shitsumon/pdfT/b217102.pdf/$File/b217102.pdf",
+          "title": "答弁本文(PDF)へ",
+          "type": "html"
+        },
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_annai.nsf/html/statics/accessibility.htm",
+          "title": "Webアクセシビリティ",
+          "type": "html"
+        },
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_annai.nsf/html/statics/link.html",
+          "title": "リンク・著作権等について",
+          "type": "html"
+        },
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_annai.nsf/html/statics/mail.htm",
+          "title": "お問い合わせ",
+          "type": "html"
+        },
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_annai.nsf/html/statics/kokkaimap.htm",
+          "title": "案内図",
+          "type": "html"
+        }
+      ],
+      "pdf_links": [
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217102.pdf/$File/a217102.pdf",
+          "title": "質問本文(PDF)へ",
+          "type": "pdf"
+        },
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_t.nsf/html/shitsumon/pdfT/b217102.pdf/$File/b217102.pdf",
+          "title": "答弁本文(PDF)へ",
+          "type": "pdf"
+        }
+      ],
+      "category": "教育・文化",
+      "collected_at": "2025-07-03T17:26:22.938974",
+      "year": 2025,
+      "week": 27
+    },
+    {
+      "title": "スパイクタンパク質の毒性に関する質問主意書",
+      "question_number": "103",
+      "session": 217,
+      "questioner": "原口一博君",
+      "house": "衆議院",
+      "submission_date": "",
+      "answer_date": "",
+      "question_content": "スパイクタンパク質の毒性に関する質問主意書\n令和七年三月十三日提出\n質問第一〇三号\nスパイクタンパク質の毒性に関する質問主意書\n提出者 原口一博\nスパイクタンパク質の毒性に関する質問主意書\nワクチンの開発において抗原として接種するタンパク質に毒性がある場合には、その毒性を失わせるための処理を行ったのち人体に投与することは当然であると考える。実際、一九四八年には京都・島根ジフテリア予防接種事件と呼ばれる予防接種事故が起きている。この事故の原因はジフテリアの予防接種で抗原として使用されたジフテリア毒素を無害化しないまま接種したことによる。死者数は乳幼児を中心に八十四名、副反応による被害者数は八百数十人から千人以上にも上った世界最大の予防接種事故である。新型コロナウイルスのｍＲＮＡワクチンで抗原として使用されているのはスパイクタンパク質である。スパイクタンパク質に細胞毒性があることは米国ソーク研究所が二〇二一年四月に論文を発表している（Circulation Research Vol.128,No9）。\nこの研究で明らかになったことは次のとおりである。\n研究者らは、ＳＡＲＳ−ＣｏＶ−２のスパイクタンパク質を持つ「疑似ウイルス」（シュードウイルス）を作成した。実際のウイルスは使用していない。このシュードウイルスに曝露すると、動物モデルの肺と動脈に損傷が生じ、スパイクタンパク質だけでも病気を引き起こすのに十分であることが証明された。組織サンプルでは、肺動脈壁の内側を覆う内皮細胞に炎症が見られた。次に研究チームはこのプロセスを研究室で再現し、（動脈の内側を覆う）健康な内皮細胞をスパイクタンパク質にさらした。彼らは、スパイクタンパク質がＡＣＥ２に結合することによって細胞を損傷したことを示した。この結合により、ミトコンドリア（細胞のエネルギーを生成する細胞小器官）へのＡＣＥ２の分子シグナル伝達が妨害され、ミトコンドリアが損傷して断片化された。これまでの研究では、細胞がＳＡＲＳ−ＣｏＶ−２ウイルスに曝露された場合にも同様の影響が示されていたが、本研究は細胞が単独でスパイクタンパク質に曝露された場合に損傷が生じることを示した初めての研究となった。\nこの研究成果が発表されたCirculation Researchは、掲載論文が他の雑誌に多数引用される循環器系の疾患研究のトップジャーナルである。さらに二〇二三年にはスパイクタンパク質の毒性に関する総説論文が公表された。この論文が掲載されているBiomedicinesはオープンなオンラインジャーナルであり誰でも閲覧することが可能である（「'Spikeopathy': COVID-19 Spike Protein Is Pathogenic, from Both Virus and Vaccine mRNA」（Biomedicines. 2023 Aug 17））。\nこの総説論文にはスパイクタンパク質の毒性に関する多くの論文が引用されている。この件に関して、以下質問する。\n一 このような著名なジャーナルに新型コロナウイルスのスパイクタンパク質の毒性が報告された。さらにソーク研究所も米国の一流の研究機関であると考える。\n１ この情報の存在を厚生労働省、独立行政法人医薬品医療機器総合機構（以下「ＰＭＤＡ」という。）、あるいは厚生労働大臣が厚生科学審議会や薬事審議会等の委員（以下「審議会委員」という。）として任命した学識経験者は承知していたのか。\n２ これまでの審議において話題に上ったのか、要すれば審議会（審議会に置かれた分科会や部会を含む。）の議事録を確認の上、示されたい。\n二 厚生労働大臣が審議会委員として任命している学識経験者が、一定のレベルの学識を有しており彼らが国民の健康を守るという意識を持っているのであれば、この論文が発表された段階でスパイクタンパク質の毒性に関する懸念を表明するようになることが想定される。加えて既に副反応の疑いによる死亡認定は千名に到達しようとしている。しかしながら、スパイクタンパク質の毒性に関する論文が世界にあふれるようになった現在においても、審議会委員は今回のｍＲＮＡワクチンについて重大な懸念はないと発言している。この点について厚生労働省としてはどのように考えているのか、任命した審議会委員の選択が適切であったと今も考えているのかも含めて、見解を伺いたい。\n三 医薬品・ワクチンなどの人に投与する製品については最新の情報により健康上のリスクが想定されるときには製薬企業はその情報をＰＭＤＡに伝えることが義務づけられている。今回のｍＲＮＡワクチンにおいて、製薬企業側から政府にスパイクタンパク質の毒性に関する懸念情報が伝達されたという事実の有無を伺いたい。\n四 今回の新型コロナウイルス感染症パンデミックにおいて厚生労働大臣が任命した審議会委員については、ｍＲＮＡワクチンに関するリスク情報の認知が不十分であると考えている。既に米国の州によっては新型コロナウイルスのｍＲＮＡワクチン接種を禁じるところまで出現している。さらには、トランプ政権は今回の新型コロナウイルス感染症パンデミック及びワクチン政策について大幅な見直しをしようとしている。この様な状況の変化に審議会委員は十分対応できていないのではないかと考えている。そこで、厚生労働省は、関連する審議会委員に任命された学識経験者をどのような基準で選考したのか、そのプロセスを具体的に示されたい。\n五 本質問主意書によってスパイクタンパク質のリスク情報を厚生労働省に正式に伝達することになるが、同省としてはこのリスク情報を今後どのように取り扱っていくのか、見解を伺いたい。\n六 既に九百名を超える接種関連死亡者が報告されていることの要因の一つが抗原に毒性があることによることは容易に想像できる。これまでに多数のｍＲＮＡワクチン接種による被害者が生まれたことと抗原であるスパイクタンパク質の毒性との関係を否定できる根拠を政府は有しているのか。有している場合、その根拠を示されたい。",
+      "answer_content": "",
+      "question_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/a217103.htm",
+      "answer_url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/b217103.htm",
+      "html_links": [
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/217103.htm",
+          "title": "経過へ",
+          "type": "html"
+        },
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217103.pdf/$File/a217103.pdf",
+          "title": "質問本文(PDF)へ",
+          "type": "html"
+        },
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/b217103.htm",
+          "title": "答弁本文(HTML)へ",
+          "type": "html"
+        },
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_t.nsf/html/shitsumon/pdfT/b217103.pdf/$File/b217103.pdf",
+          "title": "答弁本文(PDF)へ",
+          "type": "html"
+        },
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_annai.nsf/html/statics/accessibility.htm",
+          "title": "Webアクセシビリティ",
+          "type": "html"
+        },
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_annai.nsf/html/statics/link.html",
+          "title": "リンク・著作権等について",
+          "type": "html"
+        },
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_annai.nsf/html/statics/mail.htm",
+          "title": "お問い合わせ",
+          "type": "html"
+        },
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_annai.nsf/html/statics/kokkaimap.htm",
+          "title": "案内図",
+          "type": "html"
+        }
+      ],
+      "pdf_links": [
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_s.nsf/html/shitsumon/pdfS/a217103.pdf/$File/a217103.pdf",
+          "title": "質問本文(PDF)へ",
+          "type": "pdf"
+        },
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_shitsumon_pdf_t.nsf/html/shitsumon/pdfT/b217103.pdf/$File/b217103.pdf",
+          "title": "答弁本文(PDF)へ",
+          "type": "pdf"
+        }
+      ],
+      "category": "経済・産業",
+      "collected_at": "2025-07-03T17:26:24.530511",
+      "year": 2025,
+      "week": 27
+    }
+  ]
+}

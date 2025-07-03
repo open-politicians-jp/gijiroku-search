@@ -1,0 +1,634 @@
+{
+  "metadata": {
+    "data_type": "shugiin_bills_table_based",
+    "collection_method": "table_extraction",
+    "total_bills": 22,
+    "generated_at": "2025-07-03T16:51:27.342199",
+    "source_site": "www.shugiin.go.jp",
+    "target_sessions": [
+      217,
+      216,
+      215
+    ],
+    "data_quality": "table_based_collection",
+    "version": "3.0"
+  },
+  "data": [
+    {
+      "title": "行政手続における特定の個人を識別するための番号の利用等に関する法律等の一部を改正する法律の一部を改正する法律案",
+      "bill_number": "1",
+      "session_number": 215,
+      "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21505001.htm",
+      "content_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21505001.htm",
+      "progress_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/1DDDDAA.htm",
+      "submitter": "内閣",
+      "submission_date": "",
+      "status": "撤回",
+      "status_normalized": "撤回",
+      "committee": "",
+      "bill_content": "",
+      "related_links": [
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21505001.htm",
+          "title": "本文"
+        },
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/1DDDDAA.htm",
+          "title": "経過"
+        }
+      ],
+      "summary": "行政手続における特定の個人を識別するための番号の利用等に関する法律等の一部を改正する法律の一部を改正する法律案",
+      "category": "司法・行政",
+      "collected_at": "2025-07-03T16:51:22.555851",
+      "year": 2025
+    },
+    {
+      "title": "就労支援給付制度の導入に関する法律案",
+      "bill_number": "2",
+      "session_number": 215,
+      "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21505002.htm",
+      "content_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21505002.htm",
+      "progress_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/1DDDDCE.htm",
+      "submitter": "議員",
+      "submission_date": "",
+      "status": "衆議院で閉会中審査",
+      "status_normalized": "継続審議",
+      "committee": "",
+      "bill_content": "",
+      "related_links": [
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21505002.htm",
+          "title": "本文"
+        },
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/1DDDDCE.htm",
+          "title": "経過"
+        }
+      ],
+      "summary": "就労支援給付制度の導入に関する法律案",
+      "category": "一般",
+      "collected_at": "2025-07-03T16:51:22.555934",
+      "year": 2025
+    },
+    {
+      "title": "賃金上昇を上回る所得税の負担増加等に対処するために所得税に関し講ずべき措置に関する法律案",
+      "bill_number": "1",
+      "session_number": 216,
+      "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21605001.htm",
+      "content_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21605001.htm",
+      "progress_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/1DDDDB2.htm",
+      "submitter": "内閣",
+      "submission_date": "",
+      "status": "衆議院で閉会中審査",
+      "status_normalized": "継続審議",
+      "committee": "",
+      "bill_content": "",
+      "related_links": [
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21605001.htm",
+          "title": "本文"
+        },
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/1DDDDB2.htm",
+          "title": "経過"
+        }
+      ],
+      "summary": "賃金上昇を上回る所得税の負担増加等に対処するために所得税に関し講ずべき措置に関する法律案",
+      "category": "経済・財政",
+      "collected_at": "2025-07-03T16:51:22.556016",
+      "year": 2025
+    },
+    {
+      "title": "揮発油価格高騰時における揮発油税等税率特例停止措置の実施並びに揮発油税等の税率の特例の廃止及び脱炭素社会の実現等に資する税制の構築のための措置に関する法律案",
+      "bill_number": "3",
+      "session_number": 216,
+      "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21605003.htm",
+      "content_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21605003.htm",
+      "progress_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/1DDDDB6.htm",
+      "submitter": "内閣",
+      "submission_date": "",
+      "status": "撤回",
+      "status_normalized": "撤回",
+      "committee": "",
+      "bill_content": "",
+      "related_links": [
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21605003.htm",
+          "title": "本文"
+        },
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/1DDDDB6.htm",
+          "title": "経過"
+        }
+      ],
+      "summary": "揮発油価格高騰時における揮発油税等税率特例停止措置の実施並びに揮発油税等の税率の特例の廃止及び脱炭素社会の実現等に資する税制の構築のための措置に関する法律案",
+      "category": "経済・財政",
+      "collected_at": "2025-07-03T16:51:22.556079",
+      "year": 2025
+    },
+    {
+      "title": "一般会計からの自動車安全特別会計の自動車事故対策勘定への繰入れのために講ずべき措置に関する法律案",
+      "bill_number": "4",
+      "session_number": 216,
+      "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21605004.htm",
+      "content_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21605004.htm",
+      "progress_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/1DDDDBA.htm",
+      "submitter": "議員",
+      "submission_date": "",
+      "status": "衆議院で閉会中審査",
+      "status_normalized": "継続審議",
+      "committee": "",
+      "bill_content": "",
+      "related_links": [
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21605004.htm",
+          "title": "本文"
+        },
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/1DDDDBA.htm",
+          "title": "経過"
+        }
+      ],
+      "summary": "一般会計からの自動車安全特別会計の自動車事故対策勘定への繰入れのために講ずべき措置に関する法律案",
+      "category": "一般",
+      "collected_at": "2025-07-03T16:51:22.556190",
+      "year": 2025
+    },
+    {
+      "title": "電気料金の高騰に対する当分の間の措置として電気の使用者に対して再生可能エネルギー電気に係る賦課金の請求が行われないようにするために講ずべき措置等に関する法律案",
+      "bill_number": "5",
+      "session_number": 216,
+      "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21605005.htm",
+      "content_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21605005.htm",
+      "progress_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/1DDDDDE.htm",
+      "submitter": "議員",
+      "submission_date": "",
+      "status": "衆議院で閉会中審査",
+      "status_normalized": "継続審議",
+      "committee": "",
+      "bill_content": "",
+      "related_links": [
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21605005.htm",
+          "title": "本文"
+        },
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/1DDDDDE.htm",
+          "title": "経過"
+        }
+      ],
+      "summary": "電気料金の高騰に対する当分の間の措置として電気の使用者に対して再生可能エネルギー電気に係る賦課金の請求が行われないようにするために講ずべき措置等に関する法律案",
+      "category": "環境・エネルギー",
+      "collected_at": "2025-07-03T16:51:22.556251",
+      "year": 2025
+    },
+    {
+      "title": "政治資金規正法の一部を改正する法律案",
+      "bill_number": "9",
+      "session_number": 216,
+      "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21605009.htm",
+      "content_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21605009.htm",
+      "progress_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/1DDDD82.htm",
+      "submitter": "内閣",
+      "submission_date": "",
+      "status": "衆議院で閉会中審査",
+      "status_normalized": "継続審議",
+      "committee": "",
+      "bill_content": "",
+      "related_links": [
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21605009.htm",
+          "title": "本文"
+        },
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/1DDDD82.htm",
+          "title": "経過"
+        }
+      ],
+      "summary": "政治資金規正法の一部を改正する法律案",
+      "category": "一般",
+      "collected_at": "2025-07-03T16:51:22.556309",
+      "year": 2025
+    },
+    {
+      "title": "政治資金規正法及び租税特別措置法の一部を改正する法律案",
+      "bill_number": "10",
+      "session_number": 216,
+      "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21605010.htm",
+      "content_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21605010.htm",
+      "progress_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/1DDDD8A.htm",
+      "submitter": "内閣",
+      "submission_date": "",
+      "status": "撤回",
+      "status_normalized": "撤回",
+      "committee": "",
+      "bill_content": "",
+      "related_links": [
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21605010.htm",
+          "title": "本文"
+        },
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/1DDDD8A.htm",
+          "title": "経過"
+        }
+      ],
+      "summary": "政治資金規正法及び租税特別措置法の一部を改正する法律案",
+      "category": "経済・財政",
+      "collected_at": "2025-07-03T16:51:22.556372",
+      "year": 2025
+    },
+    {
+      "title": "政党交付金の交付停止等に関する制度の創設に関する法律案",
+      "bill_number": "12",
+      "session_number": 216,
+      "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21605012.htm",
+      "content_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21605012.htm",
+      "progress_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/1DDDD92.htm",
+      "submitter": "議員",
+      "submission_date": "",
+      "status": "衆議院で閉会中審査",
+      "status_normalized": "継続審議",
+      "committee": "",
+      "bill_content": "",
+      "related_links": [
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21605012.htm",
+          "title": "本文"
+        },
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/1DDDD92.htm",
+          "title": "経過"
+        }
+      ],
+      "summary": "政党交付金の交付停止等に関する制度の創設に関する法律案",
+      "category": "一般",
+      "collected_at": "2025-07-03T16:51:22.556434",
+      "year": 2025
+    },
+    {
+      "title": "政治資金規正法等の一部を改正する法律案",
+      "bill_number": "13",
+      "session_number": 216,
+      "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21605013.htm",
+      "content_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21605013.htm",
+      "progress_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/1DDDD9A.htm",
+      "submitter": "内閣",
+      "submission_date": "",
+      "status": "衆議院で閉会中審査",
+      "status_normalized": "継続審議",
+      "committee": "",
+      "bill_content": "",
+      "related_links": [
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21605013.htm",
+          "title": "本文"
+        },
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/1DDDD9A.htm",
+          "title": "経過"
+        }
+      ],
+      "summary": "政治資金規正法等の一部を改正する法律案",
+      "category": "一般",
+      "collected_at": "2025-07-03T16:51:22.556492",
+      "year": 2025
+    },
+    {
+      "title": "行政手続における特定の個人を識別するための番号の利用等に関する法律等の一部を改正する法律の一部を改正する法律案",
+      "bill_number": "1",
+      "session_number": 215,
+      "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21505001.htm",
+      "content_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21505001.htm",
+      "progress_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/1DDD7AE.htm",
+      "submitter": "内閣",
+      "submission_date": "",
+      "status": "衆議院で閉会中審査",
+      "status_normalized": "継続審議",
+      "committee": "",
+      "bill_content": "",
+      "related_links": [
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21505001.htm",
+          "title": "本文"
+        },
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/1DDD7AE.htm",
+          "title": "経過"
+        }
+      ],
+      "summary": "行政手続における特定の個人を識別するための番号の利用等に関する法律等の一部を改正する法律の一部を改正する法律案",
+      "category": "司法・行政",
+      "collected_at": "2025-07-03T16:51:25.406815",
+      "year": 2025
+    },
+    {
+      "title": "就労支援給付制度の導入に関する法律案",
+      "bill_number": "2",
+      "session_number": 215,
+      "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21505002.htm",
+      "content_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21505002.htm",
+      "progress_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/1DDD7B6.htm",
+      "submitter": "議員",
+      "submission_date": "",
+      "status": "衆議院で閉会中審査",
+      "status_normalized": "継続審議",
+      "committee": "",
+      "bill_content": "",
+      "related_links": [
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21505002.htm",
+          "title": "本文"
+        },
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/1DDD7B6.htm",
+          "title": "経過"
+        }
+      ],
+      "summary": "就労支援給付制度の導入に関する法律案",
+      "category": "一般",
+      "collected_at": "2025-07-03T16:51:25.406880",
+      "year": 2025
+    },
+    {
+      "title": "賃金上昇を上回る所得税の負担増加等に対処するために所得税に関し講ずべき措置に関する法律案",
+      "bill_number": "1",
+      "session_number": 216,
+      "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21605001.htm",
+      "content_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21605001.htm",
+      "progress_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/1DDD806.htm",
+      "submitter": "内閣",
+      "submission_date": "",
+      "status": "衆議院で閉会中審査",
+      "status_normalized": "継続審議",
+      "committee": "",
+      "bill_content": "",
+      "related_links": [
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21605001.htm",
+          "title": "本文"
+        },
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/1DDD806.htm",
+          "title": "経過"
+        }
+      ],
+      "summary": "賃金上昇を上回る所得税の負担増加等に対処するために所得税に関し講ずべき措置に関する法律案",
+      "category": "経済・財政",
+      "collected_at": "2025-07-03T16:51:25.406937",
+      "year": 2025
+    },
+    {
+      "title": "政治資金規正法の一部を改正する法律案",
+      "bill_number": "2",
+      "session_number": 216,
+      "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21605002.htm",
+      "content_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21605002.htm",
+      "progress_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/1DDD9FE.htm",
+      "submitter": "内閣",
+      "submission_date": "",
+      "status": "成立",
+      "status_normalized": "成立",
+      "committee": "",
+      "bill_content": "",
+      "related_links": [
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21605002.htm",
+          "title": "本文"
+        },
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/1DDD9FE.htm",
+          "title": "経過"
+        }
+      ],
+      "summary": "政治資金規正法の一部を改正する法律案",
+      "category": "一般",
+      "collected_at": "2025-07-03T16:51:25.406990",
+      "year": 2025
+    },
+    {
+      "title": "揮発油価格高騰時における揮発油税等税率特例停止措置の実施並びに揮発油税等の税率の特例の廃止及び脱炭素社会の実現等に資する税制の構築のための措置に関する法律案",
+      "bill_number": "3",
+      "session_number": 216,
+      "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21605003.htm",
+      "content_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21605003.htm",
+      "progress_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/1DDDB0A.htm",
+      "submitter": "内閣",
+      "submission_date": "",
+      "status": "衆議院で閉会中審査",
+      "status_normalized": "継続審議",
+      "committee": "",
+      "bill_content": "",
+      "related_links": [
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21605003.htm",
+          "title": "本文"
+        },
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/1DDDB0A.htm",
+          "title": "経過"
+        }
+      ],
+      "summary": "揮発油価格高騰時における揮発油税等税率特例停止措置の実施並びに揮発油税等の税率の特例の廃止及び脱炭素社会の実現等に資する税制の構築のための措置に関する法律案",
+      "category": "経済・財政",
+      "collected_at": "2025-07-03T16:51:25.407040",
+      "year": 2025
+    },
+    {
+      "title": "一般会計からの自動車安全特別会計の自動車事故対策勘定への繰入れのために講ずべき措置に関する法律案",
+      "bill_number": "4",
+      "session_number": 216,
+      "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21605004.htm",
+      "content_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21605004.htm",
+      "progress_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/1DDDB1E.htm",
+      "submitter": "議員",
+      "submission_date": "",
+      "status": "衆議院で閉会中審査",
+      "status_normalized": "継続審議",
+      "committee": "",
+      "bill_content": "",
+      "related_links": [
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21605004.htm",
+          "title": "本文"
+        },
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/1DDDB1E.htm",
+          "title": "経過"
+        }
+      ],
+      "summary": "一般会計からの自動車安全特別会計の自動車事故対策勘定への繰入れのために講ずべき措置に関する法律案",
+      "category": "一般",
+      "collected_at": "2025-07-03T16:51:25.407094",
+      "year": 2025
+    },
+    {
+      "title": "電気料金の高騰に対する当分の間の措置として電気の使用者に対して再生可能エネルギー電気に係る賦課金の請求が行われないようにするために講ずべき措置等に関する法律案",
+      "bill_number": "5",
+      "session_number": 216,
+      "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21605005.htm",
+      "content_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21605005.htm",
+      "progress_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/1DDDB32.htm",
+      "submitter": "議員",
+      "submission_date": "",
+      "status": "衆議院で閉会中審査",
+      "status_normalized": "継続審議",
+      "committee": "",
+      "bill_content": "",
+      "related_links": [
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21605005.htm",
+          "title": "本文"
+        },
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/1DDDB32.htm",
+          "title": "経過"
+        }
+      ],
+      "summary": "電気料金の高騰に対する当分の間の措置として電気の使用者に対して再生可能エネルギー電気に係る賦課金の請求が行われないようにするために講ずべき措置等に関する法律案",
+      "category": "環境・エネルギー",
+      "collected_at": "2025-07-03T16:51:25.407147",
+      "year": 2025
+    },
+    {
+      "title": "政治資金規正法等の一部を改正する法律案",
+      "bill_number": "6",
+      "session_number": 216,
+      "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21605006.htm",
+      "content_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21605006.htm",
+      "progress_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/1DDDB5E.htm",
+      "submitter": "内閣",
+      "submission_date": "",
+      "status": "成立",
+      "status_normalized": "成立",
+      "committee": "",
+      "bill_content": "",
+      "related_links": [
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21605006.htm",
+          "title": "本文"
+        },
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/1DDDB5E.htm",
+          "title": "経過"
+        }
+      ],
+      "summary": "政治資金規正法等の一部を改正する法律案",
+      "category": "一般",
+      "collected_at": "2025-07-03T16:51:25.407213",
+      "year": 2025
+    },
+    {
+      "title": "国会法の一部を改正する法律案",
+      "bill_number": "7",
+      "session_number": 216,
+      "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21605007.htm",
+      "content_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21605007.htm",
+      "progress_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/1DDDB76.htm",
+      "submitter": "内閣",
+      "submission_date": "",
+      "status": "撤回",
+      "status_normalized": "撤回",
+      "committee": "",
+      "bill_content": "",
+      "related_links": [
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21605007.htm",
+          "title": "本文"
+        },
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/1DDDB76.htm",
+          "title": "経過"
+        }
+      ],
+      "summary": "国会法の一部を改正する法律案",
+      "category": "一般",
+      "collected_at": "2025-07-03T16:51:25.407264",
+      "year": 2025
+    },
+    {
+      "title": "政治資金委員会法案",
+      "bill_number": "8",
+      "session_number": 216,
+      "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21605008.htm",
+      "content_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21605008.htm",
+      "progress_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/1DDDB8E.htm",
+      "submitter": "議員",
+      "submission_date": "",
+      "status": "撤回",
+      "status_normalized": "撤回",
+      "committee": "",
+      "bill_content": "",
+      "related_links": [
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21605008.htm",
+          "title": "本文"
+        },
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/1DDDB8E.htm",
+          "title": "経過"
+        }
+      ],
+      "summary": "政治資金委員会法案",
+      "category": "一般",
+      "collected_at": "2025-07-03T16:51:25.407353",
+      "year": 2025
+    },
+    {
+      "title": "行政手続における特定の個人を識別するための番号の利用等に関する法律等の一部を改正する法律の一部を改正する法律案",
+      "bill_number": "1",
+      "session_number": 215,
+      "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21505001.htm",
+      "content_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21505001.htm",
+      "progress_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/1DDD762.htm",
+      "submitter": "内閣",
+      "submission_date": "",
+      "status": "衆議院で閉会中審査",
+      "status_normalized": "継続審議",
+      "committee": "",
+      "bill_content": "",
+      "related_links": [
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21505001.htm",
+          "title": "本文"
+        },
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/1DDD762.htm",
+          "title": "経過"
+        }
+      ],
+      "summary": "行政手続における特定の個人を識別するための番号の利用等に関する法律等の一部を改正する法律の一部を改正する法律案",
+      "category": "司法・行政",
+      "collected_at": "2025-07-03T16:51:27.341963",
+      "year": 2025
+    },
+    {
+      "title": "就労支援給付制度の導入に関する法律案",
+      "bill_number": "2",
+      "session_number": 215,
+      "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21505002.htm",
+      "content_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21505002.htm",
+      "progress_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/1DDD786.htm",
+      "submitter": "議員",
+      "submission_date": "",
+      "status": "衆議院で閉会中審査",
+      "status_normalized": "継続審議",
+      "committee": "",
+      "bill_content": "",
+      "related_links": [
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21505002.htm",
+          "title": "本文"
+        },
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/1DDD786.htm",
+          "title": "経過"
+        }
+      ],
+      "summary": "就労支援給付制度の導入に関する法律案",
+      "category": "一般",
+      "collected_at": "2025-07-03T16:51:27.342088",
+      "year": 2025
+    }
+  ]
+}

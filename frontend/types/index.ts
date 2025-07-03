@@ -21,6 +21,12 @@ export interface SearchParams {
   limit?: number;
   offset?: number;
   search_type?: 'speeches' | 'committee_news' | 'bills' | 'questions';
+  // 提出法案用パラメータ
+  bill_submitter?: string;
+  bill_status?: string;
+  // 質問主意書用パラメータ
+  questioner?: string;
+  session_number?: string;
 }
 
 export interface SearchResult {

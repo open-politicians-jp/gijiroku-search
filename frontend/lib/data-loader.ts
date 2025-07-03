@@ -292,7 +292,29 @@ class StaticDataLoader {
           if (response.ok) {
             const data = await response.json();
             
-            this.billsCache = Array.isArray(data) ? data : data.bills || data.data || [];
+            const rawBills = Array.isArray(data) ? data : data.bills || data.data || [];
+            
+            // データ構造をフロントエンド形式に変換
+            this.billsCache = rawBills.map((bill: any) => ({
+              bill_number: bill.bill_number || '',
+              title: bill.title || '',
+              submitter: bill.submitter || '',
+              status: bill.status || '',
+              status_normalized: bill.status_normalized || bill.status || '',
+              session_number: bill.session_number || bill.session || 0,
+              detail_url: bill.url || bill.content_url || bill.detail_url || '',
+              summary: bill.summary || bill.bill_content || '',
+              full_text: bill.bill_content || '',
+              committee: bill.committee || '',
+              submission_date: bill.submission_date || '',
+              related_urls: (bill.related_links || bill.related_urls || []).map((link: any) => ({
+                title: link.title || '関連資料',
+                url: link.url || ''
+              })),
+              collected_at: bill.collected_at || new Date().toISOString(),
+              year: bill.year || new Date().getFullYear()
+            }));
+            
             this.updateCacheTime();
             return this.billsCache;
           }
