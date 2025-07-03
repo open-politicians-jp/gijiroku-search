@@ -3,7 +3,7 @@
     "data_type": "shugiin_bills_table_based",
     "collection_method": "table_extraction",
     "total_bills": 3,
-    "generated_at": "2025-07-03T18:35:02.704197",
+    "generated_at": "2025-07-03T18:26:36.566908",
     "source_site": "www.shugiin.go.jp",
     "target_sessions": [
       217,
@@ -39,44 +39,16 @@
       ],
       "summary": "行政手続における特定の個人を識別するための番号の利用等に関する法律等の一部を改正する法律の一部を改正する法律案",
       "category": "司法・行政",
-      "collected_at": "2025-07-03T18:34:58.948465",
+      "collected_at": "2025-07-03T18:26:32.948471",
       "year": 2025
     },
     {
-      "title": "就労支援給付制度の導入に関する法律案",
-      "bill_number": "2",
-      "session_number": 215,
-      "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21505002.htm",
-      "content_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21505002.htm",
-      "progress_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/1DDDDCE.htm",
-      "submitter": "議員",
-      "submission_date": "",
-      "status": "衆議院で閉会中審査",
-      "status_normalized": "継続審議",
-      "committee": "",
-      "bill_content": "",
-      "related_links": [
-        {
-          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21505002.htm",
-          "title": "本文"
-        },
-        {
-          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/1DDDDCE.htm",
-          "title": "経過"
-        }
-      ],
-      "summary": "就労支援給付制度の導入に関する法律案",
-      "category": "一般",
-      "collected_at": "2025-07-03T18:34:58.948524",
-      "year": 2025
-    },
-    {
-      "title": "賃金上昇を上回る所得税の負担増加等に対処するために所得税に関し講ずべき措置に関する法律案",
+      "title": "行政手続における特定の個人を識別するための番号の利用等に関する法律等の一部を改正する法律の一部を改正する法律案",
       "bill_number": "1",
-      "session_number": 216,
-      "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21605001.htm",
-      "content_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21605001.htm",
-      "progress_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/1DDDDB2.htm",
+      "session_number": 215,
+      "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21505001.htm",
+      "content_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21505001.htm",
+      "progress_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/1DDD7AE.htm",
       "submitter": "内閣",
       "submission_date": "",
       "status": "衆議院で閉会中審査",
@@ -85,17 +57,45 @@
       "bill_content": "",
       "related_links": [
         {
-          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21605001.htm",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21505001.htm",
           "title": "本文"
         },
         {
-          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/1DDDDB2.htm",
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/1DDD7AE.htm",
           "title": "経過"
         }
       ],
-      "summary": "賃金上昇を上回る所得税の負担増加等に対処するために所得税に関し講ずべき措置に関する法律案",
-      "category": "経済・財政",
-      "collected_at": "2025-07-03T18:34:58.948588",
+      "summary": "行政手続における特定の個人を識別するための番号の利用等に関する法律等の一部を改正する法律の一部を改正する法律案",
+      "category": "司法・行政",
+      "collected_at": "2025-07-03T18:26:34.357765",
+      "year": 2025
+    },
+    {
+      "title": "行政手続における特定の個人を識別するための番号の利用等に関する法律等の一部を改正する法律の一部を改正する法律案",
+      "bill_number": "1",
+      "session_number": 215,
+      "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21505001.htm",
+      "content_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21505001.htm",
+      "progress_url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/1DDD762.htm",
+      "submitter": "内閣",
+      "submission_date": "",
+      "status": "衆議院で閉会中審査",
+      "status_normalized": "継続審議",
+      "committee": "",
+      "bill_content": "",
+      "related_links": [
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/honbun/g21505001.htm",
+          "title": "本文"
+        },
+        {
+          "url": "https://www.shugiin.go.jp/internet/itdb_gian.nsf/html/gian/keika/1DDD762.htm",
+          "title": "経過"
+        }
+      ],
+      "summary": "行政手続における特定の個人を識別するための番号の利用等に関する法律等の一部を改正する法律の一部を改正する法律案",
+      "category": "司法・行政",
+      "collected_at": "2025-07-03T18:26:36.566675",
       "year": 2025
     }
   ]

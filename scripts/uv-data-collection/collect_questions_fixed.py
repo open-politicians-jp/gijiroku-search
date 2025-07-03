@@ -30,15 +30,17 @@ logger = logging.getLogger(__name__)
 class QuestionsCollector:
     """質問主意書収集クラス（正式版）"""
     
-    def __init__(self, start_date: Optional[str] = None, end_date: Optional[str] = None):
+    def __init__(self, start_date: Optional[str] = None, end_date: Optional[str] = None, session: Optional[int] = None):
         self.ua = UserAgent()
         self.session = requests.Session()
         self.update_headers()
         
         # 日付範囲設定
-        self.start_date = start_date or (datetime.now() - timedelta(days=60)).strftime("%Y-%m-%d")
+        self.start_date = start_date or (datetime.now() - timedelta(days=30)).strftime("%Y-%m-%d")
         self.end_date = end_date or datetime.now().strftime("%Y-%m-%d")
+        self.session_number = session or 217  # 現在の国会回次
         logger.info(f"収集期間: {self.start_date} から {self.end_date}")
+        logger.info(f"対象国会: 第{self.session_number}回")
         
         # 出力ディレクトリ設定
         self.project_root = Path(__file__).parent.parent.parent
@@ -59,7 +61,8 @@ class QuestionsCollector:
         
         # 基本URL（正式版）
         self.base_url = "https://www.shugiin.go.jp"
-        self.questions_main_url = "https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/menu_m.htm"
+        self.questions_main_url = f"https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/ka{self.session_number}.htm"
+        self.questions_list_url = f"https://www.shugiin.go.jp/internet/itdb_shitsumon.nsf/html/shitsumon/menu_s.htm"
         
     def update_headers(self):
         """User-Agent更新とIP偽装"""
@@ -513,22 +516,45 @@ class QuestionsCollector:
         
         # データ期間を基準としたファイル名（現在の年月 + 時刻）
         current_date = datetime.now()
-        data_period = current_date.strftime('%Y%m01')  # 当月のデータとして保存
+        data_period = current_date.strftime('%Y%m%d')  # 当日のデータとして保存
         timestamp = current_date.strftime('%H%M%S')
+        
+        # 統一されたデータ構造
+        data_structure = {
+            "metadata": {
+                "data_type": "shugiin_questions",
+                "collection_method": "incremental_scraping",
+                "total_questions": len(questions),
+                "generated_at": current_date.isoformat(),
+                "source_site": "www.shugiin.go.jp",
+                "collection_period": {
+                    "start_date": self.start_date,
+                    "end_date": self.end_date
+                }
+            },
+            "data": questions
+        }
         
         # 生データ保存
         raw_filename = f"questions_{data_period}_{timestamp}.json"
         raw_filepath = self.questions_dir / raw_filename
         
         with open(raw_filepath, 'w', encoding='utf-8') as f:
-            json.dump(questions, f, ensure_ascii=False, indent=2)
+            json.dump(data_structure, f, ensure_ascii=False, indent=2)
         
         # フロントエンド用データ保存
         frontend_filename = f"questions_{data_period}_{timestamp}.json"
         frontend_filepath = self.frontend_questions_dir / frontend_filename
         
         with open(frontend_filepath, 'w', encoding='utf-8') as f:
-            json.dump(questions, f, ensure_ascii=False, indent=2)
+            json.dump(data_structure, f, ensure_ascii=False, indent=2)
+        
+        # 最新ファイル更新（データが正常な場合のみ）
+        if len(questions) > 0:
+            latest_file = self.frontend_questions_dir / "questions_latest.json"
+            with open(latest_file, 'w', encoding='utf-8') as f:
+                json.dump(data_structure, f, ensure_ascii=False, indent=2)
+            logger.info(f"📁 最新ファイル更新: {latest_file}")
         
         logger.info(f"質問データ保存完了:")
         logger.info(f"  - 生データ: {raw_filepath}")

@@ -58,7 +58,7 @@ class CommitteeNewsEnhanced:
         self.base_url = "https://www.shugiin.go.jp"
         self.news_base_url = "https://www.shugiin.go.jp/internet/itdb_rchome.nsf/html/rchome/News/"
         
-        # 委員会一覧（常任委員会 + 特別委員会）
+        # 委員会一覧（常任委員会17 + 特別委員会7 + 調査会2 = 26委員会）
         self.standing_committees = {
             'naikaku': '内閣委員会',
             'soumu': '総務委員会', 
@@ -72,14 +72,16 @@ class CommitteeNewsEnhanced:
             'kokudo': '国土交通委員会',
             'kankyou': '環境委員会',
             'ampo': '安全保障委員会',
-            'kihon': '基本政策委員会',
             'yosan': '予算委員会',
-            'kessan': '決算行政監視委員会'
+            'kessan': '決算行政監視委員会',
+            'giin': '議院運営委員会',
+            'kihon': '基本政策委員会',
+            'chihou': '地方創生委員会'
         }
         
         self.special_committees = {
             'fukkosaigai': '復興災害特別委員会',
-            'seijikaikaku': '政治改革特別委員会',
+            'seijikaikaku': '政治改革特別委員会', 
             'okihoku': '沖縄北方特別委員会',
             'rachi': '拉致問題特別委員会',
             'shohisha': '消費者特別委員会',
@@ -87,7 +89,12 @@ class CommitteeNewsEnhanced:
             'chikodigi': '地方デジタル特別委員会'
         }
         
-        self.committees = {**self.standing_committees, **self.special_committees}
+        self.research_committees = {
+            'kenpou': '憲法調査会',
+            'kagaku': '科学技術・イノベーション調査会'
+        }
+        
+        self.committees = {**self.standing_committees, **self.special_committees, **self.research_committees}
         
         # 現在日時
         current_date = datetime.now()
