@@ -65,6 +65,7 @@ jobs:
       env:
         NODE_ENV: production
         GITHUB_PAGES: 'true'
+        NEXT_PUBLIC_BASE_PATH: '/gijiroku-search'
         NEXT_PUBLIC_VERSION: ${{ github.event.release.tag_name || 'development' }}
         NEXT_PUBLIC_BUILD_TIME: ${{ github.run_id }}
         GITHUB_SHA: ${{ github.sha }}
