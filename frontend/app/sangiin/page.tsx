@@ -79,25 +79,38 @@ export default function SangiinPage() {
   // フィルター状態
   const [selectedParty, setSelectedParty] = useState<string>('');
   const [selectedPrefecture, setSelectedPrefecture] = useState<string>('');
+  const [selectedConstituencyType, setSelectedConstituencyType] = useState<string>('');
   const [searchTerm, setSearchTerm] = useState('');
 
   const fetchCandidates = async () => {
     try {
-      // APIエンドポイントからデータを取得
-      const response = await fetch('/api/sangiin-candidates?limit=1000');
+      // SPA対応: 静的データファイルから直接読み込み（最も完全なデータセット）
+      // const response = await fetch('/data/sangiin_candidates/sangiin_candidates_latest.json');
+      const response = await fetch('/data/sangiin_candidates/go2senkyo_optimized_latest.json');
+      
       if (!response.ok) {
-        throw new Error('参議院選候補者データの取得に失敗しました');
+        throw new Error(`参議院選候補者データの取得に失敗しました (HTTP ${response.status})`);
       }
+      
       const result = await response.json();
       
-      if (!result.success) {
-        throw new Error(result.error || 'データ取得に失敗しました');
+      // データ構造の確認と取得
+      const candidatesData = result.data || result.candidates || [];
+      
+      if (!Array.isArray(candidatesData)) {
+        throw new Error('データ形式が正しくありません');
       }
       
-      // データをセット（APIで重複除去済み）
-      setCandidates(result.data || []);
+      if (candidatesData.length === 0) {
+        throw new Error('候補者データが見つかりません');
+      }
+      
+      // go2senkyo_optimized_latest.jsonは既に品質が良いのでそのまま使用
+      const uniqueCandidates = candidatesData;
+      setCandidates(uniqueCandidates);
       setLoading(false);
     } catch (err) {
+      console.error('❌ Sangiin candidates fetch error:', err);
       setError(err instanceof Error ? err.message : '不明なエラーが発生しました');
       setLoading(false);
     }
@@ -115,6 +128,11 @@ export default function SangiinPage() {
     // 都道府県フィルター
     if (selectedPrefecture) {
       filtered = filtered.filter(candidate => candidate.prefecture === selectedPrefecture);
+    }
+
+    // 選挙区タイプフィルター
+    if (selectedConstituencyType) {
+      filtered = filtered.filter(candidate => candidate.constituency_type === selectedConstituencyType);
     }
 
     // 検索フィルター
@@ -139,7 +157,7 @@ export default function SangiinPage() {
     }
 
     setFilteredCandidates(filtered);
-  }, [candidates, selectedParty, selectedPrefecture, searchTerm]);
+  }, [candidates, selectedParty, selectedPrefecture, selectedConstituencyType, searchTerm]);
 
   useEffect(() => {
     fetchCandidates();
@@ -197,6 +215,11 @@ export default function SangiinPage() {
     }
   };
 
+  const getUniqueConstituencyTypes = () => {
+    const types = Array.from(new Set(candidates.map(candidate => candidate.constituency_type)));
+    return types.sort();
+  };
+
   const getPartyColor = (party: string) => {
     const colors: { [key: string]: string } = {
       '自由民主党': 'bg-red-100 text-red-800',
@@ -240,7 +263,21 @@ export default function SangiinPage() {
         <div className="container mx-auto px-4 py-8 mt-16">
           <div className="bg-red-50 border border-red-200 rounded-lg p-6">
             <h2 className="text-lg font-semibold text-red-800 mb-2">エラーが発生しました</h2>
-            <p className="text-red-600">{error}</p>
+            <p className="text-red-600 mb-4">{error}</p>
+            <div className="text-sm text-gray-600">
+              <p>デバッグ情報:</p>
+              <ul className="list-disc list-inside mt-2">
+                <li>Candidates loaded: {candidates.length}</li>
+                <li>Loading state: {loading.toString()}</li>
+                <li>Console に詳細なログが出力されています</li>
+              </ul>
+            </div>
+            <button 
+              onClick={fetchCandidates}
+              className="mt-4 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+            >
+              再試行
+            </button>
           </div>
         </div>
       </>
@@ -279,7 +316,7 @@ export default function SangiinPage() {
       {/* フィルター */}
       <div className="bg-white rounded-lg shadow-sm border p-6 mb-6">
         <h2 className="text-lg font-semibold mb-4">検索・フィルター</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           {/* 検索ボックス */}
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">
@@ -324,6 +361,23 @@ export default function SangiinPage() {
               <option value="">すべての都道府県</option>
               {getUniquePrefectures().map(prefecture => (
                 <option key={prefecture} value={prefecture}>{prefecture}</option>
+              ))}
+            </select>
+          </div>
+
+          {/* 選挙区タイプフィルター */}
+          <div>
+            <label className="block text-sm font-medium text-gray-700 mb-2">
+              選挙区タイプ
+            </label>
+            <select
+              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              value={selectedConstituencyType}
+              onChange={(e) => setSelectedConstituencyType(e.target.value)}
+            >
+              <option value="">すべての選挙区</option>
+              {getUniqueConstituencyTypes().map(type => (
+                <option key={type} value={type}>{getConstituencyTypeLabel(type)}</option>
               ))}
             </select>
           </div>
@@ -462,7 +516,7 @@ export default function SangiinPage() {
       </div>
 
       {/* 検索結果なしの場合 */}
-      {filteredCandidates.length === 0 && (
+      {filteredCandidates.length === 0 && candidates.length > 0 && (
         <div className="text-center py-12">
           <div className="text-gray-400 mb-4">
             <Users className="h-16 w-16 mx-auto" />
@@ -473,6 +527,27 @@ export default function SangiinPage() {
           <p className="text-gray-600">
             検索条件を変更して再度お試しください。
           </p>
+        </div>
+      )}
+
+      {/* データが全くない場合 */}
+      {candidates.length === 0 && !loading && !error && (
+        <div className="text-center py-12">
+          <div className="text-gray-400 mb-4">
+            <Users className="h-16 w-16 mx-auto" />
+          </div>
+          <h3 className="text-lg font-semibold text-gray-900 mb-2">
+            候補者データが見つかりません
+          </h3>
+          <p className="text-gray-600 mb-4">
+            データの読み込みに問題がある可能性があります。
+          </p>
+          <button 
+            onClick={fetchCandidates}
+            className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+          >
+            データを再読み込み
+          </button>
         </div>
       )}
       </div>

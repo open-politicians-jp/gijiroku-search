@@ -14,10 +14,10 @@ export default function Header({ currentPage = 'search', onPageChange }: HeaderP
 
   const navigationItems = [
     { key: 'search', icon: Search, label: '検索', href: '/', onClick: () => onPageChange?.('search') },
+    { key: 'sangiin', icon: Building2, label: '参議院選', href: '/sangiin', badge: '7/20まで' },
     { key: 'summaries', icon: Bot, label: '議会要約', href: '/summaries', badge: 'Beta' },
     { key: 'manifestos', icon: FileText, label: 'マニフェスト', href: '/manifestos' },
     { key: 'legislators', icon: Users, label: '議員一覧', href: '/legislators' },
-    { key: 'sangiin', icon: Building2, label: '参議院選', href: '/sangiin' },
     { key: 'about', icon: Info, label: 'About', href: '/about' }
   ];
 
