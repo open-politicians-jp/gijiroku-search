@@ -8,7 +8,8 @@ import json
 import logging
 import requests
 import time
-from datetime import datetime
+import argparse
+from datetime import datetime, timedelta
 from pathlib import Path
 from bs4 import BeautifulSoup
 import re
@@ -405,15 +406,148 @@ class CompleteGo2senkyoCollector:
         
         return complete_file
 
+    def collect_test_prefectures(self):
+        """テストモード: 少数県のみ収集"""
+        logger.info("🧪 テストモード: 東京・大阪・神奈川のみ収集...")
+        
+        test_prefectures = [13, 27, 14]  # 東京、大阪、神奈川
+        all_results = []
+        
+        for pref_code in test_prefectures:
+            pref_name = self.prefectures[pref_code]
+            try:
+                logger.info(f"📍 テスト収集: {pref_name}")
+                candidates = self.collect_prefecture_structured(pref_code)
+                
+                if candidates:
+                    all_results.extend(candidates)
+                    logger.info(f"✅ {pref_name}: {len(candidates)}名")
+                
+                time.sleep(1)
+                
+            except Exception as e:
+                logger.error(f"❌ {pref_name} テスト収集エラー: {e}")
+                continue
+        
+        # テスト結果保存
+        saved_file = self.save_test_results(all_results)
+        
+        logger.info(f"🧪 テストモード完了: {len(all_results)}名収集")
+        return saved_file
+
+    def save_test_results(self, candidates):
+        """テスト結果の保存"""
+        logger.info("💾 テスト結果保存...")
+        
+        # 統計計算
+        party_stats = {}
+        prefecture_stats = {}
+        
+        for candidate in candidates:
+            party = candidate.get('party', '未分類')
+            prefecture = candidate.get('prefecture', '未分類')
+            
+            party_stats[party] = party_stats.get(party, 0) + 1
+            prefecture_stats[prefecture] = prefecture_stats.get(prefecture, 0) + 1
+        
+        # テストデータ構造
+        test_data = {
+            "metadata": {
+                "data_type": "go2senkyo_test_mode_sangiin_2025",
+                "collection_method": "structured_html_extraction_test_prefectures",
+                "total_candidates": len(candidates),
+                "candidates_with_kana": len([c for c in candidates if c.get('name_kana')]),
+                "test_prefectures": 3,
+                "generated_at": datetime.now().isoformat(),
+                "source_site": "sangiin.go2senkyo.com",
+                "coverage": {
+                    "constituency_types": 1,
+                    "parties": len(party_stats),
+                    "prefectures": len(prefecture_stats)
+                }
+            },
+            "statistics": {
+                "by_party": party_stats,
+                "by_prefecture": prefecture_stats,
+                "by_constituency_type": {"single_member": len(candidates)}
+            },
+            "data": candidates
+        }
+        
+        # ファイル保存
+        data_dir = Path(__file__).parent.parent.parent / "frontend" / "public" / "data" / "sangiin_candidates"
+        timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
+        
+        test_file = data_dir / f"go2senkyo_test_{timestamp}.json"
+        
+        with open(test_file, 'w', encoding='utf-8') as f:
+            json.dump(test_data, f, ensure_ascii=False, indent=2)
+        
+        logger.info(f"📁 テスト結果保存: {test_file}")
+        return test_file
+
+def check_if_update_needed():
+    """差分更新が必要かチェック"""
+    data_dir = Path(__file__).parent.parent.parent / "frontend" / "public" / "data" / "sangiin_candidates"
+    latest_file = data_dir / "go2senkyo_optimized_latest.json"
+    
+    if not latest_file.exists():
+        logger.info("🆕 初回実行: 完全収集を実行")
+        return True
+    
+    try:
+        with open(latest_file, 'r', encoding='utf-8') as f:
+            data = json.load(f)
+        
+        generated_at = data.get('metadata', {}).get('generated_at', '')
+        if generated_at:
+            last_update = datetime.fromisoformat(generated_at.replace('Z', '+00:00'))
+            now = datetime.now()
+            days_since_update = (now - last_update).days
+            
+            if days_since_update >= 7:
+                logger.info(f"📅 前回更新から{days_since_update}日経過: 更新実行")
+                return True
+            else:
+                logger.info(f"⏭️ 前回更新から{days_since_update}日: 更新スキップ")
+                return False
+    except Exception as e:
+        logger.warning(f"⚠️ 既存データ確認エラー: {e}")
+        return True
+    
+    return False
+
 def main():
     """メイン処理"""
-    logger.info("🚀 Go2senkyo.com全47都道府県完全収集開始...")
+    parser = argparse.ArgumentParser(description='Go2senkyo参議院選候補者データ収集')
+    parser.add_argument('--force-update', action='store_true', help='強制的に全件更新')
+    parser.add_argument('--test-mode', action='store_true', help='テストモード（制限実行）')
+    parser.add_argument('--max-candidates', type=int, default=1000, help='最大候補者数')
+    parser.add_argument('--json-only', action='store_true', help='JSON形式のみ出力')
+    parser.add_argument('--csv-only', action='store_true', help='CSV形式のみ出力')
+    parser.add_argument('--parties', type=str, help='対象政党（カンマ区切り）')
+    
+    args = parser.parse_args()
+    
+    logger.info("🚀 Go2senkyo.com参議院選候補者データ収集開始...")
+    
+    # 更新要否チェック（強制更新・テストモード以外）
+    if not args.force_update and not args.test_mode:
+        if not check_if_update_needed():
+            logger.info("✅ 更新不要: 処理終了")
+            return
     
     collector = CompleteGo2senkyoCollector()
-    result_file = collector.collect_all_prefectures_complete()
+    
+    if args.test_mode:
+        logger.info("🧪 テストモード: 制限実行")
+        # テストモードでは少数県のみ収集
+        result_file = collector.collect_test_prefectures()
+    else:
+        result_file = collector.collect_all_prefectures_complete()
     
     if result_file:
-        logger.info(f"✅ 全47都道府県収集完了: {result_file}")
+        logger.info(f"✅ データ収集完了: {result_file}")
     else:
         logger.error("❌ 収集失敗")
 
