@@ -38,30 +38,36 @@ interface Candidate {
 }
 
 interface ApiResponse {
+  success: boolean;
+  data: Candidate[];
+  pagination: {
+    total: number;
+    limit: number;
+    offset: number;
+    hasMore: boolean;
+  };
+  filters: {
+    query: string | null;
+    party: string | null;
+    prefecture: string | null;
+  };
   metadata: {
     data_type: string;
     collection_method: string;
     total_candidates: number;
     generated_at: string;
     source_site: string;
-    collection_stats: {
-      total_candidates: number;
-      detailed_profiles: number;
-      with_photos: number;
-      with_policies: number;
-      errors: number;
-    };
-    quality_metrics: {
-      detail_coverage: string;
-      photo_coverage: string;
-      policy_coverage: string;
+    coverage: {
+      constituency_types: number;
+      parties: number;
+      prefectures: number;
     };
   };
   statistics: {
     by_party: Record<string, number>;
     by_prefecture: Record<string, number>;
+    by_constituency_type: Record<string, number>;
   };
-  data: Candidate[];
 }
 
 export default function SangiinPage() {
@@ -77,23 +83,19 @@ export default function SangiinPage() {
 
   const fetchCandidates = async () => {
     try {
-      // Go2senkyo最適化データを読み込み
-      const response = await fetch('/data/sangiin_candidates/go2senkyo_optimized_latest.json');
+      // APIエンドポイントからデータを取得
+      const response = await fetch('/api/sangiin-candidates?limit=1000');
       if (!response.ok) {
         throw new Error('参議院選候補者データの取得に失敗しました');
       }
-      const data: ApiResponse = await response.json();
+      const result = await response.json();
       
-      // クライアント側で重複除去を実行
-      const originalCount = data.data?.length || 0;
-      const deduplicatedCandidates = deduplicateCandidates(data.data || []);
-      const deduplicatedCount = deduplicatedCandidates.length;
-      
-      if (originalCount !== deduplicatedCount) {
-        console.warn(`重複除去: ${originalCount}名 → ${deduplicatedCount}名 (${originalCount - deduplicatedCount}名除去)`);
+      if (!result.success) {
+        throw new Error(result.error || 'データ取得に失敗しました');
       }
       
-      setCandidates(deduplicatedCandidates);
+      // データをセット（APIで重複除去済み）
+      setCandidates(result.data || []);
       setLoading(false);
     } catch (err) {
       setError(err instanceof Error ? err.message : '不明なエラーが発生しました');
@@ -101,28 +103,6 @@ export default function SangiinPage() {
     }
   };
 
-  const deduplicateCandidates = (candidates: Candidate[]): Candidate[] => {
-    const seen = new Set<string>();
-    const uniqueCandidates: Candidate[] = [];
-
-    for (const candidate of candidates) {
-      // 重複判定キー: candidate_id を最優先、次に name + prefecture の組み合わせ
-      const primaryKey = candidate.candidate_id;
-      const secondaryKey = `${candidate.name}_${candidate.prefecture}`;
-      
-      if (!seen.has(primaryKey)) {
-        seen.add(primaryKey);
-        seen.add(secondaryKey);
-        uniqueCandidates.push(candidate);
-      } else if (!seen.has(secondaryKey)) {
-        // candidate_idが重複していても、名前+都道府県の組み合わせが異なる場合は別人として扱う
-        seen.add(secondaryKey);
-        uniqueCandidates.push(candidate);
-      }
-    }
-
-    return uniqueCandidates;
-  };
 
   const filterCandidates = useCallback(() => {
     let filtered = [...candidates];

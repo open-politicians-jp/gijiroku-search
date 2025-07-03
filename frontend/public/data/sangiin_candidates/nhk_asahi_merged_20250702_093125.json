@@ -1,0 +1,31 @@
+{
+  "metadata": {
+    "data_type": "nhk_asahi_merged_sangiin_2025",
+    "collection_method": "official_databases_with_ip_masking",
+    "total_candidates": 0,
+    "nhk_candidates": 0,
+    "asahi_candidates": 0,
+    "generated_at": "2025-07-02T09:31:25.625258",
+    "sources": [
+      "NHK選挙データベース",
+      "朝日新聞選挙データベース"
+    ],
+    "coverage": {
+      "constituency_types": 1,
+      "parties": 0,
+      "prefectures": 0
+    }
+  },
+  "statistics": {
+    "by_party": {},
+    "by_prefecture": {},
+    "by_source": {
+      "nhk_database": 0,
+      "asahi_database": 0
+    },
+    "by_constituency_type": {
+      "single_member": 0
+    }
+  },
+  "data": []
+}

@@ -3,19 +3,7 @@
  * GitHub Pages用の静的データ読み込み機能
  */
 
-import { Speech, SearchResult, Stats, CommitteeNews, Bill, Question, Manifesto } from '@/types';
-
-export interface SearchParams {
-  q?: string;
-  speaker?: string;
-  party?: string;
-  committee?: string;
-  date_from?: string;
-  date_to?: string;
-  limit?: number;
-  offset?: number;
-  search_type?: 'speeches' | 'committee_news' | 'bills' | 'questions' | 'manifestos';
-}
+import { Speech, SearchResult, Stats, CommitteeNews, Bill, Question, Manifesto, SearchParams } from '@/types';
 
 class StaticDataLoader {
   private speechesCache: Speech[] = [];
@@ -292,27 +280,27 @@ class StaticDataLoader {
           if (response.ok) {
             const data = await response.json();
             
+            // データ構造の変換処理
             const rawBills = Array.isArray(data) ? data : data.bills || data.data || [];
             
-            // データ構造をフロントエンド形式に変換
             this.billsCache = rawBills.map((bill: any) => ({
               bill_number: bill.bill_number || '',
-              title: bill.title || '',
+              title: bill.title || bill.status || '', // statusが実際のタイトルの場合がある
               submitter: bill.submitter || '',
-              status: bill.status || '',
-              status_normalized: bill.status_normalized || bill.status || '',
-              session_number: bill.session_number || bill.session || 0,
-              detail_url: bill.url || bill.content_url || bill.detail_url || '',
-              summary: bill.summary || bill.bill_content || '',
-              full_text: bill.bill_content || '',
+              status: bill.submission_date || bill.status || '', // submission_dateが実際のステータスの場合がある
+              status_normalized: bill.status_normalized || bill.submission_date || bill.status || '',
+              session_number: bill.session_number || bill.session || parseInt(bill.bill_number) || 0,
+              detail_url: bill.bill_url || bill.url || bill.content_url || bill.detail_url || '',
+              summary: bill.summary || bill.bill_summary || bill.bill_content || '',
               committee: bill.committee || '',
-              submission_date: bill.submission_date || '',
+              submission_date: bill.submission_date || bill.created_at || bill.collected_at || '',
               related_urls: (bill.related_links || bill.related_urls || []).map((link: any) => ({
                 title: link.title || '関連資料',
                 url: link.url || ''
               })),
-              collected_at: bill.collected_at || new Date().toISOString(),
-              year: bill.year || new Date().getFullYear()
+              collected_at: bill.collected_at || bill.created_at || new Date().toISOString(),
+              year: bill.year || new Date().getFullYear(),
+              full_text: bill.full_text || bill.content || bill.bill_summary || ''
             }));
             
             this.updateCacheTime();
@@ -355,7 +343,28 @@ class StaticDataLoader {
           if (response.ok) {
             const data = await response.json();
             
-            this.questionsCache = Array.isArray(data) ? data : data.questions || data.data || [];
+            // データ構造の変換処理
+            const rawQuestions = Array.isArray(data) ? data : data.questions || data.data || [];
+            
+            this.questionsCache = rawQuestions.map((question: any) => ({
+              title: question.title || '',
+              question_number: question.question_number || '',
+              questioner: question.questioner || '',
+              house: question.house || '衆議院',
+              submission_date: question.submission_date || '',
+              answer_date: question.answer_date || '',
+              question_content: question.question_content || '',
+              answer_content: question.answer_content || '',
+              question_url: question.question_url || '',
+              answer_url: question.answer_url || '',
+              category: question.category || '',
+              html_links: question.html_links || [],
+              pdf_links: question.pdf_links || [],
+              collected_at: question.collected_at || new Date().toISOString(),
+              year: question.year || new Date().getFullYear(),
+              week: question.week || 1
+            }));
+            
             this.updateCacheTime();
             return this.questionsCache;
           }
@@ -629,6 +638,23 @@ class StaticDataLoader {
       );
     }
 
+    // 提出者検索
+    if (params.bill_submitter) {
+      const submitter = params.bill_submitter.toLowerCase();
+      filteredBills = filteredBills.filter(bill =>
+        bill.submitter.toLowerCase().includes(submitter)
+      );
+    }
+
+    // ステータス検索
+    if (params.bill_status) {
+      const status = params.bill_status.toLowerCase();
+      filteredBills = filteredBills.filter(bill =>
+        bill.status.toLowerCase().includes(status) ||
+        bill.status_normalized.toLowerCase().includes(status)
+      );
+    }
+
     // 日付範囲検索
     if (params.date_from && params.date_to) {
       filteredBills = filteredBills.filter(bill => {
@@ -704,10 +730,18 @@ class StaticDataLoader {
     }
 
     // 質問者検索
-    if (params.speaker) {
-      const questioner = params.speaker.toLowerCase();
+    if (params.speaker || params.questioner) {
+      const questioner = (params.speaker || params.questioner || '').toLowerCase();
       filteredQuestions = filteredQuestions.filter(question =>
         question.questioner && question.questioner.toLowerCase().includes(questioner)
+      );
+    }
+
+    // 会期番号検索
+    if (params.session_number) {
+      const sessionNumber = params.session_number;
+      filteredQuestions = filteredQuestions.filter(question =>
+        question.question_number && question.question_number.includes(sessionNumber)
       );
     }
 
