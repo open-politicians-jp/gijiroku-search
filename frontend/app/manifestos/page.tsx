@@ -3,7 +3,8 @@
 import { useState, useEffect } from 'react';
 import { Manifesto } from '@/types';
 import { dataLoader } from '@/lib/data-loader';
-import { Search, FileText, Users, Calendar, ExternalLink } from 'lucide-react';
+import { Search, FileText, Users, Calendar, ExternalLink, ArrowRight, BookOpen } from 'lucide-react';
+import Link from 'next/link';
 import Header from '@/components/Header';
 
 export default function ManifestosPage() {
@@ -95,6 +96,28 @@ export default function ManifestosPage() {
         <div className="mb-8">
           <h1 className="text-3xl font-bold text-gray-900 mb-2">政党マニフェスト</h1>
           <p className="text-gray-600">各政党の政策・公約を確認できます</p>
+          
+          {/* AI要約ページへのリンク */}
+          <div className="mt-4 p-4 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg border border-blue-200">
+            <div className="flex items-center justify-between">
+              <div>
+                <div className="flex items-center gap-2 mb-2">
+                  <BookOpen className="h-5 w-5 text-blue-600" />
+                  <h2 className="text-sm font-semibold text-blue-900">🤖 NEW: AI要約マニフェスト</h2>
+                </div>
+                <p className="text-sm text-blue-700">
+                  Claude AIが各政党のマニフェストを有権者向けに要約しました。専門用語を避けた分かりやすい解説をご覧いただけます。
+                </p>
+              </div>
+              <Link
+                href="/manifestos/llm"
+                className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 text-sm font-medium ml-4"
+              >
+                AI要約を見る
+                <ArrowRight className="h-4 w-4 ml-1" />
+              </Link>
+            </div>
+          </div>
         </div>
 
         {/* 政党選択 */}
