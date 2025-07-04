@@ -1,0 +1,663 @@
+{
+  "metadata": {
+    "generated_at": "2025-07-04T17:18:57.433106",
+    "period": "recent_week",
+    "force_regenerate": false,
+    "summary_types": [
+      "committees",
+      "policies"
+    ],
+    "total_categories": 2
+  },
+  "summaries": {
+    "committees": {
+      "議院運営委員会": {
+        "total_speeches": 524,
+        "unique_speakers": 18,
+        "top_speakers": [
+          {
+            "name": "牧野たかお",
+            "speech_count": 236,
+            "party": "自由民主党"
+          },
+          {
+            "name": "浜田靖一",
+            "speech_count": 157,
+            "party": "自由民主党・無所属の会"
+          },
+          {
+            "name": "小林史武",
+            "speech_count": 30,
+            "party": null
+          },
+          {
+            "name": "築山信彦",
+            "speech_count": 24,
+            "party": null
+          },
+          {
+            "name": "青木一彦",
+            "speech_count": 6,
+            "party": "自由民主党"
+          }
+        ],
+        "date_range": {
+          "start": "2025-05-20",
+          "end": "2025-06-04"
+        },
+        "summary_text": "主な議論: ○委員長（牧野たかお君） ただいまから議院運営委員会を開会いたします。まず、本会議における議案の趣旨説明聴取及び質疑に関する件を議題といたします。本件につきましては、理事会におきまして協議いたしました, ○委員長（牧野たかお君） 御異議ないと認め、さよう決定いたします。---, ○委員長（牧野たかお君） 次に、本日の本会議の議事に関する件を議題といたします。事務総長の説明を求めます。"
+      },
+      "情報監視審査会": {
+        "total_speeches": 4,
+        "unique_speakers": 1,
+        "top_speakers": [
+          {
+            "name": "伊藤達也",
+            "speech_count": 4,
+            "party": "自由民主党・無所属の会"
+          }
+        ],
+        "date_range": {
+          "start": "2025-06-03",
+          "end": "2025-06-03"
+        },
+        "summary_text": "主な議論: ○伊藤会長休憩前に引き続き会議を開きます。令和六年年次報告書に関する件について議事を進めます。本件につきましては、運営協議会における協議等に基づき、お手元に配付のとおり、報告書案を作成いたしました。本, ○伊藤会長採決いたします。お手元に配付しております案を衆議院情報監視審査会規程第二十二条第一項に基づく令和六年年次報告書とするに賛成の諸君の挙手を求めます。〔賛成者挙手〕, ○伊藤会長挙手総員。よって、そのように決定いたしました。お諮りいたします。ただいま議決いたしました報告書の関係各方面への参考送付等の取扱いにつきましては、会長に御一任願いたいと存じますが、御異議ありま"
+      },
+      "予算委員会": {
+        "total_speeches": 12,
+        "unique_speakers": 1,
+        "top_speakers": [
+          {
+            "name": "安住淳",
+            "speech_count": 12,
+            "party": "立憲民主党・無所属"
+          }
+        ],
+        "date_range": {
+          "start": "2025-05-23",
+          "end": "2025-05-23"
+        },
+        "summary_text": "主な議論: ○安住委員長これより会議を開きます。この際、参考人出頭要求に関する件についてお諮りいたします。予算の実施状況に関する件の調査に関し、政治資金問題について、参考人として前衆議院議員下村博文君の出席を求め, ○安住委員長起立多数。よって、そのように決しました。次回は、公報をもってお知らせすることとし、本日は、これにて散会いたします。午前九時四十一分散会, ○安住委員長これより会議を開きます。この際、参考人出頭要求に関する件についてお諮りいたします。予算の実施状況に関する件の調査に関し、政治資金問題について、参考人として前衆議院議員下村博文君の出席を求め"
+      },
+      "政治改革に関する特別委員会": {
+        "total_speeches": 24,
+        "unique_speakers": 2,
+        "top_speakers": [
+          {
+            "name": "豊田俊郎",
+            "speech_count": 18,
+            "party": "自由民主党"
+          },
+          {
+            "name": "村上誠一郎",
+            "speech_count": 6,
+            "party": "自由民主党・無所属の会"
+          }
+        ],
+        "date_range": {
+          "start": "2025-05-21",
+          "end": "2025-05-21"
+        },
+        "summary_text": "主な議論: ○委員長（豊田俊郎君） ただいまから政治改革に関する特別委員会を開会いたします。委員の異動について御報告申し上げます。昨日までに、高橋次郎君、川合孝典君、山本啓介君、越智俊之君、こやり隆史君、清水真人, ○委員長（豊田俊郎君） 国会議員の選挙等の執行経費の基準に関する法律の一部を改正する法律案を議題といたします。政府から趣旨説明を聴取いたします。村上総務大臣。, ○国務大臣（村上誠一郎君） おはようございます。国会議員の選挙等の執行経費の基準に関する法律の一部を改正する法律案につきまして、その提案理由及び内容の概要を御説明申し上げます。この法律案は、最近におけ"
+      },
+      "国家基本政策委員会合同審査会": {
+        "total_speeches": 185,
+        "unique_speakers": 5,
+        "top_speakers": [
+          {
+            "name": "石破茂",
+            "speech_count": 75,
+            "party": "自由民主党・無所属の会"
+          },
+          {
+            "name": "野田佳彦",
+            "speech_count": 40,
+            "party": "立憲民主党・無所属"
+          },
+          {
+            "name": "玉木雄一郎",
+            "speech_count": 35,
+            "party": "国民民主党・無所属クラブ"
+          },
+          {
+            "name": "浅田均",
+            "speech_count": 25,
+            "party": "日本維新の会"
+          },
+          {
+            "name": "前原誠司",
+            "speech_count": 10,
+            "party": "日本維新の会"
+          }
+        ],
+        "date_range": {
+          "start": "2025-05-21",
+          "end": "2025-05-21"
+        },
+        "summary_text": "主な議論: ○会長（浅田均君） ただいまから国家基本政策委員会合同審査会を開会いたします。この際、一言御挨拶を申し上げます。参議院国家基本政策委員長の浅田均でございます。衆議院の泉健太委員長とともに、衆参両院の皆, ○野田佳彦君立憲民主党代表の野田佳彦です。総理、よろしくお願いします。この国会では、重要広範議案、四本決まっておりました。国税、サイバー防御、そして給特法、それぞれきちんと提出時期は守られて、そして活, ○内閣総理大臣（石破茂君） 重要広範議案であります。もっと早く提出をすべきであったという御批判は、それは、私どもとして、少なくとも党総裁たる私としてそれは甘んじてお受けをしなければならないと思っており"
+      },
+      "決算行政監視委員会": {
+        "total_speeches": 251,
+        "unique_speakers": 20,
+        "top_speakers": [
+          {
+            "name": "鈴木義弘",
+            "speech_count": 44,
+            "party": "国民民主党・無所属クラブ"
+          },
+          {
+            "name": "加藤勝信",
+            "speech_count": 40,
+            "party": "自由民主党・無所属の会"
+          },
+          {
+            "name": "谷田川元",
+            "speech_count": 24,
+            "party": "立憲民主党・無所属"
+          },
+          {
+            "name": "柚木道義",
+            "speech_count": 18,
+            "party": "立憲民主党・無所属"
+          },
+          {
+            "name": "白石洋一",
+            "speech_count": 18,
+            "party": "立憲民主党・無所属"
+          }
+        ],
+        "date_range": {
+          "start": "2025-05-19",
+          "end": "2025-05-19"
+        },
+        "summary_text": "主な議論: ○鈴木委員長これより会議を開きます。理事の補欠選任の件についてお諮りいたします。委員の異動に伴いまして、現在理事が一名欠員となっております。その補欠選任につきましては、先例により、委員長において指名い, ○鈴木委員長御異議なしと認めます。それでは、星野剛士君を理事に指名いたします。――――◇―――――, ○鈴木委員長令和五年度一般会計原油価格・物価高騰対策及び賃上げ促進環境整備対応予備費使用総調書及び各省各庁所管使用調書（承諾を求めるの件）、令和五年度一般会計予備費使用総調書及び各省各庁所管使用調書（"
+      }
+    },
+    "policies": {
+      "外交・安全保障": {
+        "total_speeches": 50,
+        "discussion_points": [
+          "すようにお願いいたします。そして、次に予備費についてですが、まず、財政民主主義における予備費の問題点",
+          "すようにお願いいたします。そして、次に予備費についてですが、まず、財政民主主義における予備費の問題点"
+        ],
+        "party_positions": {
+          "自由民主党・無所属の会": {
+            "speech_count": 9,
+            "speakers": [
+              "浜田靖一",
+              "加藤勝信",
+              "伊藤達也"
+            ],
+            "unique_speakers": 3
+          },
+          "立憲民主・社民・無所属": {
+            "speech_count": 5,
+            "speakers": [
+              "熊谷裕人"
+            ],
+            "unique_speakers": 1
+          },
+          "null": {
+            "speech_count": 29,
+            "speakers": [
+              "築山信彦",
+              "小林史武"
+            ],
+            "unique_speakers": 2
+          },
+          "立憲民主党・無所属": {
+            "speech_count": 2,
+            "speakers": [
+              "谷田川元"
+            ],
+            "unique_speakers": 1
+          },
+          "日本維新の会": {
+            "speech_count": 2,
+            "speakers": [
+              "中司宏"
+            ],
+            "unique_speakers": 1
+          },
+          "国民民主党・無所属クラブ": {
+            "speech_count": 2,
+            "speakers": [
+              "臼木秀剛"
+            ],
+            "unique_speakers": 1
+          },
+          "日本共産党": {
+            "speech_count": 1,
+            "speakers": [
+              "志位和夫"
+            ],
+            "unique_speakers": 1
+          }
+        },
+        "date_range": {
+          "start": "2025-05-19",
+          "end": "2025-06-03"
+        },
+        "summary_text": "外交・安全保障分野で50件の議論が行われました。"
+      },
+      "経済・財政": {
+        "total_speeches": 205,
+        "discussion_points": [],
+        "party_positions": {
+          "自由民主党": {
+            "speech_count": 1,
+            "speakers": [
+              "牧野たかお"
+            ],
+            "unique_speakers": 1
+          },
+          "null": {
+            "speech_count": 22,
+            "speakers": [
+              "築山信彦",
+              "原田祐平",
+              "川合現",
+              "小林史武"
+            ],
+            "unique_speakers": 4
+          },
+          "自由民主党・無所属の会": {
+            "speech_count": 67,
+            "speakers": [
+              "石破茂",
+              "林芳正",
+              "加藤勝信",
+              "浜田靖一"
+            ],
+            "unique_speakers": 4
+          },
+          "日本共産党": {
+            "speech_count": 16,
+            "speakers": [
+              "志位和夫",
+              "塩川鉄也",
+              "岩渕友"
+            ],
+            "unique_speakers": 3
+          },
+          "立憲民主党・無所属": {
+            "speech_count": 55,
+            "speakers": [
+              "野田佳彦",
+              "安住淳",
+              "柚木道義",
+              "白石洋一"
+            ],
+            "unique_speakers": 4
+          },
+          "日本維新の会": {
+            "speech_count": 23,
+            "speakers": [
+              "中司宏",
+              "前原誠司"
+            ],
+            "unique_speakers": 2
+          },
+          "国民民主党・無所属クラブ": {
+            "speech_count": 13,
+            "speakers": [
+              "臼木秀剛",
+              "鈴木義弘"
+            ],
+            "unique_speakers": 2
+          },
+          "参政党": {
+            "speech_count": 3,
+            "speakers": [
+              "鈴木敦"
+            ],
+            "unique_speakers": 1
+          },
+          "日本保守党": {
+            "speech_count": 5,
+            "speakers": [
+              "河村たかし"
+            ],
+            "unique_speakers": 1
+          }
+        },
+        "date_range": {
+          "start": "2025-05-19",
+          "end": "2025-06-04"
+        },
+        "summary_text": "経済・財政分野で205件の議論が行われました。"
+      },
+      "社会保障": {
+        "total_speeches": 117,
+        "discussion_points": [],
+        "party_positions": {
+          "れいわ新選組": {
+            "speech_count": 5,
+            "speakers": [
+              "山川仁"
+            ],
+            "unique_speakers": 1
+          },
+          "自由民主党": {
+            "speech_count": 31,
+            "speakers": [
+              "福岡資麿",
+              "牧野たかお",
+              "星北斗"
+            ],
+            "unique_speakers": 3
+          },
+          "自由民主党・無所属の会": {
+            "speech_count": 39,
+            "speakers": [
+              "石破茂",
+              "林芳正",
+              "浜田靖一"
+            ],
+            "unique_speakers": 3
+          },
+          "null": {
+            "speech_count": 9,
+            "speakers": [
+              "鹿沼均",
+              "築山信彦"
+            ],
+            "unique_speakers": 2
+          },
+          "公明党": {
+            "speech_count": 6,
+            "speakers": [
+              "鰐淵洋子"
+            ],
+            "unique_speakers": 1
+          },
+          "立憲民主党・無所属": {
+            "speech_count": 27,
+            "speakers": [
+              "谷田川元",
+              "野田佳彦",
+              "柚木道義"
+            ],
+            "unique_speakers": 3
+          }
+        },
+        "date_range": {
+          "start": "2025-05-19",
+          "end": "2025-05-30"
+        },
+        "summary_text": "社会保障分野で117件の議論が行われました。"
+      },
+      "教育・文化": {
+        "total_speeches": 32,
+        "discussion_points": [],
+        "party_positions": {
+          "自由民主党": {
+            "speech_count": 6,
+            "speakers": [
+              "牧野たかお"
+            ],
+            "unique_speakers": 1
+          },
+          "自由民主党・無所属の会": {
+            "speech_count": 14,
+            "speakers": [
+              "あべ俊子"
+            ],
+            "unique_speakers": 1
+          },
+          "立憲民主党・無所属": {
+            "speech_count": 12,
+            "speakers": [
+              "谷田川元"
+            ],
+            "unique_speakers": 1
+          }
+        },
+        "date_range": {
+          "start": "2025-05-19",
+          "end": "2025-05-21"
+        },
+        "summary_text": "教育・文化分野で32件の議論が行われました。"
+      },
+      "環境・エネルギー": {
+        "total_speeches": 29,
+        "discussion_points": [],
+        "party_positions": {
+          "null": {
+            "speech_count": 4,
+            "speakers": [
+              "築山信彦"
+            ],
+            "unique_speakers": 1
+          },
+          "自由民主党・無所属の会": {
+            "speech_count": 11,
+            "speakers": [
+              "石破茂",
+              "辻清人"
+            ],
+            "unique_speakers": 2
+          },
+          "自由民主党": {
+            "speech_count": 12,
+            "speakers": [
+              "牧野たかお",
+              "中田宏"
+            ],
+            "unique_speakers": 2
+          },
+          "国民民主党・無所属クラブ": {
+            "speech_count": 2,
+            "speakers": [
+              "鈴木義弘"
+            ],
+            "unique_speakers": 1
+          }
+        },
+        "date_range": {
+          "start": "2025-05-19",
+          "end": "2025-06-03"
+        },
+        "summary_text": "環境・エネルギー分野で29件の議論が行われました。"
+      },
+      "労働・雇用": {
+        "total_speeches": 8,
+        "discussion_points": [],
+        "party_positions": {
+          "立憲民主党・無所属": {
+            "speech_count": 4,
+            "speakers": [
+              "白石洋一"
+            ],
+            "unique_speakers": 1
+          },
+          "公明党": {
+            "speech_count": 4,
+            "speakers": [
+              "鰐淵洋子"
+            ],
+            "unique_speakers": 1
+          }
+        },
+        "date_range": {
+          "start": "2025-05-19",
+          "end": "2025-05-19"
+        },
+        "summary_text": "労働・雇用分野で8件の議論が行われました。"
+      },
+      "地方・都市": {
+        "total_speeches": 14,
+        "discussion_points": [],
+        "party_positions": {
+          "自由民主党・無所属の会": {
+            "speech_count": 8,
+            "speakers": [
+              "村上誠一郎",
+              "加藤勝信"
+            ],
+            "unique_speakers": 2
+          },
+          "自由民主党": {
+            "speech_count": 2,
+            "speakers": [
+              "福岡資麿"
+            ],
+            "unique_speakers": 1
+          },
+          "null": {
+            "speech_count": 4,
+            "speakers": [
+              "森重樹",
+              "平嶋隆司"
+            ],
+            "unique_speakers": 2
+          }
+        },
+        "date_range": {
+          "start": "2025-05-19",
+          "end": "2025-05-21"
+        },
+        "summary_text": "地方・都市分野で14件の議論が行われました。"
+      },
+      "農林水産": {
+        "total_speeches": 11,
+        "discussion_points": [],
+        "party_positions": {
+          "自由民主党・無所属の会": {
+            "speech_count": 9,
+            "speakers": [
+              "石破茂",
+              "林芳正"
+            ],
+            "unique_speakers": 2
+          },
+          "立憲民主党・無所属": {
+            "speech_count": 2,
+            "speakers": [
+              "柚木道義"
+            ],
+            "unique_speakers": 1
+          }
+        },
+        "date_range": {
+          "start": "2025-05-19",
+          "end": "2025-05-21"
+        },
+        "summary_text": "農林水産分野で11件の議論が行われました。"
+      },
+      "国土・交通": {
+        "total_speeches": 5,
+        "discussion_points": [],
+        "party_positions": {
+          "自由民主党・無所属の会": {
+            "speech_count": 5,
+            "speakers": [
+              "石破茂"
+            ],
+            "unique_speakers": 1
+          }
+        },
+        "date_range": {
+          "start": "2025-05-21",
+          "end": "2025-05-21"
+        },
+        "summary_text": "国土・交通分野で5件の議論が行われました。"
+      },
+      "その他": {
+        "total_speeches": 529,
+        "discussion_points": [
+          "了いたしました。次に、玉木雄一郎君。（拍手） ○玉木雄一郎君国民民主党代表の玉木雄一郎です。総理に米",
+          "了いたしました。次に、玉木雄一郎君。（拍手） ○玉木雄一郎君国民民主党代表の玉木雄一郎です。総理に米",
+          "了いたしました。次に、玉木雄一郎君。（拍手） ○玉木雄一郎君国民民主党代表の玉木雄一郎です。総理に米"
+        ],
+        "party_positions": {
+          "自由民主党": {
+            "speech_count": 229,
+            "speakers": [
+              "牧野たかお",
+              "青木一彦",
+              "豊田俊郎",
+              "阿達雅志"
+            ],
+            "unique_speakers": 4
+          },
+          "自由民主党・無所属の会": {
+            "speech_count": 166,
+            "speakers": [
+              "浜田靖一",
+              "穂坂泰",
+              "瀬戸隆一",
+              "加藤勝信",
+              "笹川博義",
+              "石破茂",
+              "伊藤達也",
+              "あべ俊子"
+            ],
+            "unique_speakers": 8
+          },
+          "日本維新の会": {
+            "speech_count": 32,
+            "speakers": [
+              "中司宏",
+              "浅田均"
+            ],
+            "unique_speakers": 2
+          },
+          "国民民主党・無所属クラブ": {
+            "speech_count": 81,
+            "speakers": [
+              "玉木雄一郎",
+              "鈴木義弘",
+              "臼木秀剛",
+              "村岡敏英"
+            ],
+            "unique_speakers": 4
+          },
+          "立憲民主党・無所属": {
+            "speech_count": 10,
+            "speakers": [
+              "谷田川元",
+              "柚木道義",
+              "白石洋一"
+            ],
+            "unique_speakers": 3
+          },
+          "null": {
+            "speech_count": 4,
+            "speakers": [
+              "原田祐平",
+              "平嶋隆司"
+            ],
+            "unique_speakers": 2
+          },
+          "日本共産党": {
+            "speech_count": 3,
+            "speakers": [
+              "志位和夫"
+            ],
+            "unique_speakers": 1
+          },
+          "参政党": {
+            "speech_count": 1,
+            "speakers": [
+              "鈴木敦"
+            ],
+            "unique_speakers": 1
+          },
+          "日本保守党": {
+            "speech_count": 3,
+            "speakers": [
+              "河村たかし"
+            ],
+            "unique_speakers": 1
+          }
+        },
+        "date_range": {
+          "start": "2025-05-19",
+          "end": "2025-06-04"
+        },
+        "summary_text": "その他分野で529件の議論が行われました。"
+      }
+    }
+  }
+}
