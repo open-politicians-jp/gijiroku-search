@@ -214,6 +214,13 @@ export default function SangiinComparisonPage() {
     setSelectedParties([]);
   };
 
+  // スマートフォン対応：タッチイベント処理
+  const handleThemeClick = (theme: string, event: React.MouseEvent | React.TouchEvent) => {
+    event.preventDefault();
+    event.stopPropagation();
+    setSelectedTheme(selectedTheme === theme ? null : theme);
+  };
+
   return (
     <>
       <Header currentPage="manifestos" />
@@ -319,17 +326,28 @@ export default function SangiinComparisonPage() {
                 {POLICY_COMPARISONS.map((comparison, index) => (
                   <tr 
                     key={comparison.theme}
-                    className={`${index % 2 === 0 ? 'bg-white' : 'bg-gray-50'} hover:bg-blue-50 cursor-pointer transition-colors`}
-                    onClick={() => setSelectedTheme(selectedTheme === comparison.theme ? null : comparison.theme)}
+                    className={`${index % 2 === 0 ? 'bg-white' : 'bg-gray-50'} hover:bg-blue-50 active:bg-blue-100 cursor-pointer transition-colors select-none`}
+                    onClick={(e) => handleThemeClick(comparison.theme, e)}
+                    onTouchStart={(e) => e.currentTarget.classList.add('bg-blue-100')}
+                    onTouchEnd={(e) => e.currentTarget.classList.remove('bg-blue-100')}
+                    style={{ touchAction: 'manipulation' }}
                   >
-                    <td className="px-4 py-3 text-sm font-medium text-gray-900 border-b border-gray-200 sticky left-0 bg-inherit z-10 min-w-[140px] w-[140px]">
+                    <td className="px-4 py-4 text-sm font-medium text-gray-900 border-b border-gray-200 sticky left-0 bg-inherit z-10 min-w-[140px] w-[140px]">
                       <div className="flex items-center">
                         <span className="truncate">{comparison.theme}</span>
-                        <FileText className="h-4 w-4 text-gray-400 ml-2 flex-shrink-0" />
+                        <FileText className={`h-4 w-4 ml-2 flex-shrink-0 transition-colors ${
+                          selectedTheme === comparison.theme ? 'text-blue-600' : 'text-gray-400'
+                        }`} />
                       </div>
+                      {/* スマートフォン用の選択インジケーター */}
+                      {selectedTheme === comparison.theme && (
+                        <div className="mt-1 text-xs text-blue-600 font-medium">
+                          ▼ 詳細表示中
+                        </div>
+                      )}
                     </td>
                     {parties.map((party) => (
-                      <td key={party} className="px-3 py-3 text-center border-b border-gray-200 min-w-[120px] w-[120px]">
+                      <td key={party} className="px-3 py-4 text-center border-b border-gray-200 min-w-[120px] w-[120px]">
                         <div className="flex items-center justify-center">
                           {getStanceIcon(comparison.parties[party]?.stance || '-')}
                         </div>
@@ -341,38 +359,64 @@ export default function SangiinComparisonPage() {
             </table>
           </div>
           <div className="p-4 bg-gray-50 text-sm text-gray-600 border-t">
-            <div className="flex items-center gap-2">
+            <div className="flex flex-col sm:flex-row sm:items-center gap-2">
               <span className="font-medium">💡 操作方法:</span>
-              <span>横スクロールで全政党を確認</span>
-              <span>•</span>
-              <span>行をクリックで詳細表示</span>
-              <span>•</span>
-              <span>上部で表示政党を選択可能</span>
+              <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2">
+                <span>横スクロールで全政党を確認</span>
+                <span className="hidden sm:inline">•</span>
+                <span className="font-medium text-blue-600">行をタップで詳細表示</span>
+                <span className="hidden sm:inline">•</span>
+                <span>上部で表示政党を選択可能</span>
+              </div>
             </div>
+            {selectedTheme && (
+              <div className="mt-2 text-xs text-blue-600 font-medium">
+                現在選択中: {selectedTheme}
+              </div>
+            )}
           </div>
         </div>
 
         {/* 選択されたテーマの詳細 */}
         {selectedTheme && (
-          <div className="mt-6 bg-white rounded-lg shadow-sm border border-gray-200 p-6">
-            <h3 className="text-lg font-semibold text-gray-900 mb-4">
-              {selectedTheme} - 各政党の詳細スタンス
-            </h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="mt-6 bg-white rounded-lg shadow-sm border border-gray-200 p-4 sm:p-6">
+            <div className="flex items-center justify-between mb-4">
+              <h3 className="text-lg font-semibold text-gray-900">
+                {selectedTheme} - 各政党の詳細スタンス
+              </h3>
+              <button
+                onClick={() => setSelectedTheme(null)}
+                className="text-gray-400 hover:text-gray-600 p-1 rounded"
+                aria-label="詳細を閉じる"
+              >
+                ✕
+              </button>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
               {parties.map((party) => {
                 const partyData = POLICY_COMPARISONS.find(c => c.theme === selectedTheme)?.parties[party];
                 if (!partyData) return null;
                 
                 return (
-                  <div key={party} className={`border-2 rounded-lg p-4 ${getStanceColor(partyData.stance)}`}>
+                  <div key={party} className={`border-2 rounded-lg p-3 sm:p-4 ${getStanceColor(partyData.stance)}`}>
                     <div className="flex items-center justify-between mb-2">
-                      <h4 className="font-semibold text-gray-900">{party}</h4>
+                      <h4 className="font-semibold text-gray-900 text-sm sm:text-base">{party}</h4>
                       {getStanceIcon(partyData.stance)}
                     </div>
-                    <p className="text-sm text-gray-700">{partyData.detail}</p>
+                    <p className="text-sm text-gray-700 leading-relaxed">{partyData.detail}</p>
                   </div>
                 );
               })}
+            </div>
+            
+            {/* スマートフォン用の閉じるボタン */}
+            <div className="mt-4 text-center sm:hidden">
+              <button
+                onClick={() => setSelectedTheme(null)}
+                className="px-4 py-2 bg-gray-100 text-gray-700 rounded-md text-sm hover:bg-gray-200"
+              >
+                詳細を閉じる
+              </button>
             </div>
           </div>
         )}
