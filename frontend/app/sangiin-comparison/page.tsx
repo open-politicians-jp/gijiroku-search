@@ -306,52 +306,122 @@ export default function SangiinComparisonPage() {
           </div>
         </div>
 
-        {/* 政策対比表 - 新しいカード形式 */}
-        <div className="space-y-4">
-          {/* 政策テーマヘッダー */}
-          <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-4">
-            <h2 className="text-lg font-semibold text-gray-900 mb-3">政策テーマを選択</h2>
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2">
-              {POLICY_COMPARISONS.map((comparison) => (
-                <button
-                  key={comparison.theme}
-                  onClick={(e) => handleThemeClick(comparison.theme, e)}
-                  onTouchStart={(e) => e.currentTarget.classList.add('bg-blue-200')}
-                  onTouchEnd={(e) => e.currentTarget.classList.remove('bg-blue-200')}
-                  className={`px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
-                    selectedTheme === comparison.theme
-                      ? 'bg-blue-600 text-white shadow-md'
-                      : 'bg-gray-100 text-gray-700 hover:bg-gray-200 active:bg-blue-200'
-                  }`}
-                  style={{ touchAction: 'manipulation' }}
-                >
-                  {comparison.theme}
-                </button>
-              ))}
+        {/* 政策対比表 - 政党×政策のマトリックス形式 */}
+        <div className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
+          <div className="overflow-x-auto">
+            <table className="w-full table-auto" style={{ minWidth: `${Math.max(600, 120 + (POLICY_COMPARISONS.length * 90))}px` }}>
+              <thead className="bg-gray-50">
+                <tr>
+                  <th className="px-3 py-3 text-left text-sm font-semibold text-gray-900 border-b border-gray-200 sticky left-0 bg-gray-50 z-10 w-24 min-w-[96px]">
+                    政党
+                  </th>
+                  {POLICY_COMPARISONS.map((comparison) => (
+                    <th key={comparison.theme} className="px-2 py-3 text-center text-xs font-semibold text-gray-900 border-b border-gray-200 w-20 min-w-[80px] whitespace-nowrap">
+                      {comparison.theme}
+                    </th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {parties.map((party, index) => (
+                  <tr 
+                    key={party}
+                    className={`${index % 2 === 0 ? 'bg-white' : 'bg-gray-50'} hover:bg-blue-50 transition-colors`}
+                  >
+                    <td className="px-3 py-3 text-sm font-medium text-gray-900 border-b border-gray-200 sticky left-0 bg-inherit z-10 w-24 min-w-[96px]">
+                      <div className="truncate" title={party}>
+                        {party}
+                      </div>
+                    </td>
+                    {POLICY_COMPARISONS.map((comparison) => (
+                      <td key={comparison.theme} className="px-2 py-3 text-center border-b border-gray-200 w-20 min-w-[80px]">
+                        <div className="flex items-center justify-center">
+                          {getStanceIcon(comparison.parties[party]?.stance || '-')}
+                        </div>
+                      </td>
+                    ))}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          
+          {/* 操作説明と凡例 */}
+          <div className="p-4 bg-gray-50 border-t">
+            <div className="mb-3">
+              <div className="text-xs text-gray-600 mb-2 font-medium">凡例:</div>
+              <div className="flex flex-wrap gap-3 text-xs">
+                <div className="flex items-center gap-1">
+                  <CheckCircle className="h-3 w-3 text-green-600" />
+                  <span>○: 積極的</span>
+                </div>
+                <div className="flex items-center gap-1">
+                  <AlertCircle className="h-3 w-3 text-yellow-600" />
+                  <span>△: 部分的・条件付</span>
+                </div>
+                <div className="flex items-center gap-1">
+                  <XCircle className="h-3 w-3 text-red-600" />
+                  <span>✕: 反対・消極的</span>
+                </div>
+                <div className="flex items-center gap-1">
+                  <span className="text-gray-400">-</span>
+                  <span>: 言及なし</span>
+                </div>
+              </div>
             </div>
-            <div className="mt-3 text-sm text-gray-500">
-              💡 政策テーマをタップすると各政党の詳細が表示されます
+            <div className="text-sm text-gray-600">
+              💡 横スクロールで全ての政策を確認できます
             </div>
           </div>
+        </div>
 
-          {/* 選択されたテーマの対比表 */}
-          {selectedTheme && (
-            <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-4">
+        {/* 詳細表示セクション */}
+        <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-4">
+          <h3 className="text-lg font-semibold text-gray-900 mb-4">📋 詳細な政策内容</h3>
+          
+          {!selectedTheme ? (
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 text-center">
+              <FileText className="h-12 w-12 text-blue-600 mx-auto mb-3" />
+              <h4 className="text-lg font-semibold text-blue-900 mb-2">
+                政策テーマを選択してください
+              </h4>
+              <p className="text-blue-700 mb-4">
+                下記から関心のある政策テーマを選択すると、各政党の詳細なスタンスを確認できます。
+              </p>
+              
+              {/* 政策テーマ選択ボタン */}
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2">
+                {POLICY_COMPARISONS.map((comparison) => (
+                  <button
+                    key={comparison.theme}
+                    onClick={(e) => handleThemeClick(comparison.theme, e)}
+                    onTouchStart={(e) => e.currentTarget.classList.add('bg-blue-200')}
+                    onTouchEnd={(e) => e.currentTarget.classList.remove('bg-blue-200')}
+                    className="px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 bg-white text-blue-700 hover:bg-blue-100 active:bg-blue-200 border border-blue-300"
+                    style={{ touchAction: 'manipulation' }}
+                  >
+                    {comparison.theme}
+                  </button>
+                ))}
+              </div>
+            </div>
+          ) : (
+            <div>
               <div className="flex items-center justify-between mb-4">
-                <h3 className="text-lg font-semibold text-gray-900">
-                  📊 {selectedTheme} - 政党比較
-                </h3>
+                <h4 className="text-lg font-semibold text-gray-900">
+                  📊 {selectedTheme} - 各政党の詳細スタンス
+                </h4>
                 <button
                   onClick={() => setSelectedTheme(null)}
                   className="text-gray-400 hover:text-gray-600 p-1 rounded"
-                  aria-label="比較を閉じる"
+                  aria-label="詳細を閉じる"
                 >
                   ✕
                 </button>
               </div>
               
-              {/* 政党別スタンス表示 */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3">
+              {/* 政党別詳細カード */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
                 {parties
                   .filter(party => POLICY_COMPARISONS.find(c => c.theme === selectedTheme)?.parties[party])
                   .map((party) => {
@@ -361,7 +431,7 @@ export default function SangiinComparisonPage() {
                     return (
                       <div key={party} className={`border-2 rounded-lg p-3 ${getStanceColor(partyData.stance)}`}>
                         <div className="flex items-center justify-between mb-2">
-                          <h4 className="font-semibold text-gray-900 text-sm">{party}</h4>
+                          <h5 className="font-semibold text-gray-900 text-sm">{party}</h5>
                           <div className="flex items-center">
                             {getStanceIcon(partyData.stance)}
                           </div>
@@ -372,41 +442,24 @@ export default function SangiinComparisonPage() {
                   })}
               </div>
 
-              {/* 凡例 */}
-              <div className="mt-4 p-3 bg-gray-50 rounded-lg">
-                <div className="text-xs text-gray-600 mb-2 font-medium">凡例:</div>
-                <div className="flex flex-wrap gap-4 text-xs">
-                  <div className="flex items-center gap-1">
-                    <CheckCircle className="h-3 w-3 text-green-600" />
-                    <span>○: 積極的</span>
-                  </div>
-                  <div className="flex items-center gap-1">
-                    <AlertCircle className="h-3 w-3 text-yellow-600" />
-                    <span>△: 部分的・条件付</span>
-                  </div>
-                  <div className="flex items-center gap-1">
-                    <XCircle className="h-3 w-3 text-red-600" />
-                    <span>✕: 反対・消極的</span>
-                  </div>
-                  <div className="flex items-center gap-1">
-                    <span className="text-gray-400">-</span>
-                    <span>: 言及なし</span>
-                  </div>
+              {/* 他のテーマ選択 */}
+              <div className="mt-6 p-4 bg-gray-50 rounded-lg">
+                <h5 className="text-sm font-semibold text-gray-700 mb-3">他の政策テーマ:</h5>
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-2">
+                  {POLICY_COMPARISONS
+                    .filter(c => c.theme !== selectedTheme)
+                    .map((comparison) => (
+                    <button
+                      key={comparison.theme}
+                      onClick={(e) => handleThemeClick(comparison.theme, e)}
+                      className="px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 bg-white text-gray-700 hover:bg-gray-100 active:bg-blue-200 border border-gray-300"
+                      style={{ touchAction: 'manipulation' }}
+                    >
+                      {comparison.theme}
+                    </button>
+                  ))}
                 </div>
               </div>
-            </div>
-          )}
-
-          {/* 初期状態のメッセージ */}
-          {!selectedTheme && (
-            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 text-center">
-              <FileText className="h-12 w-12 text-blue-600 mx-auto mb-3" />
-              <h3 className="text-lg font-semibold text-blue-900 mb-2">
-                政策テーマを選択してください
-              </h3>
-              <p className="text-blue-700">
-                上記のボタンから関心のある政策テーマを選択すると、各政党のスタンスを比較できます。
-              </p>
             </div>
           )}
         </div>
