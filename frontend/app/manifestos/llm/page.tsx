@@ -42,7 +42,16 @@ export default function LLMManifestosPage() {
       try {
         setLoading(true);
         const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
-        const response = await fetch(`${basePath}/data/llm_summaries.json`);
+        const dataUrl = `${basePath}/data/llm_summaries.json`;
+        
+        // デバッグ情報
+        console.warn('LLMデータ取得開始:', {
+          basePath,
+          dataUrl,
+          windowLocation: typeof window !== 'undefined' ? window.location.href : 'server'
+        });
+        
+        const response = await fetch(dataUrl);
         
         if (!response.ok) {
           throw new Error(`LLM要約データの取得に失敗しました (HTTP ${response.status})`);

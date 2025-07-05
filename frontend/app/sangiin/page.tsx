@@ -87,7 +87,16 @@ export default function SangiinPage() {
     try {
       // SPA対応: 静的データファイルから直接読み込み（GitHub Pages対応）
       const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
-      const response = await fetch(`${basePath}/data/sangiin_candidates/go2senkyo_optimized_latest.json`);
+      const dataUrl = `${basePath}/data/sangiin_candidates/go2senkyo_optimized_latest.json`;
+      
+      // デバッグ情報
+      console.warn('データ取得開始:', {
+        basePath,
+        dataUrl,
+        windowLocation: typeof window !== 'undefined' ? window.location.href : 'server'
+      });
+      
+      const response = await fetch(dataUrl);
       
       if (!response.ok) {
         throw new Error(`参議院選候補者データの取得に失敗しました (HTTP ${response.status})`);
