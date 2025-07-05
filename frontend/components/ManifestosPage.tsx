@@ -1,8 +1,9 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { FileText, Download, ExternalLink, Calendar, Filter, Search } from 'lucide-react';
+import { FileText, Download, ExternalLink, Calendar, Filter, Search, BookOpen, Target } from 'lucide-react';
 import { format, parseISO } from 'date-fns';
+import Link from 'next/link';
 
 interface Manifesto {
   party: string;
@@ -156,6 +157,19 @@ export default function ManifestosPage() {
     return content.substring(0, maxLength) + '...';
   };
 
+  const getPartySlug = (party: string) => {
+    const slugs: { [key: string]: string } = {
+      '自由民主党': 'jiyuminshuto',
+      '公明党': 'komeito', 
+      '立憲民主党': 'rikkenminshuto',
+      '日本維新の会': 'nipponishin',
+      '日本共産党': 'kyosanto',
+      '国民民主党': 'kokuminminshuto',
+      '参政党': 'sanseito'
+    };
+    return slugs[party] || party.toLowerCase().replace(/\s+/g, '');
+  };
+
   if (loading) {
     return (
       <div className="max-w-6xl mx-auto px-4 py-8">
@@ -182,9 +196,27 @@ export default function ManifestosPage() {
       {/* ページタイトル */}
       <div className="mb-8">
         <h1 className="text-3xl font-bold text-gray-900 mb-2">政党マニフェスト</h1>
-        <p className="text-gray-600">
+        <p className="text-gray-600 mb-4">
           各政党の政策提言・マニフェストを検索・閲覧できます
         </p>
+        
+        {/* 特別ページへのリンク */}
+        <div className="flex flex-col sm:flex-row gap-4 mt-4">
+          <Link
+            href="/manifestos/llm"
+            className="inline-flex items-center justify-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+          >
+            <BookOpen className="h-5 w-5 mr-2" />
+            AI要約マニフェスト
+          </Link>
+          <Link
+            href="/sangiin-comparison"
+            className="inline-flex items-center justify-center px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors"
+          >
+            <Target className="h-5 w-5 mr-2" />
+            参院選 政策対比表
+          </Link>
+        </div>
       </div>
 
       {/* フィルター・検索 */}
@@ -289,34 +321,46 @@ export default function ManifestosPage() {
               </div>
 
               {/* アクション */}
-              <div className="flex items-center justify-between pt-4 border-t border-gray-100">
-                <div className="text-xs text-gray-500">
-                  <Calendar className="inline h-3 w-3 mr-1" />
-                  {formatDate(manifesto.collected_at)}
+              <div className="pt-4 border-t border-gray-100">
+                <div className="flex items-center justify-between mb-3">
+                  <div className="text-xs text-gray-500">
+                    <Calendar className="inline h-3 w-3 mr-1" />
+                    {formatDate(manifesto.collected_at)}
+                  </div>
                 </div>
                 
-                <div className="flex items-center gap-2">
-                  {manifesto.pdf_url && (
+                <div className="flex flex-col gap-2">
+                  <Link
+                    href={`/manifestos/${getPartySlug(manifesto.party)}`}
+                    className="inline-flex items-center justify-center gap-1 bg-blue-600 text-white hover:bg-blue-700 text-sm font-medium px-3 py-2 rounded"
+                  >
+                    <FileText className="h-4 w-4" />
+                    AI要約詳細
+                  </Link>
+                  
+                  <div className="flex items-center gap-2">
+                    {manifesto.pdf_url && (
+                      <a
+                        href={manifesto.pdf_url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1 text-red-600 hover:text-red-700 text-sm font-medium"
+                      >
+                        <Download className="h-4 w-4" />
+                        PDF
+                      </a>
+                    )}
+                    
                     <a
-                      href={manifesto.pdf_url}
+                      href={manifesto.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1 text-red-600 hover:text-red-700 text-sm font-medium"
+                      className="inline-flex items-center gap-1 text-blue-600 hover:text-blue-700 text-sm font-medium"
                     >
-                      <Download className="h-4 w-4" />
-                      PDF
+                      元ページ
+                      <ExternalLink className="h-4 w-4" />
                     </a>
-                  )}
-                  
-                  <a
-                    href={manifesto.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1 text-blue-600 hover:text-blue-700 text-sm font-medium"
-                  >
-                    元ページ
-                    <ExternalLink className="h-4 w-4" />
-                  </a>
+                  </div>
                 </div>
               </div>
             </div>

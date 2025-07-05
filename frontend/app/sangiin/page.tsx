@@ -1,9 +1,10 @@
 'use client';
 
 import { useState, useEffect, useCallback } from 'react';
-import { Users, MapPin, Calendar, Badge, ExternalLink } from 'lucide-react';
+import { Users, MapPin, Calendar, Badge, ExternalLink, BookOpen, Target } from 'lucide-react';
 import Header from '@/components/Header';
 import Image from 'next/image';
+import Link from 'next/link';
 
 interface Candidate {
   candidate_id: string;
@@ -297,6 +298,25 @@ export default function SangiinPage() {
         <p className="text-gray-600 mb-4">
           2025年参議院選挙の候補者情報を都道府県・政党別に検索・表示できます。データはGo2senkyo.comから自動収集されています。
         </p>
+        
+        {/* 特設ページへのリンク */}
+        <div className="flex flex-col sm:flex-row gap-4 mb-6">
+          <Link
+            href="/manifestos/llm"
+            className="inline-flex items-center justify-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+          >
+            <BookOpen className="h-5 w-5 mr-2" />
+            AI要約マニフェスト
+          </Link>
+          <Link
+            href="/sangiin-comparison"
+            className="inline-flex items-center justify-center px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors"
+          >
+            <Target className="h-5 w-5 mr-2" />
+            参院選 政策対比表
+          </Link>
+        </div>
+        
         <div className="flex flex-wrap gap-4 text-sm text-gray-600">
           <div className="flex items-center gap-1">
             <Badge className="h-4 w-4" />
@@ -450,7 +470,7 @@ export default function SangiinPage() {
                   <div className="space-y-1">
                     {candidate.websites.slice(0, 3).map((website, index) => (
                       <a
-                        key={index}
+                        key={`${candidate.candidate_id}-website-${index}`} // ユニークキーに変更
                         href={website.url}
                         target="_blank"
                         rel="noopener noreferrer"
@@ -470,9 +490,11 @@ export default function SangiinPage() {
                 <div className="mb-4">
                   <p className="text-xs text-gray-500 mb-2">SNSアカウント</p>
                   <div className="flex flex-wrap gap-2">
-                    {Object.entries(candidate.sns_accounts).map(([platform, url]) => (
+                    {Object.entries(candidate.sns_accounts)
+                      .filter(([platform, url]) => platform && url) // 空のキーやURLを除外
+                      .map(([platform, url], index) => (
                       <a
-                        key={platform}
+                        key={`${candidate.candidate_id}-sns-${platform}-${index}`} // ユニークキーに変更
                         href={url}
                         target="_blank"
                         rel="noopener noreferrer"

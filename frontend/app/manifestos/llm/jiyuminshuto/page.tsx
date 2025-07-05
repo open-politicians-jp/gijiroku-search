@@ -30,14 +30,18 @@ export default function JiyuminshutoLLMPage() {
       try {
         setLoading(true);
         const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
-        const response = await fetch(`${basePath}/data/manifestos/llm_summaries_2025.json`);
+        const response = await fetch(`${basePath}/data/llm_summaries.json`);
         
         if (!response.ok) {
           throw new Error(`LLM要約データの取得に失敗しました (HTTP ${response.status})`);
         }
         
         const data = await response.json();
+        console.warn('取得データ:', data);
+        console.warn('利用可能な政党:', Object.keys(data.summaries));
+        
         const summary = data.summaries['自由民主党'];
+        console.warn('自由民主党データ:', summary);
         
         if (!summary) {
           throw new Error('自由民主党の要約データが見つかりません');
@@ -57,9 +61,9 @@ export default function JiyuminshutoLLMPage() {
 
   const getPolicyIcon = (policyName: string) => {
     const iconMap: { [key: string]: React.ComponentType<any> } = {
-      '経済成長戦略': DollarSign,
-      '防衛力強化': Shield,
-      '社会保障制度改革': Heart,
+      '経済': DollarSign,
+      '暮らし・社会保障': Heart,
+      '日本の未来': Shield,
       '地方創生': Building,
       'エネルギー安全保障': Target
     };

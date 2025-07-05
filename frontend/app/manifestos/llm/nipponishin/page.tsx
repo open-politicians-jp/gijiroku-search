@@ -32,8 +32,8 @@ interface LLMSummariesData {
   };
 }
 
-export default function JiyuminshutoDetailPage() {
-  const partyName = '自由民主党';
+export default function NipponishinDetailPage() {
+  const partyName = '日本維新の会';
 
   const [llmData, setLlmData] = useState<LLMSummariesData | null>(null);
   const [partySummary, setPartySummary] = useState<LLMSummary | null>(null);
@@ -71,7 +71,7 @@ export default function JiyuminshutoDetailPage() {
     loadPartyDetail();
   }, []);
 
-  const getPartyColor = () => 'bg-red-50 border-red-200 text-red-900';
+  const getPartyColor = () => 'bg-orange-50 border-orange-200 text-orange-900';
 
   if (loading) {
     return (
@@ -227,7 +227,7 @@ export default function JiyuminshutoDetailPage() {
         {/* フッター */}
         <div className="mt-8 p-4 bg-gray-50 rounded-lg">
           <p className="text-sm text-gray-600 mb-2">
-            この要約は{partySummary.party}の公式マニフェストをClaude AIが解析して作成したものです。
+            この要約は{partySummary.party}の公式マニフェストをClaude Code Sonnet4、Gemini 2.5 Proが解析して作成したものです。
             政策の詳細や正確な内容については、必ず公式サイトをご確認ください。
           </p>
           <p className="text-xs text-gray-500">

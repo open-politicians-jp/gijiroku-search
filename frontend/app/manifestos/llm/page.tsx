@@ -42,7 +42,7 @@ export default function LLMManifestosPage() {
       try {
         setLoading(true);
         const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
-        const response = await fetch(`${basePath}/data/manifestos/llm_summaries_2025.json`);
+        const response = await fetch(`${basePath}/data/llm_summaries.json`);
         
         if (!response.ok) {
           throw new Error(`LLM要約データの取得に失敗しました (HTTP ${response.status})`);
@@ -67,7 +67,10 @@ export default function LLMManifestosPage() {
       '公明党': 'bg-yellow-50 border-yellow-200 text-yellow-900',
       '立憲民主党': 'bg-blue-50 border-blue-200 text-blue-900',
       '日本維新の会': 'bg-orange-50 border-orange-200 text-orange-900',
-      '参政党': 'bg-indigo-50 border-indigo-200 text-indigo-900'
+      '参政党': 'bg-indigo-50 border-indigo-200 text-indigo-900',
+      '国民民主党': 'bg-green-50 border-green-200 text-green-900',
+      'れいわ新選組': 'bg-purple-50 border-purple-200 text-purple-900',
+      '日本共産党': 'bg-red-50 border-red-200 text-red-900'
     };
     return colors[party] || 'bg-gray-50 border-gray-200 text-gray-900';
   };
@@ -78,7 +81,10 @@ export default function LLMManifestosPage() {
       '公明党': 'komeito', 
       '立憲民主党': 'rikkenminshuto',
       '日本維新の会': 'nipponishin',
-      '参政党': 'sanseito'
+      '参政党': 'sanseito',
+      '国民民主党': 'kokuminminshuto',
+      'れいわ新選組': 'reiwa',
+      '日本共産党': 'kyosanto'
     };
     return slugs[party] || party.toLowerCase();
   };
@@ -130,10 +136,10 @@ export default function LLMManifestosPage() {
           <div className="mt-4 p-4 bg-blue-50 rounded-lg">
             <div className="flex items-center gap-2 mb-2">
               <BookOpen className="h-5 w-5 text-blue-600" />
-              <h2 className="text-sm font-semibold text-blue-900">Claude AI による自動要約</h2>
+              <h2 className="text-sm font-semibold text-blue-900">AI による自動要約</h2>
             </div>
             <p className="text-sm text-blue-700">
-              各政党の公式マニフェストをClaude AIが解析し、有権者にとって分かりやすい形で要約しています。
+              各政党の公式マニフェストをClaude Code Sonnet4、Gemini 2.5 Proが解析し、有権者にとって分かりやすい形で要約しています。
               詳細は原文もご確認ください。
             </p>
             <div className="mt-2 text-xs text-blue-600">
@@ -210,7 +216,7 @@ export default function LLMManifestosPage() {
         <div className="mt-8 p-4 bg-gray-50 rounded-lg">
           <h3 className="text-sm font-semibold text-gray-700 mb-2">AI要約について</h3>
           <p className="text-sm text-gray-600 mb-2">
-            この要約は各政党の公式マニフェストをClaude AIが解析して作成したものです。
+            この要約は各政党の公式マニフェストをClaude Code Sonnet4、Gemini 2.5 Proが解析して作成したものです。
             政策の詳細や正確な内容については、必ず原文をご確認ください。
           </p>
           <p className="text-xs text-gray-500">
