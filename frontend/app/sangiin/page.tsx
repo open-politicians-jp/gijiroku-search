@@ -89,13 +89,6 @@ export default function SangiinPage() {
       const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
       const dataUrl = `${basePath}/data/sangiin_candidates/go2senkyo_optimized_latest.json`;
       
-      // デバッグ情報
-      console.warn('データ取得開始:', {
-        basePath,
-        dataUrl,
-        windowLocation: typeof window !== 'undefined' ? window.location.href : 'server'
-      });
-      
       const response = await fetch(dataUrl);
       
       if (!response.ok) {
@@ -120,8 +113,28 @@ export default function SangiinPage() {
       setCandidates(uniqueCandidates);
       setLoading(false);
     } catch (err) {
-      console.error('❌ Sangiin candidates fetch error:', err);
-      setError(err instanceof Error ? err.message : '不明なエラーが発生しました');
+      const errorMessage = err instanceof Error ? err.message : '不明なエラーが発生しました';
+      
+      // GitHub Pages でのデータ読み込み失敗の場合、代替手段を試行
+      if (errorMessage.includes('404') || errorMessage.includes('Failed to fetch')) {
+        try {
+          // 代替パスでの試行
+          const altResponse = await fetch('./data/sangiin_candidates/go2senkyo_optimized_latest.json');
+          if (altResponse.ok) {
+            const altResult = await altResponse.json();
+            const altCandidatesData = altResult.data || altResult.candidates || [];
+            if (Array.isArray(altCandidatesData) && altCandidatesData.length > 0) {
+              setCandidates(altCandidatesData);
+              setLoading(false);
+              return;
+            }
+          }
+        } catch (altErr) {
+          // 代替手段も失敗した場合は元のエラーを表示
+        }
+      }
+      
+      setError(`データ読み込みエラー: ${errorMessage}`);
       setLoading(false);
     }
   };

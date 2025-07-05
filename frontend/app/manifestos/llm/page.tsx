@@ -44,13 +44,6 @@ export default function LLMManifestosPage() {
         const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
         const dataUrl = `${basePath}/data/llm_summaries.json`;
         
-        // デバッグ情報
-        console.warn('LLMデータ取得開始:', {
-          basePath,
-          dataUrl,
-          windowLocation: typeof window !== 'undefined' ? window.location.href : 'server'
-        });
-        
         const response = await fetch(dataUrl);
         
         if (!response.ok) {
@@ -60,8 +53,25 @@ export default function LLMManifestosPage() {
         const data = await response.json();
         setLlmData(data);
       } catch (err) {
-        console.error('LLM要約データの読み込みエラー:', err);
-        setError(err instanceof Error ? err.message : '不明なエラーが発生しました');
+        const errorMessage = err instanceof Error ? err.message : '不明なエラーが発生しました';
+        
+        // GitHub Pages でのデータ読み込み失敗の場合、代替手段を試行
+        if (errorMessage.includes('404') || errorMessage.includes('Failed to fetch')) {
+          try {
+            // 代替パスでの試行
+            const altResponse = await fetch('./data/llm_summaries.json');
+            if (altResponse.ok) {
+              const altData = await altResponse.json();
+              setLlmData(altData);
+              setLoading(false);
+              return;
+            }
+          } catch (altErr) {
+            // 代替手段も失敗した場合は元のエラーを表示
+          }
+        }
+        
+        setError(`データ読み込みエラー: ${errorMessage}`);
       } finally {
         setLoading(false);
       }
