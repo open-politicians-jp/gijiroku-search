@@ -7,8 +7,8 @@ import Link from 'next/link';
 import { PolicySummaryData, PartyPolicy } from '@/types/policy';
 import PolicyReferences from '@/components/PolicyReferences';
 
-export default function RikkenminshutoDetailPage() {
-  const partyName = '立憲民主党';
+export default function TeamMiraiDetailPage() {
+  const partyName = 'チームみらい';
 
   const [policyData, setPolicyData] = useState<PolicySummaryData | null>(null);
   const [partyPolicies, setPartyPolicies] = useState<PartyPolicy | null>(null);
@@ -69,7 +69,7 @@ export default function RikkenminshutoDetailPage() {
     loadPartyDetail();
   }, []);
 
-  const getPartyColor = () => 'bg-blue-50 border-blue-200 text-blue-900';
+  const getPartyColor = () => 'bg-green-50 border-green-200 text-green-900';
 
   if (loading) {
     return (
@@ -153,7 +153,7 @@ export default function RikkenminshutoDetailPage() {
               </>
             )}
             <a
-              href="https://cdp-japan.jp/"
+              href="https://team-mir.ai/"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-4 py-2 bg-gray-600 text-white rounded-md hover:bg-gray-700"
