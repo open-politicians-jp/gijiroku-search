@@ -7,8 +7,8 @@ import Link from 'next/link';
 import { PolicySummaryData, PartyPolicy } from '@/types/policy';
 import PolicyReferences from '@/components/PolicyReferences';
 
-export default function RikkenminshutoDetailPage() {
-  const partyName = '立憲民主党';
+export default function ZeikinTomeiKaToDetailPage() {
+  const partyName = '税金とうめい化の党';
 
   const [policyData, setPolicyData] = useState<PolicySummaryData | null>(null);
   const [partyPolicies, setPartyPolicies] = useState<PartyPolicy | null>(null);
@@ -136,29 +136,13 @@ export default function RikkenminshutoDetailPage() {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4">
-            {partyPolicies.party_references && partyPolicies.party_references.length > 0 && (
-              <>
-                {partyPolicies.party_references.map((ref, index) => (
-                  <a
-                    key={index}
-                    href={ref.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700"
-                  >
-                    {ref.description || 'マニフェストを見る'}
-                    <ExternalLink className="h-4 w-4 ml-1" />
-                  </a>
-                ))}
-              </>
-            )}
             <a
-              href="https://cdp-japan.jp/"
+              href="#"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-4 py-2 bg-gray-600 text-white rounded-md hover:bg-gray-700"
+              className="inline-flex items-center justify-center px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700"
             >
-              公式サイト
+              公式サイトを見る
               <ExternalLink className="h-4 w-4 ml-1" />
             </a>
           </div>
