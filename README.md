@@ -59,7 +59,9 @@ npm run build
 
 - **毎日 3:00 JST**: 過去2ヶ月分の議事録を自動取得
 - **収集後自動実行**: データ加工・テキストクリーニング
-- **リアルタイム更新**: 政党マニフェストを定期更新
+- **多種データ収集**: 議事録、法案、質問主意書、委員会ニュース、請願・陳情
+- **週次データ整理**: 週単位でのデータ分類・管理
+- **リンク修正**: 相対URLから絶対URLへの自動変換
 
 ### 手動収集（開発者向け）
 
@@ -69,11 +71,23 @@ cd scripts/uv-data-collection
 # 毎日データ収集（過去2ヶ月分）
 uv run python daily_data_collection.py
 
-# データ加工パイプライン
-uv run python data_processing_pipeline.py
+# 質問主意書収集
+uv run python collect_questions_fixed.py
 
-# 政党マニフェスト収集
-uv run python collect_real_manifestos.py
+# 提出法案収集
+uv run python collect_bills.py
+
+# 委員会ニュース収集（強化版）
+uv run python collect_committee_news_enhanced.py
+
+# 週次データ整理
+uv run python weekly_data_organizer.py
+
+# リンク修正
+uv run python fix_questions_links.py
+
+# 政策要約JSON生成
+uv run python update_policy_summaries.py
 ```
 
 ## 🏗️ アーキテクチャ
@@ -109,7 +123,8 @@ uv run python collect_real_manifestos.py
 ### データ
 - **JSON形式**: 構造化データストレージ
 - **Git管理**: バージョン管理・バックアップ
-- **ディレクトリ分類**: speeches/, manifestos/, analysis/
+- **ディレクトリ分類**: speeches/, bills/, questions/, committee_news/, manifestos/, legislators/, petitions/, summaries/, weekly/
+- **週次管理**: 年/週単位でのデータ整理システム
 
 ### インフラ・DevOps
 - **GitHub Actions**: CI/CD 自動化
@@ -131,12 +146,24 @@ uv run python collect_real_manifestos.py
 │       └── pyproject.toml              # UV設定
 ├── frontend/                   # Next.js フロントエンド
 │   ├── app/                   # App Router
+│   │   ├── manifestos/llm/   # 22政党LLM要約ページ
+│   │   ├── sangiin/         # 参議院関連ページ
+│   │   ├── summaries/       # 要約ページ
 │   │   └── api/              # API エンドポイント
 │   ├── components/           # React コンポーネント
+│   │   ├── PolicyReferences.tsx  # 政策参照コンポーネント
+│   │   └── ...
 │   ├── public/data/         # フロントエンド用データ
 │   │   ├── speeches/        # 議事録データ
+│   │   ├── bills/           # 法案データ
+│   │   ├── questions/       # 質問主意書データ
+│   │   ├── committee_news/  # 委員会ニュース
 │   │   ├── manifestos/      # マニフェストデータ
-│   │   └── legislators/     # 議員データ
+│   │   ├── legislators/     # 議員データ
+│   │   ├── petitions/       # 請願・陳情データ
+│   │   ├── summaries/       # 要約データ
+│   │   ├── weekly/          # 週次データ
+│   │   └── policy_summaries.json  # 政策要約統合データ
 │   └── types/              # TypeScript 型定義
 ├── data/                   # データストレージ
 │   ├── raw/               # 生データ
@@ -172,7 +199,13 @@ MIT License - 詳細は [LICENSE](LICENSE) ファイルを参照
 ### 現在の機能
 - **議事録検索**: 発言者、政党、委員会、キーワード検索
 - **統計表示**: 発言数、政党別・議員別ランキング（上限なし）
-- **マニフェスト**: 主要7政党の最新政策（自民、立民、維新、公明、共産、国民、れいわ）
+- **政策要約**: 22政党のLLM要約ページ（チームみらい含む）
+- **マニフェスト**: 主要政党の公式政策文書（動的URL参照）
+- **法案検索**: 提出法案の詳細検索（ステータス・審議状況付き）
+- **質問主意書**: 質問と答弁の検索（HTML/PDFリンク付き）
+- **委員会ニュース**: 全22委員会の活動情報
+- **参議院対比**: 参議院選候補者比較機能
+- **週次データ管理**: 週単位でのデータアクセス
 - **レスポンシブUI**: スマートフォン・タブレット・PC対応
 - **自動データ更新**: GitHub Actions による毎日自動収集
 
