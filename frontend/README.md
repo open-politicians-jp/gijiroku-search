@@ -8,7 +8,8 @@ Next.js 14 + TypeScript で構築された政治議事録横断検索システ�
 - **TypeScript**: 型安全なコード
 - **静的サイト生成**: GitHub Pages対応
 - **レスポンシブデザイン**: Tailwind CSS使用
-- **検索機能**: 議事録・法案・質問主意書の横断検索
+- **検索機能**: 議事録・法案・質問主意書・委員会ニュースの横断検索
+- **政策要約**: 22政党のLLM要約ページ（動的URL参照）
 
 ## 🚀 開発環境
 
@@ -40,15 +41,26 @@ npm run start
 
 ```
 ├── app/                    # Next.js App Router
-│   ├── api/               # APIエンドポイント
-│   ├── page.tsx           # メインページ
-│   ├── layout.tsx         # レイアウト
-│   └── globals.css        # グローバルスタイル
-├── components/            # Reactコンポーネント
-│   ├── SearchForm.tsx     # 検索フォーム
-│   ├── SearchResults.tsx  # 検索結果
-│   ├── StatsPage.tsx      # 統計ページ
-│   ├── AboutPage.tsx      # アバウトページ
+│   ├── manifestos/        # マニフェスト関連
+│   │   ├── llm/          # 22政党LLM要約ページ
+│   │   │   ├── jiyuminshuto/      # 自由民主党
+│   │   │   ├── rikkenminshuto/    # 立憲民主党
+│   │   │   ├── team-mirai/        # チームみらい
+│   │   │   └── ...                # その他19政党
+│   │   └── page.tsx      # マニフェスト一覧
+│   ├── sangiin/          # 参議院関連
+│   ├── sangiin-comparison/ # 参議院対比
+│   ├── summaries/        # 要約ページ
+│   ├── legislators/      # 議員ページ
+│   ├── about/           # アバウトページ
+│   ├── page.tsx         # メインページ
+│   ├── layout.tsx       # レイアウト
+│   └── globals.css      # グローバルスタイル
+├── components/          # Reactコンポーネント
+│   ├── Header.tsx       # ヘッダー
+│   ├── SearchForm.tsx   # 検索フォーム
+│   ├── SearchResults.tsx # 検索結果
+│   ├── PolicyReferences.tsx # 政策参照コンポーネント
 │   └── ...
 ├── lib/                   # ライブラリ
 │   ├── api.ts            # API関数
@@ -61,7 +73,13 @@ npm run start
 │       ├── speeches/    # 議事録データ
 │       ├── bills/       # 法案データ
 │       ├── questions/   # 質問主意書データ
-│       └── manifestos/  # マニフェストデータ
+│       ├── committee_news/ # 委員会ニュース
+│       ├── manifestos/  # マニフェストデータ
+│       ├── legislators/ # 議員データ
+│       ├── petitions/   # 請願・陳情データ
+│       ├── summaries/   # 要約データ
+│       ├── weekly/      # 週次データ
+│       └── policy_summaries.json # 政策要約統合データ
 └── next.config.js        # Next.js設定
 ```
 
@@ -104,6 +122,30 @@ interface BillRecord {
 }
 ```
 
+### 政策要約データ (policy_summaries)
+```typescript
+interface PolicySummaryData {
+  generated_at: string
+  description: string
+  parties: PartyPolicy[]
+  total_parties: number
+  has_url_references: boolean
+}
+
+interface PartyPolicy {
+  name: string
+  categories: PolicyCategory[]
+  party_references?: PolicyReference[]
+}
+
+interface PolicyReference {
+  url: string
+  description: string
+  source_type: string
+  reliability: string
+}
+```
+
 ## 🌐 デプロイメント
 
 ### GitHub Pages
@@ -119,10 +161,13 @@ interface BillRecord {
 
 ### 対応データ
 - **議事録**: 国会での発言内容
-- **法案**: 提出法案の詳細
-- **質問主意書**: 質問と答弁
-- **委員会ニュース**: 委員会活動情報
-- **マニフェスト**: 政党政策資料
+- **法案**: 提出法案の詳細（ステータス・審議状況付き）
+- **質問主意書**: 質問と答弁（HTML/PDFリンク付き）
+- **委員会ニュース**: 全22委員会の活動情報
+- **マニフェスト**: 政党政策資料（動的URL参照）
+- **政策要約**: 22政党のLLM要約（出典URL統合）
+- **請願・陳情**: 国民からの請願・陳情データ
+- **議員情報**: 衆参議員の詳細情報
 
 ### 検索方式
 - **全文検索**: タイトル・内容での検索
