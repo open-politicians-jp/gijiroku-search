@@ -7,7 +7,7 @@ import Link from 'next/link';
 import { PolicySummaryData, PartyPolicy } from '@/types/policy';
 import PolicyReferences from '@/components/PolicyReferences';
 
-export default function TeamMiraiDetailPage() {
+export default function TeamMiraiLLMPage() {
   const partyName = 'チームみらい';
 
   const [policyData, setPolicyData] = useState<PolicySummaryData | null>(null);
@@ -96,11 +96,11 @@ export default function TeamMiraiDetailPage() {
             <h2 className="text-lg font-semibold text-red-800 mb-2">エラーが発生しました</h2>
             <p className="text-red-600 mb-4">{error}</p>
             <Link
-              href="/manifestos"
+              href="/manifestos/llm"
               className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
             >
               <ArrowLeft className="h-4 w-4 mr-2" />
-              マニフェスト一覧に戻る
+              AI要約一覧に戻る
             </Link>
           </div>
         </div>
@@ -111,54 +111,124 @@ export default function TeamMiraiDetailPage() {
   return (
     <>
       <Header currentPage="manifestos" />
-      <div className="container mx-auto px-4 py-8 mt-16">
-        {/* 戻るボタン */}
+      <div className="container mx-auto px-4 py-8 mt-16 max-w-4xl">
+        {/* ナビゲーション */}
         <div className="mb-6">
           <Link
             href="/manifestos/llm"
-            className="inline-flex items-center text-blue-600 hover:text-blue-800"
+            className="inline-flex items-center text-blue-600 hover:text-blue-800 mb-4"
           >
             <ArrowLeft className="h-4 w-4 mr-2" />
-            政策要約一覧に戻る
+            AI要約一覧に戻る
           </Link>
         </div>
 
         {/* 政党ヘッダー */}
-        <div className={`rounded-lg border-2 ${getPartyColor()} p-6 mb-8`}>
-          <div className="flex items-center justify-between">
-            <div className="flex-1">
-              <h1 className="text-3xl font-bold text-gray-900 mb-2">{partyName}</h1>
-              <p className="text-gray-600 mb-2">政策要約詳細</p>
-              <div className="flex items-center space-x-4 text-sm text-gray-600">
-                <span className="flex items-center">
-                  <FileText className="h-4 w-4 mr-1" />
-                  政策カテゴリー: {partyPolicies.categories?.length || 0}件
-                </span>
-                <span className="bg-cyan-100 text-cyan-800 px-2 py-1 rounded-full text-xs font-medium">
-                  新党
-                </span>
-              </div>
+        <div className={`bg-white rounded-lg shadow-sm border-2 ${getPartyColor()} p-6 mb-8`}>
+          <div className="flex items-start justify-between mb-4">
+            <div>
+              <h1 className="text-3xl font-bold text-gray-900 mb-2">{partyPolicies.name}</h1>
+              <h2 className="text-xl text-gray-700 mb-4">政策要約</h2>
+              {partyPolicies.basic_theme && (
+                <p className="text-gray-800 leading-relaxed mb-4 font-medium">
+                  {partyPolicies.basic_theme}
+                </p>
+              )}
+              <p className="text-gray-600 leading-relaxed mb-4">
+                {partyPolicies.categories.length}の政策分野にわたる詳細な政策をご確認いただけます。
+              </p>
             </div>
+          </div>
+
+          <div className="flex flex-col sm:flex-row gap-4">
+            {partyPolicies.party_references && partyPolicies.party_references.length > 0 && (
+              <>
+                {partyPolicies.party_references.map((ref, index) => (
+                  <a
+                    key={index}
+                    href={ref.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700"
+                  >
+                    {ref.description || 'マニフェストを見る'}
+                    <ExternalLink className="h-4 w-4 ml-1" />
+                  </a>
+                ))}
+              </>
+            )}
           </div>
         </div>
 
-        {/* 政策カテゴリー */}
-        <div className="space-y-8">
-          {partyPolicies.categories?.map((category, categoryIndex) => (
+        {/* 想定支持層 */}
+        {partyPolicies.target_voters && partyPolicies.target_voters.length > 0 && (
+          <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-6">
+            <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+              <Users className="h-5 w-5 text-blue-600 mr-2" />
+              想定支持層
+            </h3>
+            <div className="flex flex-wrap gap-3">
+              {partyPolicies.target_voters.map((voter, index) => (
+                <span key={index} className="bg-cyan-100 text-cyan-800 px-4 py-2 rounded-full text-sm font-medium">
+                  {voter}
+                </span>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* 重点政策 */}
+        {partyPolicies.key_policies && partyPolicies.key_policies.length > 0 && (
+          <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-6">
+            <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+              <Target className="h-5 w-5 text-green-600 mr-2" />
+              重点政策
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+              {partyPolicies.key_policies.map((policy, index) => (
+                <div key={index} className="flex items-center p-3 bg-cyan-50 rounded-lg">
+                  <Target className="h-4 w-4 text-cyan-600 mr-2 flex-shrink-0" />
+                  <span className="text-sm font-medium text-gray-800">{policy}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* 政策分野概要 */}
+        <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-6">
+          <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+            <FileText className="h-5 w-5 text-orange-600 mr-2" />
+            政策分野詳細
+          </h3>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+            {partyPolicies.categories.map((category, index) => (
+              <div key={index} className="flex items-center p-3 bg-gray-50 rounded-lg">
+                <FileText className="h-4 w-4 text-blue-600 mr-2 flex-shrink-0" />
+                <span className="text-sm font-medium text-gray-800">{category.category}</span>
+                <span className="ml-auto text-xs text-gray-500">
+                  {category.policies.length}項目
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* 政策詳細 */}
+        <div className="space-y-6">
+          {partyPolicies.categories.map((category, categoryIndex) => (
             <div key={categoryIndex} className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6 border-b border-gray-200 pb-3">
+              <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+                <FileText className="h-5 w-5 text-orange-600 mr-2" />
                 {category.category}
-              </h2>
+              </h3>
               
-              <div className="space-y-6">
+              {/* 政策項目一覧 */}
+              <div className="space-y-4">
                 {category.policies.map((policy, policyIndex) => (
-                  <div key={policyIndex} className="border-l-4 border-cyan-500 pl-4">
-                    <h3 className="text-lg font-semibold text-gray-900 mb-3">
-                      {policy.title}
-                    </h3>
-                    <div className="text-gray-700 leading-relaxed whitespace-pre-wrap">
-                      {policy.description}
-                    </div>
+                  <div key={policyIndex} className="border-l-4 border-cyan-500 pl-4 py-2">
+                    <h4 className="font-semibold text-gray-900 mb-2">{policy.title}</h4>
+                    <p className="text-sm text-gray-700 leading-relaxed">{policy.description}</p>
                   </div>
                 ))}
               </div>
@@ -166,21 +236,29 @@ export default function TeamMiraiDetailPage() {
           ))}
         </div>
 
-        {/* 参考情報 */}
+        {/* 参考資料・出典 */}
         {partyPolicies.party_references && partyPolicies.party_references.length > 0 && (
-          <div className="mt-8">
-            <PolicyReferences 
-              references={partyPolicies.party_references}
-            />
-          </div>
+          <PolicyReferences 
+            references={partyPolicies.party_references}
+            className="mb-6"
+          />
         )}
 
-        {/* フッター情報 */}
+        {/* フッター */}
         <div className="mt-8 p-4 bg-gray-50 rounded-lg">
-          <p className="text-sm text-gray-600 text-center">
-            この情報は公開されている政策資料を基に要約されています。
-            最新の情報については各政党の公式サイトをご確認ください。
+          <p className="text-sm text-gray-600 mb-2">
+            この要約は{partyPolicies.name}の公式マニフェストを分析して作成された政策要約です。
+            政策の詳細や正確な内容については、必ず公式サイトをご確認ください。
           </p>
+          <p className="text-xs text-gray-500">
+            ※ 政策要約は参考情報として提供されています。投票の際は公式情報を必ずご確認ください。
+          </p>
+          {policyData && (
+            <p className="text-xs text-gray-500 mt-2">
+              生成日時: {new Date(policyData.generated_at).toLocaleDateString('ja-JP')} | 
+              総政党数: {policyData.total_parties}政党
+            </p>
+          )}
         </div>
       </div>
     </>

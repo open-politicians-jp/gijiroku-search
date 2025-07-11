@@ -42,6 +42,12 @@ export interface PolicyCategory {
 export interface PartyPolicy {
   /** 政党名 */
   name: string;
+  /** 基本テーマ（LLM要約） */
+  basic_theme?: string;
+  /** 想定支持層（LLM要約） */
+  target_voters?: string[];
+  /** 重点政策（LLM要約） */
+  key_policies?: string[];
   /** 政策カテゴリ一覧 */
   categories: PolicyCategory[];
   /** 政党レベルの参考URL一覧 */
@@ -64,6 +70,8 @@ export interface PolicySummaryData {
   total_parties: number;
   /** データソース */
   data_source: string;
+  /** URL参照情報の有無 */
+  has_url_references?: boolean;
 }
 
 /**
