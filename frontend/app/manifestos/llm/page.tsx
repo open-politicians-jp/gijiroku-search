@@ -76,7 +76,8 @@ export default function LLMManifestosPage() {
       '核融合党': 'bg-violet-50 border-violet-200 text-violet-900',
       '減税日本': 'bg-red-50 border-red-200 text-red-900',
       '税金とうめい化の党': 'bg-blue-50 border-blue-200 text-blue-900',
-      '新党くにもり': 'bg-teal-50 border-teal-200 text-teal-900'
+      '新党くにもり': 'bg-teal-50 border-teal-200 text-teal-900',
+      'チームみらい': 'bg-cyan-50 border-cyan-200 text-cyan-900'
     };
     return colors[party] || 'bg-gray-50 border-gray-200 text-gray-900';
   };
@@ -103,7 +104,8 @@ export default function LLMManifestosPage() {
       '核融合党': 'kakuyugo-to',
       '減税日本': 'genzei-nihon',
       '税金とうめい化の党': 'zeikin-tomei-ka-to',
-      '新党くにもり': 'shinto-kunimori'
+      '新党くにもり': 'shinto-kunimori',
+      'チームみらい': 'team-mirai'
     };
     return slugs[party] || party.toLowerCase();
   };
