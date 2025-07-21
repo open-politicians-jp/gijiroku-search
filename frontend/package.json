@@ -17,6 +17,7 @@
     "clsx": "^2.0.0",
     "date-fns": "^2.30.0",
     "flexsearch": "^0.7.31",
+    "glob": "^11.0.3",
     "hono": "^3.11.7",
     "lucide-react": "^0.294.0",
     "next": "14.0.3",
@@ -24,6 +25,7 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@cloudflare/workers-types": "^4.20250719.0",
     "@types/node": "^20.10.0",
     "@types/react": "^18.2.42",
     "@types/react-dom": "^18.2.17",

@@ -1,0 +1,47 @@
+# Cloudflare Wrangler設定ファイル
+# 日本政治議事録検索システム - D1移行版
+
+name = "gijiroku-search-d1"
+compatibility_date = "2024-01-01"
+compatibility_flags = ["nodejs_compat"]
+
+# Pages Functions設定
+pages_build_output_dir = "frontend/out"
+
+# D1データベースバインディング
+[[d1_databases]]
+binding = "DB"
+database_name = "gijiroku-search-db"
+database_id = "your-d1-database-id-here"  # Cloudflare DashboardでDB作成後に設定
+
+# 環境変数
+[env.production.vars]
+NODE_ENV = "production"
+NEXT_PUBLIC_API_BASE_URL = "https://gijiroku-search-d1.pages.dev"
+
+[env.preview.vars]  
+NODE_ENV = "preview"
+NEXT_PUBLIC_API_BASE_URL = "https://preview.gijiroku-search-d1.pages.dev"
+
+[env.development.vars]
+NODE_ENV = "development"
+NEXT_PUBLIC_API_BASE_URL = "http://localhost:3000"
+
+# ビルド設定
+[build]
+command = "cd frontend && npm ci && npm run build"
+cwd = ""
+watch_dir = "frontend"
+
+# Pages Functions環境変数
+[env.production]
+[[env.production.d1_databases]]
+binding = "DB"
+database_name = "gijiroku-search-db"
+database_id = "your-d1-database-id-here"
+
+[env.preview]
+[[env.preview.d1_databases]]
+binding = "DB"
+database_name = "gijiroku-search-db-preview"
+database_id = "your-d1-preview-database-id-here"

@@ -49,7 +49,7 @@ class StaticDataLoader {
         return await this.loadSpeechesFromLatest();
       }
       
-      const indexData = await indexResponse.json();
+      const indexData = await indexResponse.json() as any;
       const totalChunks = indexData.metadata.total_chunks;
       
       // GitHub Pages最適化環境での制限対応
@@ -73,8 +73,9 @@ class StaticDataLoader {
       const allSpeeches: Speech[] = [];
       
       for (const chunkData of chunkResults) {
-        if (chunkData && chunkData.data) {
-          allSpeeches.push(...chunkData.data);
+        const chunk = chunkData as any;
+        if (chunk && chunk.data) {
+          allSpeeches.push(...chunk.data);
         }
       }
       
@@ -99,7 +100,7 @@ class StaticDataLoader {
         throw new Error(`HTTP ${response.status}: ${response.statusText}`);
       }
       
-      const data = await response.json();
+      const data = await response.json() as any;
       // Speeches loaded from latest.json
       return data.data || [];
       
@@ -120,7 +121,7 @@ class StaticDataLoader {
       const response = await fetch(indexPath);
       
       if (response.ok) {
-        const indexData = await response.json();
+        const indexData = await response.json() as any;
         if (indexData.available_files) {
           return indexData.available_files.map((filename: string) => 
             this.getDataPath(`/data/speeches/${filename}`)
@@ -224,7 +225,7 @@ class StaticDataLoader {
         try {
           const response = await fetch(filePath);
           if (response.ok) {
-            const data = await response.json();
+            const data = await response.json() as any;
             const newsItems = Array.isArray(data) ? data : data.data || [];
             
             // 重複除去しながら統合
@@ -278,7 +279,7 @@ class StaticDataLoader {
         try {
           const response = await fetch(filePath);
           if (response.ok) {
-            const data = await response.json();
+            const data = await response.json() as any;
             
             // データ構造の変換処理
             const rawBills = Array.isArray(data) ? data : data.bills || data.data || [];
@@ -341,7 +342,7 @@ class StaticDataLoader {
         try {
           const response = await fetch(filePath);
           if (response.ok) {
-            const data = await response.json();
+            const data = await response.json() as any;
             
             // データ構造の変換処理
             const rawQuestions = Array.isArray(data) ? data : data.questions || data.data || [];
@@ -462,7 +463,7 @@ class StaticDataLoader {
         throw new Error('マニフェストデータの読み込みに失敗しました');
       }
 
-      const data = await response.json();
+      const data = await response.json() as any;
       this.manifestosCache = data.data || [];
       this.updateCacheTime();
       

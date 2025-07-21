@@ -87,7 +87,7 @@ export default function ManifestosPage() {
             const response = await fetch(filePath);
             
             if (response.ok) {
-              const data = await response.json();
+              const data = await response.json() as any;
               
               const manifestosData = Array.isArray(data) ? data : data.data || [];
               setManifestos(manifestosData);
