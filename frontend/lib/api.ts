@@ -3,36 +3,43 @@ import { dataLoader } from './data-loader';
 
 export class APIClient {
   private useStaticLoader: boolean;
+  private baseUrl: string;
 
   constructor() {
-    // 現在の設定では常に静的ローダーを使用（static export対応）
-    // 将来的にAPI routesを有効にする場合は環境変数で制御
-    this.useStaticLoader = true;
+    // Cloudflare D1移行: API Routesを優先使用
+    this.useStaticLoader = false;
+    this.baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL || '';
     
-    // 環境変数でAPI routesを明示的に有効化する場合のみ使用
-    if (process.env.NEXT_PUBLIC_USE_API_ROUTES === 'true' && typeof window !== 'undefined') {
-      this.useStaticLoader = false;
+    // 静的ローダーを明示的に使用する場合のフォールバック
+    if (process.env.NEXT_PUBLIC_USE_STATIC_LOADER === 'true') {
+      this.useStaticLoader = true;
     }
   }
 
   async search(params: SearchParams): Promise<SearchResult | any> {
     try {
       if (this.useStaticLoader) {
-        // 静的データローダーを使用（GitHub Pages等）
+        // 静的データローダーを使用（フォールバック）
         return await dataLoader.search(params);
       }
 
-      // API routesを使用
-      const response = await fetch('/api/search', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(params),
-      });
+      // D1 API routesを使用（GET メソッドでクエリパラメータ送信）
+      const searchParams = new URLSearchParams();
+      if (params.q) searchParams.set('q', params.q);
+      if (params.speaker) searchParams.set('speaker', params.speaker);
+      if (params.party) searchParams.set('party', params.party);
+      if (params.committee) searchParams.set('committee', params.committee);
+      if (params.house) searchParams.set('house', params.house);
+      if (params.dateFrom) searchParams.set('dateFrom', params.dateFrom);
+      if (params.dateTo) searchParams.set('dateTo', params.dateTo);
+      if (params.limit) searchParams.set('limit', params.limit.toString());
+      if (params.offset) searchParams.set('offset', params.offset.toString());
+
+      const url = `${this.baseUrl}/api/search?${searchParams.toString()}`;
+      const response = await fetch(url);
 
       if (!response.ok) {
-        const error = await response.json();
+        const error = await response.json().catch(() => ({ error: 'Network error' })) as any;
         throw new Error(error.error || `HTTP ${response.status}`);
       }
 
@@ -46,15 +53,16 @@ export class APIClient {
   async getStats(): Promise<Stats> {
     try {
       if (this.useStaticLoader) {
-        // 静的データローダーを使用（GitHub Pages等）
+        // 静的データローダーを使用（フォールバック）
         return await dataLoader.loadStats();
       }
 
-      // API routesを使用
-      const response = await fetch('/api/stats');
+      // D1 API routesを使用
+      const url = `${this.baseUrl}/api/stats`;
+      const response = await fetch(url);
 
       if (!response.ok) {
-        const error = await response.json();
+        const error = await response.json().catch(() => ({ error: 'Network error' })) as any;
         throw new Error(error.error || `HTTP ${response.status}`);
       }
 
@@ -71,16 +79,22 @@ export class APIClient {
         return await dataLoader.searchBills(params);
       }
 
-      const response = await fetch('/api/bills', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(params),
-      });
+      // D1 API routesを使用
+      const searchParams = new URLSearchParams();
+      if (params.q) searchParams.set('q', params.q);
+      if (params.session) searchParams.set('session', params.session);
+      if (params.house) searchParams.set('house', params.house);
+      if (params.status) searchParams.set('status', params.status);
+      if (params.dateFrom) searchParams.set('dateFrom', params.dateFrom);
+      if (params.dateTo) searchParams.set('dateTo', params.dateTo);
+      if (params.limit) searchParams.set('limit', params.limit.toString());
+      if (params.offset) searchParams.set('offset', params.offset.toString());
+
+      const url = `${this.baseUrl}/api/bills?${searchParams.toString()}`;
+      const response = await fetch(url);
 
       if (!response.ok) {
-        const error = await response.json();
+        const error = await response.json().catch(() => ({ error: 'Network error' })) as any;
         throw new Error(error.error || `HTTP ${response.status}`);
       }
 
@@ -97,16 +111,20 @@ export class APIClient {
         return await dataLoader.searchCommitteeNews(params);
       }
 
-      const response = await fetch('/api/committee-news', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(params),
-      });
+      // D1 API routesを使用
+      const searchParams = new URLSearchParams();
+      if (params.q) searchParams.set('q', params.q);
+      if (params.committee) searchParams.set('committee', params.committee);
+      if (params.dateFrom) searchParams.set('dateFrom', params.dateFrom);
+      if (params.dateTo) searchParams.set('dateTo', params.dateTo);
+      if (params.limit) searchParams.set('limit', params.limit.toString());
+      if (params.offset) searchParams.set('offset', params.offset.toString());
+
+      const url = `${this.baseUrl}/api/committee-news?${searchParams.toString()}`;
+      const response = await fetch(url);
 
       if (!response.ok) {
-        const error = await response.json();
+        const error = await response.json().catch(() => ({ error: 'Network error' })) as any;
         throw new Error(error.error || `HTTP ${response.status}`);
       }
 
@@ -123,16 +141,21 @@ export class APIClient {
         return await dataLoader.searchQuestions(params);
       }
 
-      const response = await fetch('/api/questions', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(params),
-      });
+      // D1 API routesを使用
+      const searchParams = new URLSearchParams();
+      if (params.q) searchParams.set('q', params.q);
+      if (params.questioner) searchParams.set('questioner', params.questioner);
+      if (params.status) searchParams.set('status', params.status);
+      if (params.dateFrom) searchParams.set('dateFrom', params.dateFrom);
+      if (params.dateTo) searchParams.set('dateTo', params.dateTo);
+      if (params.limit) searchParams.set('limit', params.limit.toString());
+      if (params.offset) searchParams.set('offset', params.offset.toString());
+
+      const url = `${this.baseUrl}/api/questions?${searchParams.toString()}`;
+      const response = await fetch(url);
 
       if (!response.ok) {
-        const error = await response.json();
+        const error = await response.json().catch(() => ({ error: 'Network error' })) as any;
         throw new Error(error.error || `HTTP ${response.status}`);
       }
 
@@ -149,16 +172,16 @@ export class APIClient {
         return await dataLoader.searchManifestos(params);
       }
 
-      const response = await fetch('/api/manifestos', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(params),
-      });
+      // D1 API routesを使用
+      const searchParams = new URLSearchParams();
+      if (params.party) searchParams.set('party', params.party);
+      if (params.format) searchParams.set('format', params.format);
+
+      const url = `${this.baseUrl}/api/manifestos?${searchParams.toString()}`;
+      const response = await fetch(url);
 
       if (!response.ok) {
-        const error = await response.json();
+        const error = await response.json().catch(() => ({ error: 'Network error' })) as any;
         throw new Error(error.error || `HTTP ${response.status}`);
       }
 

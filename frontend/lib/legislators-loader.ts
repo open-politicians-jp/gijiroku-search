@@ -65,7 +65,7 @@ class LegislatorsLoader {
       try {
         const response = await fetch(dataPath);
         if (response.ok) {
-          const jsonData = await response.json();
+          const jsonData = await response.json() as any;
           return this.normalizeJsonLegislators(jsonData.data);
         }
       } catch (error) {
@@ -89,7 +89,7 @@ class LegislatorsLoader {
       // 衆議院データが追加されたら実装
       // const response = await fetch('/data/legislators/shugiin_legislators_unified.json');
       // if (response.ok) {
-      //   const jsonData = await response.json();
+      //   const jsonData = await response.json() as any;
       //   return this.normalizeJsonLegislators(jsonData.data);
       // }
       return [];

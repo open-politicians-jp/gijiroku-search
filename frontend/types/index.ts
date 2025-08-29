@@ -16,6 +16,9 @@ export interface SearchParams {
   speaker?: string;
   party?: string;
   committee?: string;
+  house?: string;
+  dateFrom?: string;
+  dateTo?: string;
   date_from?: string;
   date_to?: string;
   limit?: number;
@@ -24,6 +27,9 @@ export interface SearchParams {
   // 提出法案用パラメータ
   bill_submitter?: string;
   bill_status?: string;
+  session?: string;
+  status?: string;
+  format?: string;
   // 質問主意書用パラメータ
   questioner?: string;
   session_number?: string;

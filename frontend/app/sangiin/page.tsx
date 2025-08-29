@@ -95,7 +95,7 @@ export default function SangiinPage() {
         throw new Error(`参議院選候補者データの取得に失敗しました (HTTP ${response.status})`);
       }
       
-      const result = await response.json();
+      const result = await response.json() as any;
       
       // データ構造の確認と取得
       const candidatesData = result.data || result.candidates || [];
@@ -121,7 +121,7 @@ export default function SangiinPage() {
           // 代替パスでの試行
           const altResponse = await fetch('./data/sangiin_candidates/go2senkyo_optimized_latest.json');
           if (altResponse.ok) {
-            const altResult = await altResponse.json();
+            const altResult = await altResponse.json() as any;
             const altCandidatesData = altResult.data || altResult.candidates || [];
             if (Array.isArray(altCandidatesData) && altCandidatesData.length > 0) {
               setCandidates(altCandidatesData);

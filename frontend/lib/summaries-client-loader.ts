@@ -48,7 +48,7 @@ export class SummariesClientLoader {
         return null;
       }
       
-      const summary: MeetingSummary = await response.json();
+      const summary: MeetingSummary = await response.json() as any;
       
       // データ品質チェック
       if (!summary.meeting_info?.date || !summary.meeting_info?.house || !summary.meeting_info?.committee) {
@@ -72,7 +72,7 @@ export class SummariesClientLoader {
       // まず、サマリーインデックスファイルを試す
       const indexResponse = await fetch(`${basePath}/data/summaries/summaries_index.json`);
       if (indexResponse.ok) {
-        const indexData = await indexResponse.json();
+        const indexData = await indexResponse.json() as any;
         if (indexData.files && Array.isArray(indexData.files)) {
           // 日付順でソート（新しい順）
           return indexData.files.sort((a: string, b: string) => {
