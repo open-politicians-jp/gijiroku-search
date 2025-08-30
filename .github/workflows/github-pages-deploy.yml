@@ -5,6 +5,10 @@ on:
   release:
     types: [published]
   
+  # Deploy on push to main branch
+  push:
+    branches: [main]
+  
   # Manual deployment trigger
   workflow_dispatch:
     inputs:
