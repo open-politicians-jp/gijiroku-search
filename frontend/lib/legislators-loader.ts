@@ -11,11 +11,14 @@ class LegislatorsLoader {
   async loadLegislators(): Promise<LegislatorsData> {
     // キャッシュチェック
     if (this.cache && Date.now() - this.cacheTimestamp < this.CACHE_DURATION) {
-      return this.cache;
+      if (this.cache.metadata?.total_count && this.cache.metadata.total_count > 0) {
+        return this.cache;
+      }
+      // 総数0の場合は再取得を試みる（データ切替直後の反映目的）
     }
 
     try {
-      // 参議院データの統合ファイルを読み込み
+      // 参議院（最新データ）
       const sangiinData = await this.loadSangiinData();
       
       // 衆議院データ（将来追加予定）
@@ -53,8 +56,11 @@ class LegislatorsLoader {
   private async loadSangiinData(): Promise<Legislator[]> {
     const basePath = process.env.NODE_ENV === 'production' ? '/gijiroku-search' : '';
     
-    // 試行するファイルパス（新しい命名規則 → 古い命名規則の順）
+    // 試行するファイルパス（最新エイリアス → 新しい候補 → 既存候補）
     const possiblePaths = [
+      `${basePath}/data/legislators/sangiin_legislators_latest.json`,
+      `${basePath}/data/legislators/legislators_latest.json`,
+      `${basePath}/data/legislators/legislators_20250721_000000.json`,
       `${basePath}/data/legislators/legislators_20250601_120005.json`,
       `${basePath}/data/legislators/legislators_20250601_120004.json`,
       `${basePath}/data/legislators/sangiin_legislators_unified_20250621_002031.json`,
@@ -66,7 +72,10 @@ class LegislatorsLoader {
         const response = await fetch(dataPath);
         if (response.ok) {
           const jsonData = await response.json();
-          return this.normalizeJsonLegislators(jsonData.data);
+          const rawList = Array.isArray(jsonData)
+            ? jsonData
+            : (jsonData.data || jsonData.legislators || []);
+          return this.normalizeJsonLegislators(rawList);
         }
       } catch (error) {
         // 最後のファイルの場合のみエラーログを出力
@@ -79,6 +88,111 @@ class LegislatorsLoader {
 
     console.error('全ての議員データファイルの読み込みに失敗しました');
     return [];
+  }
+
+  /**
+   * アーカイブ: 2025/07/21 参議院選までの議員データ（参議院）
+   * 既存の旧データ候補から読み込み、LegislatorsData 形式で返す
+   */
+  async loadArchivedSangiinLegislators_20250720(): Promise<LegislatorsData> {
+    const basePath = process.env.NODE_ENV === 'production' ? '/gijiroku-search' : '';
+    const archivePaths = [
+      // 新アーカイブ配置（YYYYMMDD配下）
+      `${basePath}/data/legislators/archive/20250720/sangiin_legislators.json`,
+      // 既存の保存版名称
+      `${basePath}/data/legislators/sangiin_legislators_until_20250720.json`,
+      // 旧候補
+      `${basePath}/data/legislators/legislators_20250601_120005.json`,
+      `${basePath}/data/legislators/legislators_20250601_120004.json`,
+      `${basePath}/data/legislators/sangiin_legislators_unified_20250621_002031.json`,
+      `${basePath}/data/legislators/sangiin_legislators_unified_20250621_001253.json`
+    ];
+
+    for (const dataPath of archivePaths) {
+      try {
+        const response = await fetch(dataPath);
+        if (response.ok) {
+          const jsonData = await response.json();
+          const rawList = Array.isArray(jsonData)
+            ? jsonData
+            : (jsonData.data || jsonData.legislators || []);
+          const sangiin = this.normalizeJsonLegislators(rawList);
+          const data: LegislatorsData = {
+            metadata: {
+              total_count: sangiin.length,
+              last_updated: new Date().toISOString(),
+              data_source: 'archive_sangiin_until_2025-07-20',
+              sangiin_count: sangiin.length,
+              shugiin_count: 0,
+            },
+            data: sangiin,
+          };
+          return data;
+        }
+      } catch (error) {
+        continue;
+      }
+    }
+
+    // フォールバック（空）
+    return {
+      metadata: {
+        total_count: 0,
+        last_updated: new Date().toISOString(),
+        data_source: 'archive_sangiin_until_2025-07-20_not_found',
+        sangiin_count: 0,
+        shugiin_count: 0,
+      },
+      data: [],
+    };
+  }
+
+  /**
+   * 任意日付のアーカイブ（例: '20250720'）を読み込み
+   */
+  async loadArchivedSangiinLegislators(date: string = '20250720'): Promise<LegislatorsData> {
+    const basePath = process.env.NODE_ENV === 'production' ? '/gijiroku-search' : '';
+    const archivePaths = [
+      `${basePath}/data/legislators/archive/${date}/sangiin_legislators.json`,
+      // 固定の保存版名称（互換）
+      `${basePath}/data/legislators/sangiin_legislators_until_20250720.json`,
+    ];
+
+    for (const dataPath of archivePaths) {
+      try {
+        const response = await fetch(dataPath);
+        if (response.ok) {
+          const jsonData = await response.json();
+          const rawList = Array.isArray(jsonData)
+            ? jsonData
+            : (jsonData.data || jsonData.legislators || []);
+          const sangiin = this.normalizeJsonLegislators(rawList);
+          return {
+            metadata: {
+              total_count: sangiin.length,
+              last_updated: new Date().toISOString(),
+              data_source: `archive_sangiin_${date}`,
+              sangiin_count: sangiin.length,
+              shugiin_count: 0,
+            },
+            data: sangiin,
+          };
+        }
+      } catch (error) {
+        continue;
+      }
+    }
+
+    return {
+      metadata: {
+        total_count: 0,
+        last_updated: new Date().toISOString(),
+        data_source: `archive_sangiin_${date}_not_found` ,
+        sangiin_count: 0,
+        shugiin_count: 0,
+      },
+      data: [],
+    };
   }
 
   /**
@@ -103,33 +217,44 @@ class LegislatorsLoader {
    * JSONデータを内部形式に正規化
    */
   private normalizeJsonLegislators(jsonLegislators: any[]): Legislator[] {
-    return jsonLegislators.map((leg, index) => ({
-      id: leg.id || `leg_${index}`,
-      name: leg.name || '',
-      house: leg.house as 'shugiin' | 'sangiin',
-      party: leg.party || '',
-      constituency: leg.constituency || '',
-      electionYear: leg.first_election_year || new Date().getFullYear(),
-      status: leg.status as 'active' | 'inactive' || 'active',
-      region: leg.region || undefined,
-      // 基本追加フィールド
-      termCount: leg.term_count,
-      termEnd: leg.term_end,
-      positions: leg.positions,
-      profileUrl: leg.profile_url,
-      photoUrl: leg.photo_url,
-      // 詳細情報フィールド (Issue #19対応)
-      wikipediaUrl: leg.wikipedia?.url,
-      wikipediaTitle: leg.wikipedia?.title,
-      wikipediaSummary: leg.wikipedia?.summary,
-      personalWebsite: leg.personal_website?.url,
-      personalWebsiteTitle: leg.personal_website?.title,
-      snsAccounts: leg.sns_accounts || {},
-      openpoliticsUrl: leg.openpolitics_url,
-      detailsEnhancedAt: leg.details_enhanced_at,
-      // その他のリンク
-      otherLinks: leg.other_links || [],
-    }));
+    return jsonLegislators.map((leg, index) => {
+      // 柔軟なフィールド対応
+      const name = leg.name || leg.name_kanji || leg.common_name || leg.legal_name || '';
+      const rawHouse = leg.house || '';
+      const houseMapped = rawHouse === '参議院' ? 'sangiin' : rawHouse === '衆議院' ? 'shugiin' : (rawHouse as 'sangiin' | 'shugiin');
+      const party = leg.party_normalized || leg.party || '';
+      const profileUrl = leg.profile_url || leg.profile || '';
+      const photoUrl = leg.photo_url || '';
+      const termEnd = leg.term_end || '';
+      const positions = leg.positions || '';
+      // 初当選年の推定が無い場合は現年を設定
+      const electionYear = leg.first_election_year || new Date().getFullYear();
+
+      return {
+        id: String(leg.id ?? `leg_${index}`),
+        name,
+        house: (houseMapped || 'sangiin') as 'shugiin' | 'sangiin',
+        party,
+        constituency: leg.constituency || '',
+        electionYear,
+        status: (leg.status as 'active' | 'inactive') || 'active',
+        region: leg.region || undefined,
+        termCount: leg.term_count,
+        termEnd,
+        positions,
+        profileUrl,
+        photoUrl,
+        wikipediaUrl: leg.wikipedia?.url,
+        wikipediaTitle: leg.wikipedia?.title,
+        wikipediaSummary: leg.wikipedia?.summary,
+        personalWebsite: leg.personal_website?.url,
+        personalWebsiteTitle: leg.personal_website?.title,
+        snsAccounts: leg.sns_accounts || {},
+        openpoliticsUrl: leg.openpolitics_url,
+        detailsEnhancedAt: leg.details_enhanced_at,
+        otherLinks: leg.other_links || [],
+      } as Legislator;
+    });
   }
 
   /**
