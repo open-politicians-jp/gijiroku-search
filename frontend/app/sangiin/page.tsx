@@ -266,7 +266,7 @@ export default function SangiinPage() {
   if (loading) {
     return (
       <>
-        <Header currentPage="sangiin" />
+        <Header currentPage="archive" />
         <div className="container mx-auto px-4 py-8 mt-16">
           <div className="flex items-center justify-center h-64">
             <div className="text-center">
@@ -282,7 +282,7 @@ export default function SangiinPage() {
   if (error) {
     return (
       <>
-        <Header currentPage="sangiin" />
+        <Header currentPage="archive" />
         <div className="container mx-auto px-4 py-8 mt-16">
           <div className="bg-red-50 border border-red-200 rounded-lg p-6">
             <h2 className="text-lg font-semibold text-red-800 mb-2">エラーが発生しました</h2>
@@ -309,7 +309,7 @@ export default function SangiinPage() {
 
   return (
     <>
-      <Header currentPage="sangiin" />
+      <Header currentPage="archive" />
       <div className="container mx-auto px-4 py-8 mt-16">
       {/* ヘッダー */}
       <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg p-6 mb-8">
