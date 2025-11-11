@@ -128,7 +128,11 @@ class BillsCollector:
                 continue
         
         logger.info(f"全議案データ収集完了: {len(all_bills)}件")
-        return all_bills
+        
+        merged_bills = self.merge_duplicate_bills(all_bills)
+        logger.info(f"重複統合後の件数: {len(merged_bills)}件")
+        
+        return merged_bills
     
     def collect_session_bills(self, session_number: int) -> List[Dict[str, Any]]:
         """特定の国会の議案を収集"""
@@ -279,14 +283,22 @@ class BillsCollector:
             status = self.extract_status(soup)
             committee = self.extract_committee(soup)
             
-            # 関連リンクを抽出
-            related_links = self.extract_related_links(soup)
+            # 詳細ページURL（本文）を優先して取得
+            detail_url = self.extract_preferred_detail_url(soup, link_info['url'])
             
+            # 関連リンクを抽出
+            related_links = self.extract_related_links(soup, link_info['url'], detail_url)
+            
+            bill_title = self.extract_bill_title(soup, progress_info, bill_content, link_info['title'])
+
             bill_detail = {
-                'title': link_info['title'],
+                'title': bill_title,
                 'bill_number': link_info['bill_number'],
                 'session_number': session_number,
-                'url': link_info['url'],
+                'url': detail_url,
+                'detail_url': detail_url,
+                'source_url': link_info['url'],
+                'progress_url': link_info['url'] if 'keika/' in link_info['url'].lower() else '',
                 'submitter': submitter,
                 'submission_date': submission_date,
                 'status': status,
@@ -305,6 +317,43 @@ class BillsCollector:
         except Exception as e:
             logger.error(f"議案詳細抽出エラー ({link_info['url']}): {str(e)}")
             return None
+    
+    def extract_preferred_detail_url(self, soup: BeautifulSoup, current_page_url: str) -> str:
+        """本文ページなど詳細に直結するURLを優先的に取得"""
+        try:
+            if not current_page_url:
+                return ""
+            
+            normalized_current = current_page_url.lower()
+            if 'honbun/' in normalized_current:
+                return current_page_url
+            
+            priority_keywords = [
+                ('honbun', '本文'),
+                ('gianhonbun', '本文'),
+                ('.pdf', 'PDF'),
+                ('/teishutsu/', '提出資料')
+            ]
+            
+            links = soup.find_all('a', href=True)
+            
+            for keyword, _ in priority_keywords:
+                for link in links:
+                    href = link.get('href', '')
+                    text = link.get_text(strip=True)
+                    if not href:
+                        continue
+                    lower_href = href.lower()
+                    if keyword in lower_href or (keyword == 'honbun' and '本文' in text):
+                        abs_url = self.build_absolute_url(href, current_page_url)
+                        if abs_url:
+                            return abs_url
+            
+            return current_page_url
+        
+        except Exception as e:
+            logger.error(f"詳細URL抽出エラー: {str(e)}")
+            return current_page_url or ""
     
     def extract_bill_content(self, soup: BeautifulSoup) -> str:
         """議案本文を抽出"""
@@ -361,6 +410,47 @@ class BillsCollector:
             logger.error(f"経過情報抽出エラー: {str(e)}")
         
         return progress
+
+    def extract_bill_title(self, soup: BeautifulSoup, progress_info: List[Dict[str, str]], bill_content: str, fallback_title: str) -> str:
+        """ページから正式な議案名を抽出"""
+        try:
+            def clean_candidate(text: str) -> str:
+                if not text:
+                    return ""
+                cleaned = re.sub(r'(議案(?:件)?名|法律案名|法案名)[：:]*', '', text).strip(' ：\n')
+                return cleaned.strip()
+
+            # 1) 経過テーブルから議案名を拾う
+            for entry in progress_info:
+                label = entry.get('date', '')
+                if any(keyword in label for keyword in ['議案名', '議案件名', '法案名']):
+                    candidate = clean_candidate(entry.get('action', ''))
+                    if candidate and candidate not in ['経過', '経過情報']:
+                        return candidate
+
+            # 2) 本文テキストからパターン抽出
+            search_texts = [bill_content, soup.get_text(separator='\n', strip=True)]
+            pattern = re.compile(r'(議案(?:件)?名|法律案名|法案名)[：:]*\s*([^\n]+)')
+            for text in search_texts:
+                if not text:
+                    continue
+                match = pattern.search(text)
+                if match:
+                    candidate = clean_candidate(match.group(2))
+                    if candidate and candidate not in ['経過', '経過情報']:
+                        return candidate
+
+            # 3) 見出しタグに議案名が含まれていないか確認
+            heading = soup.find(['h1', 'h2', 'h3'], string=lambda s: s and any(keyword in s for keyword in ['法案', '法律案', '議案']))
+            if heading:
+                candidate = clean_candidate(heading.get_text(strip=True))
+                if candidate and candidate not in ['経過', '経過情報']:
+                    return candidate
+
+        except Exception as e:
+            logger.error(f"議案タイトル抽出エラー: {str(e)}")
+        
+        return fallback_title
     
     def extract_submitter(self, soup: BeautifulSoup) -> str:
         """提出者を抽出"""
@@ -456,26 +546,63 @@ class BillsCollector:
             logger.error(f"委員会名抽出エラー: {str(e)}")
             return ""
     
-    def extract_related_links(self, soup: BeautifulSoup) -> List[Dict[str, str]]:
+    def extract_related_links(self, soup: BeautifulSoup, current_page_url: str, detail_url: Optional[str] = None) -> List[Dict[str, str]]:
         """関連リンクを抽出"""
         links = []
         
         try:
+            allowed_keywords = ['honbun', 'keika', '.pdf', '.doc', '.zip', '.xls', '.ppt', '/teishutsu/', '/teian/']
+            seen_urls = set()
+            
+            def add_link(url: Optional[str], title: str):
+                if not url or url in seen_urls:
+                    return
+                if 'link.html' in url or 'statics/link' in url:
+                    return
+                links.append({
+                    'url': url,
+                    'title': title or '関連資料'
+                })
+                seen_urls.add(url)
+            
             # PDFや関連文書のリンクを探す
             link_elements = soup.find_all('a', href=True)
             
             for link in link_elements:
                 href = link.get('href', '')
                 text = link.get_text(strip=True)
+                if not href:
+                    continue
                 
-                # 関連文書のリンクを判定
-                if any(ext in href.lower() for ext in ['.pdf', '.doc', '.html']):
-                    full_url = self.build_absolute_url(href, self.bills_base_url)
-                    if full_url:
-                        links.append({
-                            'url': full_url,
-                            'title': text or '関連文書'
-                        })
+                absolute_url = self.build_absolute_url(href, current_page_url)
+                if not absolute_url:
+                    continue
+                
+                lower_href = href.lower()
+                lower_url = absolute_url.lower()
+                
+                if lower_href.startswith('javascript:') or lower_href.startswith('mailto:'):
+                    continue
+                
+                if any(keyword in lower_href for keyword in allowed_keywords) or any(keyword in lower_url for keyword in allowed_keywords):
+                    link_title = text
+                    if 'honbun' in lower_href or 'honbun' in lower_url:
+                        link_title = link_title or '本文'
+                    elif 'keika' in lower_href or 'keika' in lower_url:
+                        link_title = link_title or '審議経過'
+                    add_link(absolute_url, link_title)
+            
+            # 経過ページ（元URL）が keika の場合は関連リンクとして保持
+            if current_page_url and 'keika/' in current_page_url.lower():
+                add_link(current_page_url, '審議経過')
+            
+            # 本文URLが別途存在する場合も関連リンクとして保持
+            if (
+                detail_url 
+                and detail_url != current_page_url 
+                and ('honbun/' in detail_url.lower() or detail_url.lower().endswith('.pdf'))
+            ):
+                add_link(detail_url, '本文')
             
         except Exception as e:
             logger.error(f"関連リンク抽出エラー: {str(e)}")
@@ -530,6 +657,105 @@ class BillsCollector:
             return False
         
         return True
+    
+    def normalize_title_key(self, title: str) -> str:
+        """タイトルをキー用に正規化"""
+        if not title:
+            return ""
+        normalized = re.sub(r'\s+', '', title)
+        return normalized
+    
+    def merge_progress_lists(self, base: List[Dict[str, str]], incoming: List[Dict[str, str]]) -> List[Dict[str, str]]:
+        """経過情報を重複なく統合"""
+        if not base:
+            return incoming or []
+        if not incoming:
+            return base
+        
+        seen = {(entry.get('date'), entry.get('action')) for entry in base}
+        
+        for entry in incoming:
+            key = (entry.get('date'), entry.get('action'))
+            if key not in seen:
+                base.append(entry)
+                seen.add(key)
+        
+        return base
+    
+    def merge_related_links_list(self, base: List[Dict[str, str]], incoming: List[Dict[str, str]]) -> List[Dict[str, str]]:
+        """関連リンクを統合"""
+        if not base:
+            return incoming or []
+        if not incoming:
+            return base
+        
+        seen = {link.get('url') for link in base if link.get('url')}
+        for link in incoming:
+            url = link.get('url')
+            if url and url not in seen:
+                base.append(link)
+                seen.add(url)
+        
+        return base
+    
+    def merge_duplicate_bills(self, bills: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+        """経過ページと本文ページに分かれている議案を統合"""
+        merged: Dict[str, Dict[str, Any]] = {}
+        
+        for bill in bills:
+            title_key = self.normalize_title_key(bill.get('title', ''))
+            key = f"{bill.get('session_number')}_{title_key}"
+            if not key.strip('_'):
+                key = f"{bill.get('session_number')}_{bill.get('bill_number')}_{bill.get('url')}"
+            
+            existing = merged.get(key)
+            if not existing:
+                merged[key] = bill
+                continue
+            
+            # 議案番号は桁数が多い（固有）のものを優先
+            current_len = len(existing.get('bill_number', '') or '')
+            incoming_len = len(bill.get('bill_number', '') or '')
+            if incoming_len > current_len:
+                existing['bill_number'] = bill.get('bill_number', existing.get('bill_number', ''))
+            
+            # 提出者や委員会など未設定のメタ情報を補完
+            for field in ['submitter', 'committee', 'submission_date']:
+                if not existing.get(field) and bill.get(field):
+                    existing[field] = bill[field]
+            
+            # ステータス情報はより具体的なものを優先
+            if bill.get('status_normalized') and bill.get('status_normalized') != '不明':
+                existing['status_normalized'] = bill['status_normalized']
+                existing['status'] = bill.get('status', existing.get('status', ''))
+            elif not existing.get('status_normalized') and bill.get('status_normalized'):
+                existing['status_normalized'] = bill['status_normalized']
+            
+            # 進行状況と関連リンクを統合
+            existing['progress_info'] = self.merge_progress_lists(existing.get('progress_info', []), bill.get('progress_info', []))
+            existing['related_links'] = self.merge_related_links_list(existing.get('related_links', []), bill.get('related_links', []))
+            
+            # 審議経過URL（keika）は保持
+            if bill.get('progress_url'):
+                existing['progress_url'] = bill['progress_url']
+            
+            # 本文URL（honbun）が存在する場合は詳細リンクとして採用
+            candidate_detail = bill.get('detail_url') or bill.get('url', '')
+            if 'honbun/' in candidate_detail.lower():
+                existing['url'] = candidate_detail
+                existing['detail_url'] = candidate_detail
+                existing['source_url'] = candidate_detail
+            
+            # 本文テキストが長い方を優先
+            if len(bill.get('bill_content', '') or '') > len(existing.get('bill_content', '') or ''):
+                existing['bill_content'] = bill.get('bill_content', existing.get('bill_content', ''))
+                existing['summary'] = bill.get('summary', existing.get('summary', ''))
+            
+        merged_list = list(merged.values())
+        for bill in merged_list:
+            if not bill.get('detail_url'):
+                bill['detail_url'] = bill.get('url', '')
+        return merged_list
 
     def save_bills_data(self, bills: List[Dict[str, Any]]):
         """議案データを保存"""

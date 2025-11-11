@@ -1,104 +1,96 @@
 {
   "metadata": {
-    "total_count": 47888,
+    "total_count": 78395,
     "chunk_size": 5000,
-    "total_chunks": 10,
+    "total_chunks": 16,
     "date_range": {
-      "from": "2024-10-01",
-      "to": "2025-06-04"
+      "from": "2024-04-01",
+      "to": "2025-11-05"
     },
-    "generated_at": "2025-06-22T21:58:34.fZ"
+    "generated_at": "2025-11-11T21:09:51.267800"
   },
   "chunks": [
     {
       "chunk_number": 1,
-      "filename": "speeches_chunk_01.json",
-      "count": 5000,
-      "date_range": {
-        "from": "2025-04-15",
-        "to": "2025-06-04"
-      }
+      "filename": "speeches_chunk_01.json"
     },
     {
       "chunk_number": 2,
-      "filename": "speeches_chunk_02.json",
-      "count": 5000,
-      "date_range": {
-        "from": "2025-04-03",
-        "to": "2025-04-15"
-      }
+      "filename": "speeches_chunk_02.json"
     },
     {
       "chunk_number": 3,
-      "filename": "speeches_chunk_03.json",
-      "count": 5000,
-      "date_range": {
-        "from": "2025-03-25",
-        "to": "2025-04-03"
-      }
+      "filename": "speeches_chunk_03.json"
     },
     {
       "chunk_number": 4,
-      "filename": "speeches_chunk_04.json",
-      "count": 5000,
-      "date_range": {
-        "from": "2025-03-18",
-        "to": "2025-03-25"
-      }
+      "filename": "speeches_chunk_04.json"
     },
     {
       "chunk_number": 5,
-      "filename": "speeches_chunk_05.json",
-      "count": 5000,
-      "date_range": {
-        "from": "2025-03-11",
-        "to": "2025-03-18"
-      }
+      "filename": "speeches_chunk_05.json"
     },
     {
       "chunk_number": 6,
-      "filename": "speeches_chunk_06.json",
-      "count": 5000,
-      "date_range": {
-        "from": "2025-02-27",
-        "to": "2025-03-11"
-      }
+      "filename": "speeches_chunk_06.json"
     },
     {
       "chunk_number": 7,
-      "filename": "speeches_chunk_07.json",
-      "count": 5000,
-      "date_range": {
-        "from": "2025-02-19",
-        "to": "2025-02-27"
-      }
+      "filename": "speeches_chunk_07.json"
     },
     {
       "chunk_number": 8,
-      "filename": "speeches_chunk_08.json",
-      "count": 5000,
-      "date_range": {
-        "from": "2025-02-04",
-        "to": "2025-02-19"
-      }
+      "filename": "speeches_chunk_08.json"
     },
     {
       "chunk_number": 9,
-      "filename": "speeches_chunk_09.json",
-      "count": 5000,
-      "date_range": {
-        "from": "2024-12-19",
-        "to": "2025-02-04"
-      }
+      "filename": "speeches_chunk_09.json"
     },
     {
       "chunk_number": 10,
-      "filename": "speeches_chunk_10.json",
-      "count": 2888,
-      "date_range": {
-        "from": "2024-10-01",
-        "to": "2024-12-19"
-      }
+      "filename": "speeches_chunk_10.json"
+    },
+    {
+      "chunk_number": 11,
+      "filename": "speeches_chunk_11.json"
+    },
+    {
+      "chunk_number": 12,
+      "filename": "speeches_chunk_12.json"
+    },
+    {
+      "chunk_number": 13,
+      "filename": "speeches_chunk_13.json"
+    },
+    {
+      "chunk_number": 14,
+      "filename": "speeches_chunk_14.json"
+    },
+    {
+      "chunk_number": 15,
+      "filename": "speeches_chunk_15.json"
+    },
+    {
+      "chunk_number": 16,
+      "filename": "speeches_chunk_16.json"
     }
+  ],
+  "available_files": [
+    "speeches_chunk_01.json",
+    "speeches_chunk_02.json",
+    "speeches_chunk_03.json",
+    "speeches_chunk_04.json",
+    "speeches_chunk_05.json",
+    "speeches_chunk_06.json",
+    "speeches_chunk_07.json",
+    "speeches_chunk_08.json",
+    "speeches_chunk_09.json",
+    "speeches_chunk_10.json",
+    "speeches_chunk_11.json",
+    "speeches_chunk_12.json",
+    "speeches_chunk_13.json",
+    "speeches_chunk_14.json",
+    "speeches_chunk_15.json",
+    "speeches_chunk_16.json"
   ]
 }

@@ -22,6 +22,7 @@ import time
 import random
 import requests
 import calendar
+import math
 from datetime import datetime, timedelta
 from dateutil.relativedelta import relativedelta
 from pathlib import Path
@@ -145,11 +146,6 @@ class DailyKokkaiAPIClient:
                 # 次のページへ
                 start_record += records_per_request
                 
-                # 安全制限: 月間5000件まで
-                if len(all_speeches) >= 5000:
-                    logger.warning(f"⚠️ 月間制限(5000件)に達したため終了")
-                    break
-                    
             except Exception as e:
                 logger.error(f"❌ エラー発生: {e}")
                 break
@@ -370,43 +366,50 @@ def analyze_existing_data_periods(client):
     return covered_periods, oldest_period, newest_period
 
 def get_progressive_collection_months(client, months_to_collect=3):
-    """既存データファイル名解析を基に進行的な収集対象月を決定 (Issue #26対応)"""
-    
+    """既存データに基づき最新〜過去の不足期間を算出 (Issue #26対応強化)"""
+
+    # 0.25 などの小数でも最低1ヶ月は取得する
+    months_to_collect = max(1, int(math.ceil(months_to_collect)))
+
     covered_periods, oldest_period, newest_period = analyze_existing_data_periods(client)
-    
+    current_date = datetime.now()
+
     if not covered_periods:
         logger.info("📊 既存データなし: 現在日付から過去データを収集")
-        current_date = datetime.now()
         target_months = []
         for i in range(months_to_collect):
             target_date = current_date - relativedelta(months=i)
             target_months.append((target_date.year, target_date.month))
         return target_months
-    
+
     logger.info(f"📊 収集済み期間: {len(covered_periods)}ヶ月分")
     logger.info(f"📊 最古期間: {oldest_period[0]}年{oldest_period[1]}月")
     logger.info(f"📊 最新期間: {newest_period[0]}年{newest_period[1]}月")
-    
-    # 最古期間より過去のデータを収集対象とする
+
     target_months = []
+    scheduled = set()
+
+    # 直近の月を優先的にチェック（最新データ取得）
+    for i in range(months_to_collect):
+        target_date = current_date - relativedelta(months=i)
+        period = (target_date.year, target_date.month)
+        if period not in scheduled:
+            target_months.append(period)
+            scheduled.add(period)
+
+    # 歴史的な不足期間も徐々に埋める
     base_year, base_month = oldest_period
     base_date = datetime(base_year, base_month, 1)
-    
-    # 過去に向かって未収集の月を特定
     for i in range(1, months_to_collect + 1):
         target_date = base_date - relativedelta(months=i)
-        target_period = (target_date.year, target_date.month)
-        
-        # 既に収集済みの期間はスキップ
-        if target_period not in covered_periods:
-            target_months.append(target_period)
-    
-    if target_months:
-        logger.info(f"📅 過去データ収集: 最古期間 {base_year}年{base_month}月 より過去 {len(target_months)}ヶ月分")
-        logger.info(f"📅 収集対象: {', '.join([f'{y}年{m}月' for y, m in target_months])}")
-    else:
-        logger.info(f"✅ 過去 {months_to_collect}ヶ月分のデータは既に収集済み")
-    
+        period = (target_date.year, target_date.month)
+        if period in covered_periods or period in scheduled:
+            continue
+        target_months.append(period)
+        scheduled.add(period)
+
+    logger.info(f"📅 収集対象: {', '.join([f'{y}年{m}月' for y, m in target_months])}")
+
     return target_months
 
 def main():
@@ -426,7 +429,7 @@ def main():
     
     if use_progressive:
         # 新しい進行的収集ロジック
-        target_months = get_progressive_collection_months(client, int(months_back))
+        target_months = get_progressive_collection_months(client, months_back)
     else:
         # 従来のロジック（後方互換性のため保持）
         current_date = datetime.now()

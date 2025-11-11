@@ -200,12 +200,33 @@ class LegislatorsLoader {
    */
   private async loadShugiinData(): Promise<Legislator[]> {
     try {
-      // 衆議院データが追加されたら実装
-      // const response = await fetch('/data/legislators/shugiin_legislators_unified.json');
-      // if (response.ok) {
-      //   const jsonData = await response.json();
-      //   return this.normalizeJsonLegislators(jsonData.data);
-      // }
+      const basePath = process.env.NODE_ENV === 'production' ? '/gijiroku-search' : '';
+      const candidates = [
+        `${basePath}/data/legislators/shugiin_legislators_latest.json`,
+        `${basePath}/data/legislators/legislators_latest.json`,
+        `${basePath}/data/legislators/legislators_20251101_210546.json`,
+      ];
+
+      for (const dataPath of candidates) {
+        try {
+          const response = await fetch(dataPath);
+          if (!response.ok) continue;
+          const jsonData = await response.json();
+          const rawList = Array.isArray(jsonData)
+            ? jsonData
+            : (jsonData.data || jsonData.legislators || []);
+          if (rawList.length === 0) continue;
+          const normalized = this.normalizeJsonLegislators(rawList).map((leg) => ({
+            ...leg,
+            house: 'shugiin' as const,
+          }));
+          return normalized;
+        } catch (error) {
+          // 次の候補へ
+          continue;
+        }
+      }
+
       return [];
     } catch (error) {
       console.warn('Shugiin data not available yet:', error);

@@ -1,0 +1,593 @@
+{
+  "metadata": {
+    "data_type": "speeches",
+    "year": 2025,
+    "month": 11,
+    "total_count": 20,
+    "generated_at": "2025-11-11T19:14:25.187340",
+    "source": "https://kokkai.ndl.go.jp/api.html",
+    "collection_method": "progressive_past_data_collection",
+    "filename_format": "speeches_YYYYMM01_HHMMSS.json",
+    "period": "2025-11",
+    "is_past_data": false
+  },
+  "data": [
+    {
+      "id": "121904024X00420251105_000",
+      "date": "2025-11-05",
+      "session": 219,
+      "house": "衆議院",
+      "committee": "議院運営委員会",
+      "meeting_info": {
+        "session_name": "",
+        "meeting_name": "議院運営委員会",
+        "house": "衆議院",
+        "meeting_number": "",
+        "date": "2025-11-05",
+        "issue": "第4号",
+        "pdf_url": null,
+        "speech_order": 0,
+        "meeting_type": "常任委員会"
+      },
+      "speaker": "会議録情報",
+      "party": null,
+      "party_normalized": null,
+      "party_aliases": [],
+      "position": null,
+      "text": "令和七年十一月五日（水曜日）\r\n　　　　正午開議\r\n　出席委員\r\n　　　委員長　浜田　靖一君\r\n　　　理事　村井　英樹君　理事　田野瀬太道君\r\n　　　理事　宮内　秀樹君　理事　宮路　拓馬君\r\n　　　理事　吉川　　元君　理事　坂本祐之輔君\r\n　　　理事　石川　香織君　理事　金村　龍那君\r\n　　　理事　西岡　秀子君\r\n　　　　　　神田　潤一君　　　　小寺　裕雄君\r\n　　　　　　塩崎　彰久君　　　　中曽根康隆君\r\n　　　　　　西田　昭二君　　　　古川　　康君\r\n　　　　　　伊藤　俊輔君　　　佐々木ナオミ君\r\n　　　　　　中谷　一馬君　　　長友よしひろ君\r\n　　　　　　徳安　淳子君　　　　向山　好一君\r\n　　　　　　輿水　恵一君　　　　山川　　仁君\r\n　　　　　　塩川　鉄也君\r\n　　　　…………………………………\r\n　　　議長　　　　　　　　　　　額賀福志郎君\r\n　　　副議長　　　　　　　　　　玄葉光一郎君\r\n　　　事務総長　　　　　　　　　築山　信彦君\r\n　　　　―――――――――――――\r\n委員の異動\r\n十一月五日\r\n　辞任　　　　　　　　　補欠選任\r\n　　奥下　剛光君　　　　　徳安　淳子君\r\n同日\r\n　辞任　　　　　　　　　補欠選任\r\n　　徳安　淳子君　　　　　奥下　剛光君\r\n　　　　―――――――――――――\r\n本日の会議に付した案件\r\n　本日の本会議の議事等に関する件\r\n　　　　　――――◇―――――",
+      "url": "https://kokkai.ndl.go.jp/txt/121904024X00420251105/0",
+      "created_at": "2025-11-11T19:14:23.120863"
+    },
+    {
+      "id": "121904024X00420251105_001",
+      "date": "2025-11-05",
+      "session": 219,
+      "house": "衆議院",
+      "committee": "議院運営委員会",
+      "meeting_info": {
+        "session_name": "",
+        "meeting_name": "議院運営委員会",
+        "house": "衆議院",
+        "meeting_number": "",
+        "date": "2025-11-05",
+        "issue": "第4号",
+        "pdf_url": null,
+        "speech_order": 1,
+        "meeting_type": "常任委員会"
+      },
+      "speaker": "浜田靖一",
+      "party": "自由民主党・無所属の会",
+      "party_normalized": "自由民主党",
+      "party_aliases": [
+        "自民党",
+        "自民",
+        "LDP"
+      ],
+      "position": null,
+      "text": "○浜田委員長　これより会議を開きます。\r\n　本日の本会議における国務大臣の演説に対する質疑は、まず立憲民主党・無所属の吉田はるみ君、次に国民民主党・無所属クラブの玉木雄一郎君、次に公明党の斉藤鉄夫君、次にれいわ新選組の高井崇志君、次いで日本共産党の田村智子君の順序で行い、本日をもって国務大臣の演説に対する質疑を終了することになっております。\r\n　なお、質疑者の要求大臣は、お手元の委員会案件に記載のとおりであります。\r\n　　　　―――――――――――――\r\n　一、国務大臣の演説に対する質疑（前会の続）\r\n　　　質疑者　　　　　　時間　　　要求大臣\r\n　吉田はるみ君（立憲）　30分以内　総理\r\n　玉木雄一郎君（国民）　30分以内　総理\r\n　斉藤　鉄夫君（公明）　30分以内　総理\r\n　高井　崇志君（れ新）　15分以内　総理\r\n　田村　智子君（共産）　15分以内　総理\r\n　　　　―――――――――――――",
+      "url": "https://kokkai.ndl.go.jp/txt/121904024X00420251105/1",
+      "created_at": "2025-11-11T19:14:23.120877"
+    },
+    {
+      "id": "121904024X00420251105_002",
+      "date": "2025-11-05",
+      "session": 219,
+      "house": "衆議院",
+      "committee": "議院運営委員会",
+      "meeting_info": {
+        "session_name": "",
+        "meeting_name": "議院運営委員会",
+        "house": "衆議院",
+        "meeting_number": "",
+        "date": "2025-11-05",
+        "issue": "第4号",
+        "pdf_url": null,
+        "speech_order": 2,
+        "meeting_type": "常任委員会"
+      },
+      "speaker": "浜田靖一",
+      "party": "自由民主党・無所属の会",
+      "party_normalized": "自由民主党",
+      "party_aliases": [
+        "自民党",
+        "自民",
+        "LDP"
+      ],
+      "position": null,
+      "text": "○浜田委員長　次に、本日の本会議の議事について、事務総長の説明を求めます。",
+      "url": "https://kokkai.ndl.go.jp/txt/121904024X00420251105/2",
+      "created_at": "2025-11-11T19:14:23.120887"
+    },
+    {
+      "id": "121904024X00420251105_003",
+      "date": "2025-11-05",
+      "session": 219,
+      "house": "衆議院",
+      "committee": "議院運営委員会",
+      "meeting_info": {
+        "session_name": "",
+        "meeting_name": "議院運営委員会",
+        "house": "衆議院",
+        "meeting_number": "",
+        "date": "2025-11-05",
+        "issue": "第4号",
+        "pdf_url": null,
+        "speech_order": 3,
+        "meeting_type": "常任委員会"
+      },
+      "speaker": "築山信彦",
+      "party": null,
+      "party_normalized": null,
+      "party_aliases": [],
+      "position": "衆議院事務総長",
+      "text": "○築山事務総長　昨日に引き続きまして、国務大臣の演説に対する質疑を行います。お手元の委員会案件に記載のとおり、五人の方々からそれぞれ質疑が行われます。\r\n　なお、二人目の玉木雄一郎議員の質疑に対する答弁が終了したところで十分間休憩いたします。\r\n　本日の議事は、以上でございます。",
+      "url": "https://kokkai.ndl.go.jp/txt/121904024X00420251105/3",
+      "created_at": "2025-11-11T19:14:23.120892"
+    },
+    {
+      "id": "121904024X00420251105_004",
+      "date": "2025-11-05",
+      "session": 219,
+      "house": "衆議院",
+      "committee": "議院運営委員会",
+      "meeting_info": {
+        "session_name": "",
+        "meeting_name": "議院運営委員会",
+        "house": "衆議院",
+        "meeting_number": "",
+        "date": "2025-11-05",
+        "issue": "第4号",
+        "pdf_url": null,
+        "speech_order": 4,
+        "meeting_type": "常任委員会"
+      },
+      "speaker": "浜田靖一",
+      "party": "自由民主党・無所属の会",
+      "party_normalized": "自由民主党",
+      "party_aliases": [
+        "自民党",
+        "自民",
+        "LDP"
+      ],
+      "position": null,
+      "text": "○浜田委員長　それでは、本日の本会議は、午後零時五十分予鈴、午後一時から開会いたします。\r\n　　　　―――――――――――――",
+      "url": "https://kokkai.ndl.go.jp/txt/121904024X00420251105/4",
+      "created_at": "2025-11-11T19:14:23.120896"
+    },
+    {
+      "id": "121904024X00420251105_005",
+      "date": "2025-11-05",
+      "session": 219,
+      "house": "衆議院",
+      "committee": "議院運営委員会",
+      "meeting_info": {
+        "session_name": "",
+        "meeting_name": "議院運営委員会",
+        "house": "衆議院",
+        "meeting_number": "",
+        "date": "2025-11-05",
+        "issue": "第4号",
+        "pdf_url": null,
+        "speech_order": 5,
+        "meeting_type": "常任委員会"
+      },
+      "speaker": "浜田靖一",
+      "party": "自由民主党・無所属の会",
+      "party_normalized": "自由民主党",
+      "party_aliases": [
+        "自民党",
+        "自民",
+        "LDP"
+      ],
+      "position": null,
+      "text": "○浜田委員長　次に、次回の本会議及び委員会は、追って公報をもってお知らせいたします。\r\n　なお、来る十一日火曜日午前十一時から理事会を開会いたします。\r\n　本日は、これにて散会いたします。\r\n　　　　午後零時一分散会",
+      "url": "https://kokkai.ndl.go.jp/txt/121904024X00420251105/5",
+      "created_at": "2025-11-11T19:14:23.120901"
+    },
+    {
+      "id": "121904780X00120251105_000",
+      "date": "2025-11-05",
+      "session": 219,
+      "house": "衆議院",
+      "committee": "懲罰委員会",
+      "meeting_info": {
+        "session_name": "",
+        "meeting_name": "懲罰委員会",
+        "house": "衆議院",
+        "meeting_number": "",
+        "date": "2025-11-05",
+        "issue": "第1号",
+        "pdf_url": null,
+        "speech_order": 0,
+        "meeting_type": "常任委員会"
+      },
+      "speaker": "会議録情報",
+      "party": null,
+      "party_normalized": null,
+      "party_aliases": [],
+      "position": null,
+      "text": "本国会召集日（令和七年十月二十一日）（火曜日）（午前零時現在）における本委員は、次のとおりである。\r\n　　　委員長　菊田真紀子君\r\n　　　理事　野田　聖子君　理事　村井　英樹君\r\n　　　理事　後藤　祐一君　理事　山井　和則君\r\n　　　理事　浦野　靖人君\r\n　　　　　　麻生　太郎君　　　　鬼木　　誠君\r\n　　　　　　岸田　文雄君　　　　田所　嘉徳君\r\n　　　　　　田野瀬太道君　　　　中西　健治君\r\n　　　　　　枝野　幸男君　　　　逢坂　誠二君\r\n　　　　　　小沢　一郎君　　　　牧　　義夫君\r\n　　　　　　馬場　伸幸君　　　　円　より子君\r\n　　　　　　佐藤　英道君\r\n　　　　―――――――――――――\r\n十月二十一日\r\n　菊田真紀子君委員長辞任につき、その補欠として手塚仁雄君が議院において、委員長に選任された。\r\n令和七年十一月五日（水曜日）\r\n　　　　午後零時二十分開議\r\n　出席委員\r\n　　　委員長　手塚　仁雄君\r\n　　　理事　野田　聖子君　理事　村井　英樹君\r\n　　　理事　青柳陽一郎君　理事　吉川　　元君\r\n　　　理事　馬場　伸幸君\r\n　　　　　　石破　　茂君　　　　岸田　文雄君\r\n　　　　　　菅　　義偉君　　　　田野瀬太道君\r\n　　　　　　藤丸　　敏君　　　　武藤　容治君\r\n　　　　　　小宮山泰子君　　　　杉村　慎治君\r\n　　　　　　武正　公一君　　　　伴野　　豊君\r\n　　　　　　遠藤　　敬君　　　　円　より子君\r\n　　　　　　中川　康洋君\r\n　　　　―――――――――――――\r\n委員の異動\r\n十月二十一日\r\n　辞任　　　　　　　　　補欠選任\r\n　　麻生　太郎君　　　　　石破　　茂君\r\n　　田野瀬太道君　　　　　菅　　義偉君\r\n　　枝野　幸男君　　　　　吉川　　元君\r\n　　逢坂　誠二君　　　　　小宮山泰子君\r\n　　菊田真紀子君　　　　　武正　公一君\r\n　　後藤　祐一君　　　　　手塚　仁雄君\r\n　　牧　　義夫君　　　　　伴野　　豊君\r\n　　山井　和則君　　　　　青柳陽一郎君\r\n　　浦野　靖人君　　　　　遠藤　　敬君\r\n　　佐藤　英道君　　　　　中川　康洋君\r\n同月二十三日\r\n　辞任　　　　　　　　　補欠選任\r\n　　田所　嘉徳君　　　　　田野瀬太道君\r\n同月三十日\r\n　辞任　　　　　　　　　補欠選任\r\n　　鬼木　　誠君　　　　　藤丸　　敏君\r\n　　中西　健治君　　　　　武藤　容治君\r\n十一月五日\r\n　辞任　　　　　　　　　補欠選任\r\n　　小沢　一郎君　　　　　杉村　慎治君\r\n同日\r\n　辞任　　　　　　　　　補欠選任\r\n　　杉村　慎治君　　　　　小沢　一郎君\r\n同日\r\n　理事後藤祐一君、山井和則君及び浦野靖人君十月二十一日委員辞任につき、その補欠として青柳陽一郎君、吉川元君及び馬場伸幸君が理事に当選した。\r\n　　　　―――――――――――――\r\n本日の会議に付した案件\r\n　理事の補欠選任\r\n　　　　　――――◇―――――",
+      "url": "https://kokkai.ndl.go.jp/txt/121904780X00120251105/0",
+      "created_at": "2025-11-11T19:14:23.120905"
+    },
+    {
+      "id": "121904780X00120251105_001",
+      "date": "2025-11-05",
+      "session": 219,
+      "house": "衆議院",
+      "committee": "懲罰委員会",
+      "meeting_info": {
+        "session_name": "",
+        "meeting_name": "懲罰委員会",
+        "house": "衆議院",
+        "meeting_number": "",
+        "date": "2025-11-05",
+        "issue": "第1号",
+        "pdf_url": null,
+        "speech_order": 1,
+        "meeting_type": "常任委員会"
+      },
+      "speaker": "手塚仁雄",
+      "party": "立憲民主党・無所属",
+      "party_normalized": "立憲民主党",
+      "party_aliases": [
+        "立民",
+        "立憲"
+      ],
+      "position": null,
+      "text": "○手塚委員長　これより会議を開きます。\r\n　一言御挨拶申し上げます。\r\n　去る十月二十一日の本会議におきまして、懲罰委員長に選任されました手塚仁雄でございます。\r\n　当委員会は、議院の秩序維持及び規律保持に関し重大なる責務を課せられており、その職責の重大さを痛感している次第でございます。\r\n　委員各位の御協力と御支援を賜りまして、誠心誠意努めてまいりたいと存じます。\r\n　何とぞよろしくお願い申し上げます。（拍手）\r\n　　　　　――――◇―――――",
+      "url": "https://kokkai.ndl.go.jp/txt/121904780X00120251105/1",
+      "created_at": "2025-11-11T19:14:23.120915"
+    },
+    {
+      "id": "121904780X00120251105_002",
+      "date": "2025-11-05",
+      "session": 219,
+      "house": "衆議院",
+      "committee": "懲罰委員会",
+      "meeting_info": {
+        "session_name": "",
+        "meeting_name": "懲罰委員会",
+        "house": "衆議院",
+        "meeting_number": "",
+        "date": "2025-11-05",
+        "issue": "第1号",
+        "pdf_url": null,
+        "speech_order": 2,
+        "meeting_type": "常任委員会"
+      },
+      "speaker": "手塚仁雄",
+      "party": "立憲民主党・無所属",
+      "party_normalized": "立憲民主党",
+      "party_aliases": [
+        "立民",
+        "立憲"
+      ],
+      "position": null,
+      "text": "○手塚委員長　この際、理事の補欠選任についてお諮りいたします。\r\n　委員の異動に伴い、現在理事が三名欠員となっております。その補欠選任を行いたいと存じますが、先例によりまして、委員長において指名するに御異議ありませんか。\r\n　　　　〔「異議なし」と呼ぶ者あり〕",
+      "url": "https://kokkai.ndl.go.jp/txt/121904780X00120251105/2",
+      "created_at": "2025-11-11T19:14:23.120921"
+    },
+    {
+      "id": "121904780X00120251105_003",
+      "date": "2025-11-05",
+      "session": 219,
+      "house": "衆議院",
+      "committee": "懲罰委員会",
+      "meeting_info": {
+        "session_name": "",
+        "meeting_name": "懲罰委員会",
+        "house": "衆議院",
+        "meeting_number": "",
+        "date": "2025-11-05",
+        "issue": "第1号",
+        "pdf_url": null,
+        "speech_order": 3,
+        "meeting_type": "常任委員会"
+      },
+      "speaker": "手塚仁雄",
+      "party": "立憲民主党・無所属",
+      "party_normalized": "立憲民主党",
+      "party_aliases": [
+        "立民",
+        "立憲"
+      ],
+      "position": null,
+      "text": "○手塚委員長　御異議なしと認めます。よって、そのように決しました。\r\n　それでは、理事に\r\n　　　　　　青柳陽一郎君　　　　吉川　　元君\r\n　　　　　　馬場　伸幸君\r\nを指名いたします。\r\n　本日は、これにて散会いたします。\r\n　　　　午後零時二十一分散会",
+      "url": "https://kokkai.ndl.go.jp/txt/121904780X00120251105/3",
+      "created_at": "2025-11-11T19:14:23.120927"
+    },
+    {
+      "id": "121904024X00320251104_000",
+      "date": "2025-11-04",
+      "session": 219,
+      "house": "衆議院",
+      "committee": "議院運営委員会",
+      "meeting_info": {
+        "session_name": "",
+        "meeting_name": "議院運営委員会",
+        "house": "衆議院",
+        "meeting_number": "",
+        "date": "2025-11-04",
+        "issue": "第3号",
+        "pdf_url": null,
+        "speech_order": 0,
+        "meeting_type": "常任委員会"
+      },
+      "speaker": "会議録情報",
+      "party": null,
+      "party_normalized": null,
+      "party_aliases": [],
+      "position": null,
+      "text": "令和七年十一月四日（火曜日）\r\n　　　　正午開議\r\n　出席委員\r\n　　　委員長　浜田　靖一君\r\n　　　理事　村井　英樹君　理事　田野瀬太道君\r\n　　　理事　宮内　秀樹君　理事　宮路　拓馬君\r\n　　　理事　吉川　　元君　理事　坂本祐之輔君\r\n　　　理事　石川　香織君　理事　金村　龍那君\r\n　　　理事　西岡　秀子君\r\n　　　　　　神田　潤一君　　　　小寺　裕雄君\r\n　　　　　　塩崎　彰久君　　　　中曽根康隆君\r\n　　　　　　西田　昭二君　　　　古川　　康君\r\n　　　　　　伊藤　俊輔君　　　佐々木ナオミ君\r\n　　　　　　中谷　一馬君　　　長友よしひろ君\r\n　　　　　　奥下　剛光君　　　　向山　好一君\r\n　　　　　　輿水　恵一君　　　　山川　　仁君\r\n　　　　　　塩川　鉄也君\r\n　　　　…………………………………\r\n　　　議長　　　　　　　　　　　額賀福志郎君\r\n　　　副議長　　　　　　　　　　玄葉光一郎君\r\n　　　事務総長　　　　　　　　　築山　信彦君\r\n　　　　―――――――――――――\r\n委員の異動\r\n十月三十日\r\n　辞任　　　　　　　　　補欠選任\r\n　　高木　　啓君　　　　　古川　　康君\r\n　　深澤　陽一君　　　　　西田　昭二君\r\n　　　　―――――――――――――\r\n本日の会議に付した案件\r\n　情報監視審査会委員辞任の件\r\n　情報監視審査会委員選任の件\r\n　本日の本会議の議事等に関する件\r\n　　　　　――――◇―――――",
+      "url": "https://kokkai.ndl.go.jp/txt/121904024X00320251104/0",
+      "created_at": "2025-11-11T19:14:23.120931"
+    },
+    {
+      "id": "121904024X00320251104_001",
+      "date": "2025-11-04",
+      "session": 219,
+      "house": "衆議院",
+      "committee": "議院運営委員会",
+      "meeting_info": {
+        "session_name": "",
+        "meeting_name": "議院運営委員会",
+        "house": "衆議院",
+        "meeting_number": "",
+        "date": "2025-11-04",
+        "issue": "第3号",
+        "pdf_url": null,
+        "speech_order": 1,
+        "meeting_type": "常任委員会"
+      },
+      "speaker": "浜田靖一",
+      "party": "自由民主党・無所属の会",
+      "party_normalized": "自由民主党",
+      "party_aliases": [
+        "自民党",
+        "自民",
+        "LDP"
+      ],
+      "position": null,
+      "text": "○浜田委員長　これより会議を開きます。\r\n　まず、情報監視審査会委員辞任の件についてでありますが、去る十月三十一日、中西健治君から辞任願が提出されました。\r\n　本件は、本日の本会議において議題とするに御異議ありませんか。\r\n　　　　〔「異議なし」と呼ぶ者あり〕",
+      "url": "https://kokkai.ndl.go.jp/txt/121904024X00320251104/1",
+      "created_at": "2025-11-11T19:14:23.120933"
+    },
+    {
+      "id": "121904024X00320251104_002",
+      "date": "2025-11-04",
+      "session": 219,
+      "house": "衆議院",
+      "committee": "議院運営委員会",
+      "meeting_info": {
+        "session_name": "",
+        "meeting_name": "議院運営委員会",
+        "house": "衆議院",
+        "meeting_number": "",
+        "date": "2025-11-04",
+        "issue": "第3号",
+        "pdf_url": null,
+        "speech_order": 2,
+        "meeting_type": "常任委員会"
+      },
+      "speaker": "浜田靖一",
+      "party": "自由民主党・無所属の会",
+      "party_normalized": "自由民主党",
+      "party_aliases": [
+        "自民党",
+        "自民",
+        "LDP"
+      ],
+      "position": null,
+      "text": "○浜田委員長　御異議なしと認めます。よって、そのように決定いたしました。\r\n　　　　―――――――――――――",
+      "url": "https://kokkai.ndl.go.jp/txt/121904024X00320251104/2",
+      "created_at": "2025-11-11T19:14:23.120937"
+    },
+    {
+      "id": "121904024X00320251104_003",
+      "date": "2025-11-04",
+      "session": 219,
+      "house": "衆議院",
+      "committee": "議院運営委員会",
+      "meeting_info": {
+        "session_name": "",
+        "meeting_name": "議院運営委員会",
+        "house": "衆議院",
+        "meeting_number": "",
+        "date": "2025-11-04",
+        "issue": "第3号",
+        "pdf_url": null,
+        "speech_order": 3,
+        "meeting_type": "常任委員会"
+      },
+      "speaker": "浜田靖一",
+      "party": "自由民主党・無所属の会",
+      "party_normalized": "自由民主党",
+      "party_aliases": [
+        "自民党",
+        "自民",
+        "LDP"
+      ],
+      "position": null,
+      "text": "○浜田委員長　次に、情報監視審査会委員選任の件についてでありますが、中西健治君の辞任が本会議において許可されましたならば、引き続きその後任の選任を行うことに賛成の諸君の挙手を求めます。\r\n　　　　〔賛成者挙手〕",
+      "url": "https://kokkai.ndl.go.jp/txt/121904024X00320251104/3",
+      "created_at": "2025-11-11T19:14:23.120941"
+    },
+    {
+      "id": "121904024X00320251104_004",
+      "date": "2025-11-04",
+      "session": 219,
+      "house": "衆議院",
+      "committee": "議院運営委員会",
+      "meeting_info": {
+        "session_name": "",
+        "meeting_name": "議院運営委員会",
+        "house": "衆議院",
+        "meeting_number": "",
+        "date": "2025-11-04",
+        "issue": "第3号",
+        "pdf_url": null,
+        "speech_order": 4,
+        "meeting_type": "常任委員会"
+      },
+      "speaker": "浜田靖一",
+      "party": "自由民主党・無所属の会",
+      "party_normalized": "自由民主党",
+      "party_aliases": [
+        "自民党",
+        "自民",
+        "LDP"
+      ],
+      "position": null,
+      "text": "○浜田委員長　挙手多数。よって、そのように決定いたしました。\r\n　なお、後任の候補者として、自由民主党・無所属の会から藤丸敏君を届け出てまいっております。\r\n　　　　―――――――――――――",
+      "url": "https://kokkai.ndl.go.jp/txt/121904024X00320251104/4",
+      "created_at": "2025-11-11T19:14:23.120944"
+    },
+    {
+      "id": "121904024X00320251104_005",
+      "date": "2025-11-04",
+      "session": 219,
+      "house": "衆議院",
+      "committee": "議院運営委員会",
+      "meeting_info": {
+        "session_name": "",
+        "meeting_name": "議院運営委員会",
+        "house": "衆議院",
+        "meeting_number": "",
+        "date": "2025-11-04",
+        "issue": "第3号",
+        "pdf_url": null,
+        "speech_order": 5,
+        "meeting_type": "常任委員会"
+      },
+      "speaker": "浜田靖一",
+      "party": "自由民主党・無所属の会",
+      "party_normalized": "自由民主党",
+      "party_aliases": [
+        "自民党",
+        "自民",
+        "LDP"
+      ],
+      "position": null,
+      "text": "○浜田委員長　次に、国務大臣の演説に対する質疑についてでありますが、本日の本会議においては、まず立憲民主党・無所属の野田佳彦君、次に自由民主党・無所属の会の小林鷹之君、次に立憲民主党・無所属の城井崇君、次いで日本維新の会の藤田文武君の順序で行います。\r\n　なお、質疑者の要求大臣は、お手元の委員会案件に記載のとおりであります。\r\n　　　　―――――――――――――\r\n　一、国務大臣の演説に対する質疑\r\n　　　質疑者　　　　　　時間　　　要求大臣\r\n　野田　佳彦君（立憲）　30分以内　総理\r\n　小林　鷹之君（自民）　30分以内　総理\r\n　城井　　崇君（立憲）　30分以内　総理\r\n　藤田　文武君（維新）　30分以内　総理\r\n　　　　―――――――――――――",
+      "url": "https://kokkai.ndl.go.jp/txt/121904024X00320251104/5",
+      "created_at": "2025-11-11T19:14:23.120948"
+    },
+    {
+      "id": "121904024X00320251104_006",
+      "date": "2025-11-04",
+      "session": 219,
+      "house": "衆議院",
+      "committee": "議院運営委員会",
+      "meeting_info": {
+        "session_name": "",
+        "meeting_name": "議院運営委員会",
+        "house": "衆議院",
+        "meeting_number": "",
+        "date": "2025-11-04",
+        "issue": "第3号",
+        "pdf_url": null,
+        "speech_order": 6,
+        "meeting_type": "常任委員会"
+      },
+      "speaker": "浜田靖一",
+      "party": "自由民主党・無所属の会",
+      "party_normalized": "自由民主党",
+      "party_aliases": [
+        "自民党",
+        "自民",
+        "LDP"
+      ],
+      "position": null,
+      "text": "○浜田委員長　次に、本日の本会議の議事の順序について、事務総長の説明を求めます。",
+      "url": "https://kokkai.ndl.go.jp/txt/121904024X00320251104/6",
+      "created_at": "2025-11-11T19:14:23.120951"
+    },
+    {
+      "id": "121904024X00320251104_007",
+      "date": "2025-11-04",
+      "session": 219,
+      "house": "衆議院",
+      "committee": "議院運営委員会",
+      "meeting_info": {
+        "session_name": "",
+        "meeting_name": "議院運営委員会",
+        "house": "衆議院",
+        "meeting_number": "",
+        "date": "2025-11-04",
+        "issue": "第3号",
+        "pdf_url": null,
+        "speech_order": 7,
+        "meeting_type": "常任委員会"
+      },
+      "speaker": "築山信彦",
+      "party": null,
+      "party_normalized": null,
+      "party_aliases": [],
+      "position": "衆議院事務総長",
+      "text": "○築山事務総長　まず、情報監視審査会委員辞任の件についてお諮りいたします。\r\n　本件が許可されましたならば、引き続いて情報監視審査会委員の選任の件についてお諮りいたします。れいわ新選組及び日本共産党が反対でございます。\r\n　次に、国務大臣の演説に対しまして、お手元の委員会案件に記載のとおり、四人の方々からそれぞれ質疑が行われます。\r\n　二人目の小林鷹之議員の質疑に対する答弁が終了したところで十分間休憩いたします。\r\n　四人目の藤田文武議員の質疑に対する答弁が終わりましたところで、動議により、残余の質疑は延期し、明五日にこれを行うことを決定していただきます。\r\n　本日の議事は、以上でございます。",
+      "url": "https://kokkai.ndl.go.jp/txt/121904024X00320251104/7",
+      "created_at": "2025-11-11T19:14:23.120954"
+    },
+    {
+      "id": "121904024X00320251104_008",
+      "date": "2025-11-04",
+      "session": 219,
+      "house": "衆議院",
+      "committee": "議院運営委員会",
+      "meeting_info": {
+        "session_name": "",
+        "meeting_name": "議院運営委員会",
+        "house": "衆議院",
+        "meeting_number": "",
+        "date": "2025-11-04",
+        "issue": "第3号",
+        "pdf_url": null,
+        "speech_order": 8,
+        "meeting_type": "常任委員会"
+      },
+      "speaker": "浜田靖一",
+      "party": "自由民主党・無所属の会",
+      "party_normalized": "自由民主党",
+      "party_aliases": [
+        "自民党",
+        "自民",
+        "LDP"
+      ],
+      "position": null,
+      "text": "○浜田委員長　それでは、本日の本会議は、午後零時五十分予鈴、午後一時から開会いたします。\r\n　　　　―――――――――――――",
+      "url": "https://kokkai.ndl.go.jp/txt/121904024X00320251104/8",
+      "created_at": "2025-11-11T19:14:23.120957"
+    },
+    {
+      "id": "121904024X00320251104_009",
+      "date": "2025-11-04",
+      "session": 219,
+      "house": "衆議院",
+      "committee": "議院運営委員会",
+      "meeting_info": {
+        "session_name": "",
+        "meeting_name": "議院運営委員会",
+        "house": "衆議院",
+        "meeting_number": "",
+        "date": "2025-11-04",
+        "issue": "第3号",
+        "pdf_url": null,
+        "speech_order": 9,
+        "meeting_type": "常任委員会"
+      },
+      "speaker": "浜田靖一",
+      "party": "自由民主党・無所属の会",
+      "party_normalized": "自由民主党",
+      "party_aliases": [
+        "自民党",
+        "自民",
+        "LDP"
+      ],
+      "position": null,
+      "text": "○浜田委員長　次に、次回の本会議の件についてでありますが、次回の本会議は、明五日水曜日午後一時から開会することといたします。\r\n　また、同日午前十一時理事会、正午から委員会を開会いたします。\r\n　本日は、これにて散会いたします。\r\n　　　　午後零時一分散会",
+      "url": "https://kokkai.ndl.go.jp/txt/121904024X00320251104/9",
+      "created_at": "2025-11-11T19:14:23.120960"
+    }
+  ]
+}

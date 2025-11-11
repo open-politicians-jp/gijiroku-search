@@ -20,6 +20,7 @@ import random
 from datetime import datetime
 from pathlib import Path
 from typing import Dict, List, Any, Optional
+from urllib.parse import urljoin
 from fake_useragent import UserAgent
 from bs4 import BeautifulSoup
 import logging
@@ -49,6 +50,7 @@ class ShugiinLegislatorsCollector:
         # 衆議院議員関連URL
         self.base_url = "https://www.shugiin.go.jp"
         self.members_url = "https://www.shugiin.go.jp/internet/itdb_annai.nsf/html/statics/syu/1giin.htm"
+        self.current_member_page = self.members_url
         
         # 政党名正規化マッピング
         self.party_mapping = {
@@ -129,15 +131,19 @@ class ShugiinLegislatorsCollector:
         logger.info("衆議院議員データ収集開始...")
         
         try:
-            self.random_delay()
-            response = self.session.get(self.members_url, timeout=30)
-            response.raise_for_status()
+            pages = self.get_member_page_urls()
+            logger.info(f"議員ページ一覧: {pages}")
+            members: List[Dict[str, Any]] = []
             
-            soup = BeautifulSoup(response.text, 'html.parser')
-            logger.info(f"衆議院議員ページ取得成功: {self.members_url}")
-            
-            # 議員データを含むテーブルを探す
-            members = self.extract_members_from_tables(soup)
+            for idx, page_url in enumerate(pages, start=1):
+                logger.info(f"ページ{idx}/{len(pages)} 取得中: {page_url}")
+                soup = self.fetch_member_page(page_url)
+                if soup is None:
+                    continue
+                self.current_member_page = page_url
+                page_members = self.extract_members_from_tables(soup)
+                logger.info(f"  -> {len(page_members)}名取得")
+                members.extend(page_members)
             
             logger.info(f"衆議院議員データ収集完了: {len(members)}名")
             return members
@@ -145,6 +151,34 @@ class ShugiinLegislatorsCollector:
         except Exception as e:
             logger.error(f"衆議院議員データ収集エラー: {str(e)}")
             return []
+
+    def fetch_member_page(self, url: str) -> Optional[BeautifulSoup]:
+        try:
+            self.random_delay()
+            response = self.session.get(url, timeout=30)
+            response.raise_for_status()
+            response.encoding = 'shift_jis'
+            logger.info(f"衆議院議員ページ取得成功: {url}")
+            return BeautifulSoup(response.text, 'html.parser')
+        except Exception as e:
+            logger.error(f"議員ページ取得エラー ({url}): {e}")
+            return None
+
+    def get_member_page_urls(self) -> List[str]:
+        """かな別の議員ページ URL を抽出"""
+        base_soup = self.fetch_member_page(self.members_url)
+        if base_soup is None:
+            return [self.members_url]
+        urls = {self.members_url}
+        for link in base_soup.select('a[href]'):
+            href = link.get('href', '')
+            if 'giin.htm' in href.lower() and 'giin_top' not in href.lower():
+                urls.add(urljoin(self.members_url, href))
+        # 数字順にソート
+        def sort_key(u):
+            match = re.search(r'/([0-9]+)giin\.htm$', u)
+            return int(match.group(1)) if match else 999
+        return sorted(urls, key=sort_key)
     
     def extract_members_from_tables(self, soup: BeautifulSoup) -> List[Dict[str, Any]]:
         """テーブルから議員データを抽出"""
@@ -157,20 +191,17 @@ class ShugiinLegislatorsCollector:
             
             for table_idx, table in enumerate(tables):
                 rows = table.find_all('tr')
-                
-                # データを含むテーブルかチェック（行数が多い）
-                if len(rows) > 20:
+                if not rows:
+                    continue
+
+                header_cells = rows[0].find_all(['th', 'td'])
+                header_texts = [cell.get_text(strip=True) for cell in header_cells]
+                header_joined = ''.join(header_texts)
+                if '氏名' in header_joined and '選挙区' in header_joined:
                     logger.info(f"テーブル{table_idx + 1}を解析中: {len(rows)}行")
-                    
-                    # ヘッダーをチェックして議員データテーブルか確認
-                    if rows:
-                        header_cells = rows[0].find_all(['th', 'td'])
-                        header_texts = [cell.get_text(strip=True) for cell in header_cells]
-                        if any('氏名' in text for text in header_texts):
-                            logger.info(f"議員データテーブルを発見: {header_texts}")
-                            table_members = self.parse_members_table(table)
-                            members.extend(table_members)
-                            logger.info(f"テーブル{table_idx + 1}から{len(table_members)}名抽出")
+                    table_members = self.parse_members_table(table)
+                    members.extend(table_members)
+                    logger.info(f"テーブル{table_idx + 1}から{len(table_members)}名抽出")
             
             # テーブル以外の構造も試行
             if not members:
@@ -233,20 +264,12 @@ class ShugiinLegislatorsCollector:
             
             # プロフィールリンクを抽出
             profile_url = ""
+            base_url = getattr(self, 'current_member_page', self.members_url)
             for cell in cells:
-                links = cell.find_all('a', href=True)
-                for link in links:
+                for link in cell.find_all('a', href=True):
                     href = link.get('href')
                     if href and 'profile' in href.lower():
-                        # 相対URLを絶対URLに変換
-                        if href.startswith('../../../../'):
-                            profile_url = self.base_url + '/' + href[5:]  # ../../../../を除去
-                            profile_url = profile_url.replace('//', '/')  # 重複スラッシュを修正
-                            profile_url = profile_url.replace('http:/', 'http://')  # httpプロトコルを修正
-                        elif href.startswith('/'):
-                            profile_url = self.base_url + href
-                        elif href.startswith('http'):
-                            profile_url = href
+                        profile_url = urljoin(base_url, href)
                         break
                 if profile_url:
                     break
@@ -269,7 +292,7 @@ class ShugiinLegislatorsCollector:
                 "status": "active",  # 現職と仮定
                 "profile_url": profile_url,
                 "collected_at": datetime.now().isoformat(),
-                "source_url": self.members_url
+                "source_url": base_url
             }
             
             return member
