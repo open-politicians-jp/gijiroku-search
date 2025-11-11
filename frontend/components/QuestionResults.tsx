@@ -8,22 +8,20 @@ interface QuestionResultsProps {
   questions: Question[];
   total: number;
   loading?: boolean;
+  loadingMore?: boolean;
   onLoadMore?: () => void;
   hasMore?: boolean;
-  currentOffset?: number;
-  limit?: number;
 }
 
 export default function QuestionResults({ 
   questions, 
   total, 
   loading = false, 
+  loadingMore = false,
   onLoadMore, 
-  hasMore = false, 
-  currentOffset = 0, 
-  limit = 20 
+  hasMore = false
 }: QuestionResultsProps) {
-  if (loading) {
+  if (loading && !loadingMore) {
     return (
       <div className="max-w-4xl mx-auto mt-8">
         <div className="text-center py-12">
@@ -84,6 +82,8 @@ export default function QuestionResults({
     };
     return colorMap[category] || 'bg-gray-100 text-gray-600';
   };
+
+  const displayedCount = Math.min(total, questions.length);
 
   return (
     <div className="max-w-4xl mx-auto mt-8">
@@ -257,13 +257,13 @@ export default function QuestionResults({
         <div className="text-center mt-8">
           <button
             onClick={onLoadMore}
-            disabled={loading}
+            disabled={loadingMore}
             className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
           >
-            {loading ? '読み込み中...' : 'さらに読み込む'}
+            {loadingMore ? '読み込み中...' : 'さらに読み込む'}
           </button>
           <p className="text-sm text-gray-500 mt-2">
-            {currentOffset + questions.length} / {total} 件表示中
+            {displayedCount} / {total} 件表示中
           </p>
         </div>
       )}

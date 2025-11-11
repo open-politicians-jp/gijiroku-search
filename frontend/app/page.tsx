@@ -222,6 +222,9 @@ export default function Home() {
                   bills={billsResult.bills}
                   total={billsResult.total}
                   loading={loading}
+                  loadingMore={loadingMore}
+                  hasMore={billsResult.has_more}
+                  onLoadMore={handleLoadMore}
                 />
               )}
               
@@ -231,6 +234,9 @@ export default function Home() {
                   questions={questionsResult.questions}
                   total={questionsResult.total}
                   loading={loading}
+                  loadingMore={loadingMore}
+                  hasMore={questionsResult.has_more}
+                  onLoadMore={handleLoadMore}
                 />
               )}
               

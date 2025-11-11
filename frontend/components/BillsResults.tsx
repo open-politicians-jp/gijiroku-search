@@ -7,10 +7,20 @@ interface BillsResultsProps {
   bills: Bill[];
   total: number;
   loading?: boolean;
+  loadingMore?: boolean;
+  onLoadMore?: () => void;
+  hasMore?: boolean;
 }
 
-export default function BillsResults({ bills, total, loading = false }: BillsResultsProps) {
-  if (loading) {
+export default function BillsResults({ 
+  bills, 
+  total, 
+  loading = false,
+  loadingMore = false,
+  onLoadMore,
+  hasMore = false
+}: BillsResultsProps) {
+  if (loading && !loadingMore) {
     return (
       <div className="max-w-4xl mx-auto px-4">
         <div className="animate-pulse space-y-4">
@@ -86,6 +96,8 @@ export default function BillsResults({ bills, total, loading = false }: BillsRes
     
     return statusMap[statusNormalized] || originalStatus;
   };
+
+  const displayedCount = Math.min(total, bills.length);
 
   return (
     <div className="max-w-4xl mx-auto px-4">
@@ -213,10 +225,17 @@ export default function BillsResults({ bills, total, loading = false }: BillsRes
       </div>
 
       {/* ページング情報 */}
-      {total > bills.length && (
+      {hasMore && onLoadMore && (
         <div className="mt-8 text-center">
-          <p className="text-sm text-gray-500">
-            {bills.length}件 / {total}件を表示中
+          <button
+            onClick={onLoadMore}
+            disabled={loadingMore}
+            className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+          >
+            {loadingMore ? '読み込み中...' : 'さらに読み込む'}
+          </button>
+          <p className="text-sm text-gray-500 mt-2">
+            {displayedCount}件 / {total}件を表示中
           </p>
         </div>
       )}
