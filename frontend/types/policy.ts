@@ -52,6 +52,8 @@ export interface PartyPolicy {
   categories: PolicyCategory[];
   /** 政党レベルの参考URL一覧 */
   party_references?: PolicyReference[];
+  /** 公式サイトURL */
+  official_url?: string;
 }
 
 /**
@@ -65,13 +67,17 @@ export interface PolicySummaryData {
   /** 政党一覧 */
   parties: PartyPolicy[];
   /** 利用可能なカテゴリ一覧 */
-  categories: string[];
+  categories?: string[];
   /** 総政党数 */
   total_parties: number;
   /** データソース */
-  data_source: string;
+  data_source?: string;
   /** URL参照情報の有無 */
   has_url_references?: boolean;
+  /** 選挙種別 (shugiin/sangiin) */
+  election_type?: string;
+  /** 選挙年 */
+  election_year?: number;
 }
 
 /**

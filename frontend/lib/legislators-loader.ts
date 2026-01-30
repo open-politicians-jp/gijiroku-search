@@ -196,6 +196,69 @@ class LegislatorsLoader {
   }
 
   /**
+   * 衆議院アーカイブデータを読み込み（解散前データ等）
+   */
+  async loadArchivedShugiinLegislators(date: string = '20261226_pre_dissolution'): Promise<LegislatorsData> {
+    const basePath = process.env.NODE_ENV === 'production' ? '/gijiroku-search' : '';
+    const archivePaths = [
+      `${basePath}/data/legislators/archive/${date}/shugiin_legislators_pre_dissolution.json`,
+      `${basePath}/data/legislators/archive/${date}/shugiin_legislators.json`,
+    ];
+
+    for (const dataPath of archivePaths) {
+      try {
+        const response = await fetch(dataPath);
+        if (response.ok) {
+          const jsonData = await response.json();
+          const rawList = Array.isArray(jsonData)
+            ? jsonData
+            : (jsonData.data || jsonData.legislators || []);
+          const shugiin = this.normalizeJsonLegislators(rawList).map((leg) => ({
+            ...leg,
+            house: 'shugiin' as const,
+          }));
+          return {
+            metadata: {
+              total_count: shugiin.length,
+              last_updated: new Date().toISOString(),
+              data_source: `archive_shugiin_${date}`,
+              sangiin_count: 0,
+              shugiin_count: shugiin.length,
+            },
+            data: shugiin,
+          };
+        }
+      } catch (error) {
+        continue;
+      }
+    }
+
+    return {
+      metadata: {
+        total_count: 0,
+        last_updated: new Date().toISOString(),
+        data_source: `archive_shugiin_${date}_not_found`,
+        sangiin_count: 0,
+        shugiin_count: 0,
+      },
+      data: [],
+    };
+  }
+
+  /**
+   * 汎用アーカイブデータ読み込み（house指定対応）
+   */
+  async loadArchivedLegislators(date: string, house?: 'shugiin' | 'sangiin'): Promise<LegislatorsData> {
+    if (house === 'shugiin') {
+      return this.loadArchivedShugiinLegislators(date);
+    } else if (house === 'sangiin') {
+      return this.loadArchivedSangiinLegislators(date);
+    }
+    // house未指定の場合は参議院（互換性維持）
+    return this.loadArchivedSangiinLegislators(date);
+  }
+
+  /**
    * 衆議院データを読み込み（将来実装予定）
    */
   private async loadShugiinData(): Promise<Legislator[]> {

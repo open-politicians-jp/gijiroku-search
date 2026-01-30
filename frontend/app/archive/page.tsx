@@ -21,7 +21,33 @@ export default function ArchivePage() {
 
           {/* Archived items */}
           <div className="space-y-4">
-            {/* 議員一覧（アーカイブ） */}
+            {/* 衆議院解散前議員一覧（アーカイブ） */}
+            <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                <div>
+                  <div className="flex items-center gap-2 text-sm text-gray-500 mb-1">
+                    <Users className="h-4 w-4" />
+                    <span>衆議院議員一覧（解散前）</span>
+                  </div>
+                  <h2 className="text-lg font-semibold text-gray-900">
+                    2026年衆議院選挙前の議員一覧
+                  </h2>
+                </div>
+                <div className="flex items-center gap-3">
+                  <Link
+                    href="/archive/legislators?date=20261226_pre_dissolution&house=shugiin"
+                    className="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 text-white text-sm rounded-md hover:bg-blue-700"
+                  >
+                    開く
+                  </Link>
+                </div>
+              </div>
+              <p className="text-sm text-gray-600 mt-3">
+                2026年衆議院選挙の解散前の議員データ（465名）の保存版です。2025年11月時点のデータ。
+              </p>
+            </div>
+
+            {/* 参議院選前議員一覧（アーカイブ） */}
             <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
                 <div>

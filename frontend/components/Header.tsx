@@ -1,11 +1,11 @@
 'use client';
 
 import { useState } from 'react';
-import { Search, BarChart3, Info, FileText, Users, Bot, Menu, X, Building2, Archive } from 'lucide-react';
+import { Search, BarChart3, Info, FileText, Users, Bot, Menu, X, Building2, Archive, Vote } from 'lucide-react';
 import Link from 'next/link';
 
 interface HeaderProps {
-  currentPage?: 'search' | 'about' | 'legislators' | 'summaries' | 'manifestos' | 'sangiin' | 'archive';
+  currentPage?: 'search' | 'about' | 'legislators' | 'summaries' | 'manifestos' | 'sangiin' | 'shugiin2026' | 'archive';
   onPageChange?: (page: 'search') => void;
 }
 
@@ -14,6 +14,7 @@ export default function Header({ currentPage = 'search', onPageChange }: HeaderP
 
   const navigationItems = [
     { key: 'search', icon: Search, label: '検索', href: '/', onClick: () => onPageChange?.('search') },
+    { key: 'shugiin2026', icon: Vote, label: '衆院選2026', href: '/shugiin-manifestos', badge: 'NEW' },
     { key: 'summaries', icon: Bot, label: '議会要約', href: '/summaries', badge: 'Beta' },
     { key: 'manifestos', icon: FileText, label: 'マニフェスト', href: '/manifestos' },
     { key: 'legislators', icon: Users, label: '議員一覧', href: '/legislators' },
