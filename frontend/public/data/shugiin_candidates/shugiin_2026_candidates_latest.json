@@ -823,7 +823,7 @@
       "name_kana": "オイカワ タイスケ"
     },
     {
-      "name": "ローレンス 綾子ローレンス アヤコ",
+      "name": "ローレンス 綾子",
       "party": "国民民主党",
       "constituency": "宮城1区",
       "constituency_type": "single_member",
@@ -832,7 +832,8 @@
       "source": "go2senkyo",
       "source_url": "https://go2senkyo.com/shugiin/28030/senkyoku/51067",
       "candidate_id": "shugiin2026_0057",
-      "collected_at": "2026-01-31T00:44:30.210188"
+      "collected_at": "2026-01-31T00:44:30.210188",
+      "name_kana": "ローレンス アヤコ"
     },
     {
       "name": "中嶋 れん",
@@ -6217,7 +6218,7 @@
       "name_kana": "ヌマカミ ツネオ"
     },
     {
-      "name": "キクタケ 進キクタケ ススム",
+      "name": "キクタケ 進",
       "party": "無所属",
       "constituency": "神奈川12区",
       "constituency_type": "single_member",
@@ -6226,7 +6227,8 @@
       "source": "go2senkyo",
       "source_url": "https://go2senkyo.com/shugiin/28030/senkyoku/51295",
       "candidate_id": "shugiin2026_0472",
-      "collected_at": "2026-01-31T00:44:30.210776"
+      "collected_at": "2026-01-31T00:44:30.210776",
+      "name_kana": "キクタケ ススム"
     },
     {
       "name": "まるた こう一郎",
@@ -9388,7 +9390,7 @@
       "name_kana": "ホリカワ アキコ"
     },
     {
-      "name": "フジタ 洋司フジタ ヨウジ",
+      "name": "フジタ 洋司",
       "party": "自由民主党",
       "constituency": "京都2区",
       "constituency_type": "single_member",
@@ -9397,7 +9399,8 @@
       "source": "go2senkyo",
       "source_url": "https://go2senkyo.com/shugiin/28030/senkyoku/51059",
       "candidate_id": "shugiin2026_0716",
-      "collected_at": "2026-01-31T00:44:30.211119"
+      "collected_at": "2026-01-31T00:44:30.211119",
+      "name_kana": "フジタ ヨウジ"
     },
     {
       "name": "辻村 ちひろ",
@@ -9829,7 +9832,7 @@
       "name_kana": "ナカヤマ ヤスヒデ"
     },
     {
-      "name": "ミノベ テルオミノベ テルオ",
+      "name": "ミノベ テルオ",
       "party": "日本維新の会",
       "constituency": "大阪4区",
       "constituency_type": "single_member",
@@ -9838,7 +9841,8 @@
       "source": "go2senkyo",
       "source_url": "https://go2senkyo.com/shugiin/28030/senkyoku/51072",
       "candidate_id": "shugiin2026_0750",
-      "collected_at": "2026-01-31T00:44:30.211167"
+      "collected_at": "2026-01-31T00:44:30.211167",
+      "name_kana": "ミノベ テルオ"
     },
     {
       "name": "山田 みのり",
@@ -10374,7 +10378,7 @@
       "name_kana": "ムネキヨ コウイチ"
     },
     {
-      "name": "ホンダ 平直ホンダ ヒラナオ",
+      "name": "ホンダ 平直",
       "party": "中道改革連合",
       "constituency": "大阪13区",
       "constituency_type": "single_member",
@@ -10383,7 +10387,8 @@
       "source": "go2senkyo",
       "source_url": "https://go2senkyo.com/shugiin/28030/senkyoku/51081",
       "candidate_id": "shugiin2026_0792",
-      "collected_at": "2026-01-31T00:44:30.211226"
+      "collected_at": "2026-01-31T00:44:30.211226",
+      "name_kana": "ホンダ ヒラナオ"
     },
     {
       "name": "たからい てるみ",
@@ -14286,7 +14291,7 @@
       "name_kana": "イトウ シュウヘイ"
     },
     {
-      "name": "コクバ 幸之助コクバ コウノスケ",
+      "name": "コクバ 幸之助",
       "party": "自由民主党",
       "constituency": "沖縄1区",
       "constituency_type": "single_member",
@@ -14295,7 +14300,8 @@
       "source": "go2senkyo",
       "source_url": "https://go2senkyo.com/shugiin/28030/senkyoku/51197",
       "candidate_id": "shugiin2026_1093",
-      "collected_at": "2026-01-31T00:44:30.211649"
+      "collected_at": "2026-01-31T00:44:30.211649",
+      "name_kana": "コクバ コウノスケ"
     },
     {
       "name": "あかみね 政賢",
@@ -14363,7 +14369,7 @@
       "name_kana": "クニオアラカキ クニオ"
     },
     {
-      "name": "ミヤザキ 政久ミヤザキ マサヒサ",
+      "name": "ミヤザキ 政久",
       "party": "自由民主党",
       "constituency": "沖縄2区",
       "constituency_type": "single_member",
@@ -14372,7 +14378,8 @@
       "source": "go2senkyo",
       "source_url": "https://go2senkyo.com/shugiin/28030/senkyoku/51198",
       "candidate_id": "shugiin2026_1099",
-      "collected_at": "2026-01-31T00:44:30.211658"
+      "collected_at": "2026-01-31T00:44:30.211658",
+      "name_kana": "ミヤザキ マサヒサ"
     },
     {
       "name": "瑞慶覧",
@@ -14401,7 +14408,7 @@
       "name_kana": "ヨシダ ユウリ"
     },
     {
-      "name": "ヒガ タカシヒガ タカシ",
+      "name": "ヒガ タカシ",
       "party": "無所属",
       "constituency": "沖縄2区",
       "constituency_type": "single_member",
@@ -14410,7 +14417,8 @@
       "source": "go2senkyo",
       "source_url": "https://go2senkyo.com/shugiin/28030/senkyoku/51198",
       "candidate_id": "shugiin2026_1102",
-      "collected_at": "2026-01-31T00:44:30.211662"
+      "collected_at": "2026-01-31T00:44:30.211662",
+      "name_kana": "ヒガ タカシ"
     },
     {
       "name": "島尻 あい子",
@@ -14426,7 +14434,7 @@
       "name_kana": "シマジリ アイコ"
     },
     {
-      "name": "ヤラ ともひろヤラ トモヒロ",
+      "name": "ヤラ ともひろ",
       "party": "中道改革連合",
       "constituency": "沖縄3区",
       "constituency_type": "single_member",
@@ -14435,7 +14443,8 @@
       "source": "go2senkyo",
       "source_url": "https://go2senkyo.com/shugiin/28030/senkyoku/51199",
       "candidate_id": "shugiin2026_1104",
-      "collected_at": "2026-01-31T00:44:30.211665"
+      "collected_at": "2026-01-31T00:44:30.211665",
+      "name_kana": "ヤラ トモヒロ"
     },
     {
       "name": "仲間 あきこ",
@@ -14451,7 +14460,7 @@
       "name_kana": "ナカマ アキコ"
     },
     {
-      "name": "ニシメ 恒三郎ニシメ コウサブロウ",
+      "name": "ニシメ 恒三郎",
       "party": "自由民主党",
       "constituency": "沖縄4区",
       "constituency_type": "single_member",
@@ -14460,7 +14469,8 @@
       "source": "go2senkyo",
       "source_url": "https://go2senkyo.com/shugiin/28030/senkyoku/51200",
       "candidate_id": "shugiin2026_1106",
-      "collected_at": "2026-01-31T00:44:30.211668"
+      "collected_at": "2026-01-31T00:44:30.211668",
+      "name_kana": "ニシメ コウサブロウ"
     },
     {
       "name": "山川 ひとし",
@@ -14476,7 +14486,7 @@
       "name_kana": "ヤマカワ ヒトシ"
     },
     {
-      "name": "トイタ 芳行トイタ ヨシユキ",
+      "name": "トイタ 芳行",
       "party": "中道改革連合",
       "constituency": "沖縄4区",
       "constituency_type": "single_member",
@@ -14485,7 +14495,8 @@
       "source": "go2senkyo",
       "source_url": "https://go2senkyo.com/shugiin/28030/senkyoku/51200",
       "candidate_id": "shugiin2026_1108",
-      "collected_at": "2026-01-31T00:44:30.211670"
+      "collected_at": "2026-01-31T00:44:30.211670",
+      "name_kana": "トイタ ヨシユキ"
     },
     {
       "name": "さきえだ 裕次",
@@ -14501,7 +14512,7 @@
       "name_kana": "サキエダ ユウジ"
     },
     {
-      "name": "オカダ 美輪子オカダ ミワコ",
+      "name": "オカダ 美輪子",
       "party": "日本維新の会",
       "constituency": "比例北海道ブロック",
       "constituency_type": "proportional",
@@ -14510,7 +14521,8 @@
       "source": "go2senkyo",
       "source_url": "https://go2senkyo.com/shugiin/28030/hireiku/151/hirei_party/19/candidates",
       "candidate_id": "shugiin2026_1110",
-      "collected_at": "2026-01-31T00:44:30.211673"
+      "collected_at": "2026-01-31T00:44:30.211673",
+      "name_kana": "オカダ ミワコ"
     },
     {
       "name": "鳴海 一芳",
@@ -15345,7 +15357,7 @@
       "name_kana": "オオツバキ ユウコ"
     },
     {
-      "name": "ミサオ・ レッドウルフミサオ レッドウルフ",
+      "name": "ミサオ・レッドウルフ",
       "party": "れいわ新選組",
       "constituency": "比例東京ブロック",
       "constituency_type": "proportional",
@@ -15354,7 +15366,8 @@
       "source": "go2senkyo",
       "source_url": "https://go2senkyo.com/shugiin/28030/hireiku/155/hirei_party/3594/candidates",
       "candidate_id": "shugiin2026_1175",
-      "collected_at": "2026-01-31T00:44:30.212103"
+      "collected_at": "2026-01-31T00:44:30.212103",
+      "name_kana": "ミサオ レッドウルフ"
     },
     {
       "name": "平井 宏治",
