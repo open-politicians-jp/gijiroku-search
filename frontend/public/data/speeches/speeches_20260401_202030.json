@@ -1,0 +1,248 @@
+{
+  "metadata": {
+    "data_type": "speeches",
+    "year": 2026,
+    "month": 4,
+    "total_count": 8,
+    "generated_at": "2026-04-05T20:20:30.788681",
+    "source": "https://kokkai.ndl.go.jp/api.html",
+    "collection_method": "progressive_past_data_collection",
+    "filename_format": "speeches_YYYYMM01_HHMMSS.json",
+    "period": "2026-04",
+    "is_past_data": false
+  },
+  "data": [
+    {
+      "id": "122104024X01420260402_000",
+      "date": "2026-04-02",
+      "session": 221,
+      "house": "衆議院",
+      "committee": "議院運営委員会",
+      "meeting_info": {
+        "session_name": "",
+        "meeting_name": "議院運営委員会",
+        "house": "衆議院",
+        "meeting_number": "",
+        "date": "2026-04-02",
+        "issue": "第14号",
+        "pdf_url": null,
+        "speech_order": 0,
+        "meeting_type": "常任委員会"
+      },
+      "speaker": "会議録情報",
+      "party": null,
+      "party_normalized": null,
+      "party_aliases": [],
+      "position": null,
+      "text": "令和八年四月二日（木曜日）\r\n　　　　正午開議\r\n　出席委員\r\n　　　委員長　山口　俊一君\r\n　　　理事　村井　英樹君　理事　田野瀬太道君\r\n　　　理事　武藤　容治君　理事　宮内　秀樹君\r\n　　　理事　熊田　裕通君　理事　中曽根康隆君\r\n　　　理事　中川　康洋君　理事　金村　龍那君\r\n　　　理事　西岡　秀子君\r\n　　　　　　秋葉　賢也君　　　　石原　正敬君\r\n　　　　　　今岡　　植君　　　　大空　幸星君\r\n　　　　　　神田　潤一君　　　　木村　次郎君\r\n　　　　　　小寺　裕雄君　　　　谷川　とむ君\r\n　　　　　　西田　昭二君　　　　三ッ林裕巳君\r\n　　　　　　中川　宏昌君　　　　沼崎　満子君\r\n　　　　　　奥下　剛光君　　　　石川　　勝君\r\n　　　　　　峰島　侑也君\r\n　　　　…………………………………\r\n　　　議長　　　　　　　　　　　森　　英介君\r\n　　　副議長　　　　　　　　　　石井　啓一君\r\n　　　事務総長　　　　　　　　　築山　信彦君\r\n　　　　―――――――――――――\r\n委員の異動\r\n四月二日\r\n　辞任　　　　　　　　　補欠選任\r\n　　塩崎　彰久君　　　　　今岡　　植君\r\n同日\r\n　辞任　　　　　　　　　補欠選任\r\n　　今岡　　植君　　　　　塩崎　彰久君\r\n　　　　―――――――――――――\r\n本日の会議に付した案件\r\n　本会議における議案の趣旨説明聴取の件\r\n　本日の本会議の議事等に関する件\r\n　　　　　――――◇―――――",
+      "url": "https://kokkai.ndl.go.jp/txt/122104024X01420260402/0",
+      "created_at": "2026-04-05T20:20:29.374762"
+    },
+    {
+      "id": "122104024X01420260402_001",
+      "date": "2026-04-02",
+      "session": 221,
+      "house": "衆議院",
+      "committee": "議院運営委員会",
+      "meeting_info": {
+        "session_name": "",
+        "meeting_name": "議院運営委員会",
+        "house": "衆議院",
+        "meeting_number": "",
+        "date": "2026-04-02",
+        "issue": "第14号",
+        "pdf_url": null,
+        "speech_order": 1,
+        "meeting_type": "常任委員会"
+      },
+      "speaker": "山口俊一",
+      "party": "自由民主党・無所属の会",
+      "party_normalized": "自由民主党",
+      "party_aliases": [
+        "自民党",
+        "自民",
+        "LDP"
+      ],
+      "position": null,
+      "text": "○山口委員長　これより会議を開きます。\r\n　まず、趣旨説明を聴取する議案の件についてでありますが、内閣提出の国家情報会議設置法案は、本日の本会議において趣旨の説明を聴取し、これに対する質疑を行うことに御異議ありませんか。\r\n　　　　〔「異議なし」と呼ぶ者あり〕",
+      "url": "https://kokkai.ndl.go.jp/txt/122104024X01420260402/1",
+      "created_at": "2026-04-05T20:20:29.374775"
+    },
+    {
+      "id": "122104024X01420260402_002",
+      "date": "2026-04-02",
+      "session": 221,
+      "house": "衆議院",
+      "committee": "議院運営委員会",
+      "meeting_info": {
+        "session_name": "",
+        "meeting_name": "議院運営委員会",
+        "house": "衆議院",
+        "meeting_number": "",
+        "date": "2026-04-02",
+        "issue": "第14号",
+        "pdf_url": null,
+        "speech_order": 2,
+        "meeting_type": "常任委員会"
+      },
+      "speaker": "山口俊一",
+      "party": "自由民主党・無所属の会",
+      "party_normalized": "自由民主党",
+      "party_aliases": [
+        "自民党",
+        "自民",
+        "LDP"
+      ],
+      "position": null,
+      "text": "○山口委員長　御異議なしと認めます。よって、そのように決定いたしました。\r\n　なお、本法律案の趣旨説明は、木原国務大臣が行います。\r\n　本法律案の趣旨説明に対し、自由民主党・無所属の会の鳩山二郎君、中道改革連合・無所属の後藤祐一君、日本維新の会の浦野靖人君、国民民主党・無所属クラブの橋本幹彦君、参政党の吉川里奈君から、それぞれ質疑の通告があります。\r\n　質疑時間は、鳩山二郎君、浦野靖人君は各々十分以内、後藤祐一君、橋本幹彦君は各々十五分以内、吉川里奈君は七分以内とするに御異議ありませんか。\r\n　　　　〔「異議なし」と呼ぶ者あり〕",
+      "url": "https://kokkai.ndl.go.jp/txt/122104024X01420260402/2",
+      "created_at": "2026-04-05T20:20:29.374786"
+    },
+    {
+      "id": "122104024X01420260402_003",
+      "date": "2026-04-02",
+      "session": 221,
+      "house": "衆議院",
+      "committee": "議院運営委員会",
+      "meeting_info": {
+        "session_name": "",
+        "meeting_name": "議院運営委員会",
+        "house": "衆議院",
+        "meeting_number": "",
+        "date": "2026-04-02",
+        "issue": "第14号",
+        "pdf_url": null,
+        "speech_order": 3,
+        "meeting_type": "常任委員会"
+      },
+      "speaker": "山口俊一",
+      "party": "自由民主党・無所属の会",
+      "party_normalized": "自由民主党",
+      "party_aliases": [
+        "自民党",
+        "自民",
+        "LDP"
+      ],
+      "position": null,
+      "text": "○山口委員長　御異議なしと認めます。よって、そのように決定いたしました。\r\n　なお、質疑者の要求大臣は、お手元の委員会案件のとおりであります。\r\n　　　　―――――――――――――\r\n　一、趣旨説明を聴取する議案の件\r\n　　国家情報会議設置法案（内閣提出）\r\n　　　趣旨説明\r\n　　　　　　国務大臣　木原　　稔君（約３分）\r\n　　　質疑通告　　　　　時間　　　要求大臣\r\n　鳩山　二郎君（自民）　10分以内　総理、官房\r\n　後藤　祐一君（中道）　15分以内　総理、厚労、赤澤国務（重要物資確保）\r\n　浦野　靖人君（維新）　10分以内　総理\r\n　橋本　幹彦君（国民）　15分以内　総理\r\n　吉川　里奈君（参政）　７分以内　総理、官房\r\n　　　　―――――――――――――",
+      "url": "https://kokkai.ndl.go.jp/txt/122104024X01420260402/3",
+      "created_at": "2026-04-05T20:20:29.374792"
+    },
+    {
+      "id": "122104024X01420260402_004",
+      "date": "2026-04-02",
+      "session": 221,
+      "house": "衆議院",
+      "committee": "議院運営委員会",
+      "meeting_info": {
+        "session_name": "",
+        "meeting_name": "議院運営委員会",
+        "house": "衆議院",
+        "meeting_number": "",
+        "date": "2026-04-02",
+        "issue": "第14号",
+        "pdf_url": null,
+        "speech_order": 4,
+        "meeting_type": "常任委員会"
+      },
+      "speaker": "山口俊一",
+      "party": "自由民主党・無所属の会",
+      "party_normalized": "自由民主党",
+      "party_aliases": [
+        "自民党",
+        "自民",
+        "LDP"
+      ],
+      "position": null,
+      "text": "○山口委員長　次に、本日の本会議の議事について、事務総長の説明を求めます。",
+      "url": "https://kokkai.ndl.go.jp/txt/122104024X01420260402/4",
+      "created_at": "2026-04-05T20:20:29.374798"
+    },
+    {
+      "id": "122104024X01420260402_005",
+      "date": "2026-04-02",
+      "session": 221,
+      "house": "衆議院",
+      "committee": "議院運営委員会",
+      "meeting_info": {
+        "session_name": "",
+        "meeting_name": "議院運営委員会",
+        "house": "衆議院",
+        "meeting_number": "",
+        "date": "2026-04-02",
+        "issue": "第14号",
+        "pdf_url": null,
+        "speech_order": 5,
+        "meeting_type": "常任委員会"
+      },
+      "speaker": "築山信彦",
+      "party": null,
+      "party_normalized": null,
+      "party_aliases": [],
+      "position": "衆議院事務総長",
+      "text": "○築山事務総長　まず、国家情報会議設置法案につきまして、木原国務大臣から趣旨の説明がございます。これに対しまして、五人の方々からそれぞれ質疑が行われます。\r\n　所要は約二時間の見込みでございます。\r\n　本日の議事は、以上でございます。",
+      "url": "https://kokkai.ndl.go.jp/txt/122104024X01420260402/5",
+      "created_at": "2026-04-05T20:20:29.374803"
+    },
+    {
+      "id": "122104024X01420260402_006",
+      "date": "2026-04-02",
+      "session": 221,
+      "house": "衆議院",
+      "committee": "議院運営委員会",
+      "meeting_info": {
+        "session_name": "",
+        "meeting_name": "議院運営委員会",
+        "house": "衆議院",
+        "meeting_number": "",
+        "date": "2026-04-02",
+        "issue": "第14号",
+        "pdf_url": null,
+        "speech_order": 6,
+        "meeting_type": "常任委員会"
+      },
+      "speaker": "山口俊一",
+      "party": "自由民主党・無所属の会",
+      "party_normalized": "自由民主党",
+      "party_aliases": [
+        "自民党",
+        "自民",
+        "LDP"
+      ],
+      "position": null,
+      "text": "○山口委員長　それでは、本日の本会議は、午後二時二十分予鈴、午後二時三十分から開会いたします。\r\n　　　　―――――――――――――",
+      "url": "https://kokkai.ndl.go.jp/txt/122104024X01420260402/6",
+      "created_at": "2026-04-05T20:20:29.374806"
+    },
+    {
+      "id": "122104024X01420260402_007",
+      "date": "2026-04-02",
+      "session": 221,
+      "house": "衆議院",
+      "committee": "議院運営委員会",
+      "meeting_info": {
+        "session_name": "",
+        "meeting_name": "議院運営委員会",
+        "house": "衆議院",
+        "meeting_number": "",
+        "date": "2026-04-02",
+        "issue": "第14号",
+        "pdf_url": null,
+        "speech_order": 7,
+        "meeting_type": "常任委員会"
+      },
+      "speaker": "山口俊一",
+      "party": "自由民主党・無所属の会",
+      "party_normalized": "自由民主党",
+      "party_aliases": [
+        "自民党",
+        "自民",
+        "LDP"
+      ],
+      "position": null,
+      "text": "○山口委員長　次に、次回の本会議及び委員会は、追って公報をもってお知らせいたします。\r\n　本日は、これにて散会いたします。\r\n　　　　午後零時一分散会",
+      "url": "https://kokkai.ndl.go.jp/txt/122104024X01420260402/7",
+      "created_at": "2026-04-05T20:20:29.374818"
+    }
+  ]
+}
