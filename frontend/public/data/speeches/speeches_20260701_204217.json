@@ -1,0 +1,162 @@
+{
+  "metadata": {
+    "data_type": "speeches",
+    "year": 2026,
+    "month": 7,
+    "total_count": 5,
+    "generated_at": "2026-07-04T20:42:17.885647",
+    "source": "https://kokkai.ndl.go.jp/api.html",
+    "collection_method": "progressive_past_data_collection",
+    "filename_format": "speeches_YYYYMM01_HHMMSS.json",
+    "period": "2026-07",
+    "is_past_data": false
+  },
+  "data": [
+    {
+      "id": "122114324X00620260701_000",
+      "date": "2026-07-01",
+      "session": 221,
+      "house": "参議院",
+      "committee": "国民生活・経済に関する調査会",
+      "meeting_info": {
+        "session_name": "",
+        "meeting_name": "国民生活・経済に関する調査会",
+        "house": "参議院",
+        "meeting_number": "",
+        "date": "2026-07-01",
+        "issue": "第6号",
+        "pdf_url": null,
+        "speech_order": 0,
+        "meeting_type": "調査会"
+      },
+      "speaker": "会議録情報",
+      "party": null,
+      "party_normalized": null,
+      "party_aliases": [],
+      "position": null,
+      "text": "令和八年七月一日（水曜日）\r\n　　　午前十時開会\r\n　　　　─────────────\r\n　　出席者は左のとおり。\r\n　　　　会　長　　　　　　　　　野上浩太郎君\r\n　　　　理　事\r\n　　　　　　　　　　　　　　　　小林　一大君\r\n　　　　　　　　　　　　　　　　山本佐知子君\r\n　　　　　　　　　　　　　　　　柴　　愼一君\r\n　　　　　　　　　　　　　　　　水野　孝一君\r\n　　　　　　　　　　　　　　　　宮崎　　勝君\r\n　　　　　　　　　　　　　　　　中条きよし君\r\n　　　　　　　　　　　　　　　　宮出　千慧君\r\n　　　　委　員\r\n　　　　　　　　　　　　　　　いんどう周作君\r\n　　　　　　　　　　　　　　　　上野　通子君\r\n　　　　　　　　　　　　　　　　かまやち敏君\r\n　　　　　　　　　　　　　　　　小林孝一郎君\r\n　　　　　　　　　　　　　　　　星　　北斗君\r\n　　　　　　　　　　　　　　　　泉　　房穂君\r\n　　　　　　　　　　　　　　　　小島とも子君\r\n　　　　　　　　　　　　　　　かごしま彰宏君\r\n　　　　　　　　　　　　　　　　川村　雄大君\r\n　　　　　　　　　　　　　　　　上野ほたる君\r\n　　　　　　　　　　　　　　　　白川　容子君\r\n　　　　　　　　　　　　　　　　尾辻　朋実君\r\n　　　事務局側\r\n　　　　　　　第二特別調査室\r\n　　　　　　　長　　　　　　　　高嶋　久志君\r\n　　　　─────────────\r\n　　本日の会議に付した案件\r\n○調査報告書に関する件\r\n○中間報告に関する件\r\n　　　　─────────────",
+      "url": "https://kokkai.ndl.go.jp/txt/122114324X00620260701/0",
+      "created_at": "2026-07-04T20:42:15.271027"
+    },
+    {
+      "id": "122114324X00620260701_001",
+      "date": "2026-07-01",
+      "session": 221,
+      "house": "参議院",
+      "committee": "国民生活・経済に関する調査会",
+      "meeting_info": {
+        "session_name": "",
+        "meeting_name": "国民生活・経済に関する調査会",
+        "house": "参議院",
+        "meeting_number": "",
+        "date": "2026-07-01",
+        "issue": "第6号",
+        "pdf_url": null,
+        "speech_order": 1,
+        "meeting_type": "調査会"
+      },
+      "speaker": "野上浩太郎",
+      "party": "自由民主党・無所属の会",
+      "party_normalized": "自由民主党",
+      "party_aliases": [
+        "自民党",
+        "自民",
+        "LDP"
+      ],
+      "position": null,
+      "text": "○会長（野上浩太郎君）　ただいまから国民生活・経済に関する調査会を開会いたします。\r\n　調査報告書の提出についてお諮りいたします。\r\n　本調査会は、毎年、調査に関する中間報告書を議長に提出することになっております。\r\n　理事会において協議の結果、お手元に配付の国民生活・経済に関する調査報告書（中間報告）案が取りまとまりました。\r\n　つきましては、本案を本調査会の中間報告書として議長に提出いたしたいと存じますが、御異議ございませんか。\r\n　　　〔「異議なし」と呼ぶ者あり〕",
+      "url": "https://kokkai.ndl.go.jp/txt/122114324X00620260701/1",
+      "created_at": "2026-07-04T20:42:15.271040"
+    },
+    {
+      "id": "122114324X00620260701_002",
+      "date": "2026-07-01",
+      "session": 221,
+      "house": "参議院",
+      "committee": "国民生活・経済に関する調査会",
+      "meeting_info": {
+        "session_name": "",
+        "meeting_name": "国民生活・経済に関する調査会",
+        "house": "参議院",
+        "meeting_number": "",
+        "date": "2026-07-01",
+        "issue": "第6号",
+        "pdf_url": null,
+        "speech_order": 2,
+        "meeting_type": "調査会"
+      },
+      "speaker": "野上浩太郎",
+      "party": "自由民主党・無所属の会",
+      "party_normalized": "自由民主党",
+      "party_aliases": [
+        "自民党",
+        "自民",
+        "LDP"
+      ],
+      "position": null,
+      "text": "○会長（野上浩太郎君）　御異議ないと認め、さよう決定いたします。\r\n　　　　─────────────",
+      "url": "https://kokkai.ndl.go.jp/txt/122114324X00620260701/2",
+      "created_at": "2026-07-04T20:42:15.271049"
+    },
+    {
+      "id": "122114324X00620260701_003",
+      "date": "2026-07-01",
+      "session": 221,
+      "house": "参議院",
+      "committee": "国民生活・経済に関する調査会",
+      "meeting_info": {
+        "session_name": "",
+        "meeting_name": "国民生活・経済に関する調査会",
+        "house": "参議院",
+        "meeting_number": "",
+        "date": "2026-07-01",
+        "issue": "第6号",
+        "pdf_url": null,
+        "speech_order": 3,
+        "meeting_type": "調査会"
+      },
+      "speaker": "野上浩太郎",
+      "party": "自由民主党・無所属の会",
+      "party_normalized": "自由民主党",
+      "party_aliases": [
+        "自民党",
+        "自民",
+        "LDP"
+      ],
+      "position": null,
+      "text": "○会長（野上浩太郎君）　この際、お諮りいたします。\r\n　ただいま提出を決定いたしました調査報告書につきましては、議院の会議におきましても中間報告をいたしたいと存じますが、御異議ございませんか。\r\n　　　〔「異議なし」と呼ぶ者あり〕",
+      "url": "https://kokkai.ndl.go.jp/txt/122114324X00620260701/3",
+      "created_at": "2026-07-04T20:42:15.271055"
+    },
+    {
+      "id": "122114324X00620260701_004",
+      "date": "2026-07-01",
+      "session": 221,
+      "house": "参議院",
+      "committee": "国民生活・経済に関する調査会",
+      "meeting_info": {
+        "session_name": "",
+        "meeting_name": "国民生活・経済に関する調査会",
+        "house": "参議院",
+        "meeting_number": "",
+        "date": "2026-07-01",
+        "issue": "第6号",
+        "pdf_url": null,
+        "speech_order": 4,
+        "meeting_type": "調査会"
+      },
+      "speaker": "野上浩太郎",
+      "party": "自由民主党・無所属の会",
+      "party_normalized": "自由民主党",
+      "party_aliases": [
+        "自民党",
+        "自民",
+        "LDP"
+      ],
+      "position": null,
+      "text": "○会長（野上浩太郎君）　御異議ないと認め、さよう決定いたします。\r\n　本日はこれにて散会いたします。\r\n　　　午前十時一分散会",
+      "url": "https://kokkai.ndl.go.jp/txt/122114324X00620260701/4",
+      "created_at": "2026-07-04T20:42:15.271060"
+    }
+  ]
+}
