@@ -1,0 +1,600 @@
+{
+  "metadata": {
+    "data_type": "speeches",
+    "year": 2026,
+    "month": 7,
+    "total_count": 20,
+    "generated_at": "2026-07-13T20:47:36.175602",
+    "source": "https://kokkai.ndl.go.jp/api.html",
+    "collection_method": "progressive_past_data_collection",
+    "filename_format": "speeches_YYYYMM01_HHMMSS.json",
+    "period": "2026-07",
+    "is_past_data": false
+  },
+  "data": [
+    {
+      "id": "122114541X00420260702_000",
+      "date": "2026-07-02",
+      "session": 221,
+      "house": "参議院",
+      "committee": "情報監視審査会",
+      "meeting_info": {
+        "session_name": "",
+        "meeting_name": "情報監視審査会",
+        "house": "参議院",
+        "meeting_number": "",
+        "date": "2026-07-02",
+        "issue": "第4号",
+        "pdf_url": null,
+        "speech_order": 0,
+        "meeting_type": "審査会"
+      },
+      "speaker": "会議録情報",
+      "party": null,
+      "party_normalized": null,
+      "party_aliases": [],
+      "position": null,
+      "text": "令和八年七月二日（木曜日）\r\n　　　　─────────────\r\n　　出席者は左のとおり。\r\n　　　　会　長　　　　　　　　　宮沢　洋一君\r\n　　　　委　員\r\n　　　　　　　　　　　　　　　　石田　昌宏君\r\n　　　　　　　　　　　　　　　　岩本　剛人君\r\n　　　　　　　　　　　　　　　　森　ゆうこ君\r\n　　　　　　　　　　　　　　　　川合　孝典君\r\n　　　　　　　　　　　　　　　　秋野　公造君\r\n　　　　　　　　　　　　　　　　石井　苗子君\r\n　　　　　　　　　　　　　　　　岩本　麻奈君\r\n　　　　　　　　─────\r\n　　　　　　　議長　　　　　　　関口　昌一君\r\n　　　　　　　副議長　　　　　　福山　哲郎君\r\n　　　　　　　　─────\r\n　　　事務局側\r\n　　　　　　　事務総長　　　　　伊藤　文靖君\r\n　　　　　　　事務次長　　　　　八鍬　敬嗣君\r\n　　　　　　　情報監視審査会\r\n　　　　　　　事務局長　　　　　鎌田　純一君\r\n　　　　─────────────\r\n　　本日の会議に付した案件\r\n○年次報告書に関する件\r\n○調査及び審査の報告に関する件\r\n　　　　─────────────\r\n　　　午後二時三十二分開会",
+      "url": "https://kokkai.ndl.go.jp/txt/122114541X00420260702/0",
+      "created_at": "2026-07-13T20:47:34.068322"
+    },
+    {
+      "id": "122114541X00420260702_001",
+      "date": "2026-07-02",
+      "session": 221,
+      "house": "参議院",
+      "committee": "情報監視審査会",
+      "meeting_info": {
+        "session_name": "",
+        "meeting_name": "情報監視審査会",
+        "house": "参議院",
+        "meeting_number": "",
+        "date": "2026-07-02",
+        "issue": "第4号",
+        "pdf_url": null,
+        "speech_order": 1,
+        "meeting_type": "審査会"
+      },
+      "speaker": "宮沢洋一",
+      "party": "自由民主党・無所属の会",
+      "party_normalized": "自由民主党",
+      "party_aliases": [
+        "自民党",
+        "自民",
+        "LDP"
+      ],
+      "position": null,
+      "text": "○会長（宮沢洋一君）　ただいまから情報監視審査会を再開いたします。\r\n　年次報告書の提出についてお諮りいたします。\r\n　本審査会は、毎年一回、調査及び審査の経過及び結果に関する報告書を議長に提出し、議長からこれを公表いただくことになっております。\r\n　今般、審査会における調査を踏まえ、お手元に配付の年次報告書案がまとまりました。\r\n　つきましては、本案を本審査会の報告書として議長に提出いたしたいと存じますが、御異議ございませんか。\r\n　　　〔「異議なし」と呼ぶ者あり〕",
+      "url": "https://kokkai.ndl.go.jp/txt/122114541X00420260702/1",
+      "created_at": "2026-07-13T20:47:34.068338"
+    },
+    {
+      "id": "122114541X00420260702_002",
+      "date": "2026-07-02",
+      "session": 221,
+      "house": "参議院",
+      "committee": "情報監視審査会",
+      "meeting_info": {
+        "session_name": "",
+        "meeting_name": "情報監視審査会",
+        "house": "参議院",
+        "meeting_number": "",
+        "date": "2026-07-02",
+        "issue": "第4号",
+        "pdf_url": null,
+        "speech_order": 2,
+        "meeting_type": "審査会"
+      },
+      "speaker": "宮沢洋一",
+      "party": "自由民主党・無所属の会",
+      "party_normalized": "自由民主党",
+      "party_aliases": [
+        "自民党",
+        "自民",
+        "LDP"
+      ],
+      "position": null,
+      "text": "○会長（宮沢洋一君）　御異議ないと認め、さよう決定いたします。\r\n　なお、本報告書につきましては、これを本日の会議録の末尾に掲載いたします。\r\n　　　　─────────────",
+      "url": "https://kokkai.ndl.go.jp/txt/122114541X00420260702/2",
+      "created_at": "2026-07-13T20:47:34.068351"
+    },
+    {
+      "id": "122114541X00420260702_003",
+      "date": "2026-07-02",
+      "session": 221,
+      "house": "参議院",
+      "committee": "情報監視審査会",
+      "meeting_info": {
+        "session_name": "",
+        "meeting_name": "情報監視審査会",
+        "house": "参議院",
+        "meeting_number": "",
+        "date": "2026-07-02",
+        "issue": "第4号",
+        "pdf_url": null,
+        "speech_order": 3,
+        "meeting_type": "審査会"
+      },
+      "speaker": "宮沢洋一",
+      "party": "自由民主党・無所属の会",
+      "party_normalized": "自由民主党",
+      "party_aliases": [
+        "自民党",
+        "自民",
+        "LDP"
+      ],
+      "position": null,
+      "text": "○会長（宮沢洋一君）　この際、お諮りいたします。\r\n　ただいま提出を決定いたしました報告書につきましては、議院の会議における報告の申出をいたしたいと存じますが、御異議ございませんか。\r\n　　　〔「異議なし」と呼ぶ者あり〕",
+      "url": "https://kokkai.ndl.go.jp/txt/122114541X00420260702/3",
+      "created_at": "2026-07-13T20:47:34.068359"
+    },
+    {
+      "id": "122114541X00420260702_004",
+      "date": "2026-07-02",
+      "session": 221,
+      "house": "参議院",
+      "committee": "情報監視審査会",
+      "meeting_info": {
+        "session_name": "",
+        "meeting_name": "情報監視審査会",
+        "house": "参議院",
+        "meeting_number": "",
+        "date": "2026-07-02",
+        "issue": "第4号",
+        "pdf_url": null,
+        "speech_order": 4,
+        "meeting_type": "審査会"
+      },
+      "speaker": "宮沢洋一",
+      "party": "自由民主党・無所属の会",
+      "party_normalized": "自由民主党",
+      "party_aliases": [
+        "自民党",
+        "自民",
+        "LDP"
+      ],
+      "position": null,
+      "text": "○会長（宮沢洋一君）　御異議ないと認め、さよう決定いたします。\r\n　　　　─────────────",
+      "url": "https://kokkai.ndl.go.jp/txt/122114541X00420260702/4",
+      "created_at": "2026-07-13T20:47:34.068366"
+    },
+    {
+      "id": "122114541X00420260702_005",
+      "date": "2026-07-02",
+      "session": 221,
+      "house": "参議院",
+      "committee": "情報監視審査会",
+      "meeting_info": {
+        "session_name": "",
+        "meeting_name": "情報監視審査会",
+        "house": "参議院",
+        "meeting_number": "",
+        "date": "2026-07-02",
+        "issue": "第4号",
+        "pdf_url": null,
+        "speech_order": 5,
+        "meeting_type": "審査会"
+      },
+      "speaker": "宮沢洋一",
+      "party": "自由民主党・無所属の会",
+      "party_normalized": "自由民主党",
+      "party_aliases": [
+        "自民党",
+        "自民",
+        "LDP"
+      ],
+      "position": null,
+      "text": "○会長（宮沢洋一君）　本日は、議長及び副議長に御出席をいただいておりますので、この際、報告書を議長に提出いたしたいと存じます。\r\n　皆様、御起立をお願いいたします。\r\n　　　〔総員起立〕\r\n　　　〔会長、報告書を議長に提出〕",
+      "url": "https://kokkai.ndl.go.jp/txt/122114541X00420260702/5",
+      "created_at": "2026-07-13T20:47:34.068373"
+    },
+    {
+      "id": "122114541X00420260702_006",
+      "date": "2026-07-02",
+      "session": 221,
+      "house": "参議院",
+      "committee": "情報監視審査会",
+      "meeting_info": {
+        "session_name": "",
+        "meeting_name": "情報監視審査会",
+        "house": "参議院",
+        "meeting_number": "",
+        "date": "2026-07-02",
+        "issue": "第4号",
+        "pdf_url": null,
+        "speech_order": 6,
+        "meeting_type": "審査会"
+      },
+      "speaker": "宮沢洋一",
+      "party": "自由民主党・無所属の会",
+      "party_normalized": "自由民主党",
+      "party_aliases": [
+        "自民党",
+        "自民",
+        "LDP"
+      ],
+      "position": null,
+      "text": "○会長（宮沢洋一君）　議長におかれては、よろしくお取り計らいをお願いいたします。\r\n　御着席ください。\r\n　議長から御発言がございます。",
+      "url": "https://kokkai.ndl.go.jp/txt/122114541X00420260702/6",
+      "created_at": "2026-07-13T20:47:34.068380"
+    },
+    {
+      "id": "122114541X00420260702_007",
+      "date": "2026-07-02",
+      "session": 221,
+      "house": "参議院",
+      "committee": "情報監視審査会",
+      "meeting_info": {
+        "session_name": "",
+        "meeting_name": "情報監視審査会",
+        "house": "参議院",
+        "meeting_number": "",
+        "date": "2026-07-02",
+        "issue": "第4号",
+        "pdf_url": null,
+        "speech_order": 7,
+        "meeting_type": "審査会"
+      },
+      "speaker": "関口昌一",
+      "party": "各派に属しない議員",
+      "party_normalized": "各派に属しない議員",
+      "party_aliases": [],
+      "position": "議長",
+      "text": "○議長（関口昌一君）　宮沢会長を始め審査会委員の皆様方の精力的な活動に敬意を表する次第です。\r\n　御提出いただきました報告書は、皆様の活動の成果でありますので、しかるべく取り計らいます。",
+      "url": "https://kokkai.ndl.go.jp/txt/122114541X00420260702/7",
+      "created_at": "2026-07-13T20:47:34.068393"
+    },
+    {
+      "id": "122114541X00420260702_008",
+      "date": "2026-07-02",
+      "session": 221,
+      "house": "参議院",
+      "committee": "情報監視審査会",
+      "meeting_info": {
+        "session_name": "",
+        "meeting_name": "情報監視審査会",
+        "house": "参議院",
+        "meeting_number": "",
+        "date": "2026-07-02",
+        "issue": "第4号",
+        "pdf_url": null,
+        "speech_order": 8,
+        "meeting_type": "審査会"
+      },
+      "speaker": "宮沢洋一",
+      "party": "自由民主党・無所属の会",
+      "party_normalized": "自由民主党",
+      "party_aliases": [
+        "自民党",
+        "自民",
+        "LDP"
+      ],
+      "position": null,
+      "text": "○会長（宮沢洋一君）　ありがとうございました。\r\n　速記を止めてください。\r\n　　　〔速記中止〕",
+      "url": "https://kokkai.ndl.go.jp/txt/122114541X00420260702/8",
+      "created_at": "2026-07-13T20:47:34.068404"
+    },
+    {
+      "id": "122114541X00420260702_009",
+      "date": "2026-07-02",
+      "session": 221,
+      "house": "参議院",
+      "committee": "情報監視審査会",
+      "meeting_info": {
+        "session_name": "",
+        "meeting_name": "情報監視審査会",
+        "house": "参議院",
+        "meeting_number": "",
+        "date": "2026-07-02",
+        "issue": "第4号",
+        "pdf_url": null,
+        "speech_order": 9,
+        "meeting_type": "審査会"
+      },
+      "speaker": "宮沢洋一",
+      "party": "自由民主党・無所属の会",
+      "party_normalized": "自由民主党",
+      "party_aliases": [
+        "自民党",
+        "自民",
+        "LDP"
+      ],
+      "position": null,
+      "text": "○会長（宮沢洋一君）　速記を起こしてください。\r\n　一言御挨拶申し上げます。\r\n　本審査会は、これまで精力的に調査を進め、本日、これまでの活動を踏まえた年次報告書の提出を行うまでに至りました。\r\n　本年調査からは、重要経済安保情報保護活用制度の運用の常時監視が新たに所掌に追加されたところ、委員各位には熱心な御議論を重ねていただき、充実した調査を行うことができました。\r\n　委員各位の御尽力に対し、会長として感謝申し上げます。\r\n　本審査会が引き続きその役割を果たしていけますよう、今後とも御協力をお願いいたします。\r\n　本日はこれにて散会いたします。\r\n　　　午後二時三十七分散会",
+      "url": "https://kokkai.ndl.go.jp/txt/122114541X00420260702/9",
+      "created_at": "2026-07-13T20:47:34.068412"
+    },
+    {
+      "id": "122114308X00620260701_000",
+      "date": "2026-07-01",
+      "session": 221,
+      "house": "参議院",
+      "committee": "国際問題に関する調査会",
+      "meeting_info": {
+        "session_name": "",
+        "meeting_name": "国際問題に関する調査会",
+        "house": "参議院",
+        "meeting_number": "",
+        "date": "2026-07-01",
+        "issue": "第6号",
+        "pdf_url": null,
+        "speech_order": 0,
+        "meeting_type": "調査会"
+      },
+      "speaker": "会議録情報",
+      "party": null,
+      "party_normalized": null,
+      "party_aliases": [],
+      "position": null,
+      "text": "令和八年七月一日（水曜日）\r\n　　　午前十時開会\r\n　　　　─────────────\r\n　　出席者は左のとおり。\r\n　　　　会　長　　　　　　　　　鈴木　宗男君\r\n　　　　理　事\r\n　　　　　　　　　　　　　　　　藤井　一博君\r\n　　　　　　　　　　　　　　　　吉井　　章君\r\n　　　　　　　　　　　　　　　　塩村あやか君\r\n　　　　　　　　　　　　　　　　原田　秀一君\r\n　　　　　　　　　　　　　　　　窪田　哲也君\r\n　　　　　　　　　　　　　　　　石井　苗子君\r\n　　　　　　　　　　　　　　　　大津　　力君\r\n　　　　委　員\r\n　　　　　　　　　　　　　　　　鈴木　大地君\r\n　　　　　　　　　　　　　　　　若井　敦子君\r\n　　　　　　　　　　　　　　　　脇　　雅昭君\r\n　　　　　　　　　　　　　　　　福士　珠美君\r\n　　　　　　　　　　　　　　　　三上　えり君\r\n　　　　　　　　　　　　　　　　庭田　幸恵君\r\n　　　　　　　　　　　　　　　　伊藤　孝江君\r\n　　　　　　　　　　　　　　　　石　　　平君\r\n　　　　　　　　　　　　　　　　杉本　純子君\r\n　　　　　　　　　　　　　　　　伊勢崎賢治君\r\n　　　　　　　　　　　　　　　　高良　沙哉君\r\n　　　事務局側\r\n　　　　　　　第一特別調査室\r\n　　　　　　　長　　　　　　　　有安　洋樹君\r\n　　　　─────────────\r\n　　本日の会議に付した案件\r\n○調査報告書に関する件\r\n○中間報告に関する件\r\n　　　　─────────────",
+      "url": "https://kokkai.ndl.go.jp/txt/122114308X00620260701/0",
+      "created_at": "2026-07-13T20:47:34.068419"
+    },
+    {
+      "id": "122114308X00620260701_001",
+      "date": "2026-07-01",
+      "session": 221,
+      "house": "参議院",
+      "committee": "国際問題に関する調査会",
+      "meeting_info": {
+        "session_name": "",
+        "meeting_name": "国際問題に関する調査会",
+        "house": "参議院",
+        "meeting_number": "",
+        "date": "2026-07-01",
+        "issue": "第6号",
+        "pdf_url": null,
+        "speech_order": 1,
+        "meeting_type": "調査会"
+      },
+      "speaker": "鈴木宗男",
+      "party": "自由民主党・無所属の会",
+      "party_normalized": "自由民主党",
+      "party_aliases": [
+        "自民党",
+        "自民",
+        "LDP"
+      ],
+      "position": null,
+      "text": "○会長（鈴木宗男君）　ただいまから国際問題に関する調査会を開会いたします。\r\n　調査報告書の提出についてお諮りいたします。\r\n　本調査会は、毎年、調査に関する中間報告書を議長に提出することになっております。\r\n　理事会において協議の結果、お手元に配付の国際問題に関する調査報告書（中間報告）案がまとまりました。\r\n　つきましては、本案を本調査会の中間報告書として議長に提出いたしたいと存じますが、御異議ございませんか。\r\n　　　〔「異議なし」と呼ぶ者あり〕",
+      "url": "https://kokkai.ndl.go.jp/txt/122114308X00620260701/1",
+      "created_at": "2026-07-13T20:47:34.068424"
+    },
+    {
+      "id": "122114308X00620260701_002",
+      "date": "2026-07-01",
+      "session": 221,
+      "house": "参議院",
+      "committee": "国際問題に関する調査会",
+      "meeting_info": {
+        "session_name": "",
+        "meeting_name": "国際問題に関する調査会",
+        "house": "参議院",
+        "meeting_number": "",
+        "date": "2026-07-01",
+        "issue": "第6号",
+        "pdf_url": null,
+        "speech_order": 2,
+        "meeting_type": "調査会"
+      },
+      "speaker": "鈴木宗男",
+      "party": "自由民主党・無所属の会",
+      "party_normalized": "自由民主党",
+      "party_aliases": [
+        "自民党",
+        "自民",
+        "LDP"
+      ],
+      "position": null,
+      "text": "○会長（鈴木宗男君）　御異議ないと認め、さよう決定いたします。\r\n　　　　─────────────",
+      "url": "https://kokkai.ndl.go.jp/txt/122114308X00620260701/2",
+      "created_at": "2026-07-13T20:47:34.068430"
+    },
+    {
+      "id": "122114308X00620260701_003",
+      "date": "2026-07-01",
+      "session": 221,
+      "house": "参議院",
+      "committee": "国際問題に関する調査会",
+      "meeting_info": {
+        "session_name": "",
+        "meeting_name": "国際問題に関する調査会",
+        "house": "参議院",
+        "meeting_number": "",
+        "date": "2026-07-01",
+        "issue": "第6号",
+        "pdf_url": null,
+        "speech_order": 3,
+        "meeting_type": "調査会"
+      },
+      "speaker": "鈴木宗男",
+      "party": "自由民主党・無所属の会",
+      "party_normalized": "自由民主党",
+      "party_aliases": [
+        "自民党",
+        "自民",
+        "LDP"
+      ],
+      "position": null,
+      "text": "○会長（鈴木宗男君）　この際、お諮りいたします。\r\n　ただいま提出を決定いたしました調査報告書につきましては、議院の会議におきましても中間報告をいたしたいと存じますが、御異議ございませんか。\r\n　　　〔「異議なし」と呼ぶ者あり〕",
+      "url": "https://kokkai.ndl.go.jp/txt/122114308X00620260701/3",
+      "created_at": "2026-07-13T20:47:34.068436"
+    },
+    {
+      "id": "122114308X00620260701_004",
+      "date": "2026-07-01",
+      "session": 221,
+      "house": "参議院",
+      "committee": "国際問題に関する調査会",
+      "meeting_info": {
+        "session_name": "",
+        "meeting_name": "国際問題に関する調査会",
+        "house": "参議院",
+        "meeting_number": "",
+        "date": "2026-07-01",
+        "issue": "第6号",
+        "pdf_url": null,
+        "speech_order": 4,
+        "meeting_type": "調査会"
+      },
+      "speaker": "鈴木宗男",
+      "party": "自由民主党・無所属の会",
+      "party_normalized": "自由民主党",
+      "party_aliases": [
+        "自民党",
+        "自民",
+        "LDP"
+      ],
+      "position": null,
+      "text": "○会長（鈴木宗男君）　御異議ないと認め、さよう決定いたします。\r\n　本日はこれにて散会いたします。\r\n　　　午前十時一分散会",
+      "url": "https://kokkai.ndl.go.jp/txt/122114308X00620260701/4",
+      "created_at": "2026-07-13T20:47:34.068442"
+    },
+    {
+      "id": "122114324X00620260701_000",
+      "date": "2026-07-01",
+      "session": 221,
+      "house": "参議院",
+      "committee": "国民生活・経済に関する調査会",
+      "meeting_info": {
+        "session_name": "",
+        "meeting_name": "国民生活・経済に関する調査会",
+        "house": "参議院",
+        "meeting_number": "",
+        "date": "2026-07-01",
+        "issue": "第6号",
+        "pdf_url": null,
+        "speech_order": 0,
+        "meeting_type": "調査会"
+      },
+      "speaker": "会議録情報",
+      "party": null,
+      "party_normalized": null,
+      "party_aliases": [],
+      "position": null,
+      "text": "令和八年七月一日（水曜日）\r\n　　　午前十時開会\r\n　　　　─────────────\r\n　　出席者は左のとおり。\r\n　　　　会　長　　　　　　　　　野上浩太郎君\r\n　　　　理　事\r\n　　　　　　　　　　　　　　　　小林　一大君\r\n　　　　　　　　　　　　　　　　山本佐知子君\r\n　　　　　　　　　　　　　　　　柴　　愼一君\r\n　　　　　　　　　　　　　　　　水野　孝一君\r\n　　　　　　　　　　　　　　　　宮崎　　勝君\r\n　　　　　　　　　　　　　　　　中条きよし君\r\n　　　　　　　　　　　　　　　　宮出　千慧君\r\n　　　　委　員\r\n　　　　　　　　　　　　　　　いんどう周作君\r\n　　　　　　　　　　　　　　　　上野　通子君\r\n　　　　　　　　　　　　　　　　かまやち敏君\r\n　　　　　　　　　　　　　　　　小林孝一郎君\r\n　　　　　　　　　　　　　　　　星　　北斗君\r\n　　　　　　　　　　　　　　　　泉　　房穂君\r\n　　　　　　　　　　　　　　　　小島とも子君\r\n　　　　　　　　　　　　　　　かごしま彰宏君\r\n　　　　　　　　　　　　　　　　川村　雄大君\r\n　　　　　　　　　　　　　　　　上野ほたる君\r\n　　　　　　　　　　　　　　　　白川　容子君\r\n　　　　　　　　　　　　　　　　尾辻　朋実君\r\n　　　事務局側\r\n　　　　　　　第二特別調査室\r\n　　　　　　　長　　　　　　　　高嶋　久志君\r\n　　　　─────────────\r\n　　本日の会議に付した案件\r\n○調査報告書に関する件\r\n○中間報告に関する件\r\n　　　　─────────────",
+      "url": "https://kokkai.ndl.go.jp/txt/122114324X00620260701/0",
+      "created_at": "2026-07-13T20:47:34.068448"
+    },
+    {
+      "id": "122114324X00620260701_001",
+      "date": "2026-07-01",
+      "session": 221,
+      "house": "参議院",
+      "committee": "国民生活・経済に関する調査会",
+      "meeting_info": {
+        "session_name": "",
+        "meeting_name": "国民生活・経済に関する調査会",
+        "house": "参議院",
+        "meeting_number": "",
+        "date": "2026-07-01",
+        "issue": "第6号",
+        "pdf_url": null,
+        "speech_order": 1,
+        "meeting_type": "調査会"
+      },
+      "speaker": "野上浩太郎",
+      "party": "自由民主党・無所属の会",
+      "party_normalized": "自由民主党",
+      "party_aliases": [
+        "自民党",
+        "自民",
+        "LDP"
+      ],
+      "position": null,
+      "text": "○会長（野上浩太郎君）　ただいまから国民生活・経済に関する調査会を開会いたします。\r\n　調査報告書の提出についてお諮りいたします。\r\n　本調査会は、毎年、調査に関する中間報告書を議長に提出することになっております。\r\n　理事会において協議の結果、お手元に配付の国民生活・経済に関する調査報告書（中間報告）案が取りまとまりました。\r\n　つきましては、本案を本調査会の中間報告書として議長に提出いたしたいと存じますが、御異議ございませんか。\r\n　　　〔「異議なし」と呼ぶ者あり〕",
+      "url": "https://kokkai.ndl.go.jp/txt/122114324X00620260701/1",
+      "created_at": "2026-07-13T20:47:34.068452"
+    },
+    {
+      "id": "122114324X00620260701_002",
+      "date": "2026-07-01",
+      "session": 221,
+      "house": "参議院",
+      "committee": "国民生活・経済に関する調査会",
+      "meeting_info": {
+        "session_name": "",
+        "meeting_name": "国民生活・経済に関する調査会",
+        "house": "参議院",
+        "meeting_number": "",
+        "date": "2026-07-01",
+        "issue": "第6号",
+        "pdf_url": null,
+        "speech_order": 2,
+        "meeting_type": "調査会"
+      },
+      "speaker": "野上浩太郎",
+      "party": "自由民主党・無所属の会",
+      "party_normalized": "自由民主党",
+      "party_aliases": [
+        "自民党",
+        "自民",
+        "LDP"
+      ],
+      "position": null,
+      "text": "○会長（野上浩太郎君）　御異議ないと認め、さよう決定いたします。\r\n　　　　─────────────",
+      "url": "https://kokkai.ndl.go.jp/txt/122114324X00620260701/2",
+      "created_at": "2026-07-13T20:47:34.068458"
+    },
+    {
+      "id": "122114324X00620260701_003",
+      "date": "2026-07-01",
+      "session": 221,
+      "house": "参議院",
+      "committee": "国民生活・経済に関する調査会",
+      "meeting_info": {
+        "session_name": "",
+        "meeting_name": "国民生活・経済に関する調査会",
+        "house": "参議院",
+        "meeting_number": "",
+        "date": "2026-07-01",
+        "issue": "第6号",
+        "pdf_url": null,
+        "speech_order": 3,
+        "meeting_type": "調査会"
+      },
+      "speaker": "野上浩太郎",
+      "party": "自由民主党・無所属の会",
+      "party_normalized": "自由民主党",
+      "party_aliases": [
+        "自民党",
+        "自民",
+        "LDP"
+      ],
+      "position": null,
+      "text": "○会長（野上浩太郎君）　この際、お諮りいたします。\r\n　ただいま提出を決定いたしました調査報告書につきましては、議院の会議におきましても中間報告をいたしたいと存じますが、御異議ございませんか。\r\n　　　〔「異議なし」と呼ぶ者あり〕",
+      "url": "https://kokkai.ndl.go.jp/txt/122114324X00620260701/3",
+      "created_at": "2026-07-13T20:47:34.068464"
+    },
+    {
+      "id": "122114324X00620260701_004",
+      "date": "2026-07-01",
+      "session": 221,
+      "house": "参議院",
+      "committee": "国民生活・経済に関する調査会",
+      "meeting_info": {
+        "session_name": "",
+        "meeting_name": "国民生活・経済に関する調査会",
+        "house": "参議院",
+        "meeting_number": "",
+        "date": "2026-07-01",
+        "issue": "第6号",
+        "pdf_url": null,
+        "speech_order": 4,
+        "meeting_type": "調査会"
+      },
+      "speaker": "野上浩太郎",
+      "party": "自由民主党・無所属の会",
+      "party_normalized": "自由民主党",
+      "party_aliases": [
+        "自民党",
+        "自民",
+        "LDP"
+      ],
+      "position": null,
+      "text": "○会長（野上浩太郎君）　御異議ないと認め、さよう決定いたします。\r\n　本日はこれにて散会いたします。\r\n　　　午前十時一分散会",
+      "url": "https://kokkai.ndl.go.jp/txt/122114324X00620260701/4",
+      "created_at": "2026-07-13T20:47:34.068470"
+    }
+  ]
+}
