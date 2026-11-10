@@ -1,0 +1,568 @@
+{
+  "metadata": {
+    "data_type": "speeches",
+    "year": 2026,
+    "month": 11,
+    "total_count": 19,
+    "generated_at": "2026-11-10T02:27:20.394920",
+    "source": "https://kokkai.ndl.go.jp/api.html",
+    "collection_method": "progressive_past_data_collection",
+    "filename_format": "speeches_YYYYMM01_HHMMSS.json",
+    "period": "2026-11",
+    "is_past_data": false
+  },
+  "data": [
+    {
+      "id": "122215392X00120261104_000",
+      "date": "2026-11-04",
+      "session": 222,
+      "house": "参議院",
+      "committee": "消費税・支援金法案に関する特別委員会",
+      "meeting_info": {
+        "session_name": "",
+        "meeting_name": "消費税・支援金法案に関する特別委員会",
+        "house": "参議院",
+        "meeting_number": "",
+        "date": "2026-11-04",
+        "issue": "第1号",
+        "pdf_url": null,
+        "speech_order": 0,
+        "meeting_type": "特別委員会"
+      },
+      "speaker": "会議録情報",
+      "party": null,
+      "party_normalized": null,
+      "party_aliases": [],
+      "position": null,
+      "text": "令和八年十一月四日（水曜日）\r\n　　　午前十時九分開会\r\n　　　　─────────────\r\n令和八年十一月四日議長において本委員を左のとおり指名した。\r\n　　　　　　　　　　　　　　　　井上　義行君\r\n　　　　　　　　　　　　　　　いんどう周作君\r\n　　　　　　　　　　　　　　　　江島　　潔君\r\n　　　　　　　　　　　　　　　　小林　一大君\r\n　　　　　　　　　　　　　　　　小林孝一郎君\r\n　　　　　　　　　　　　　　　　佐藤　　啓君\r\n　　　　　　　　　　　　　　　　出川　桃子君\r\n　　　　　　　　　　　　　　　　西田　昌司君\r\n　　　　　　　　　　　　　　　　西田　英範君\r\n　　　　　　　　　　　　　　　　長谷川　岳君\r\n　　　　　　　　　　　　　　　　星　　北斗君\r\n　　　　　　　　　　　　　　　　本田　顕子君\r\n　　　　　　　　　　　　　　　　松村　祥史君\r\n　　　　　　　　　　　　　　　　宮沢　洋一君\r\n　　　　　　　　　　　　　　　　宮本　和宏君\r\n　　　　　　　　　　　　　　　　山田　太郎君\r\n　　　　　　　　　　　　　　　　脇　　雅昭君\r\n　　　　　　　　　　　　　　　　石垣のりこ君\r\n　　　　　　　　　　　　　　　　石橋　通宏君\r\n　　　　　　　　　　　　　　　　鬼木　　誠君\r\n　　　　　　　　　　　　　　　　勝部　賢志君\r\n　　　　　　　　　　　　　　　　熊谷　裕人君\r\n　　　　　　　　　　　　　　　　柴　　愼一君\r\n　　　　　　　　　　　　　　　　徳永　エリ君\r\n　　　　　　　　　　　　　　　　上田　清司君\r\n　　　　　　　　　　　　　　　かごしま彰宏君\r\n　　　　　　　　　　　　　　　　竹詰　　仁君\r\n　　　　　　　　　　　　　　　　原田　秀一君\r\n　　　　　　　　　　　　　　　　秋野　公造君\r\n　　　　　　　　　　　　　　　　川村　雄大君\r\n　　　　　　　　　　　　　　　　里見　隆治君\r\n　　　　　　　　　　　　　　　　原田大二郎君\r\n　　　　　　　　　　　　　　　　浅田　　均君\r\n　　　　　　　　　　　　　　　　片山　大介君\r\n　　　　　　　　　　　　　　　　串田　誠一君\r\n　　　　　　　　　　　　　　　　安藤　　裕君\r\n　　　　　　　　　　　　　　　　塩入　清香君\r\n　　　　　　　　　　　　　　　　松田　　学君\r\n　　　　　　　　　　　　　　　　小池　　晃君\r\n　　　　　　　　　　　　　　　　大島九州男君\r\n　　　　─────────────\r\n　　出席者は左のとおり。\r\n　　　　委員長　　　　　　　　　松村　祥史君\r\n　　　　理　事\r\n　　　　　　　　　　　　　　　　小林　一大君\r\n　　　　　　　　　　　　　　　　佐藤　　啓君\r\n　　　　　　　　　　　　　　　　長谷川　岳君\r\n　　　　　　　　　　　　　　　　本田　顕子君\r\n　　　　　　　　　　　　　　　　石橋　通宏君\r\n　　　　　　　　　　　　　　　　竹詰　　仁君\r\n　　　　　　　　　　　　　　　　里見　隆治君\r\n　　　　　　　　　　　　　　　　片山　大介君\r\n　　　　委　員\r\n　　　　　　　　　　　　　　　　井上　義行君\r\n　　　　　　　　　　　　　　　いんどう周作君\r\n　　　　　　　　　　　　　　　　江島　　潔君\r\n　　　　　　　　　　　　　　　　小林孝一郎君\r\n　　　　　　　　　　　　　　　　出川　桃子君\r\n　　　　　　　　　　　　　　　　西田　昌司君\r\n　　　　　　　　　　　　　　　　西田　英範君\r\n　　　　　　　　　　　　　　　　星　　北斗君\r\n　　　　　　　　　　　　　　　　宮沢　洋一君\r\n　　　　　　　　　　　　　　　　宮本　和宏君\r\n　　　　　　　　　　　　　　　　山田　太郎君\r\n　　　　　　　　　　　　　　　　脇　　雅昭君\r\n　　　　　　　　　　　　　　　　石垣のりこ君\r\n　　　　　　　　　　　　　　　　鬼木　　誠君\r\n　　　　　　　　　　　　　　　　勝部　賢志君\r\n　　　　　　　　　　　　　　　　熊谷　裕人君\r\n　　　　　　　　　　　　　　　　柴　　愼一君\r\n　　　　　　　　　　　　　　　　徳永　エリ君\r\n　　　　　　　　　　　　　　　　上田　清司君\r\n　　　　　　　　　　　　　　　かごしま彰宏君\r\n　　　　　　　　　　　　　　　　原田　秀一君\r\n　　　　　　　　　　　　　　　　秋野　公造君\r\n　　　　　　　　　　　　　　　　川村　雄大君\r\n　　　　　　　　　　　　　　　　原田大二郎君\r\n　　　　　　　　　　　　　　　　浅田　　均君\r\n　　　　　　　　　　　　　　　　串田　誠一君\r\n　　　　　　　　　　　　　　　　安藤　　裕君\r\n　　　　　　　　　　　　　　　　塩入　清香君\r\n　　　　　　　　　　　　　　　　松田　　学君\r\n　　　　　　　　　　　　　　　　小池　　晃君\r\n　　　　　　　　　　　　　　　　大島九州男君\r\n　　　事務局側\r\n　　　　　　　常任委員会専門\r\n　　　　　　　員　　　　　　　　村田　和彦君\r\n　　　　─────────────\r\n　　本日の会議に付した案件\r\n○特別委員長互選\r\n○理事選任の件\r\n　　　　─────────────\r\n　　　〔上田清司君委員長席に着く〕",
+      "url": "https://kokkai.ndl.go.jp/txt/122215392X00120261104/0",
+      "created_at": "2026-11-10T02:27:16.974849"
+    },
+    {
+      "id": "122215392X00120261104_001",
+      "date": "2026-11-04",
+      "session": 222,
+      "house": "参議院",
+      "committee": "消費税・支援金法案に関する特別委員会",
+      "meeting_info": {
+        "session_name": "",
+        "meeting_name": "消費税・支援金法案に関する特別委員会",
+        "house": "参議院",
+        "meeting_number": "",
+        "date": "2026-11-04",
+        "issue": "第1号",
+        "pdf_url": null,
+        "speech_order": 1,
+        "meeting_type": "特別委員会"
+      },
+      "speaker": "上田清司",
+      "party": "国民民主党・新緑風会",
+      "party_normalized": "国民民主党",
+      "party_aliases": [
+        "国民"
+      ],
+      "position": null,
+      "text": "○上田清司君　ただいまから消費税・支援金法案に関する特別委員会を開会いたします。\r\n　本院規則第八十条第二項の規定により、年長のゆえをもちまして私が委員長の選任につきその議事を主宰いたします。\r\n　これより委員長の選任を行います。\r\n　つきましては、選任の方法はいかがいたしましょうか。",
+      "url": "https://kokkai.ndl.go.jp/txt/122215392X00120261104/1",
+      "created_at": "2026-11-10T02:27:16.974864"
+    },
+    {
+      "id": "122215392X00120261104_002",
+      "date": "2026-11-04",
+      "session": 222,
+      "house": "参議院",
+      "committee": "消費税・支援金法案に関する特別委員会",
+      "meeting_info": {
+        "session_name": "",
+        "meeting_name": "消費税・支援金法案に関する特別委員会",
+        "house": "参議院",
+        "meeting_number": "",
+        "date": "2026-11-04",
+        "issue": "第1号",
+        "pdf_url": null,
+        "speech_order": 2,
+        "meeting_type": "特別委員会"
+      },
+      "speaker": "石橋通宏",
+      "party": "立憲民主・無所属",
+      "party_normalized": "立憲民主・無所属",
+      "party_aliases": [],
+      "position": null,
+      "text": "○石橋通宏君　委員長の選任は、主宰者の指名に一任することの動議を提出いたします。",
+      "url": "https://kokkai.ndl.go.jp/txt/122215392X00120261104/2",
+      "created_at": "2026-11-10T02:27:16.974877"
+    },
+    {
+      "id": "122215392X00120261104_003",
+      "date": "2026-11-04",
+      "session": 222,
+      "house": "参議院",
+      "committee": "消費税・支援金法案に関する特別委員会",
+      "meeting_info": {
+        "session_name": "",
+        "meeting_name": "消費税・支援金法案に関する特別委員会",
+        "house": "参議院",
+        "meeting_number": "",
+        "date": "2026-11-04",
+        "issue": "第1号",
+        "pdf_url": null,
+        "speech_order": 3,
+        "meeting_type": "特別委員会"
+      },
+      "speaker": "上田清司",
+      "party": "国民民主党・新緑風会",
+      "party_normalized": "国民民主党",
+      "party_aliases": [
+        "国民"
+      ],
+      "position": null,
+      "text": "○上田清司君　ただいまの石橋君の動議に御異議ございませんか。\r\n　　　〔「異議なし」と呼ぶ者あり〕",
+      "url": "https://kokkai.ndl.go.jp/txt/122215392X00120261104/3",
+      "created_at": "2026-11-10T02:27:16.974887"
+    },
+    {
+      "id": "122215392X00120261104_004",
+      "date": "2026-11-04",
+      "session": 222,
+      "house": "参議院",
+      "committee": "消費税・支援金法案に関する特別委員会",
+      "meeting_info": {
+        "session_name": "",
+        "meeting_name": "消費税・支援金法案に関する特別委員会",
+        "house": "参議院",
+        "meeting_number": "",
+        "date": "2026-11-04",
+        "issue": "第1号",
+        "pdf_url": null,
+        "speech_order": 4,
+        "meeting_type": "特別委員会"
+      },
+      "speaker": "上田清司",
+      "party": "国民民主党・新緑風会",
+      "party_normalized": "国民民主党",
+      "party_aliases": [
+        "国民"
+      ],
+      "position": null,
+      "text": "○上田清司君　御異議ないものと認めます。\r\n　それでは、委員長に松村祥史君を指名いたします。（拍手）\r\n　　　　─────────────\r\n　　　〔松村祥史君委員長席に着く〕",
+      "url": "https://kokkai.ndl.go.jp/txt/122215392X00120261104/4",
+      "created_at": "2026-11-10T02:27:16.974893"
+    },
+    {
+      "id": "122215392X00120261104_005",
+      "date": "2026-11-04",
+      "session": 222,
+      "house": "参議院",
+      "committee": "消費税・支援金法案に関する特別委員会",
+      "meeting_info": {
+        "session_name": "",
+        "meeting_name": "消費税・支援金法案に関する特別委員会",
+        "house": "参議院",
+        "meeting_number": "",
+        "date": "2026-11-04",
+        "issue": "第1号",
+        "pdf_url": null,
+        "speech_order": 5,
+        "meeting_type": "特別委員会"
+      },
+      "speaker": "松村祥史",
+      "party": "自由民主党・無所属の会",
+      "party_normalized": "自由民主党",
+      "party_aliases": [
+        "自民党",
+        "自民",
+        "LDP"
+      ],
+      "position": null,
+      "text": "○委員長（松村祥史君）　この際、一言御挨拶申し上げます。\r\n　ただいま皆様の御推挙によりまして、本委員会の委員長に選任いただきました松村祥史でございます。\r\n　委員会の運営につきましては、公正かつ円滑な運営に努めてまいりたいと存じますので、理事、委員各位の皆様方の御支援と御協力のほどよろしくお願いをいたします。（拍手）\r\n　　　　─────────────",
+      "url": "https://kokkai.ndl.go.jp/txt/122215392X00120261104/5",
+      "created_at": "2026-11-10T02:27:16.974899"
+    },
+    {
+      "id": "122215392X00120261104_006",
+      "date": "2026-11-04",
+      "session": 222,
+      "house": "参議院",
+      "committee": "消費税・支援金法案に関する特別委員会",
+      "meeting_info": {
+        "session_name": "",
+        "meeting_name": "消費税・支援金法案に関する特別委員会",
+        "house": "参議院",
+        "meeting_number": "",
+        "date": "2026-11-04",
+        "issue": "第1号",
+        "pdf_url": null,
+        "speech_order": 6,
+        "meeting_type": "特別委員会"
+      },
+      "speaker": "松村祥史",
+      "party": "自由民主党・無所属の会",
+      "party_normalized": "自由民主党",
+      "party_aliases": [
+        "自民党",
+        "自民",
+        "LDP"
+      ],
+      "position": null,
+      "text": "○委員長（松村祥史君）　ただいまから理事の選任を行います。\r\n　本委員会の理事の数は八名でございます。\r\n　理事の選任につきましては、先例により、委員長の指名に御一任願いたいと存じますが、御異議ございませんか。\r\n　　　〔「異議なし」と呼ぶ者あり〕",
+      "url": "https://kokkai.ndl.go.jp/txt/122215392X00120261104/6",
+      "created_at": "2026-11-10T02:27:16.974905"
+    },
+    {
+      "id": "122215392X00120261104_007",
+      "date": "2026-11-04",
+      "session": 222,
+      "house": "参議院",
+      "committee": "消費税・支援金法案に関する特別委員会",
+      "meeting_info": {
+        "session_name": "",
+        "meeting_name": "消費税・支援金法案に関する特別委員会",
+        "house": "参議院",
+        "meeting_number": "",
+        "date": "2026-11-04",
+        "issue": "第1号",
+        "pdf_url": null,
+        "speech_order": 7,
+        "meeting_type": "特別委員会"
+      },
+      "speaker": "松村祥史",
+      "party": "自由民主党・無所属の会",
+      "party_normalized": "自由民主党",
+      "party_aliases": [
+        "自民党",
+        "自民",
+        "LDP"
+      ],
+      "position": null,
+      "text": "○委員長（松村祥史君）　御異議ないと認めます。\r\n　それでは、理事に小林一大君、佐藤啓君、長谷川岳君、本田顕子君、石橋通宏君、竹詰仁君、里見隆治君及び片山大介君を指名いたします。\r\n　本日はこれにて散会いたします。\r\n　　　午前十時十一分散会",
+      "url": "https://kokkai.ndl.go.jp/txt/122215392X00120261104/7",
+      "created_at": "2026-11-10T02:27:16.974918"
+    },
+    {
+      "id": "122214575X00220261104_000",
+      "date": "2026-11-04",
+      "session": 222,
+      "house": "参議院",
+      "committee": "政治改革に関する特別委員会",
+      "meeting_info": {
+        "session_name": "",
+        "meeting_name": "政治改革に関する特別委員会",
+        "house": "参議院",
+        "meeting_number": "",
+        "date": "2026-11-04",
+        "issue": "第2号",
+        "pdf_url": null,
+        "speech_order": 0,
+        "meeting_type": "特別委員会"
+      },
+      "speaker": "会議録情報",
+      "party": null,
+      "party_normalized": null,
+      "party_aliases": [],
+      "position": null,
+      "text": "令和八年十一月四日（水曜日）\r\n　　　午前十時二十三分開会\r\n　　　　─────────────\r\n　　　委員の異動\r\n　十一月二日\r\n　　　　辞任　　　　　　　　　補欠選任\r\n　　　　　金子　道仁君　　　　　松野　明美君\r\n　　　　　木村　英子君　　　　　伊勢崎賢治君\r\n　　　　─────────────\r\n　　出席者は左のとおり。\r\n　　　　委員長　　　　　　　　　大家　敏志君\r\n　　　　理　事\r\n　　　　　　　　　　　　　　　　上月　良祐君\r\n　　　　　　　　　　　　　　　　滝波　宏文君\r\n　　　　　　　　　　　　　　　　馬場　成志君\r\n　　　　　　　　　　　　　　　　石橋　通宏君\r\n　　　　　　　　　　　　　　　　後藤　　斎君\r\n　　　　　　　　　　　　　　　　石川　博崇君\r\n　　　　　　　　　　　　　　　　佐々木りえ君\r\n　　　　委　員\r\n　　　　　　　　　　　　　　　　臼井　正一君\r\n　　　　　　　　　　　　　　　　小川　克巳君\r\n　　　　　　　　　　　　　　　　越智　俊之君\r\n　　　　　　　　　　　　　　　　梶原　大介君\r\n　　　　　　　　　　　　　　　　加藤　明良君\r\n　　　　　　　　　　　　　　　　古庄　玄知君\r\n　　　　　　　　　　　　　　　　小林　一大君\r\n　　　　　　　　　　　　　　　　西田　英範君\r\n　　　　　　　　　　　　　　　　福山　　守君\r\n　　　　　　　　　　　　　　　　山本佐知子君\r\n　　　　　　　　　　　　　　　　脇　　雅昭君\r\n　　　　　　　　　　　　　　　　小西　洋之君\r\n　　　　　　　　　　　　　　　　塩村あやか君\r\n　　　　　　　　　　　　　　　　田島麻衣子君\r\n　　　　　　　　　　　　　　　　広田　　一君\r\n　　　　　　　　　　　　　　　　蓮　　　舫君\r\n　　　　　　　　　　　　　　　　榛葉賀津也君\r\n　　　　　　　　　　　　　　　　竹詰　　仁君\r\n　　　　　　　　　　　　　　　　原田　秀一君\r\n　　　　　　　　　　　　　　　　上田　　勇君\r\n　　　　　　　　　　　　　　　　宮崎　　勝君\r\n　　　　　　　　　　　　　　　　猪瀬　直樹君\r\n　　　　　　　　　　　　　　　　松野　明美君\r\n　　　　　　　　　　　　　　　　宮出　千慧君\r\n　　　　　　　　　　　　　　　　山中　　泉君\r\n　　　　　　　　　　　　　　　　山添　　拓君\r\n　　　　　　　　　　　　　　　　伊勢崎賢治君\r\n　　　国務大臣\r\n　　　　　　　総務大臣　　　　　藤井比早之君\r\n　　　副大臣\r\n　　　　　　　総務副大臣　　　　鈴木　英敬君\r\n　　　大臣政務官\r\n　　　　　　　総務大臣政務官　　福原　淳嗣君\r\n　　　事務局側\r\n　　　　　　　常任委員会専門\r\n　　　　　　　員　　　　　　　　荒井　透雅君\r\n　　　　　　　常任委員会専門\r\n　　　　　　　員　　　　　　　　武蔵　誠憲君\r\n　　　　─────────────\r\n　　本日の会議に付した案件\r\n○地方公共団体の議会の議員及び長の選挙期日等の臨時特例に関する法律案（閣法第一六号）（衆議院送付）\r\n　　　　─────────────",
+      "url": "https://kokkai.ndl.go.jp/txt/122214575X00220261104/0",
+      "created_at": "2026-11-10T02:27:16.974925"
+    },
+    {
+      "id": "122214575X00220261104_001",
+      "date": "2026-11-04",
+      "session": 222,
+      "house": "参議院",
+      "committee": "政治改革に関する特別委員会",
+      "meeting_info": {
+        "session_name": "",
+        "meeting_name": "政治改革に関する特別委員会",
+        "house": "参議院",
+        "meeting_number": "",
+        "date": "2026-11-04",
+        "issue": "第2号",
+        "pdf_url": null,
+        "speech_order": 1,
+        "meeting_type": "特別委員会"
+      },
+      "speaker": "大家敏志",
+      "party": "自由民主党・無所属の会",
+      "party_normalized": "自由民主党",
+      "party_aliases": [
+        "自民党",
+        "自民",
+        "LDP"
+      ],
+      "position": null,
+      "text": "○委員長（大家敏志君）　ただいまから政治改革に関する特別委員会を開会いたします。\r\n　委員の異動について御報告いたします。\r\n　昨日までに、金子道仁君及び木村英子君が委員を辞任され、その補欠として松野明美君及び伊勢崎賢治君が選任されました。\r\n　　　　─────────────",
+      "url": "https://kokkai.ndl.go.jp/txt/122214575X00220261104/1",
+      "created_at": "2026-11-10T02:27:16.974929"
+    },
+    {
+      "id": "122214575X00220261104_002",
+      "date": "2026-11-04",
+      "session": 222,
+      "house": "参議院",
+      "committee": "政治改革に関する特別委員会",
+      "meeting_info": {
+        "session_name": "",
+        "meeting_name": "政治改革に関する特別委員会",
+        "house": "参議院",
+        "meeting_number": "",
+        "date": "2026-11-04",
+        "issue": "第2号",
+        "pdf_url": null,
+        "speech_order": 2,
+        "meeting_type": "特別委員会"
+      },
+      "speaker": "大家敏志",
+      "party": "自由民主党・無所属の会",
+      "party_normalized": "自由民主党",
+      "party_aliases": [
+        "自民党",
+        "自民",
+        "LDP"
+      ],
+      "position": null,
+      "text": "○委員長（大家敏志君）　この際、藤井総務大臣、鈴木総務副大臣及び福原総務大臣政務官から発言を求められておりますので、これを許します。藤井総務大臣。",
+      "url": "https://kokkai.ndl.go.jp/txt/122214575X00220261104/2",
+      "created_at": "2026-11-10T02:27:16.974934"
+    },
+    {
+      "id": "122214575X00220261104_003",
+      "date": "2026-11-04",
+      "session": 222,
+      "house": "参議院",
+      "committee": "政治改革に関する特別委員会",
+      "meeting_info": {
+        "session_name": "",
+        "meeting_name": "政治改革に関する特別委員会",
+        "house": "参議院",
+        "meeting_number": "",
+        "date": "2026-11-04",
+        "issue": "第2号",
+        "pdf_url": null,
+        "speech_order": 3,
+        "meeting_type": "特別委員会"
+      },
+      "speaker": "藤井比早之",
+      "party": "自由民主党・無所属の会",
+      "party_normalized": "自由民主党",
+      "party_aliases": [
+        "自民党",
+        "自民",
+        "LDP"
+      ],
+      "position": "総務大臣・内閣府特命担当大臣（地方創生）",
+      "text": "○国務大臣（藤井比早之君）　総務大臣の藤井比早之でございます。\r\n　選挙制度及び政治資金制度を所管する大臣として、副大臣、大臣政務官、職員とともに職務に全力で取り組んでまいります。\r\n　大家委員長を始め、理事、委員の先生方の御指導をよろしくお願い申し上げます。",
+      "url": "https://kokkai.ndl.go.jp/txt/122214575X00220261104/3",
+      "created_at": "2026-11-10T02:27:16.974939"
+    },
+    {
+      "id": "122214575X00220261104_004",
+      "date": "2026-11-04",
+      "session": 222,
+      "house": "参議院",
+      "committee": "政治改革に関する特別委員会",
+      "meeting_info": {
+        "session_name": "",
+        "meeting_name": "政治改革に関する特別委員会",
+        "house": "参議院",
+        "meeting_number": "",
+        "date": "2026-11-04",
+        "issue": "第2号",
+        "pdf_url": null,
+        "speech_order": 4,
+        "meeting_type": "特別委員会"
+      },
+      "speaker": "大家敏志",
+      "party": "自由民主党・無所属の会",
+      "party_normalized": "自由民主党",
+      "party_aliases": [
+        "自民党",
+        "自民",
+        "LDP"
+      ],
+      "position": null,
+      "text": "○委員長（大家敏志君）　鈴木総務副大臣。",
+      "url": "https://kokkai.ndl.go.jp/txt/122214575X00220261104/4",
+      "created_at": "2026-11-10T02:27:16.974944"
+    },
+    {
+      "id": "122214575X00220261104_005",
+      "date": "2026-11-04",
+      "session": 222,
+      "house": "参議院",
+      "committee": "政治改革に関する特別委員会",
+      "meeting_info": {
+        "session_name": "",
+        "meeting_name": "政治改革に関する特別委員会",
+        "house": "参議院",
+        "meeting_number": "",
+        "date": "2026-11-04",
+        "issue": "第2号",
+        "pdf_url": null,
+        "speech_order": 5,
+        "meeting_type": "特別委員会"
+      },
+      "speaker": "鈴木英敬",
+      "party": "自由民主党・無所属の会",
+      "party_normalized": "自由民主党",
+      "party_aliases": [
+        "自民党",
+        "自民",
+        "LDP"
+      ],
+      "position": "総務副大臣・内閣府副大臣",
+      "text": "○副大臣（鈴木英敬君）　総務副大臣の鈴木英敬でございます。\r\n　藤井大臣を補佐し、全力を尽くしてまいります。\r\n　大家委員長を始め、理事、委員の先生方の格段の御指導、御鞭撻を心からお願い申し上げます。",
+      "url": "https://kokkai.ndl.go.jp/txt/122214575X00220261104/5",
+      "created_at": "2026-11-10T02:27:16.974948"
+    },
+    {
+      "id": "122214575X00220261104_006",
+      "date": "2026-11-04",
+      "session": 222,
+      "house": "参議院",
+      "committee": "政治改革に関する特別委員会",
+      "meeting_info": {
+        "session_name": "",
+        "meeting_name": "政治改革に関する特別委員会",
+        "house": "参議院",
+        "meeting_number": "",
+        "date": "2026-11-04",
+        "issue": "第2号",
+        "pdf_url": null,
+        "speech_order": 6,
+        "meeting_type": "特別委員会"
+      },
+      "speaker": "大家敏志",
+      "party": "自由民主党・無所属の会",
+      "party_normalized": "自由民主党",
+      "party_aliases": [
+        "自民党",
+        "自民",
+        "LDP"
+      ],
+      "position": null,
+      "text": "○委員長（大家敏志君）　福原総務大臣政務官。",
+      "url": "https://kokkai.ndl.go.jp/txt/122214575X00220261104/6",
+      "created_at": "2026-11-10T02:27:16.974952"
+    },
+    {
+      "id": "122214575X00220261104_007",
+      "date": "2026-11-04",
+      "session": 222,
+      "house": "参議院",
+      "committee": "政治改革に関する特別委員会",
+      "meeting_info": {
+        "session_name": "",
+        "meeting_name": "政治改革に関する特別委員会",
+        "house": "参議院",
+        "meeting_number": "",
+        "date": "2026-11-04",
+        "issue": "第2号",
+        "pdf_url": null,
+        "speech_order": 7,
+        "meeting_type": "特別委員会"
+      },
+      "speaker": "福原淳嗣",
+      "party": "自由民主党・無所属の会",
+      "party_normalized": "自由民主党",
+      "party_aliases": [
+        "自民党",
+        "自民",
+        "LDP"
+      ],
+      "position": "総務大臣政務官・内閣府大臣政務官",
+      "text": "○大臣政務官（福原淳嗣君）　総務大臣政務官の福原淳嗣でございます。\r\n　鈴木副大臣とともに藤井大臣をしっかりと支え、事に臨みます。\r\n　大家委員長を始め、理事、委員の先生方の格段の御指導、御鞭撻をよろしくお願いを申し上げます。\r\n　　　　─────────────",
+      "url": "https://kokkai.ndl.go.jp/txt/122214575X00220261104/7",
+      "created_at": "2026-11-10T02:27:16.974956"
+    },
+    {
+      "id": "122214575X00220261104_008",
+      "date": "2026-11-04",
+      "session": 222,
+      "house": "参議院",
+      "committee": "政治改革に関する特別委員会",
+      "meeting_info": {
+        "session_name": "",
+        "meeting_name": "政治改革に関する特別委員会",
+        "house": "参議院",
+        "meeting_number": "",
+        "date": "2026-11-04",
+        "issue": "第2号",
+        "pdf_url": null,
+        "speech_order": 8,
+        "meeting_type": "特別委員会"
+      },
+      "speaker": "大家敏志",
+      "party": "自由民主党・無所属の会",
+      "party_normalized": "自由民主党",
+      "party_aliases": [
+        "自民党",
+        "自民",
+        "LDP"
+      ],
+      "position": null,
+      "text": "○委員長（大家敏志君）　地方公共団体の議会の議員及び長の選挙期日等の臨時特例に関する法律案を議題といたします。\r\n　政府から趣旨説明を聴取いたします。藤井総務大臣。",
+      "url": "https://kokkai.ndl.go.jp/txt/122214575X00220261104/8",
+      "created_at": "2026-11-10T02:27:16.974960"
+    },
+    {
+      "id": "122214575X00220261104_009",
+      "date": "2026-11-04",
+      "session": 222,
+      "house": "参議院",
+      "committee": "政治改革に関する特別委員会",
+      "meeting_info": {
+        "session_name": "",
+        "meeting_name": "政治改革に関する特別委員会",
+        "house": "参議院",
+        "meeting_number": "",
+        "date": "2026-11-04",
+        "issue": "第2号",
+        "pdf_url": null,
+        "speech_order": 9,
+        "meeting_type": "特別委員会"
+      },
+      "speaker": "藤井比早之",
+      "party": "自由民主党・無所属の会",
+      "party_normalized": "自由民主党",
+      "party_aliases": [
+        "自民党",
+        "自民",
+        "LDP"
+      ],
+      "position": "総務大臣・内閣府特命担当大臣（地方創生）",
+      "text": "○国務大臣（藤井比早之君）　地方公共団体の議会の議員及び長の選挙期日等の臨時特例に関する法律案につきまして、その提案理由及び内容の概要を御説明申し上げます。\r\n　この法律案は、全国多数の地方公共団体の議会の議員又は長の任期が令和九年三月から五月までの間に満了することとなる実情に鑑み、国民の地方選挙に対する関心を高めるとともに、これらの選挙の円滑かつ効率的な執行を図るため、選挙の期日を統一するとともに、これに伴う公職選挙法の特例を定めようとするものであります。\r\n　次に、法律案の内容について、その概要を御説明申し上げます。\r\n　第一に、令和九年三月から五月までの間に任期が満了する地方公共団体の議会の議員及び長の選挙等について、いわゆる九十日特例の規定による場合等を除き、原則として、その選挙の期日を、都道府県及び指定都市の選挙にあっては令和九年四月十一日、指定都市以外の市、町村及び特別区の選挙にあっては同月二十五日に統一することとしております。\r\n　第二に、都道府県又は指定都市の選挙の候補者となった者は、関係地域において行われる市区町村の選挙又は市区町村の選挙と同日に行われる衆議院議員若しくは参議院議員の補欠選挙等の候補者となることができないものとすること、寄附等の禁止期間を選挙の期日の九十日前から当該選挙の期日までの期間とすること等、必要な特例を設けております。\r\n　以上が、この法律案の提案理由及び内容の概要でございます。\r\n　何とぞ、御審議の上、速やかに御賛同を賜りますようお願い申し上げます。",
+      "url": "https://kokkai.ndl.go.jp/txt/122214575X00220261104/9",
+      "created_at": "2026-11-10T02:27:16.974964"
+    },
+    {
+      "id": "122214575X00220261104_010",
+      "date": "2026-11-04",
+      "session": 222,
+      "house": "参議院",
+      "committee": "政治改革に関する特別委員会",
+      "meeting_info": {
+        "session_name": "",
+        "meeting_name": "政治改革に関する特別委員会",
+        "house": "参議院",
+        "meeting_number": "",
+        "date": "2026-11-04",
+        "issue": "第2号",
+        "pdf_url": null,
+        "speech_order": 10,
+        "meeting_type": "特別委員会"
+      },
+      "speaker": "大家敏志",
+      "party": "自由民主党・無所属の会",
+      "party_normalized": "自由民主党",
+      "party_aliases": [
+        "自民党",
+        "自民",
+        "LDP"
+      ],
+      "position": null,
+      "text": "○委員長（大家敏志君）　以上で趣旨説明の聴取は終わりました。\r\n　本案に対する質疑は後日に譲ることとし、本日はこれにて散会いたします。\r\n　　　午前十時二十七分散会",
+      "url": "https://kokkai.ndl.go.jp/txt/122214575X00220261104/10",
+      "created_at": "2026-11-10T02:27:16.974969"
+    }
+  ]
+}
